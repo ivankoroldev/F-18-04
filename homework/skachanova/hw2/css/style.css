@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 70px 70px 0px 70px;
+    text-align: left;
+    font-size: 14px;
+    color: #707070;
+    background-color: #fff;
+}
+.nav {
+	margin-top: 65px;
+	word-spacing: 119px;
+	font-family: Times New Roman, serif;
+	text-transform: uppercase;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+   }
+a:visited {
+    color: inherit;
+    text-decoration: none;
+   }
+a:hover {
+    color: #ed4949;
+    text-decoration: none;
+   }
+.nav ul {
+	margin: 65px 0px 45px 0px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.nav ul li{
+	display: inline-block;
+	margin: 20px;
+}
+.list_block ul {
+	margin: 40px 0px 35px 0px;
+	padding: 0;
+	font-family: Times New Roman, serif;
+	list-style: disc inside;
+}
+.list_block ul li {
+	line-height: 18px;
+}
+.list2_block ul {
+	margin: 42px 0px 39px 0px;
+	padding: 0;
+	font-family: Times New Roman, serif;
+	list-style: decimal inside;	
+}
+.list2_block ul li {
+	line-height: 18px;
+}
+.list3_block ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	margin-top: 65px;
+	margin-bottom: 45px;
+}
+.list3_block ul li{
+	display: inline-block;
+	margin: 20px;
+}
+.center {
+  	display: block;
+  	margin: auto;
+}
+.visual_block{
+	margin: 44px 0px 50px 0px;
+	max-width: 100%;
+	max-width: 100%;
+}
+.item {
+	font-family: Arial, sans-serif;
+	color: inherit;
+	text-transform: uppercase;
+}
+h1{
+	font-family: Georgia, serif;
+	margin-top: 39px;
+	font-size: 36px;
+}
+h2 {
+	font-family: Georgia, serif;
+	font-size: 30px;
+}
+h3{
+	font-family: Georgia, serif;
+	font-size: 24px;
+}
+h4{
+	font-family: Georgia, serif;
+	font-size: 18px;
+}
+.text_block{
+	margin: 25px 235px 34px 0px;
+	font-family: Georgia, serif;
+	line-height: 18px;
+}
+.text_block2{
+	margin: 40px 246px 27px 14px;
+	line-height: 18px;
+	font-family: Georgia, serif;
+	text-align: center;
+}
+.footer {
+	margin: 100px -70px 0px -200px;
+	text-align: right;
+ 	font-family: Times New Roman, serif;
+    font-size: 14px;
+    background: #f0f0f0;
+ 	padding: 0 15px 10px;
+}
+.fa {
+  margin-right: 12px;
+  margin-top: 25px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+    color: #ea1313;
+}
+.fa-facebook {
+  margin-left: 12px;
+  background: #f0f0f0;
+  color: #626262;
+}
+.fa-twitter {
+  background: #f0f0f0;
+  color: #626262;
+}
+.fa-instagram {
+  margin-right: 65px;
+  background: #f0f0f0;
+  color: #626262;
+}
+
+
+  
