@@ -1,0 +1,68 @@
+.body{
+	max-width: 1200px;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+img.namesite{
+	padding: 82px 474px 0px 474px;
+
+}
+ul.logo {
+	list-style: none;
+	text-align: center;
+	
+}
+ul.logo li{
+	display: inline-block;
+	margin: 50px;
+	
+}
+h1{
+	color: #626262;
+}
+.bigtext{
+	padding-right: 150px;
+	color: #626262;
+}
+a.onelink{
+	text-transform: uppercase;
+	color: #7c7c7c;
+}
+a:hover {
+    color: #ea1313; /* Цвет ссылки после наведения */ 
+}
+p.oneparag {
+	text-transform: uppercase;
+	color: #b4ad9e;
+	font-family: Arial;
+	font-size: 14px;	
+}
+
+p.lastparag {
+	text-transform: uppercase;
+	color: #b4ad9e;
+	font-family: Arial;
+	font-size: 14px;
+
+}
+
+p.footerparag{
+	display: inline-block;
+	font-family: times new roman;
+	font-size: 14px;
+
+}
+footer {
+	position: relative;
+	top: 100px;
+	right: 0px;
+	width: 100%;
+	height: 98px;
+	background: #f0f0f0;
+}
+.footer{
+	padding: 30px 2px 30px 1200px;
+}
+i{
+padding-left: 10px; 
+ }
