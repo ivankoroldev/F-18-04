@@ -1,0 +1,158 @@
+
+.page {
+    max-width: 1065px;
+    margin: 0 auto;
+    background: white;
+    
+}
+
+.logo {
+    margin: 6.7% 0 4.7% 0;
+    text-align: center;
+}
+
+.menu>ul {
+    text-align: center;
+}
+.menu>ul>li {
+    float: left;
+    list-style: none;
+    padding: 0 7%;
+}
+
+.menu>ul>li>a {
+    text-decoration: none;
+    color: #626262;;
+    font-family: Times New Roman;
+    font-size: 14px;
+}
+
+.menu>ul>li>a:hover {
+    color: red;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+
+
+
+.line {
+    margin: 0 20%;
+}
+
+.main-image {
+    margin-top: 3%;
+}
+
+
+.first h1{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Times New Roman;
+    color: #626262;
+}
+
+.first p {
+    font-size: 14px;
+    font-family: Georgia;
+    line-height: 24px;
+    color: #949494;
+}
+.second h2 {
+    font-size: 30px;
+    font-family: Georgia;
+    color: #626262;
+}
+
+.second h3 {
+    font-size: 24px;
+    font-family: Georgia;
+    color: #626262;
+}
+
+.second h4 {
+    font-size: 18px;
+    font-family: Georgia;
+    color: #626262;
+}
+
+.lorem>li>a {
+    text-decoration: none;
+     color: #949494;
+    
+}
+
+.lorem>li>a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.lorem {
+    padding: 0 17px;
+    
+}
+.lorem>li {
+    text-decoration: none;
+     color: #949494;
+    font-family: Georgia;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.nemo {
+     color: #949494;
+    font-family: Georgia;
+    font-size: 14px;
+    line-height: 20px; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+textarea {
+    border: none;
+}
+
+
+.footer {
+    margin: 0;
+    background: #f0f0f0;
+    height: 100px;
+}
+
+.icons {
+    max-width: 1065px;
+    margin: 0 auto;
+    padding-top:30px; 
+    text-align: right;
+}
+
+.fab{
+    color: #6a6a6a;
+    padding: 5px;
+}
+
+.fab:hover{
+    color: red;
+}
+
+.follow {
+    font-family: Times New Roman;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.photodiary {
+    color: #b4ad9e;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+
+
+.content {
+    margin-top: 45px;
+}

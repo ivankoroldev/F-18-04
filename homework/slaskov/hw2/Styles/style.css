@@ -1,0 +1,126 @@
+
+:root{
+    --company-grey: #626262;
+    --company-grey-light: #b4ad9e;
+    --company-red: #ea1313;
+    --footer-color: #f0f0f0;
+}
+
+body {
+    margin-left: 69px;
+    margin-right: 69px;
+    padding-top:90px;
+    width:1200px;
+    margin:auto;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color:var(--company-red);
+    text-decoration: underline;
+}
+
+.logo{
+    font-family: 'Inconsolata';
+    font-size: 30px;
+    letter-spacing: 10px;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul.inline{
+    display: inline-block;
+    text-align: center;
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.inline li{
+    display: inline-block;
+}
+
+nav ul li{
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    color:var(--company-grey);
+    text-transform: uppercase;
+}
+
+nav ul li:hover{
+    color:var(--company-red);
+}
+
+.main-image img{
+    width:100%;
+}
+
+.diary{
+    font-family: 'Arial';
+    font-size: 14px;
+    text-transform: uppercase;
+    color:var(--company-grey-light);
+}
+
+.content{
+    color:var(--company-grey);
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.content h2{
+    font-family:'Georgia';
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.content h3{
+    font-family:'Georgia';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.content h4{
+    font-family:'Georgia';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content p{
+    font-family:'Georgia';
+    font-size:14px;
+    line-height: 20px;
+}
+
+footer{
+    height: 97px;
+    background-color: var(--footer-color);
+}
+
+.social{
+    padding-top: 31px;
+    float: right;
+}
+
+#social-follow-p{
+    display:inline;
+}
+
+.social-icons li{
+    padding-left:18px;
+}
+
+.fab:hover{
+    color:var(--company-red);
+}
