@@ -10,7 +10,7 @@ body {
 
 .container {
 	margin: 0 auto;
-	width: 1063px;
+	max-width: 1063px;
 }
 
 h1, h2, h3, h4 {
