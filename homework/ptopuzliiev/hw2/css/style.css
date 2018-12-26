@@ -1,0 +1,159 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 24px;
+	color: #626262;
+	font-family: "Arial";
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 1063px;
+}
+
+h1, h2, h3, h4 {
+	color: #626262;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+h2{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 24px;
+	margin-bottom: 35px;
+	margin-top: 0;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 24px;
+	margin: 25px 0 30px;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 30px 0;
+}
+
+h5 {
+	color: #b4ad9e;
+	text-transform: uppercase;
+}
+
+.logo {
+	text-align: center;
+	margin-top: 80px;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+}
+
+ul li a {
+	text-decoration: none;
+}
+
+nav {
+	text-align: center;
+}
+header nav ul li {
+	display: inline-block;
+}
+
+header nav ul li a {
+	text-transform: uppercase;
+	line-height: 24px;
+	color: #626262;
+	display: block;
+	padding: 30px;
+}
+
+header nav ul li a:hover {
+	color: #ea1313;
+	transition: color 0.3s;
+}
+
+header .viewport-image {
+	text-align: center;
+}
+
+section .container .perfect-weekend p {
+	line-height: 24px;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+section .container .perfect-weekend h5{
+	margin-bottom: 0;
+}
+
+section .container .here-title ul {
+	margin-left: 15px;
+}
+
+section .container .here-title ul li a {
+	line-height: 24px;
+	margin-bottom: 10px;
+	color: inherit;
+}
+
+.here-title span {
+	color: #ea1313;
+	text-decoration: underline;
+}
+
+ol {
+	margin-left: 15px;
+}
+
+ol li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.blochquote {
+	text-align: center;
+}
+.blochquote p {
+	margin: 0 0 20px;
+}
+
+section .container h5 {
+	margin-bottom: 100px;
+}
+
+footer {
+	background: #f0f0f0;
+	width: 100%;
+	text-align: right;
+}
+
+.footer-social {
+	padding: 30px 0 50px;
+}
+
+.footer-social .fab {
+	padding: 9px;
+	cursor: pointer;
+	line-height: 15px;
+	font-size: 15px;
+}
+
+.footer-social .fab:hover {
+	color: #ea1313;
+}
+
+.footer-link {
+	margin-right: 16px;
+	color: #000000;
+}
