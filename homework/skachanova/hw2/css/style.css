@@ -1,119 +1,183 @@
-html, body {
-    height: 100%;
-}
 body {
-    margin: 70px 70px 0px 70px;
-    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: #626262;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
-    color: #707070;
-    background-color: #fff;
+    min-width: 320px;
 }
-.nav {
-	margin-top: 65px;
-	word-spacing: 119px;
-	font-family: Times New Roman, serif;
-	text-transform: uppercase;
+
+h1,h2,h3,h4,h6,h5,p {
+    margin: 0 0 20px;
 }
-a {
+
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.logo a {
+    text-decoration: none;
     color: inherit;
-    text-decoration: none;
-   }
-a:visited {
-    color: inherit;
-    text-decoration: none;
-   }
-a:hover {
-    color: #ed4949;
-    text-decoration: none;
-   }
+}
+
+.header {
+    padding: 75px 0 30px;
+    text-align: center;
+}
+
 .nav ul {
-	margin: 65px 0px 45px 0px;
-	padding: 0;
-	list-style: none;
-	text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.nav ul li{
-	display: inline-block;
-	margin: 20px;
+
+.nav li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 45px;
 }
-.list_block ul {
-	margin: 40px 0px 35px 0px;
-	padding: 0;
-	font-family: Times New Roman, serif;
-	list-style: disc inside;
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
 }
-.list_block ul li {
-	line-height: 18px;
+
+.nav a:hover {
+    color: #ea1313;
 }
-.list2_block ul {
-	margin: 42px 0px 39px 0px;
-	padding: 0;
-	font-family: Times New Roman, serif;
-	list-style: decimal inside;	
+
+#wrapper {
+    width: 100%;
+    position: relative;
 }
-.list2_block ul li {
-	line-height: 18px;
+
+.container  {
+    max-width: 1093px;
+    margin: 0 auto 0;
+    padding: 0 15px;
 }
-.list3_block ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	text-align: left;
-	margin-top: 65px;
-	margin-bottom: 45px;
+
+.uppercase {
+    text-transform: uppercase;
 }
-.list3_block ul li{
-	display: inline-block;
-	margin: 20px;
+
+.visual {
+    margin-bottom: 30px;
 }
-.center {
-  	display: inline-block;
-  	margin: auto;
+
+.visual img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
 }
-.visual_block{
-	margin: 44px 0px 50px 0px;
-	max-width: 100%;
+
+.content-section h1 {
+    margin: 0 0 30px;
 }
+
+.content-section {
+      max-width: 900px;
+}
+
 .item {
-	font-family: Arial, sans-serif;
-	color: inherit;
-	text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    color: #b4ad9e;
+    margin-bottom: 29px;
 }
-h1{
-	font-family: Georgia, serif;
-	margin-top: 39px;
-	font-size: 36px;
+
+.title_font {
+    font-family: Georgia, serif; 
 }
-h2 {
-	font-family: Georgia, serif;
-	font-size: 30px;
+
+.href_line a {
+    color: inherit;
+    text-decoration: none;
 }
-h3{
-	font-family: Georgia, serif;
-	font-size: 24px;
+
+.href_line a:hover {
+    color: #ea1313;
+    text-decoration: underline;
 }
-h4{
-	font-family: Georgia, serif;
-	font-size: 18px;
+
+#article-1_title {
+    font-size: 36px;
+    margin-bottom: 22px;
 }
-.text_block{
-	margin: 25px 235px 34px 0px;
-	font-family: Georgia, serif;
-	line-height: 18px;
+
+.article-1_text {
+    margin-bottom: 26px;
+    line-height: 14px;
 }
-.text_block2{
-	margin: 40px 246px 27px 14px;
-	line-height: 18px;
-	font-family: Georgia, serif;
-	text-align: center;
+
+#article-2_title { 
+    font-size: 30px;
+    margin-bottom: 38px;
 }
-.footer {
-	margin: 100px -70px 0px -200px;
-	text-align: right;
- 	font-family: Times New Roman, serif;
-    font-size: 14px;
+
+.article-2_text {
+    margin-bottom: 30px;
+    line-height: 14px;
+}
+
+.article-2_text ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc inside;
+}
+
+.article-2_text, .article-3_text li {
+    line-height: 14px;
+}
+
+#article-3_title { 
+    font-size: 24px;
+    margin-bottom: 38px;
+}
+
+.article-3_text {
+    margin-bottom: 34px;
+    line-height: 14px;
+}
+
+.article-3_text ul {
+    margin: 0;
+    padding: 0;
+    list-style: decimal inside;
+}
+
+#article-4_title { 
+    font-size: 18px;
+    margin-bottom: 38px;
+}
+
+.article-4_text {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+fieldset {
+    max-width: 200px;
+    margin-bottom: 50px;
+}
+
+table td {
+    display: inline-block;
+    vertical-align: top;
+    height: 195px;
+    max-width: 100%;
+}
+
+footer {
+    text-align: right;
     background: #f0f0f0;
- 	padding: 0 15px 10px;
+    padding: 0 15px 10px;
+    height: 97px;
 }
 .fa {
   margin-right: 12px;
@@ -140,6 +204,3 @@ h4{
   background: #f0f0f0;
   color: #626262;
 }
-
-
-  
