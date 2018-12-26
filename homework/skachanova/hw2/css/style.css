@@ -67,12 +67,11 @@ a:hover {
 	margin: 20px;
 }
 .center {
-  	display: block;
+  	display: inline-block;
   	margin: auto;
 }
 .visual_block{
 	margin: 44px 0px 50px 0px;
-	max-width: 100%;
 	max-width: 100%;
 }
 .item {
