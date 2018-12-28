@@ -4,7 +4,7 @@ body {
     color: #626262;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
-    /*min-width: 320px;*/
+    min-width: 320px;
 }
 
 h1,h2,h3,h4,h6,h5,p {
