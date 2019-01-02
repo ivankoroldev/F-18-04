@@ -1,0 +1,3 @@
+[Wed Jan 02 2019 19:37:56 GMT+0200 (Финляндия (зима))] layer "Tempees.com": Unsupported extension: com
+[Wed Jan 02 2019 19:37:56 GMT+0200 (Финляндия (зима))] layer "All rights reserved / Designed by Tempees.com": Filename begins with whitespace
+[Wed Jan 02 2019 19:37:56 GMT+0200 (Финляндия (зима))] layer "www.tempees.com": Unsupported extension: com
