@@ -19,6 +19,12 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     font-size: 13px;
 }
 
+.container {
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
 .header-wrapper {
     background-color: #6d5384;
     color: #fff;
@@ -34,12 +40,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 .header a {
     text-decoration: none;
     color: #fff;
-}
-
-.container {
-    max-width: 1180px;
-    padding: 0 20px;
-    margin: 0 auto;
 }
 
 .logo {
@@ -58,7 +58,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 
 .logo__title {
     font-size: 14px;
-    margin: 0;
 }
 
 .fa-paint-brush {
@@ -71,6 +70,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 .nav__item {
     text-transform: uppercase;
     display: inline-block;
+    vertical-align: auto;
     border: 1px solid #8a739e;
     border-radius: 5px;
     font-size: 18px;
