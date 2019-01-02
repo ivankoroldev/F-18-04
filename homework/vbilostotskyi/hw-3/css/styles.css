@@ -26,7 +26,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 }
 
 .header-wrapper {
-    background-color: #6d5384;
+    background-image: url(../img/header-background.jpg);
     color: #fff;
 }
 
@@ -103,4 +103,24 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     background-color: #f7df59;
     box-shadow: 0 3px 1px rgba(76,47,101,0.8);
     transition: 0.3s;
+}
+
+.head-title {
+    font-size: 112px;
+    text-transform: uppercase;
+    text-align-last: justify;
+}
+
+.head-title__span {
+    color: #ead7fb;
+}
+
+.head-text {
+    font-size: 34px;
+    text-align-last: justify;
+}
+
+.head-section {
+    padding-bottom: 43px;
+    border-bottom: 2px solid #8a739e;
 }
