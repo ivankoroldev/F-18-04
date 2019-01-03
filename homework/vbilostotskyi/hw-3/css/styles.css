@@ -79,7 +79,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     height: 55px;
     text-align: center;
     margin-left: 10px;
-    position: relative
+    position: relative;
 }
 
 .nav__item a {
@@ -123,4 +123,19 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 .head-section {
     padding-bottom: 43px;
     border-bottom: 2px solid #8a739e;
+}
+
+.slider {
+    max-width: 825px;
+    min-height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.slider__item {
+    outline: none;
 }
