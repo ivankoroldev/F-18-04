@@ -28,6 +28,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 .header-wrapper {
     background-image: url(../img/header-background.jpg);
     color: #fff;
+    position: relative;
 }
 
 .header {
@@ -37,7 +38,8 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     justify-content: space-between;
 }
 
-.header a {
+.header a,
+.buttons__item {
     text-decoration: none;
     color: #fff;
 }
@@ -68,6 +70,17 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
 }
 
 .nav__item {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav__item a,
+.buttons__item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
     text-transform: uppercase;
     display: inline-block;
     vertical-align: auto;
@@ -78,18 +91,16 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     width: 140px;
     height: 55px;
     text-align: center;
-    margin-left: 10px;
-    position: relative;
 }
 
-.nav__item a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
+.nav__item a:hover {
+    background-color: #f7df59;
+    box-shadow: 0 3px 1px rgba(76,47,101,0.8);
+    transition: 0.3s;
+    border: 1px solid transparent;
 }
 
-.nav__item::after {
+.nav__item a:hover::after {
     content: "";
     position: absolute;
     border: 8px solid transparent;
@@ -97,11 +108,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     top: 100%;
     left: 50%;
     margin-left: -8px;
-}
-
-.nav__item:hover {
-    background-color: #f7df59;
-    box-shadow: 0 3px 1px rgba(76,47,101,0.8);
     transition: 0.3s;
 }
 
@@ -136,6 +142,36 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
     align-items: center;
 }
 
+.slider-wrapper {
+    margin-bottom: 60px;
+}
+
 .slider__item {
     outline: none;
+}
+
+.buttons {
+    text-align: center;
+    padding-bottom: 96px;
+}
+
+.buttons__item:hover {
+    background-color: #69c7e2;
+    box-shadow: 0 3px 1px rgba(76,47,101,0.8);
+    transition: 0.3s;
+}
+
+.buttons__item {
+    margin: 0 3px;
+}
+
+.header-wrapper:after {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    border-top: 20px;
+    border-image: url(../img/header-background.jpg);
+    top: 100%;
+    left: 50%;
+    margin-left: -20px;
 }
