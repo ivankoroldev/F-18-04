@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'gothamblack';
+    src: url('../fonts/gothamblack-webfont.woff2') format('woff2'),
+         url('../fonts/gothamblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "GothamProLight";
+    src: url("../fonts/GothamProLight/GothamProLight.eot");
+    src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+    url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +51,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     color: #fff;
     position: relative;
     margin-bottom: 80px;
+    font-family: 'gothamblack';
 }
 
 .header {
@@ -39,6 +59,18 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    margin-left: -22px;
+    background: url(../img/header-background.jpg);
+    transform: rotate(45deg); 
 }
 
 .header a,
@@ -51,6 +83,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     font-weight: 300;
     display: flex;
     align-items: center;
+    font-family: "GothamProLight";
 }
 
 .logo__text {
@@ -114,7 +147,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .head-title {
-    font-size: 112px;
+    font-size: 111px;
     text-transform: uppercase;
     text-align-last: justify;
 }
@@ -124,13 +157,17 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .head-text {
-    font-size: 34px;
+    font-size: 33px;
     text-align-last: justify;
 }
 
 .head-section {
     padding-bottom: 43px;
     border-bottom: 2px solid #8a739e;
+}
+
+.slider-wrapper {
+    margin-bottom: 60px;
 }
 
 .slider {
@@ -142,10 +179,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     font-weight: 100;
     display: flex;
     align-items: center;
-}
-
-.slider-wrapper {
-    margin-bottom: 60px;
+    font-family: "GothamProLight";
 }
 
 .slider__item {
@@ -165,18 +199,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
 .buttons__item {
     margin: 0 3px;
-}
-
-.header-wrapper:after {
-    content: '';
-    position: absolute;
-    top: 97%;
-    left: 50%;
-    width: 44px;
-    height: 44px;
-    margin-left: -22px;
-    background: url(../img/header-background.jpg);
-    transform: rotate(45deg); 
 }
 
 .main__title {
@@ -263,4 +285,3 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 .footer__link:hover {
     text-decoration: underline;
 }
-
