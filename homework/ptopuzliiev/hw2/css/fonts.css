@@ -1,24 +1,22 @@
-/*font-family: "Georgia*/
-
 @font-face {
-    font-family: "Georgia";
-    src: url("../fonts/georgia/Georgia.eot");
-    src: url("../fonts/georgia/Georgia.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/georgia/Georgia.woff2") format("woff2"),
-        url("../fonts/georgia/Georgia.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GothamBlack';
+  src: url('GothamBlack.eot');
+  src: url('../fonts/GothamBLack/GothamBlack.woff2') format('woff2'),
+       url('../fonts/GothamBLack/GothamBlack.woff') format('woff'),
+       url('../fonts/GothamBLack/GothamBlack.ttf') format('truetype'),
+       url('../fonts/GothamBLack/GothamBlack.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
-/*font-family: "arial*/
-
-/*@font-face {
-    font-family: "arial";
-    src: url("../fonts/arial/AAJYKS+TTNooksScript.eot");
-    src: url("../fonts/arial/AAJYKS+TTNooksScript.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/arial/AAJYKS+TTNooksScript.woff2") format("woff2"),
-        url("../fonts/arial/AAJYKS+TTNooksScript.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}*/
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url('MyriadProRegular.eot');
+  src: url('../fonts/MyriadProRegular/MyriadProRegular.woff2') format('woff2'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.woff') format('woff'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.ttf') format('truetype'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'GothamBlack';
+  src: url('../fonts/GothamBlack/GothamBlack.eot');
+  src: url('../fonts/GothamBlack/GothamBlack.woff2') format('woff2'),
+       url('../fonts/GothamBlack/GothamBlack.woff') format('woff'),
+       url('../fonts/GothamBlack/GothamBlack.ttf') format('truetype'),
+       url('../fonts/GothamBlack/GothamBlack.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url('MyriadProRegular.eot');
+  src: url('../fonts/MyriadProRegular/MyriadProRegular.woff2') format('woff2'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.woff') format('woff'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.ttf') format('truetype'),
+       url('../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GothamThin';
+  src: url('../fonts/GothamThin/GothamThin.eot');
+  src: url('../fonts/GothamThin/GothamThin.woff2') format('woff2'),
+       url('../fonts/GothamThin/GothamThin.woff') format('woff'),
+       url('../fonts/GothamThin/GothamThin.ttf') format('truetype'),
+       url('../fonts/GothamThin/GothamThin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

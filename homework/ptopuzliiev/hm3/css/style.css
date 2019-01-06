@@ -1,0 +1,241 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: #6d5384;
+	min-width: 320px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+	margin: 0 0 20px;
+}
+
+/*служеюные классы*/
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto 0 auto;
+	padding: 0 15px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/*использовать служебные классы осторожно */
+
+#wrapper{
+	width: 100%;
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+
+/*-----HEADER-----*/
+
+header {
+	background-color: #6d5384;
+	/*padding-top: 60px;*/
+	
+}
+.header-menu {
+	position: relative;
+	max-width: 1140px;
+}
+
+.header-navigation {
+	position: absolute;
+	width: 100%;
+	top: 68px;
+	left: -3px;
+	z-index: 1;
+}
+
+.logo {
+	float: left;
+}
+
+.logo-link {
+	float: left;
+}
+
+.logo-text {
+	color: #ffffff;
+	float: left;
+	text-decoration: none;
+	padding: 20px 0 12px 18px;
+	font-size: 18px;
+	font-family: "GothamThin";
+}
+
+.logo .logo-link {
+	border: 1px solid #a491b5;
+	border-radius: 50%;
+}
+
+.logo img {
+	padding: 20px;
+}
+
+.logo-text span {
+	font-family: "MyriadProRegular";
+	font-size: 14px;
+}
+
+.nav {
+	float: right;
+
+}
+.nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: right;
+	padding-top: 20px;
+}
+
+.nav ul li {
+	float: left;
+	margin-right: 10px;
+}
+
+.nav ul li:last-child {
+	margin-right: 0;
+}
+
+.nav ul li a  {
+	display: block;
+	text-decoration: none;
+	padding: 18px 30px;
+	color: #fff;
+	font-size: 18px;
+	font-family: "GothamBlack";
+	border: solid 1px #9884aa;
+	border-radius: 8px;
+}
+
+.nav-item a {
+	position: relative;
+}
+
+.nav ul li a:hover{
+	background-color: #f7df59;
+	transition: 0.3s;
+	background: #f7df59; /* Цвет фона */
+    box-shadow: 0 5px 0px rgba(76,47,101,0.3); /* Параметры тени */
+}
+
+.nav ul li a:hover::after {
+	content: "";
+	position: absolute;
+	border-top: 16px solid #f7df59;
+	border-bottom: 16px solid transparent;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -16px;
+	transition: 0.3s;
+}
+
+.header-content {
+	padding-top: 250px;
+	color: #000;
+	position: relative;
+	padding-bottom: 90px;
+}
+
+.header-content::after {
+	content: "";
+	position: absolute;
+	border-top: 40px solid #6d5384;
+	border-bottom: 40px solid transparent;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -40px;
+}
+
+.header-content h1 {
+	font-size: 112px;
+	margin: 0;
+	font-family: "GothamBlack";
+	padding: 0;
+	letter-spacing: 1.9px;
+	color: #fff;
+}
+
+.header-content h1 span {
+	color: #ead7fb;
+}
+
+.content-title p {
+	font-family: "GothamBlack";
+	font-weight: bold;
+	color: #fff;
+	font-size: 33px;
+	margin: 0;
+}
+
+.content-title {
+	position: relative;
+	padding-bottom: 40px;
+	margin-bottom: 50px;
+}
+
+.content-title::after {
+	content: "";
+	border-bottom: solid 1px #9884aa;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+}
+
+.content-info {
+	max-width: 830px;
+	margin: 0 auto;
+	margin-bottom: 45px;
+}
+
+.content-info p {
+	text-align: center;
+	font-family: "GothamThin";
+	font-size: 28px;
+	color: #fff; 
+}
+
+form {
+	text-align: center;
+}
+
+form .form__button {
+	background-color: transparent;
+	border: solid 1px #9884aa;
+	border-radius: 5px;
+	padding: 18px 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	color: #fefefe;
+	cursor: pointer;
+}
+
+form .form__button:hover {
+	background-color: #69c7e2;
+	transition: 0.3s;
+	box-shadow: 0 5px 0 rgba(67,45,87,0.3);
+}
+
