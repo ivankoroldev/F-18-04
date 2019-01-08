@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     min-width: 320px;
-	color: #6c5283;
+	color: #6b5181;
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -147,17 +147,22 @@ header {
 }
 
 .motto h1 {
-    font-size: 112px;
+    font-size: 108px;
     font-weight: 900;
+	word-spacing: 4px;
     color: #fff;
     margin: 0;
-    padding: 0;
-    
+    padding: 0; 
+}
+
+.color-text {
+	color:  #ead7fb;
 }
 
 .motto p {
-    font-size: 34px;
-    font-weight: 900;
+    font-size: 31px;
+    font-weight: 700;
+	word-spacing: 4px;
     color: #fff;
     margin: 0;
     padding-bottom: 47px;
@@ -172,10 +177,13 @@ header {
     color:#fff;
     font-size: 28px;
     padding-bottom: 60px;
+	font-weight: 100;
 }
 
 .carousel {
     display: inline-block;
+	vertical-align: top;
+	margin: 0;
 }
 
 .carousel li {
@@ -184,7 +192,7 @@ header {
     color: white;
 }
 
-.carousel li:hover {
+li.li-active,.carousel li:hover {
     color: black;
     cursor: pointer;
 }
@@ -232,6 +240,11 @@ main {
 .item {
 	position: relative;
     width: 30%;
+	color: inherit;
+}
+
+.item:hover {
+	box-shadow:3px 5px 3px 3px rgba(0,0,0,0.75); ;
 }
 
 .content {
@@ -255,6 +268,7 @@ main {
 	bottom: 30px;
 	left: 0;
 	width: 100%;
+	font-weight: 500;
 }
 
 .about {
@@ -266,8 +280,8 @@ main {
 }
 
 .about p {
-	font-size: 13px;
-	line-height: 2.3;
+	font-size: 12px;
+	line-height: 2;
 	padding: 30px 20px;
 }
 
@@ -276,21 +290,34 @@ footer {
 	padding: 45px 0 70px 0;
 }
 
-.links nav{
-	display: inline-block;
-}
-
 .links {
 	display: flex;
 	justify-content: space-between;
+}
+
+.links nav{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.list-links {
+	margin: 0;
+	padding: 0;
+}
+
+.list-links li {
+	float: left;
+	list-style: none;
+	padding-left: 2px;
 }
 
 .link {
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: 300;
+	color: inherit;
 }
-.link:hover {
+.link:hover, .text-box:hover {
 	text-decoration: underline;
 }
 .clearfix:after {
