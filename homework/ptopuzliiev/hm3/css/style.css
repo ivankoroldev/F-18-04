@@ -6,6 +6,7 @@ body {
 	min-width: 320px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
+	background: url('../img/bg.jpg');
 }
 
 * {
@@ -151,6 +152,25 @@ header {
 	transition: 0.3s;
 }
 
+.nav ul li.active {
+	background-color: #f7df59;
+	border-radius: 8px;
+	border: transparent;
+}
+
+.nav ul li.active a::after {
+	content: "";
+	position: absolute;
+	border-top: 16px solid #f7df59;
+	border-bottom: 16px solid transparent;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -16px;
+	transition: 0.3s;
+}
+
 .header-content {
 	padding-top: 250px;
 	color: #000;
@@ -208,14 +228,15 @@ header {
 .content-info {
 	max-width: 830px;
 	margin: 0 auto;
-	margin-bottom: 45px;
+	margin-bottom: 60px;
 }
 
 .content-info p {
 	text-align: center;
 	font-family: "GothamThin";
 	font-size: 28px;
-	color: #fff; 
+	color: #fff;
+	margin-bottom: 0;
 }
 
 form {
@@ -231,6 +252,11 @@ form .form__button {
 	font-weight: 800;
 	color: #fefefe;
 	cursor: pointer;
+	margin-right: 10px;
+}
+
+form .form__button:last-child {
+	margin-right: 0;
 }
 
 form .form__button:hover {
@@ -238,4 +264,73 @@ form .form__button:hover {
 	transition: 0.3s;
 	box-shadow: 0 5px 0 rgba(67,45,87,0.3);
 }
+
+.owl-carousel {
+	margin-bottom: 65px;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+	margin-top: 0;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+	background-color: #443255;
+	width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 50%;
+    position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span:before {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	border: 1px solid #443255;
+    border-radius: 50%;
+    margin: -2px;
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+	width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-right: 6px;
+    background: #ffffff;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: #443255;
+}
+
+
+.itemcontent {
+	width: 100px;
+	height: 100px;
+	background-color: #000;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	border-radius: 50%;
+	
+}
+
+.itemcontent .item2 {
+	border: solid 1px #fff;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+/*-----MAIN-----*/
 
