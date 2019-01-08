@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(image/background.jpg);
+	background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    min-width: 320px;
+	color: #6c5283;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#page {
+    width: 100%;
+    position: relative;
+}
+
+header {
+    padding-top: 67px;
+    background: #6c5283;
+	position: absolute;
+	right: 0;
+	left: 0;
+	z-index: 2;
+	font-family: 'Montserrat';
+}
+
+.content-hold {
+    max-width: 1170px;
+    padding:0 15px;
+    margin: 0 auto;
+}
+
+.logo p {
+    float: left;
+    padding:15px 12px 0 12px;
+    font-size: 28px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.logo p+p {
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 12px;
+}
+
+.logo img {
+    float: left;
+}
+.logo {
+    text-decoration: none;
+    color: #b8acc2;
+}
+
+
+.logo-line {
+    max-width: 325px;
+}
+
+.navigation {
+    position: relative;
+    float:right;
+    padding-top: 40px;
+}
+
+.line {
+    margin: 0;
+    text-align: center;
+}
+.line li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.line a{
+	text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+	border: 1px solid #fff;
+	position: relative;
+    padding: 17px 23px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.line a:hover {
+	background: #f7df59;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 3px #432d57;
+}
+
+.line a::after {
+    content:"";
+    position: absolute;
+    border-top:10px solid #f7df59;
+    border-bottom:10px solid transparent;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    top: 100%;
+    left: 50%;
+    display: none;
+    margin: 0 10px 0 -10px;
+}
+
+.line li.active a, .line li a:hover  {
+    background: #f7df59;
+    border-color: transparent;
+    box-shadow: 0 3px 3px #432d57;
+}
+
+.line li.active a::after , .line li a:hover::after {
+    display: block;
+}
+
+
+.second {
+	background: #6c5283;
+	padding-top: 324px;
+	position: relative;
+	font-family: 'Montserrat';
+}
+
+.second::after {
+	content:"";
+    position: absolute;
+    border-top:21px solid #6c5283;
+    border-bottom:21px solid transparent;
+    border-left:21px solid transparent;
+    border-right:21px solid transparent;
+    left: 50%;
+	top: 100%;
+	margin:0 20px 0 -20px ;
+}
+
+.motto {
+    text-align: justify;
+}
+
+.motto h1 {
+    font-size: 112px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.motto p {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 47px;
+}
+
+.join {
+    text-align: center;
+    padding: 50px 165px;
+    border-top: 1px solid #9884aa;
+}
+.join p { 
+    color:#fff;
+    font-size: 28px;
+    padding-bottom: 60px;
+}
+
+.carousel {
+    display: inline-block;
+}
+
+.carousel li {
+    float: left;
+    padding: 0 5px;
+    color: white;
+}
+
+.carousel li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.registration {
+	text-align: center;
+	padding-bottom: 95px;
+}
+.btn {
+	background: none;
+	text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+	border: 1px solid #fff;
+    padding: 15px 38px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.btn:hover {
+	background: #69c7e2;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 3px #432d57;
+}
+main {
+	padding-top: 80px;
+}
+
+.pre-content {
+	text-align: center;
+	padding-bottom: 80px;
+}
+.pre-content h2 {
+	font-size: 60px;
+	font-weight: 100;
+}
+
+.pre-content p {
+	font-size: 30px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.item {
+	position: relative;
+    width: 30%;
+}
+
+.content {
+	display: flex;
+    justify-content: space-between;
+	padding-bottom: 100px;
+}
+
+.inner {
+	background-repeat: no-repeat;
+	min-height: 310px;
+	background-position: 50% 20%;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 5px 3px 0 rgba(0,0,0,0.75);
+}
+
+.text-box {
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+}
+
+.about {
+	background: white;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 70px;
+	box-shadow: 0 5px 3px 0 rgba(237, 237, 237, 0.75);
+}
+
+.about p {
+	font-size: 13px;
+	line-height: 2.3;
+	padding: 30px 20px;
+}
+
+footer {
+	border-top: 2px solid #432d57;
+	padding: 45px 0 70px 0;
+}
+
+.links nav{
+	display: inline-block;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.link {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+
