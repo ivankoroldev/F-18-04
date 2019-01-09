@@ -149,7 +149,7 @@ header {
 .motto h1 {
     font-size: 108px;
     font-weight: 900;
-	word-spacing: 4px;
+	word-spacing: 2px;
     color: #fff;
     margin: 0;
     padding: 0; 
@@ -162,7 +162,7 @@ header {
 .motto p {
     font-size: 31px;
     font-weight: 700;
-	word-spacing: 4px;
+	word-spacing: 6px;
     color: #fff;
     margin: 0;
     padding-bottom: 47px;
@@ -184,11 +184,13 @@ header {
     display: inline-block;
 	vertical-align: top;
 	margin: 0;
+	padding: 0;
+	list-style-position: inside;
 }
 
 .carousel li {
+	max-width: 10px;
     float: left;
-    padding: 0 5px;
     color: white;
 }
 
