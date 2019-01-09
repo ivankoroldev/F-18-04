@@ -95,7 +95,7 @@ header {
 }
 
 .logo-text span {
-	font-family: "MyriadProRegular";
+	font-family: "MyriadProRegular", sans-serif;
 	font-size: 14px;
 }
 
@@ -194,6 +194,7 @@ header {
 }
 
 .header-content h1 {
+	max-width: 1140px;
 	font-size: 112px;
 	margin: 0;
 	font-family: "GothamBlack";
@@ -272,6 +273,9 @@ form .form-button:hover {
 	margin-bottom: 65px;
 }
 
+
+/*----------------owl carousel-----------------------*/
+
 .owl-theme .owl-nav.disabled+.owl-dots {
 	margin-top: 0;
 }
@@ -315,7 +319,7 @@ form .form-button:hover {
 .owl-theme .owl-dots .owl-dot:last-child span {
 	margin-right: 0;
 }
-
+/*------------------------owl carousel-------------------------*/
 
 /*-----MAIN-----*/
 
@@ -411,11 +415,24 @@ main {
 	letter-spacing: 0.3px;
 }
 
+.info p a {
+	text-decoration: none;
+}
+
+.info p a:hover {
+	text-decoration: underline;
+}
+
 
 /*-----FOOTER-----*/
 
 footer {
 	padding: 45px 0 70px;
+}
+
+.footer-section {
+	font-weight: 300;
+	font-size: 14px;
 }
 
 .left-block {
@@ -428,7 +445,6 @@ footer {
 
 footer .footer-link {
 	margin-bottom: 0;
-	font-weight: 300;
-	font-size: 14px;
+	color: #6d5386;
 	text-decoration: none;
 }

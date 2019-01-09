@@ -6,7 +6,8 @@ $(document).ready(function(){
     center: true,
     autoplay: true,
     autoplayTimeout: 10000,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    dots: true
 	});
 });
 
