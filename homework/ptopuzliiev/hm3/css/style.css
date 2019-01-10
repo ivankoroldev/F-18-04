@@ -292,6 +292,7 @@ form .form-button:hover {
     transition: opacity .2s ease;
     border-radius: 50%;
     position: relative;
+    outline: none;
 }
 
 .owl-theme .owl-dots .owl-dot.active span:before {
