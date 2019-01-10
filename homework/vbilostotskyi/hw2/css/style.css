@@ -1,9 +1,27 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote {
+    margin: 0 0 20px;
+}
+
+#wrapper {
+    width: 100%;
+    position: relative;
     color: #626262;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
+    /* overflow: hidden; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 75px 0 30px;
 }
 
 .header,
@@ -12,19 +30,26 @@ body {
 }
 
 .content {
-    max-width: 1063px;
-    margin: auto;
+    max-width: 1093px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
-.uppercase, .nav__item {
-    text-transform: uppercase
+.uppercase, 
+.nav {
+    text-transform: uppercase;
 }
+
+.nav {
+    margin: 0;
+    padding: 0;
+}
+
 
 .logo {
     font-size: 30px;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Inconsolata', Arial, Helvetica, sans-serif, monospace;
     letter-spacing: 7px;
-    margin-top:80px;
     margin-bottom: 50px;
 }
 
@@ -33,12 +58,16 @@ body {
     color: #000;
 }
 
+.nav__item {
+    padding: 0 45px;
+}
+
 .nav__item,
 .footer__item {
     list-style-type: none;
     font-size: 14px;
     display: inline-block;
-    margin-right: 80px;
+    vertical-align: middle;
 }
 
 .footer__item {
@@ -66,27 +95,46 @@ body {
     width: 100%;
 }
 
+.photodiary {
+    margin-bottom: 25px;
+}
+
 .photodiary,
 .comment {
     text-align: left;
     color: #b4ad9e;
 }
 
+.main {
+    /* margin-bottom: 100px; */
+}
+
+.main-article {
+    max-width: 905px;
+}
+
 .article-1__title {
     font-size: 36px;
-    margin: 10px 0 10px 0;
+    margin-bottom: 12px;
 }
 
 .article-2__title {
     font-size: 30px;
+    margin-bottom: 34px;
+}
+
+.article-3__list {
+    margin-bottom: 28px;
 }
 
 .article-3__title {
     font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .article-4__title {
     font-size: 18px;
+    margin-bottom: 32px;
 }
 
 .article-2__list,
@@ -103,14 +151,50 @@ body {
 .footer {
     background-color: #f0f0f0;
     height: 100px;
-    margin-top: 100px;
 }
 
 .footer-links {
     float: right;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .footer__item a i {
     font-size: 20px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.main-form {
+    background-color: #c4c4a2;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 260px;
+}
+
+.form-row input {
+    border-radius: 5px;
+    display: block;
+}
+
+.main-form button {
+    border-radius: 5px;
+    height: 30px;;
+}
+
+.form-wrapper {
+    margin-bottom: 30px;
+}
+
+.video {
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.video iframe,
+.map iframe {
+    display: block;
+    width: 100%;
+    min-height: 500px;
 }
