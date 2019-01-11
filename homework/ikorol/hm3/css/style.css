@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: #6d5384;
+	min-width: 320px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	/*font-family: 'Montserrat', sans-serif;*/
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+	margin: 0 0 20px;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#wrapper {
+	width: 100%;
+	position: relative;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.header-wrap {
+	color: #fff;
+	padding: 65px 0;
+}
+
+.navigation {
+	float: right;
+}
+
+.navigation a {
+	color: inherit;
+}
+
+.navigation ul {
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0 -5px; 
+}
+
+.navigation li {
+	font-size: 18px;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+} 
+
+.navigation li a {
+	display: block;
+	padding: 15px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: 600;
+	border: 1px solid #fff;
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+
+.navigation li a:hover, .navigation li.active a{
+	background: #f7df59;
+	border-color: #f7df59;
+	box-shadow: 0px 4px 0px -1px rgba(76,47,101,1);
+	transform: scale(1.1);
+}
+
+.navigation li a:hover:after, .navigation li.active a:after {
+	opacity: 1;
+	visibility: visible;
+	transition: .3s all .3s ease-in-out;
+	transform: translate(-50%,-50%) rotate(45deg) scale(1);
+
+}
+
+.navigation li a:after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #f7df59;
+	top: 100%;
+	left: 50%;
+	margin-top: 2px;
+	border-right: 2px solid rgba(76,47,101,1);
+	border-bottom: 2px solid rgba(76,47,101,1);
+	transform: translate(-50%,-50%) rotate(45deg) scale(0);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s all .3s ease-in-out;
+	transition: none;
+}
+
+
+.logo {
+	float: left;
+}
+
+.logo-hold {
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	padding-top: 21px;
+}
+
+.logo a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.top-text {
+	display: block;
+	font-size: 28px;
+	line-height: 1;
+	font-weight: 300;
+}
+
+.bottom-text {
+	font-weight: 300;
+	display: block;
+	font-size: 14px;
+	line-height: 1;
+}
+
+
+
+
+
+
+.visual-bg {
+	background: url("../img/visula-bg.png");
+	height: 600px;
+	color: #fff;
+	padding-top: 250px;
+}
