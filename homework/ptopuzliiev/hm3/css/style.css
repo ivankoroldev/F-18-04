@@ -6,7 +6,6 @@ body {
 	min-width: 320px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	
 }
 
 * {
@@ -17,11 +16,11 @@ h1,h2,h3,h4,h5,h6, p {
 	margin: 0 0 20px;
 }
 
-/*служеюные классы*/
+/*служебные классы*/
 
 .container {
 	max-width: 1170px;
-	margin: 0 auto 0 auto;
+	margin: 0 auto;
 	padding: 0 15px;
 }
 
@@ -36,15 +35,13 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 
-/*использовать служебные классы осторожно */
-
 #wrapper{
 	width: 100%;
 	position: relative;
 	/*overflow: hidden;*/
-	background-image: url('../img/bg.jpg');
+	/*background-image: url('../img/bg.jpg');
 	background-size: cover;
-	background-position: 50% 50%;
+	background-position: 50% 50%;*/
 }
 
 
@@ -243,11 +240,11 @@ header {
 	margin-bottom: 0;
 }
 
-form {
+.visual-cont-link {
 	text-align: center;
 }
 
-form .form-button {
+.visual-link {
 	background-color: transparent;
 	border: solid 1px #9884aa;
 	border-radius: 5px;
@@ -255,26 +252,26 @@ form .form-button {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 800;
 	color: #fefefe;
-	cursor: pointer;
 	margin-right: 10px;
+	text-decoration: none;
 }
 
-form .form-button:last-child {
+.visual-link:last-child {
 	margin-right: 0;
 }
 
-form .form-button:hover {
+.visual-link:hover {
 	background-color: #69c7e2;
 	transition: 0.3s;
 	box-shadow: 0 5px 0 rgba(67,45,87,0.3);
 }
 
+/*----------------owl carousel-----------------------*/
+
 .owl-carousel {
 	margin-bottom: 65px;
 }
 
-
-/*----------------owl carousel-----------------------*/
 
 .owl-theme .owl-nav.disabled+.owl-dots {
 	margin-top: 0;
@@ -292,7 +289,6 @@ form .form-button:hover {
     transition: opacity .2s ease;
     border-radius: 50%;
     position: relative;
-    outline: none;
 }
 
 .owl-theme .owl-dots .owl-dot.active span:before {
@@ -418,6 +414,7 @@ main {
 
 .info p a {
 	text-decoration: none;
+	color: #6d5384;
 }
 
 .info p a:hover {
