@@ -13,9 +13,10 @@ body {
 }
 
 #wrapper {
+    width: 100%;
+    position: relative;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 header {
@@ -25,7 +26,6 @@ header {
 
 .container  {
     margin: 66px auto 0;
-    padding: 0;
     max-width: 1170px;
     padding: 0 15px;
 }
@@ -99,7 +99,6 @@ nav li:hover::after {
     width: 18px;
     height: 18px;
     background: #f7df59;
-    transform: rotate(45deg);
     left: 64px; 
     top: 80%;
     transform: rotate(45deg);
@@ -112,6 +111,7 @@ nav li:hover::after {
 
 .logo-text-2 {
     font-size: 14px;
+    line-height: 1em;
 }
 
 .a1 {
