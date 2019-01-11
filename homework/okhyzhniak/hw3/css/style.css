@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #626262;
+    font-family: 'Times New Roman', 'Times' serif;
+    font-size: 14px;
+    min-width: 320px;
+ }
+ *{
+ 	box-sizing: border-box;
+ }
+ .wrapper{
+	width: 100%;
+	position: relative;
+	background-image: url("../img/bg-wrapper.jpg");
+	background-repeat: repeat;
+	height: 700px;
+ }
+ .conteiner{
+ 	max-width: 1170px;
+ 	margin: 0 auto;
+ 	padding: 0 15px;
+ 	background: red;
+ }
+ .header{
+	background-image: url("../img/bg-header.jpg");
+	position: relative;
+ }
+.logo{
+ 	max-width: 300px;
+ 	background: green;
+ }
+.logo_circle{
+ 	max-width: 82px;
+ 	display: inline-block;
+ 	vertical-align: bottom;
+ }
+ .logo_circle img{
+ 	width: 100%;
+ }
+ .logo_text{
+ 	width: 100%
+ 	display: inline-block;
+ 	vertical-align: bottom;
+ }
+ .nav1{
+ 	max-width: 590px;
+ 	background-color: yellow;
+ }
