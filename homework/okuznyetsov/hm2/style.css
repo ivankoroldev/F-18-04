@@ -1,0 +1,182 @@
+body { 
+    margin: 0;
+    padding: 0;
+    color: #626262;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    min-width: 320px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#page {
+    background: white;
+    max-width: 1093px;
+    margin: 0 auto 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.logo {
+    margin: 6.7% 0 4.7% 0;
+    text-align: center;
+}
+
+.menu {
+    padding-bottom: 4%;
+}
+
+.line {
+    margin: 0;
+    text-align: center;
+}
+.line li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 45px;
+}
+
+.line a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.line a:hover {
+    color: red;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.visual {
+    margin-bottom: 3.3%;
+}
+
+.visual img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.inscription {
+    color: #b4ad9e;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+.inscription:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.first h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.first p {
+    font-family: Georgia;
+    line-height: 24px;
+    color: #949494;
+}
+
+.second {
+    padding-bottom: 3%;
+    font-family: Georgia;
+}
+
+.second h2 {
+    font-size: 30px;
+    
+}
+
+.second h3 {
+    font-size: 24px;
+}
+
+.second h4 {
+    font-size: 18px;
+}
+
+.lorem {
+    padding: 0 17px;
+}
+
+.lorem li {
+    text-decoration: none;
+    color: #949494;
+    line-height: 20px;
+}
+
+.lorem a {
+    text-decoration: none;
+    color: #949494;  
+}
+
+.lorem a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.nemo {
+    color: #949494;
+    line-height: 20px; 
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2.7%;
+}
+
+.footer {
+    margin: 0;
+    background: #f0f0f0;
+}
+
+.icons {
+    max-width: 1065px;
+    margin: 0 auto;
+    padding:30px 0; 
+    text-align: right;
+}
+
+.fab{
+    color: #6a6a6a;
+    padding: 5px;
+}
+
+.fab:hover{
+    color: red;
+}
+
+.follow {
+    padding-right: 15px;
+}
+
+
+iframe {
+    display: block;
+    margin-top: 25px;
+}
+
+.btn {
+    background: #f0f0f0;;
+    border: none;
+    height: 22px;
+}
+
+.registration {
+    padding-bottom: 30px;
+}
+
+.frame {
+    padding-bottom:3%;
+}
