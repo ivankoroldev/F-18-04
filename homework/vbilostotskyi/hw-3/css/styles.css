@@ -71,20 +71,10 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     font-family: 'gothamblack', Arial, Helvetica, sans-serif;
 }
 
-/* purple triangle */
-.visual-bg:after { 
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 44px;
-    height: 44px;
-    transform: translate(-50%,-50%) rotate(45deg);
-    background: url(../img/header-background.jpg); 
-}
-
-/*  try to do triangle by another way
+ /* try to do triangle by another way */
 .triangle-holder {
+    width: 30px;
+    height: 30px;
     overflow: hidden;
     position: absolute;
     top: 100%;
@@ -93,11 +83,11 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .triangle {
-    background: url(../img/panda.jpg);
-    transform: rotate(45deg);
-    width: 200px;
-    height: 200px;
-} */
+    background: url(../img/header-background.jpg);
+    transform: rotate(-45deg);
+    width: 60px;
+    height: 60px;
+}
 
 .header a,
 .buttons__item {
