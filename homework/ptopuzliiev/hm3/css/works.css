@@ -160,12 +160,8 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 
-
-
-
-
 .visual-bg {
-	background: url("../img/visula-bg.png");
+	background: url("../img/visual-bg.png");
 	height: 600px;
 	color: #fff;
 	padding-top: 250px;
