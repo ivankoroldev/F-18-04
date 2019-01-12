@@ -16,7 +16,8 @@ h1,h2,h3,h4,h6,h5,p {
 }
 
 .header {
-    background: #69507f;
+    width: 100%;
+    text-align: center; 
 }
 
 .logo {
