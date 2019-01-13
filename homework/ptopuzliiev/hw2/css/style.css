@@ -2,158 +2,213 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
-	line-height: 24px;
 	color: #626262;
-	font-family: "Arial";
+	min-width: 320px;
+	font-family: 'Open Sans', sans-serif;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+	margin: 0 0 20px;
+}
+
+/*служеюные классы*/
 
 .container {
-	margin: 0 auto;
-	width: 1063px;
+	max-width: 1093px;
+	margin: 0 auto 0 auto;
+	padding: 0 15px;
 }
 
-h1, h2, h3, h4 {
-	color: #626262;
-}
-
-h1 {
-	font-size: 36px;
-	font-weight: bold;
-	margin-bottom: 12px;
-}
-
-h2{
-	font-size: 30px;
-	font-weight: bold;
-	line-height: 24px;
-	margin-bottom: 35px;
-	margin-top: 0;
-}
-
-h3 {
-	font-size: 24px;
-	line-height: 24px;
-	margin: 25px 0 30px;
-}
-
-h4 {
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: bold;
-	margin: 30px 0;
-}
-
-h5 {
-	color: #b4ad9e;
+.uppercase {
 	text-transform: uppercase;
 }
 
-.logo {
-	text-align: center;
-	margin-top: 80px;
+
+/*использовать служебные классы осторожно */
+
+#wrapper{
+	width: 100%;
+	position: relative;
+	/*overflow: hidden;*/
 }
 
-ul, ol {
+
+/*-----HEADER-----*/
+
+header {
+	padding: 75px 0 35px;
+	text-align: center;
+}
+
+.logo {
+	margin-bottom: 60px;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block; 
+	padding: 0 45px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.nav a:hover {
+	color: red;
+	transition: 0.3s;
+}
+
+
+/*-----VIASUAL-----*/
+
+.visual img {
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+
+/*-----MAIN-----*/
+
+main {
+	padding-bottom: 70px;
+}
+
+main .text {
+	margin-bottom: 30px;
+	color: #b4ad9e;
+	font-family: "arial";
+}
+
+.content-section {
+	max-width: 905px;
+	text-align: left;
+	font-family: "Georgia";
+}
+
+.content-section h1 {
+	font-size: 36px;
+	margin-bottom: 14px;
+}
+
+.content-section p {
+	line-height: 24px;
+}
+
+.content-section h2 {
+	font-size: 30px;
+	line-height: 24px;
+	margin-bottom: 36px;
+}
+
+.bulleted__list {
+	padding-left: 20px;
+	margin: 0;
+}
+
+.bulleted__list li {
+	margin-bottom: 10px;
+}
+
+.bulleted__list li a {
+	text-decoration: none;
+	color: #626262;
+}
+
+.content-section li a span:hover {
+	text-decoration: underline;
+	color: #ea1313;
+	transition: 0.3s;
+}
+
+.bulleted__list li:last-child {
+	margin-bottom: 25px;
+}
+
+.content-section h3 {
+	font-size: 24px;
+	line-height: 24px;
+	margin-bottom: 33px;
+}
+
+.numbered__list {
+	padding-left: 20px;
+	margin: 0;
+}
+
+.numbered__list li {
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+.numbered__list li a {
+	text-decoration: none;
+	color: #626262;
+}
+
+.numbered__list li:last-child {
+	margin-bottom: 30px;
+}
+
+.content-section h4 {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+h4 + p {
+	text-align: center;
+	margin-bottom: 23px;
+}
+
+
+/*-----FOOTER-----*/
+
+footer {
+	padding: 30px 0 50px;
+	background: #f0f0f0;
+}
+
+footer .footer__social {
+	text-align: right;
+}
+
+.footer__link {
+	display: inline-block;
+	margin-right: 14px;
+}
+
+footer ul {
+	display: inline-block;
 	padding: 0;
 	margin: 0;
 }
 
-ul li a {
-	text-decoration: none;
-}
-
-nav {
-	text-align: center;
-}
-header nav ul li {
+footer ul li {
 	display: inline-block;
-}
-
-header nav ul li a {
-	text-transform: uppercase;
-	line-height: 24px;
-	color: #626262;
-	display: block;
-	padding: 30px;
-}
-
-header nav ul li a:hover {
-	color: #ea1313;
-	transition: color 0.3s;
-}
-
-header .viewport-image {
-	text-align: center;
-}
-
-section .container .perfect-weekend p {
-	line-height: 24px;
-	margin-bottom: 20px;
-	margin-top: 0;
-}
-
-section .container .perfect-weekend h5{
-	margin-bottom: 0;
-}
-
-section .container .here-title ul {
-	margin-left: 15px;
-}
-
-section .container .here-title ul li a {
-	line-height: 24px;
-	margin-bottom: 10px;
-	color: inherit;
-}
-
-.here-title span {
-	color: #ea1313;
-	text-decoration: underline;
-}
-
-ol {
-	margin-left: 15px;
-}
-
-ol li a {
+	vertical-align: top;
 	text-decoration: none;
-	color: inherit;
+	padding: 0 9px;
 }
 
-.blochquote {
-	text-align: center;
-}
-.blochquote p {
-	margin: 0 0 20px;
-}
-
-section .container h5 {
-	margin-bottom: 100px;
-}
-
-footer {
-	background: #f0f0f0;
-	width: 100%;
-	text-align: right;
-}
-
-.footer-social {
-	padding: 30px 0 50px;
-}
-
-.footer-social .fab {
-	padding: 9px;
-	cursor: pointer;
-	line-height: 15px;
+.fab {
+	color: #626262;
 	font-size: 15px;
 }
 
-.footer-social .fab:hover {
+.fab:hover {
 	color: #ea1313;
+	transition: 0.3s;
 }
 
-.footer-link {
-	margin-right: 16px;
-	color: #000000;
-}

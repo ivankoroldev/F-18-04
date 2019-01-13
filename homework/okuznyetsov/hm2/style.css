@@ -1,9 +1,22 @@
+body { 
+    margin: 0;
+    padding: 0;
+    color: #626262;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    min-width: 320px;
+}
 
-.page {
-    max-width: 1065px;
-    margin: 0 auto;
+* {
+    box-sizing: border-box;
+}
+
+#page {
     background: white;
-    
+    max-width: 1093px;
+    margin: 0 auto 0 auto;
+    padding: 0 15px;
+    position: relative;
 }
 
 .logo {
@@ -11,23 +24,26 @@
     text-align: center;
 }
 
-.menu>ul {
+.menu {
+    padding-bottom: 4%;
+}
+
+.line {
+    margin: 0;
     text-align: center;
 }
-.menu>ul>li {
-    float: left;
-    list-style: none;
-    padding: 0 7%;
+.line li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 45px;
 }
 
-.menu>ul>li>a {
+.line a {
     text-decoration: none;
-    color: #626262;;
-    font-family: Times New Roman;
-    font-size: 14px;
+    color: inherit;
 }
 
-.menu>ul>li>a:hover {
+.line a:hover {
     color: red;
 }
 
@@ -37,96 +53,98 @@ display: table;
 clear: both;
 }
 
-
-
-.line {
-    margin: 0 20%;
+.visual {
+    margin-bottom: 3.3%;
 }
 
-.main-image {
-    margin-top: 3%;
+.visual img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.inscription {
+    color: #b4ad9e;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+.inscription:hover {
+    color: red;
+    cursor: pointer;
 }
 
 
 .first h1{
     font-size: 36px;
     font-weight: bold;
-    font-family: Times New Roman;
-    color: #626262;
 }
 
 .first p {
-    font-size: 14px;
     font-family: Georgia;
     line-height: 24px;
     color: #949494;
 }
+
+.second {
+    padding-bottom: 3%;
+    font-family: Georgia;
+}
+
 .second h2 {
     font-size: 30px;
-    font-family: Georgia;
-    color: #626262;
+    
 }
 
 .second h3 {
     font-size: 24px;
-    font-family: Georgia;
-    color: #626262;
 }
 
 .second h4 {
     font-size: 18px;
-    font-family: Georgia;
-    color: #626262;
-}
-
-.lorem>li>a {
-    text-decoration: none;
-     color: #949494;
-    
-}
-
-.lorem>li>a:hover {
-    text-decoration: underline;
-    color: red;
 }
 
 .lorem {
     padding: 0 17px;
-    
 }
-.lorem>li {
+
+.lorem li {
     text-decoration: none;
-     color: #949494;
-    font-family: Georgia;
-    font-size: 14px;
+    color: #949494;
     line-height: 20px;
 }
 
+.lorem a {
+    text-decoration: none;
+    color: #949494;  
+}
+
+.lorem a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
 .nemo {
-     color: #949494;
-    font-family: Georgia;
-    font-size: 14px;
+    color: #949494;
     line-height: 20px; 
     text-align: center;
-    margin-bottom: 15px;
+    margin: 0;
+    padding-bottom: 2.7%;
 }
-
-
-textarea {
-    border: none;
-}
-
 
 .footer {
     margin: 0;
     background: #f0f0f0;
-    height: 100px;
 }
 
 .icons {
     max-width: 1065px;
     margin: 0 auto;
-    padding-top:30px; 
+    padding:30px 0; 
     text-align: right;
 }
 
@@ -140,19 +158,25 @@ textarea {
 }
 
 .follow {
-    font-family: Times New Roman;
-    font-size: 14px;
     padding-right: 15px;
 }
 
-.photodiary {
-    color: #b4ad9e;
-    font-family: Arial;
-    font-size: 14px;
+
+iframe {
+    display: block;
+    margin-top: 25px;
 }
 
+.btn {
+    background: #f0f0f0;;
+    border: none;
+    height: 22px;
+}
 
+.registration {
+    padding-bottom: 30px;
+}
 
-.content {
-    margin-top: 45px;
+.frame {
+    padding-bottom:3%;
 }
