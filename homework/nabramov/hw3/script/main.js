@@ -1,6 +1,6 @@
 window.onload = function(){
 let elem = document.getElementsByClassName('nav');
-let elementPag = document.getElementsByClassName('pg');
+let elem1=document.getElementsByClassName("li");
 toggleClass = function(){
 	for (var i =0;i<elem.length;i++){
 		elem[i].classList.remove("active");
@@ -9,14 +9,15 @@ toggleClass = function(){
 };
 for(var i=0;i<elem.length;i++){
 	elem[i].addEventListener("click",toggleClass);
-}
-toggleClass = function(){
-	for (var i=0;i<elem.length;i++){
-		elementPag[i].classList.remove("is-active");
-		this.classList.add("is-active");
 	}
-};
-for(var i=0;i<elem.length;i++){
-	elementPag[i].addEventListener("click",toggleClass);
-};
+toggleClass=function() {
+	for(var i=0;i<elem1.length;i++){
+		elem1[i].classList.remove('active-li')
+		this.classList.add("active-li")
+	}
 }
+	for (var i =0; i < elem1.length; i++) {
+		elem1[i].addEventListener("click",toggleClass);
+	}
+}
+
