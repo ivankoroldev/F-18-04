@@ -302,6 +302,12 @@ main .container{
   color: #6b5181;
   border-radius: 5px;
   box-shadow: 0 5px 0 0 rgb(209,209,209);
+  transition: all .5s  ease-in-out;
+}
+.box a:hover{
+  transform: scale(1.1);
+  box-shadow: 0 10px 50px 0 rgba(0,0,0,0.9);
+
 }
 .box img{
   max-width: 100%;
@@ -311,10 +317,11 @@ main .container{
   border-radius: 5px;
 }
 .img-hold{
-  margin: 0 0 10px;
+  margin-bottom:20px;
 }
 .box h4{
-  margin: 25px 0 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 .text-box{
   background: #fff;
@@ -341,11 +348,14 @@ main .container{
   justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
+  padding: 50px 0 50px;
 }
 .footer-link{
   display: inline-block;
   vertical-align: middle;
-  padding: 50px 0 70px;
+}
+.footer a{
+  color: #6d5384;
 }
 @media only screen and (max-width: 1023px) {
   .box{
@@ -356,4 +366,6 @@ main .container{
   .box{
     width: 100%;
   }
+
 }
+
