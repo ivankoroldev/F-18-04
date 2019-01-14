@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1023px) {
+    .head-nav__item {
+        padding: 0 15px;
+    }
+
+    .head-nav {
+        margin: 0 -15px;
+    }
+
+    .visual {
+        padding: 140px 0 100px;
+    }
+
+    .visual__title {
+        font-size: 55px;
+    }
+
+    .visual__text {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .head-nav {
+        display: none;
+    }
+
+    .visual__title {
+        font-size: 35px;
+    }
+
+    .visual__text {
+        font-size: 15px;
+    }
+
+    .features__item {
+        width: 50%;
+    }
+
+    .works__item {
+        width: 50%;
+    }
+}
