@@ -527,3 +527,177 @@ footer {
 .heart {
 	color: red;
 }
+
+ .nav-opener {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        color: aquamarine;
+        text-transform: uppercase;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Raleway';
+	 	padding: 5px 0;
+	 	display: none;
+        }
+
+@media only screen and (max-width: 767px) {
+	
+	.nav-opener {
+		display: block;
+	}
+	
+	 .navigation {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        transition: all .3s ease-in-out;
+        width: 100%;
+        height: auto;
+        background: rgba(100, 149, 237, 0.78);
+        margin: 0;
+        padding: 0;
+		 text-align: center;
+    }
+	.navigation li {
+		font-size: 10px;
+		line-height: 2;
+		display: block;
+		float: none;}
+	.navigation li.active a {
+		transform: none;
+		color: #fff;
+	}
+	
+	.navigation li a:hover {
+		color: #e84545;
+		transform: scale(1.2);
+	}
+	
+	.active-nav .navigation {
+        right: 0;
+    }
+	
+	.visual {
+		padding: 200px 0 20px;
+	}
+	
+	.visual h1 {
+		font-size: 18px;
+   		padding: 0 0px 5px;
+	}
+	.visual p {
+		font-size: 13px;
+	}
+	
+	.btn-transition {
+		padding: 10px 0 10px;}
+	
+	.btn-wrap a {
+   		 font-size: 10px;
+    	 font-weight: 400;
+		padding: 5px 25px;}
+	
+	.information {
+		padding: 5px 0 25px;}
+	
+	.information ul li:nth-child(odd){
+		display: none;
+	}
+	.information ul li {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	
+	.box h3,.box-founder h3 {
+		text-transform: uppercase;
+		padding: 10px 0 10px;
+		font-size: 12px;
+	}
+	
+	.box p,.box-founder p {
+		font-size: 10px;
+	}
+	
+	.content-wrap ul li:nth-child(odd){
+		display: none;
+	}
+	
+	.content-wrap ul li {
+		width: 100%;
+		margin-bottom: 2px;}
+	
+	.founder-wrap>ul>li:nth-child(odd){
+		display: none;
+	}
+	
+	.founder-wrap>ul>li {
+		width: 100%;
+		margin-bottom: 2px;}
+	.box-founder img {
+		max-width: 75%;
+	}
+	
+	.box-founder {
+    padding: 25px 5px;
+    color: #6c7279;
+    text-align: center;
+		font-size: 12px;}
+	
+	.box-founder h4 {
+		font-size: 11px;
+		padding: 7px 0;
+	}
+	
+	.icon-link {
+		text-align: center;
+	}
+	.list-icon a, .icons a {
+		padding: 5px 6px;
+	}
+	
+	.clients {
+		display: none;
+	}
+	
+	.download-wraper {
+		padding: 20px 0 10px;}
+	
+	.download-wraper h2 {
+		font-size: 13px;
+		font-weight: 300;
+		}
+	.download-wraper h3{
+		font-size: 12px;
+	}
+	
+	.btn-wrap-dwn a {
+		font-size: 10px;
+		padding: 10px 60px;}
+	
+	.footer-txt {
+		font-size: 12px;
+		line-height: 1.2;
+		width: 100%;
+		padding: 0px 0px;
+		margin-bottom: 15px;
+	}
+	
+	.icons {
+		margin: 0 -5px;}
+	
+	.footer-wrap {
+		padding: 10px;
+	}
+	
+	.text-author {
+		padding: 10px;
+	}
+	
+	.text-author p {
+		font-size: 10px;
+	}
+	
+	
+}
