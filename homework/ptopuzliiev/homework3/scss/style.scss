@@ -97,20 +97,20 @@ h1,h2,h3,h4,h5,h6, p {
 					display: inline-block;
 					vertical-align: middle;
 					padding-left: 10px;
+					font-family: "Gotham", sans-serif;
+					font-weight: 100;
 
 					.top-text {
 						display: block;
 						font-size: 28px;
 						line-height: 1;
-						font-family: "GothamThin", sans-serif;
-						font-weight: 100;
+						
 					}
 
 					.bottom-text {
 						font-size: 14px;
 						line-height: 1;
-						font-family: "GothamThin", sans-serif;
-						font-weight: 100;
+						
 					}
 				}
 				.navigation ul {
@@ -132,70 +132,68 @@ h1,h2,h3,h4,h5,h6, p {
 		}
 
 
-						&.active a {
-						border-color: #f7df59; 
-						background-color: #f7df59;
-						box-shadow: 0px 5px 1px -1px rgba(76,47,101,1);
-						transform: scale(1.05);
+				&.active a {
+				border-color: #f7df59; 
+				background-color: #f7df59;
+				box-shadow: 0px 5px 1px -1px rgba(76,47,101,1);
+				transform: scale(1.05);
 
 @media only screen and (max-width:768px) {
 			transform: scale(1);
 		}
 					}
 
-					&.active a:after {
-						visibility: visible;
-						opacity: 1;
-						transition: .3s all .3s ease-in-out;
-						transform: translate(-50%, -50%) rotate(45deg) scale(1);
-					}
+				&.active a:after {
+					visibility: visible;
+					opacity: 1;
+					transition: .3s all .3s ease-in-out;
+					transform: translate(-50%, -50%) rotate(45deg) scale(1);
+				}
 
-						a{
-							text-decoration: none;
-							color: inherit;
-							text-transform: uppercase;
-							display: block;
-							padding: 20px 30px;
-							border: 1px solid #9884aa;
-							font-family: "GothamBlack", sans-serif;
-							border-radius: 5px;
-							font-weight: 600;
-							position: relative;
-							transition: all .3s ease-in-out;
+					a{
+						text-decoration: none;
+						color: inherit;
+						text-transform: uppercase;
+						display: block;
+						padding: 20px 30px;
+						border: 1px solid #9884aa;
+						font-family: "Gotham", sans-serif;
+						border-radius: 5px;
+						font-weight: 800;
+						position: relative;
+						transition: all .3s ease-in-out;
 
-							&:hover {
-								border-color: #f7df59; 
-								background-color: #f7df59;
-								box-shadow: 0px 5px 1px -1px rgba(76,47,101,1);
-								transform: scale(1.05);
+						&:hover {
+							border-color: #f7df59; 
+							background-color: #f7df59;
+							box-shadow: 0px 5px 1px -1px rgba(76,47,101,1);
+							transform: scale(1.05);
 
 @media only screen and (max-width:768px) {
-			transform: scale(1);
-		}
-							}
-							&:after {
-								content: "";
-								position: absolute;
-								top: 100%;
-								left: 50%;
-								width: 16px;
-								height: 16px;
-								background-color: #f7df59;
-								transform: translate(-50%, -50%) rotate(45deg) scale(1);
-								border-right: 2px solid rgba(76,47,101,1);
-								border-bottom: 2px solid rgba(76,47,101,1);
-								margin-top: 2px;
-								opacity: 0;
-								visibility: hidden;
-								transition: .3s all .3s ease-in-out;
-								transition: none;
-							}
-							&:hover:after {
-								visibility: visible;
-								opacity: 1;
-								transition: .3s all .3s ease-in-out;
-								transform: translate(-50%, -50%) rotate(45deg) scale(1);
-							}
+		transform: scale(1);
+	}
+						}
+						&:after {
+							content: "";
+							position: absolute;
+							width: 16px;
+							height: 16px;
+							background: #f7df59;
+							top: 100%;
+							left: 50%;
+							box-shadow: 3px 3px 0px 0px rgba(76,47,101,1);
+							transform: translate(-50%,-50%) rotate(45deg);
+							opacity: 0;
+							visibility: hidden;
+							transition: .3s all .3s ease-in-out;
+							transition: none;
+						}
+						&:hover:after {
+							visibility: visible;
+							opacity: 1;
+							transition: .3s all .3s ease-in-out;
+							transform: translate(-50%, -50%) rotate(45deg) scale(1);
+						}
 						}
 					}
 				}
@@ -268,17 +266,18 @@ h1,h2,h3,h4,h5,h6, p {
 
 			.visual-text-hold {
 				border-bottom: 2px solid #9884aa;
-				font-family: "GothamBlack", sans-serif;
+				font-family: "Gotham", sans-serif;
 				font-size: 34px;
-				font-weight: 700;
 				word-spacing: 6px;
+				font-weight: 600;
 
 				h1 {
 					font-size: 112px;
-					font-family: "GothamBlack", sans-serif;
+					font-family: "Gotham", sans-serif;
 					margin-bottom: 30px;
 					line-height: 1;
 					word-spacing: 9px;
+
 
 	@media only screen and (max-width:768px) {
 			font-size: 60px;
@@ -305,9 +304,10 @@ h1,h2,h3,h4,h5,h6, p {
 
 				.slide {
 					font-size: 28px;
-					font-family: "GothamThin", sans-serif;
+					font-family: "Gotham", sans-serif;
 					font-weight: 100;
 					line-height: 1.2;
+					font-weight: 100;
 
 @media only screen and (max-width:768px) {
 			font-size: 35px;

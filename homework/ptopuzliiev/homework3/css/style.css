@@ -81,18 +81,16 @@ body {
         body #wrapper header .header-wrap .logo-text {
           display: inline-block;
           vertical-align: middle;
-          padding-left: 10px; }
+          padding-left: 10px;
+          font-family: "Gotham", sans-serif;
+          font-weight: 100; }
           body #wrapper header .header-wrap .logo-text .top-text {
             display: block;
             font-size: 28px;
-            line-height: 1;
-            font-family: "GothamThin", sans-serif;
-            font-weight: 100; }
+            line-height: 1; }
           body #wrapper header .header-wrap .logo-text .bottom-text {
             font-size: 14px;
-            line-height: 1;
-            font-family: "GothamThin", sans-serif;
-            font-weight: 100; }
+            line-height: 1; }
         body #wrapper header .header-wrap .navigation ul {
           font-size: 0;
           line-height: 0;
@@ -137,9 +135,9 @@ body {
               display: block;
               padding: 20px 30px;
               border: 1px solid #9884aa;
-              font-family: "GothamBlack", sans-serif;
+              font-family: "Gotham", sans-serif;
               border-radius: 5px;
-              font-weight: 600;
+              font-weight: 800;
               position: relative;
               -webkit-transition: all .3s ease-in-out;
               -o-transition: all .3s ease-in-out;
@@ -160,17 +158,16 @@ body {
               body #wrapper header .header-wrap .navigation ul li a:after {
                 content: "";
                 position: absolute;
-                top: 100%;
-                left: 50%;
                 width: 16px;
                 height: 16px;
-                background-color: #f7df59;
-                -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
-                -ms-transform: translate(-50%, -50%) rotate(45deg) scale(1);
-                transform: translate(-50%, -50%) rotate(45deg) scale(1);
-                border-right: 2px solid #4c2f65;
-                border-bottom: 2px solid #4c2f65;
-                margin-top: 2px;
+                background: #f7df59;
+                top: 100%;
+                left: 50%;
+                -webkit-box-shadow: 3px 3px 0px 0px #4c2f65;
+                box-shadow: 3px 3px 0px 0px #4c2f65;
+                -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                -ms-transform: translate(-50%, -50%) rotate(45deg);
+                transform: translate(-50%, -50%) rotate(45deg);
                 opacity: 0;
                 visibility: hidden;
                 -webkit-transition: .3s all .3s ease-in-out;
@@ -242,13 +239,13 @@ body {
               box-shadow: 0px 5px 0px -1px #432d57; }
       body #wrapper .visual-case .visual-text-hold {
         border-bottom: 2px solid #9884aa;
-        font-family: "GothamBlack", sans-serif;
+        font-family: "Gotham", sans-serif;
         font-size: 34px;
-        font-weight: 700;
-        word-spacing: 6px; }
+        word-spacing: 6px;
+        font-weight: 600; }
         body #wrapper .visual-case .visual-text-hold h1 {
           font-size: 112px;
-          font-family: "GothamBlack", sans-serif;
+          font-family: "Gotham", sans-serif;
           margin-bottom: 30px;
           line-height: 1;
           word-spacing: 9px; }
@@ -267,9 +264,10 @@ body {
         padding: 40px 0 60px; }
         body #wrapper .visual-case .slide-show .slide {
           font-size: 28px;
-          font-family: "GothamThin", sans-serif;
+          font-family: "Gotham", sans-serif;
           font-weight: 100;
-          line-height: 1.2; }
+          line-height: 1.2;
+          font-weight: 100; }
           @media only screen and (max-width: 768px) {
             body #wrapper .visual-case .slide-show .slide {
               font-size: 35px; } }
