@@ -20,7 +20,7 @@ body {
   body .listreset {
     padding: 0;
     margin: 0;
-    list-style-type: none; }
+    list-style: none; }
   body .extra-color {
     color: #ead7fb; }
   body #wrapper {
@@ -53,12 +53,12 @@ body {
         align-items: center;
         padding-top: 65px;
         color: #fff; }
-        @media only screen and (min-width: 320px) and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           body #wrapper header .header-wrap {
             display: block;
             position: relative;
             padding-top: 10px; } }
-        @media only screen and (min-width: 320px) and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           body #wrapper header .header-wrap .logo {
             text-align: center; } }
         body #wrapper header .header-wrap .logo a {
@@ -66,7 +66,7 @@ body {
           color: inherit;
           display: inline-block;
           vertical-align: top; }
-          @media only screen and (min-width: 320px) and (max-width: 1024px) {
+          @media only screen and (max-width: 1024px) {
             body #wrapper header .header-wrap .logo a {
               margin-bottom: 10px; } }
         body #wrapper header .header-wrap .logo-hold {
@@ -103,7 +103,7 @@ body {
             font-size: 18px;
             line-height: 1.2;
             padding: 0 5px; }
-            @media only screen and (min-width: 320px) and (max-width: 768px) {
+            @media only screen and (max-width: 768px) {
               body #wrapper header .header-wrap .navigation ul li {
                 display: block;
                 text-align: center;
@@ -116,7 +116,7 @@ body {
               -webkit-transform: scale(1.05);
               -ms-transform: scale(1.05);
               transform: scale(1.05); }
-              @media only screen and (min-width: 320px) and (max-width: 768px) {
+              @media only screen and (max-width: 768px) {
                 body #wrapper header .header-wrap .navigation ul li.active a {
                   -webkit-transform: scale(1);
                   -ms-transform: scale(1);
@@ -152,7 +152,7 @@ body {
                 -webkit-transform: scale(1.05);
                 -ms-transform: scale(1.05);
                 transform: scale(1.05); }
-                @media only screen and (min-width: 320px) and (max-width: 768px) {
+                @media only screen and (max-width: 768px) {
                   body #wrapper header .header-wrap .navigation ul li a:hover {
                     -webkit-transform: scale(1);
                     -ms-transform: scale(1);
@@ -194,7 +194,7 @@ body {
       color: #fff;
       position: relative;
       text-align: center; }
-      @media only screen and (min-width: 320px) and (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         body #wrapper .visual-case {
           padding-top: 450px; } }
       body #wrapper .visual-case .triangle {
@@ -221,7 +221,7 @@ body {
           font-weight: 800;
           padding: 0 5px;
           margin-bottom: 20px; }
-          @media only screen and (min-width: 320px) and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
             body #wrapper .visual-case .buttons-hold .buttons-hold-item {
               display: block; } }
           body #wrapper .visual-case .buttons-hold .buttons-hold-item a {
@@ -241,26 +241,26 @@ body {
               -webkit-box-shadow: 0px 5px 0px -1px #432d57;
               box-shadow: 0px 5px 0px -1px #432d57; }
       body #wrapper .visual-case .visual-text-hold {
-        border-bottom: 2px solid #9884aa; }
+        border-bottom: 2px solid #9884aa;
+        font-family: "GothamBlack", sans-serif;
+        font-size: 34px;
+        font-weight: 700;
+        word-spacing: 6px; }
         body #wrapper .visual-case .visual-text-hold h1 {
           font-size: 112px;
           font-family: "GothamBlack", sans-serif;
           margin-bottom: 30px;
           line-height: 1;
           word-spacing: 9px; }
-          @media only screen and (min-width: 480px) and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
             body #wrapper .visual-case .visual-text-hold h1 {
               font-size: 60px; } }
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @media only screen and (max-width: 480px) {
             body #wrapper .visual-case .visual-text-hold h1 {
               font-size: 50px; } }
         body #wrapper .visual-case .visual-text-hold p {
-          font-family: "GothamBlack", sans-serif;
-          font-size: 34px;
-          margin-bottom: 40px;
-          font-weight: 700;
-          word-spacing: 6px; }
-          @media only screen and (min-width: 320px) and (max-width: 768px) {
+          margin-bottom: 40px; }
+          @media only screen and (max-width: 768px) {
             body #wrapper .visual-case .visual-text-hold p {
               font-size: 30px; } }
       body #wrapper .visual-case .slide-show {
@@ -270,10 +270,10 @@ body {
           font-family: "GothamThin", sans-serif;
           font-weight: 100;
           line-height: 1.2; }
-          @media only screen and (min-width: 480px) and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
             body #wrapper .visual-case .slide-show .slide {
               font-size: 35px; } }
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @media only screen and (max-width: 480px) {
             body #wrapper .visual-case .slide-show .slide {
               font-size: 30px; } }
           body #wrapper .visual-case .slide-show .slide p {
@@ -336,10 +336,10 @@ body {
           color: #654d7b;
           margin-bottom: 15px;
           line-height: 1; }
-          @media only screen and (min-width: 480px) and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
             body #wrapper main .main-wrapper .heading h2 {
               font-size: 53px; } }
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @media only screen and (max-width: 480px) {
             body #wrapper main .main-wrapper .heading h2 {
               font-size: 42px; } }
         body #wrapper main .main-wrapper .heading h3 {
@@ -349,10 +349,10 @@ body {
           color: #fff;
           line-height: 1;
           margin-bottom: 0; }
-          @media only screen and (min-width: 480px) and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
             body #wrapper main .main-wrapper .heading h3 {
               font-size: 40px; } }
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @media only screen and (max-width: 480px) {
             body #wrapper main .main-wrapper .heading h3 {
               font-size: 26px; } }
       body #wrapper main .main-wrapper .boxes-hold {
@@ -372,7 +372,7 @@ body {
             body #wrapper main .main-wrapper .boxes-hold .box {
               width: 50%;
               margin-bottom: 20px; } }
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @media only screen and (max-width: 480px) {
             body #wrapper main .main-wrapper .boxes-hold .box {
               width: 100%; } }
           body #wrapper main .main-wrapper .boxes-hold .box a {
@@ -381,12 +381,19 @@ body {
             display: block;
             border-radius: 5px;
             background-color: #fff;
-            padding: 20px 20px 30px; }
+            padding: 20px 20px 30px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
+            body #wrapper main .main-wrapper .boxes-hold .box a:hover {
+              opacity: 0.8; }
             body #wrapper main .main-wrapper .boxes-hold .box a h4 {
               color: #6b5181;
               font-family: "Roboto", sans-serif;
               font-weight: 500;
               margin-bottom: 0; }
+              body #wrapper main .main-wrapper .boxes-hold .box a h4:hover {
+                text-decoration: underline; }
           body #wrapper main .main-wrapper .boxes-hold .box .img-hold {
             margin-bottom: 30px; }
             body #wrapper main .main-wrapper .boxes-hold .box .img-hold img {
@@ -398,19 +405,19 @@ body {
         padding: 35px 22px 32px 20px;
         border-radius: 5px;
         -webkit-box-shadow: 0 5px 0 rgba(194, 182, 203, 0.3);
-        box-shadow: 0 5px 0 rgba(194, 182, 203, 0.3); }
-        @media only screen and (min-width: 480px) and (max-width: 768px) {
+        box-shadow: 0 5px 0 rgba(194, 182, 203, 0.3);
+        font-weight: 300;
+        line-height: 2;
+        text-align: center;
+        letter-spacing: 0.3px; }
+        @media only screen and (max-width: 768px) {
           body #wrapper main .main-wrapper .info {
             font-size: 16px; } }
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @media only screen and (max-width: 480px) {
           body #wrapper main .main-wrapper .info {
             font-size: 20px; } }
         body #wrapper main .main-wrapper .info p {
-          font-weight: 300;
-          margin-bottom: 0;
-          line-height: 2;
-          text-align: center;
-          letter-spacing: 0.3px; }
+          margin-bottom: 0; }
           body #wrapper main .main-wrapper .info p span {
             font-weight: 500; }
           body #wrapper main .main-wrapper .info p a {
@@ -418,7 +425,8 @@ body {
             text-decoration: none;
             color: #6d5384; }
             body #wrapper main .main-wrapper .info p a:hover {
-              text-decoration: underline; }
+              text-decoration: underline;
+              opacity: 0.8; }
     body #wrapper footer {
       padding: 45px 0 70px; }
       body #wrapper footer .footer-wrap {
@@ -434,20 +442,23 @@ body {
         justify-content: space-between;
         font-weight: 300;
         font-size: 14px; }
-        @media only screen and (min-width: 480px) and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           body #wrapper footer .footer-wrap {
             display: block;
             text-align: center;
             font-size: 20px; } }
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @media only screen and (max-width: 480px) {
           body #wrapper footer .footer-wrap {
             display: block;
             text-align: center;
             font-size: 18px; } }
-        @media only screen and (min-width: 320px) and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           body #wrapper footer .footer-wrap .left-block {
             margin-bottom: 20px; } }
         body #wrapper footer .footer-wrap .footer-link {
           margin-bottom: 0;
           color: #6d5386;
           text-decoration: none; }
+          body #wrapper footer .footer-wrap .footer-link:hover {
+            opacity: 0.8;
+            text-decoration: underline; }
