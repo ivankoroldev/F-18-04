@@ -130,9 +130,9 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     height: 82px;
 }
 
-.nav {
+/* .nav {
     position: relative;
-}
+} */
 
 .burger-menu {
     content: "d";
@@ -271,9 +271,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .gallery {
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
     font-size: 0;
     line-height: 0;
     margin: 0 -25px;
@@ -281,11 +278,13 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
 .gallery-link {
     display: inline-block;
+    vertical-align: top;
     text-decoration: none;
     padding: 20px 20px 0 20px;
     background-color: #fafafa;
     box-shadow: 0 4px 1px rgba(0,0,0,0.5);
     border-radius: 4px;
+    color: #6b5181;
 }
 
 .gallery__item {
@@ -306,7 +305,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .gallery__img {
-    display: block;
     max-width: 100%;
 	height: auto;
 	display: inline-block;
@@ -329,6 +327,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 .main__text-link {
     font-weight: bold;
     text-decoration: none;
+    color: #6b5181;
 }
 
 .main__text-link:hover {
@@ -352,6 +351,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
 .footer__link {
     text-decoration: none;
+    color: #6b5181;
 }
 
 .footer__link:hover {
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     display: none;
     width: 45px;
     height: 35px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
  }
  

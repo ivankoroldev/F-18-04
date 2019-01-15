@@ -40,4 +40,9 @@
     .works__item {
         width: 50%;
     }
+
+    .our-team__item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
