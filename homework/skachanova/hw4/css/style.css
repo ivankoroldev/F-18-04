@@ -115,7 +115,7 @@ h1,h2,h3,h4,h5,h6, p {
 
 .visual-bg {
 	background: url("../img/header-img.jpg");
-	min-height: 835px;
+	min-height: 650px;
 	color: inherit;
 	padding: 155px 0 70px;
 	position: relative;
@@ -123,7 +123,7 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .visual-bg-text {
-	margin-bottom: 80px;
+	margin: 0 auto 80px;
 	max-width: 900px;
 }
 
@@ -184,110 +184,57 @@ h1,h2,h3,h4,h5,h6, p {
 	visibility: visible;
 }
 
-
-/* 
-
-
-.top-text {
-	display: block;
-	font-size: 28px;
-	line-height: 1;
-	font-weight: 300;
-}
-
-.bottom-text {
-	font-weight: 300;
-	display: block;
-	font-size: 14px;
-	line-height: 1;
-}
-
-.visual-bg {
-	background: url("../img/visula-bg.png");
-	min-height: 835px;
-	color: #fff;
-	padding: 250px 0 70px;
-	position: relative;	
-	font-size: 34px;
-	text-align: center;
-}
-
-.visual-bg h1 {
-	word-spacing: 20px;
-	font-size: 112px;
-	line-height: 1;
-	margin-bottom: 5px;
-}
-
-.visual-bg p {
-	word-spacing: 13px;
-}
-
-.extra-color {
-	color: #ead7fb;
-}
-
-.visual-text-hold {
-	padding-bottom: 30px;
-	border-bottom: 2px solid #9884aa;
-}
-
-.pagination	{
+.boxes-hold {
 	font-size: 0;
 	line-height: 0;
-	padding: 20px 0;
-	text-align: center;
+	margin: 0 -35px 125;
+	padding: 120px 0 0;
+
 }
 
-.pagination li {
+.box {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.2;
+	width: 33.33%;
 	display: inline-block;
 	vertical-align: top;
-	height: 12px;
-	width: 12px;
-	cursor: pointer;
-	border-radius: 50%;
+	padding: 0 35px;
+	margin-bottom: 75px;
+}
+
+.box a {
+	padding: 20px;
+	display: block;
 	background: #fff;
-	margin: 0 4px;
-	transition: all .3s ease-in-out;
-	position: relative;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #2d3033;
 }
 
-.pagination li:after {
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	border-radius: 50%;
-	border: 1px solid #443255;
-	opacity: 0;
-	visibility: hidden;
-	transition: all .3s ease-in-out;
+.box img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.pagination li:hover, .pagination li.active {
-	background: #443255;
+.img-hold {
+	margin: 0 0 35px;
 }
 
-.pagination li:hover:after, .pagination li.active:after {
-	opacity: 1;
-	visibility: visible;
+.box h4 {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	color: #2d3033;
 }
 
-.slideshow {
-	padding: 40px 0;
+.box p {
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #6c7279;
 }
-
-.slide {
-	font-size: 28px;
-}
-
-.slide-wrap {
-	max-width: 820px;
-	margin: 0 auto; 
-}
-
+/* 
 
 
 main {
