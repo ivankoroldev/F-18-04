@@ -360,9 +360,6 @@ body {
         font-size: 0;
         margin: 0 -20px;
         margin-bottom: 95px; }
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
-          body #wrapper main .main-wrapper .boxes-hold {
-            margin: 0; } }
         body #wrapper main .main-wrapper .boxes-hold .box {
           display: inline-block;
           vertical-align: top;
