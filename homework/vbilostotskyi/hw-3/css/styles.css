@@ -61,6 +61,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .visual-bg {
@@ -363,7 +364,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
         width: 50%;
     }
     .nav__list {
-        display: none;
+        /* display: none; */
     }
 
 @media only screen and (max-width: 767px) {
@@ -395,7 +396,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
   /* burger-menu fron internet */
 
-.menu__icon {
+/* .menu__icon {
     display: none;
     width: 45px;
     height: 35px;
@@ -495,4 +496,4 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
    .nav__item a::after {
     display: none;
    }
-}
+} */
