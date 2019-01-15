@@ -1,6 +1,6 @@
 // owl carousel
 $(document).ready(function(){
-	$('.owl-carousel').owlCarousel({
+	$('.slider').owlCarousel({
     items : 1,
     loop: true,
     center: true,
