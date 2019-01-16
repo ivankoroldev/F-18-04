@@ -189,7 +189,6 @@ h1,h2,h3,h4,h5,h6, p {
 	line-height: 0;
 	margin: 0 -35px 125;
 	padding: 120px 0 0;
-
 }
 
 .box {
@@ -234,8 +233,63 @@ h1,h2,h3,h4,h5,h6, p {
 	text-transform: uppercase;
 	color: #6c7279;
 }
-/* 
 
+.galery-holder {
+	font-size: 0;
+	line-height: 0;
+	min-height: 700px;
+	margin: 0 -1px 100px;
+}
+
+.galery {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.5;
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+	padding: 0 1px;
+	margin-bottom: 1px;
+	position: relative;
+}
+
+.galery img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.hover-text span{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: rgba(232, 69, 69, 0.7);
+	padding: 15px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.hover-text span:hover {
+	opacity: 1;
+	visibility: visible;
+} 
+
+/* 
 
 main {
 	padding: 50px 0;
