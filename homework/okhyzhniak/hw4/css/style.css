@@ -4,7 +4,7 @@ body {
 	font-size: 13px;
 	color: #6d5384;
 	min-width: 320px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	/*font-family: 'Montserrat', sans-serif;*/
 }
@@ -16,4 +16,95 @@ body {
 h1,h2,h3,h4,h5,h6, p {
 	margin: 0 0 20px;
 }
+.listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+#wrapper {
+	width: 100%;
+	position: relative;
+	min-height: 800px;
+	background-color: green;
+}
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+	color: #a2a3af;
+}
+.header-wrap {
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    align-items:center;
+    flex-direction: row;
+}
+.logo {
+	width: 16.66%
+}
+.logo img{
+	width: 100%;
+	height: auto;
+}
+.navigation a {
+	color: inherit;
+}
+
+.navigation ul {
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0 -5px; 
+}
+
+.navigation li {
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+} 
+
+.navigation li a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+
+.navigation li a:hover, .navigation li.active a{
+	background: #30344e;
+	/*border-color: #f7df59;*/
+	box-shadow: 0px 4px 0px -1px rgba(42,45,72,1);
+	transform: scale(1.1);
+}
+
+
+
+
+
+.visual {
+	background: url("../img/visula-bg.jpg");
+	color: #fff;
+	padding-top: 100px;
+	position: relative;
+	z-index: 10;
+}
