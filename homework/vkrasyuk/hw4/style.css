@@ -122,6 +122,9 @@ main{
     line-height: 0;
     font-size: 0;
 }
+.mainimg a:hover{
+    
+}
 .box-hold{
     position: relative;
     width: 33.33%;
