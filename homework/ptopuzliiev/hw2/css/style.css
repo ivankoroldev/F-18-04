@@ -88,7 +88,7 @@ main {
 main .text {
 	margin-bottom: 30px;
 	color: #b4ad9e;
-	font-family: "arial";
+	font-family: 'Open Sans', sans-serif;
 }
 
 .content-section {
@@ -172,7 +172,46 @@ h4 + p {
 	margin-bottom: 23px;
 }
 
+iframe {
+	width: 100%;
+	display: block;
+	min-height: 400px;
+}
 
+.maps {
+	margin-bottom: 10px;
+}
+
+.video {
+	margin-bottom: 70px;	
+}
+
+form {
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #5F9EA0;
+	max-width: 360px;
+	min-width: 320px;
+	border-radius: 6px;
+}
+
+.form__item {
+	margin-bottom: 10px;
+}
+
+.form__button {
+	border: none;
+	padding: 5px 20px;
+	cursor: pointer;
+	background-color: #5F9EA0;
+	color: white;
+	border-radius: 5px;
+}
+
+.form__button:hover {
+	opacity: 0.9;
+	transition: 0.3s;
+}
 /*-----FOOTER-----*/
 
 footer {
