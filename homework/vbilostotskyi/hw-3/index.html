@@ -14,29 +14,43 @@
 </head>
 <body>
     <div id="wrapper">
-        <section class="header-wrapper">
+        <header class="header">
             <div class="container">
-                <header class="header">
+                <div class="header-wrap">
                     <div class="logo">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="logo__text">
-                            <a href="#" class="logo__link">
-                                Tempees.com
-                            </a>
-                            <p class="logo__title">
-                                cool free templates & photos
-                            </p>
-                        </div>
+                        <a href="#">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="logo__text">
+                                <p class="logo__link">
+                                    Tempees.com
+                                </p>
+                                <p class="logo__title">
+                                    cool free templates & photos
+                                </p>
+                            </div>
+                        </a>
                     </div>
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#">about us</a></li>
+                            <li class="nav__item active"><a href="#">about us</a></li>
                             <li class="nav__item"><a href="#">works</a></li>
                             <li class="nav__item"><a href="#">hire us</a></li>
                             <li class="nav__item"><a href="#">contact</a></li>
                         </ul>
+
+                        <!-- burger-menu fron internet -->
+                        <div class="menu__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </nav>
-                </header>
+                </div>
+            </div>
+        </header>
+        <section class="visual-bg">
+            <div class="container">
                 <section class="head-section">
                     <h1 class="head-title">
                         tempees <span class="head-title__span">the best</span> 
@@ -65,6 +79,11 @@
                     <a href="#" class="buttons__item">join us</a>
                     <a href="#" class="buttons__item">sign in</a>
                 </div>
+                <!-- try to do triangle by another way  -->
+                <div class="triangle-holder">
+                    <div class="triangle">
+                    </div>
+                </div>
             </div>
         </section>
         <main class="main">
@@ -74,16 +93,22 @@
                     <h3 class="main__undertitle">The best content on universe</h3>
                     <div class="gallery">
                         <figure class="gallery__item">
-                            <img src="img/Untitled-1.jpg" alt="Untitled-1" class="gallery__img">
-                            <figcaption class="gallery__figcaption">free resurses</figcaption>
+                            <a href="#" class="gallery-link">
+                                <img src="img/Untitled-1.jpg" alt="Untitled-1" class="gallery__img">
+                                <figcaption class="gallery__figcaption">free resurses</figcaption>
+                            </a>
                         </figure>
                         <figure class="gallery__item">
-                            <img src="img/Untitled-2.jpg" alt="Untitled-2" class="gallery__img">
-                            <figcaption class="gallery__figcaption">free photos</figcaption>
+                            <a href="#" class="gallery-link">
+                                <img src="img/Untitled-2.jpg" alt="Untitled-2" class="gallery__img">
+                                <figcaption class="gallery__figcaption">free photos</figcaption>
+                            </a>
                         </figure>
                         <figure class="gallery__item">
-                            <img src="img/Untitled-3.jpg" alt="Untitled-3" class="gallery__img">
-                            <figcaption class="gallery__figcaption">premium resurses</figcaption>
+                            <a href="#" class="gallery-link">
+                                <img src="img/Untitled-3.jpg" alt="Untitled-3" class="gallery__img">
+                                <figcaption class="gallery__figcaption">premium resurses</figcaption>
+                            </a>
                         </figure>    
                     </div>
                 </section>
@@ -101,7 +126,7 @@
         <footer class="footer-wrapper">
             <div class="container">
                 <div class="footer">
-                    <p class="footer__text">Tempees.com / Free Photos & Templates</p>
+                    <p class="footer__text"><a href="#" class="footer__link">Tempees.com</a> / Free Photos & Templates</p>
                     <p class="footer__text">All rights reserved / Designed by <a href="#" class="footer__link">Tempees.com</a></p>
                 </div>
             </div>
