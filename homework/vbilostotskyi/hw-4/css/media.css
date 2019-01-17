@@ -62,7 +62,6 @@
         display: block;
         width: 30px;
         height: 30px;
-        background: #000;
         position: relative;
     }
 
@@ -76,6 +75,8 @@
         transform: translateX(-50%);
         background: #fff;
         top: 18px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
     }
 
     .nav-btn::after,
@@ -100,14 +101,14 @@
     }
 
     .menu-active .nav-btn::before {
-        top: 6px; 
-        top: 50%;
+        top: 12px; 
+        left: 2px;
         transform: rotate(45deg);
     }
 
     .menu-active .nav-btn span {
         top: 12px;
-        top: 50%;
+        left: 2px;
         transform: rotate(-45deg);
     }
 }
