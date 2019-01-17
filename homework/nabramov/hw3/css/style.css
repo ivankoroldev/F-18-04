@@ -369,6 +369,26 @@ main .container{
   .box{
     width: 50%;
   }
+  .logo-hold{
+    width: 60px;
+    height: 60px;
+    padding-top: 15px;
+  }
+  .logo-hold img{
+    width: 35px;
+  }
+  .top-text{
+    font-size: 16px;
+  }
+  .bottom-text{
+    font-size: 13px;
+  }
+  .navigation li{
+    font-size: 15px;
+  }
+  .navigation li a{
+    padding: 10px 15px;
+  }
 }
 @media only screen and (max-width: 767px) {
     .top-text{
@@ -464,7 +484,9 @@ main .container{
   .navigation li a{
     border:none;
     border-radius: 0;
-    
+  }
+  .navigation li a:hover, .navigation li.active a{
+    box-shadow: none;
   }
   .navigation li a::after{
     display: none;

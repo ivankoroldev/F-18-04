@@ -1,0 +1,174 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "raleway", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h5,p {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1200px;
+	padding:0 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.stylereset {
+	list-style-type: none;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	background: url(../img/bg.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+}
+
+.wrapper-color{
+	background: rgba(43,46,74,0.9);
+}
+
+.header{
+	margin-bottom: 150px;
+}
+
+.header-container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	border-bottom: 2px solid #505369;
+}
+
+.logo a {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.navigation ul{
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation li {
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 30px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #ccccd3;
+}
+
+.visual h1 {
+	font-family: "open_sans", sans-serif;
+	font-size: 65px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	word-spacing: 10px;
+}
+
+.visual p {
+	font-family: "raleway", sans-serif;
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 60px;
+	padding: 0 30px;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.btn a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-family: "raleway", sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	background: #e84545;
+	padding: 20px 50px;
+	border-radius: 5px;
+	margin-bottom: 150px;
+}
+
+.main {
+	background: #fff;
+}
+
+.content-box {
+		padding-top: 50px; 
+		font-size: 0;
+		line-height: 0;
+		margin: 0 -35px;
+}
+
+.content {
+		text-align: center;
+		font-size: 18px;
+		line-height: 1;
+		width: 33.33%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 35px;
+		margin-bottom: 30px;
+
+}
+
+.content img{
+	padding-bottom: 20px;
+}
+
+.content h4 {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 700;
+} 
+
+.content p {
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #6c7279;
+}
+
+.photos {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
