@@ -21,10 +21,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .head-nav {
-        display: none;
-    }
-
+    
     .visual__title {
         font-size: 35px;
     }
@@ -44,5 +41,73 @@
     .our-team__item {
         width: 50%;
         margin-bottom: 30px;
+    }
+
+    .footer__contacts-item {
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .footer__contacts {
+        padding-top: 15px;
+    }
+
+    .footer__text {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .nav-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: #000;
+        position: relative;
+    }
+
+    .nav-btn::after,
+    .nav-btn::before,
+    .nav-btn span {
+        position: absolute;
+        height: 4px;
+        width: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        top: 18px;
+    }
+
+    .nav-btn::after,
+    .nav-btn::before {
+        content: '';
+    }
+
+    .nav-btn::after {
+        top: 12px;
+    }
+
+    .nav-btn::before {
+        top: 6px; 
+    }
+
+    .head-nav {
+        display: none;
+    }
+
+    .menu-active .nav-btn::after {
+        opacity: 0;
+    }
+
+    .menu-active .nav-btn::before {
+        top: 6px; 
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .menu-active .nav-btn span {
+        top: 12px;
+        top: 50%;
+        transform: rotate(-45deg);
     }
 }
