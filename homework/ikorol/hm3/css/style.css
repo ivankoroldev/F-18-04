@@ -108,7 +108,7 @@ h1 {
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 999;	
+	z-index: 999;
 }
 
 .header-wrap {
@@ -123,7 +123,7 @@ h1 {
 	flex-direction: row;
 	justify-content: space-between;
 	-ms-align-items: center;
-align-items: center;
+    align-items: center;
 
 }
 
@@ -196,7 +196,7 @@ align-items: center;
 
 
 .logo {
-	
+
 }
 
 .logo-hold {
@@ -248,7 +248,7 @@ align-items: center;
 	color: #fff;
 	padding: 250px 0 70px;
 	position: relative;	
-		font-size: 34px;
+	font-size: 34px;
 	text-align: center;
 }
 
@@ -504,6 +504,7 @@ scss
 		font-size: 30px;
 	}
 }*/
+<<<<<<< HEAD
 
 
 .nav-btn {
@@ -634,3 +635,5 @@ scss
 768 - 1023 - tablet
 1024 - 1199 - desktop
 1200 + - large
+=======
+>>>>>>> skachanova
