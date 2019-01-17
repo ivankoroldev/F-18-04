@@ -70,20 +70,106 @@ h1,h2,h3,h4,h6,h5,p {
     text-transform: uppercase;
 }
 
-.visual {
-    margin-bottom: 30px;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.visual img {
+.holder {
+    background: red;
+    position: relative;
+    z-index: 3;
+    /*opacity: .5;*/
+    /*background: rgba(0,0,0,.5);*/
+}
+
+.holder::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-top: 80px solid red;
+    /*border-bottom: 20px solid transparent;*/
+    border-left: 80px solid green;
+    border-right: 80px solid green;
+    border-bottom: 80px solid #000;
+    margin-left: -80px;
+
+}
+
+.img-holder {
+    float: right;
+    width: 200px;
+}
+
+.img-holder img {
     display: inline-block;
     vertical-align: top;
     max-width: 100%;
+    display: none;
 }
 
-.content-section h1 {
-    margin: 0 0 30px;
+.content-holder {
+    color: yellow;
+    clear: both;
+    padding: 50px;
 }
+
+.content-holder ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.content-holder ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content-holder ul li::before {
+    content: "\f2b9";
+    font-family: "Font Awesome 5 Free" !important;
+    font-size: 20px;
+    background-color: #000;
+    position: absolute;
+    right: 100%;
+    top: 0;
+}
+
+.content-holder ul li::before {
+    content: "\f2b9";
+    font-family: "Font Awesome 5 Free" !important;
+    font-size: 20px;
+    background-color: #000;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+
+
+
+
+.another-holder {
+    background: pink;
+    padding: 50px;
+    position: relative;
+}
+
 
 .content-section {
-      max-width: 900px;
+    position: relative;
+    z-index: 4;
 }
+
+/*display: inline-block;
+vertical-align: top;
+
+position: absolute;
+top: 0;
+left: 0;
+
+position: fixed;
+top: 0;
+left: 0;*/
