@@ -4,73 +4,109 @@
     <meta charset="UTF-8">
     <title>Minimo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div id="wrapper">
 		<header>
 			<div class="container">
+				<!-- <div class="logo">
+					<a href="index.html" class="logo__link">minimø</a>
+				</div> -->
 				<div class="logo">
-					<img src="img/logo.png" alt="logo-Minimo">
+					<a href="index.html" class="logo__link"><img src="img/logo.png" alt="logo-Minimo"></a>
 				</div>
-				<nav>
+				<nav class="nav uppercase">
 					<ul>
-						<li><a href="#">lifestyle</a></li>
-						<li><a href="#">photodiary</a></li>
-						<li><a href="#">music</a></li>
-						<li><a href="#">travel</a></li>
+						<li class="nav__item"><a href="#">lifestyle</a></li>
+						<li class="nav__item"><a href="#">photodiary</a></li>
+						<li class="nav__item"><a href="#">music</a></li>
+						<li class="nav__item"><a href="#">travel</a></li>
 					</ul>
 				</nav>
-				<div class="viewport-image">
-					<img src="img/viewport-image.png" alt="viewport-image">
-				</div>
+				
 			</div>
 		</header>
-
-		<section>
+		<div class="visual">
 			<div class="container">
-				<div class="perfect-weekend">
-					<h5>photodiary</h5>
-					<h1>The perfect weekend getaway</h1>
-					<p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum <strong>dolore eu fugiat</strong> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-				</div>
-				<div class="here-title">
-					<h2>h2 here title</h2>
-					<ul>
-						<li><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-					</ul>
-				</div>
-				<div class="number-list">
-					<h3>h3 title </h3>
-					<ol>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-					</ol>
-				</div>
-				<h4>h4 blochquote</h4>
-				<div class="blochquote">
-					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.  </p>
-				</div>
-				<h5>Leave a comment</h5>
+				<img src="img/viewport-image.png" alt="image descr">
 			</div>
-		</section>
+		</div>
+
+
+		<main>
+			<div class="container">
+				<p class="text uppercase">photodiary</p>
+				<div class="content-section">
+					<h1>
+						The perfect weekend getaway
+					</h1>
+					<p>
+						Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <strong>cillum dolore eu fugiat</strong> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					</p>
+					<h2>
+						h2 here title
+					</h2>
+					<ul class="bulleted__list">
+						<li class="bulleted__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="bulleted__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="bulleted__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="bulleted__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+					</ul>
+					<h3>h3 title</h3>
+					<ol class="numbered__list">
+						<li class="numbered__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="numbered__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="numbered__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+						<li class="numbered__item"><a href="#">Lorem <span>ipsum dolor</span> sit amet</a></li>
+					</ol>
+					<h4>
+						h4 blochquote
+					</h4>
+					<p>
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+					</p>
+				</div>
+				<p class="text uppercase">Leave a comment</p>
+				<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.0848449318394!2d36.21659603316795!3d50.026442458542675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a13635664af3%3A0x8aa83ecfaf11561b!2zSVQgQ2xvdWQg0JBj0LBkZW3Rgw!5e0!3m2!1sru!2sua!4v1546254008450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe class="video" src="https://www.youtube.com/embed/tFT0YUepDhI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<form action="#" method="#">
+					<div class="form__item">
+						<label for="email">Enter your email</label>
+						<input type="email" id="email">
+					</div>
+					<div class="form__item">
+						<label for="name">Enter your name</label>
+						<input type="text" id="name">
+					</div>
+					<div class="form__item">
+						<label for="surname">Enter your surname</label>
+						<input type="text" id="surname">
+					</div>
+					<input class="form__button" type="submit" value="SUBMIT">
+				</form>
+			</div>
+		</main>
 
 		<footer>
 		    <div class="container">
-		    	<div class="footer-social">
-		    		<span class="footer-link">Follow</span>
-			    	<i class="fab fa-facebook-f"></i>
-			    	<i class="fab fa-twitter"></i>
-			    	<i class="fab fa-instagram"></i>
+		    	<div class="footer__social">
+		    		<span class="footer__link">Follow</span>
+			    	<ul>
+			    		<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			    		<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			    		<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+			    	</ul>
 		    	</div>
 		    </div>
 	    </footer>
 	</div>
 </body>
 </html>
+
+			    	
+			    	
+			    	
