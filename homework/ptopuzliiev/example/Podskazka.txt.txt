@@ -1,3 +1,0 @@
-pri dobavlenii display: inline-block, dobavliat vertical-align: top,bottom .. . v osnovnom top
-
-v dz dobavit form and iframe
