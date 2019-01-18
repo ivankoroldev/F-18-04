@@ -781,10 +781,6 @@ footer {
 		display: block;
 		float: none;}
 	
-	.navigation li.active a {
-		transform: none;
-		color: #fff;
-	}
 	
 	.navigation li a:hover {
 		color: #e84545;
