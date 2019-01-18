@@ -373,18 +373,13 @@ main {
 .clients {
 	width: 100%;
 	background: #53354a;
-	line-height: 0;
-	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .img-client {
-	display: inline-block;
-    vertical-align: top;
     width: 50%;
 	min-height: 500px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.2;
 	background: url(img/suzana.jpg);
 	background-size: cover;
 	background-position: right;
@@ -395,11 +390,8 @@ main {
 }
 
 .comments {
-	display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    font-size: 18px;
-    line-height: 1.2;
+	width: 50%;
+	min-height: 500px;
 }
 
 .comments p {
@@ -672,7 +664,7 @@ footer {
 	}
 	
 	.comments cite {
-		padding: 0 10px;
+		padding: 15px;
 	}
 	
 	.pagination	{
