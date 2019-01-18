@@ -18,6 +18,15 @@
     .visual__text {
         font-size: 17px;
     }
+
+    .testimonials__item {
+        min-height: 400px;
+        width: 100%;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -110,5 +119,17 @@
         top: 12px;
         left: 2px;
         transform: rotate(-45deg);
+    }
+
+    .slide__text {
+        font-size: 25px;
+    }
+
+    .slideshow {
+        padding: 25px;
+    }
+
+    .testimonials__item {
+        min-height: 300px;
     }
 }
