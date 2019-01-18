@@ -72,6 +72,7 @@
         width: 30px;
         height: 30px;
         position: relative;
+        z-index: 4;
     }
 
     .nav-btn::after,
@@ -101,8 +102,42 @@
         top: 6px; 
     }
 
+    .header-content {
+        padding: 15px 0;
+    }
+
     .head-nav {
-        display: none;
+        transition: all 0.3s ease-in-out;
+        padding-top: 80px;
+        opacity: 0;
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        left: 100%;
+        background: rgba(0, 0, 0, 0.9);   
+    }
+
+    .head-nav__item {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .head-nav__link {
+        font-size: 25px;
+    }
+
+    .menu-active {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .menu-active .head-nav {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
     }
 
     .menu-active .nav-btn::after {
