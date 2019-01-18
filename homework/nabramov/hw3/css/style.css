@@ -344,6 +344,9 @@ main .container{
   text-decoration: underline;
   font-weight: bold;
 }
+.text-box a:hover{
+  color: #f7df59;
+}
 .footer{
   display: -webkit-flex;
   display: -moz-flex;
@@ -363,6 +366,9 @@ main .container{
 }
 .footer a{
   color: #6d5384;
+}
+.footer a:hover{
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -388,6 +394,15 @@ main .container{
   }
   .navigation li a{
     padding: 10px 15px;
+  }
+  .header-wrap {
+    padding: 40px 0;
+  }
+  .visual-bg {
+    padding-top: 50px;
+  }
+  .visual-bg h1 {
+    font-size: 70px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -418,6 +433,7 @@ main .container{
     border-radius: 50%;
     position: relative;
     z-index: 3;
+    cursor: pointer;
 }
   .nav-btn span, .nav-btn span::before, .nav-btn span::after{
     position: absolute;
