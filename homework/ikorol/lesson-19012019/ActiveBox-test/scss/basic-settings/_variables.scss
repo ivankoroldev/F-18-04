@@ -1,0 +1,23 @@
+//color
+$gray: #777777;
+$black: #000000;
+$white: #fff;
+
+// Body styles
+$base-font-size: 'open_sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$add-font-montserrat: 'montserrat', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-text-color: $black;
+$base-background-color: $white;
+$base-font-family: $base-font-size;
+$base-font-size: 14px;
+$base-line-height: 1;
+$base-min-width: 320px;
+
+// Links styles
+$base-link-color: $black;
+
+// Buttons styles
+$btn-color: $white;
+$btn-background: $black;
+$btn-padding: 0;
+$btn-font-size: inherit;
