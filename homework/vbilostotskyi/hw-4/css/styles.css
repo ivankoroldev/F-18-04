@@ -165,7 +165,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 }
 
 .visual__button-wrapper,
-.dowload__button-wrapper {
+.download__button-wrapper {
     width: 200px;
     height: 46px;
     font-weight: 600;
@@ -173,6 +173,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     border-radius: 2px;
     background: #e84545;
     margin: 0 auto;
+    transition: all 0.3s ease-in-out;
 }
 
 .dowload__button-wrapper {
@@ -185,6 +186,14 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
     height: 100%;
     color: #fff;
     padding: 15px 0;
+}
+
+.visual__button-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.download__button-wrapper:hover {
+    transform: scale(1.1);
 }
 
 .features__content {
