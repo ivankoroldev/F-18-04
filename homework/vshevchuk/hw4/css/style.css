@@ -1,0 +1,343 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+.header {
+    background: url("../img/header.jpg");
+    background-size: cover;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header-wrap {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #505268;
+}
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0;
+}
+.navigation ul li {
+    margin: 0 0 0 70px;
+    border-bottom: 1px solid transparent;
+}
+.navigation ul li:hover {
+    border-bottom: 1px solid #cccdd3;
+}
+.navigation a {
+    text-decoration: none;
+    color: #cccdd3;
+}
+h1 {
+    padding-top: 155px;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: #ffffff;
+    margin: 0 auto;
+    font-family: "OpenSans" bold;
+    max-width: 915px;
+}
+.visual-text p{
+    color: #eaeaec;
+    font-size: 22px;
+    margin: 0 auto;
+    max-width: 860px;
+    font-family: "Raleway";
+    padding-top: 45px;
+    text-align: center;
+}
+.navigation-find ul {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 155px;
+}
+.navigation-find ul a {
+    text-decoration: none;
+    color: #cccdd3;
+    border: 2px solid #505268;
+    border-radius: 5px;
+    padding: 20px 50px 20px 50px;
+    font-weight: 600;
+}
+.navigation-find ul a:hover {
+    color: #fdf3f3;
+    background: #e84545;
+    border-radius: 5px;
+    border: 2px solid #e84545;
+}
+.icon-style  {
+    font-size: 45px;
+    color: red;
+}
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 120px;
+}
+.main-content p {
+    font-family: "Raleway";
+    max-width: 300px;
+    text-align: justify;
+    font-size: 14px;
+    padding-bottom: 80px;
+}
+h3{
+    padding: 35px 0 25px;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    text-transform: uppercase;
+}
+.img-box{
+    font-size: 0;
+    line-height: 0;
+}
+.box{
+    font-size: 18px;
+    line-height: 1.2;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+.box img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.box a:hover{
+ background-color: #e84545;
+}
+.personal{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+.personal p {
+    font-family: "Raleway";
+    max-width: 270px;
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 30px;
+}
+.personal span{
+    font-size: 13px;
+    color: #e84545;
+    font-family: "Open Sans";
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.personal h2{
+    font-family: "Raleway";
+    font-size: 22px;
+    padding-top: 30px;
+    margin: 0;
+
+}
+.icon-facebook {
+    font-size: 24px;
+    color: #c6cacc;
+    padding: 5px;
+    border: 1px solid #c6cacc;
+    text-decoration: none;
+
+}
+.icon-twitter {
+    font-size: 24px;
+    color: #c6cacc;
+    padding: 5px;
+    border: 1px solid #c6cacc;
+    text-decoration: none;
+}
+.icon-linkedin {
+    font-size: 24px;
+    color: #c6cacc;
+    padding: 5px;
+    border: 1px solid #c6cacc;
+    text-decoration: none;
+
+}
+.personal a:hover {
+    color: #e84545;
+}
+.slide-box{    
+    
+    display: flex;
+   
+}
+
+.slide-left{    
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slide-left img {
+    
+    max-height: 100%;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.slide-right{
+   width: 50%;
+   background: #53354a;     
+    
+}
+
+.slide-text{
+     max-width: 500px;
+     padding: 110px 0 0 85px;
+}
+
+.slide-text i{
+    font-family: 'Cardo', serif;
+    font-size: 36px;
+    color: white;
+   
+
+}
+
+.slide-text p{
+    font-weight: bold;
+     font-size: 13px;
+     color: white;
+}
+
+
+
+
+ h2{
+    padding-top: 100px;
+    text-align: center;    
+    font-size: 28px;
+    margin: 0;
+}
+ h4{
+    text-align: center;    
+    font-size:13px;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+.download-here ul {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;    
+    padding-bottom: 100px;
+}
+.download-here ul a {
+    text-decoration: none;
+    color: #505268;
+    border: 2px solid #505268;
+    border-radius: 5px;
+    padding: 20px 50px 20px 50px;
+    font-weight: 600;
+}
+.download-here ul a:hover {
+    color: #fdf3f3;
+    background: #e84545;
+    border-radius: 5px;
+    border: 2px solid #e84545;
+}
+.footer-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 90px;
+
+}
+.location{
+    width: 33.33%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    
+}
+.location p{
+    
+}
+h5{
+
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.share-with-love{
+    width: 33.33%;
+    text-align: center;
+}
+.about{
+    width: 33.33%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+.share-with-love a{
+    border: 2px solid white;
+    margin-left: 10px;
+}
+
+.share-with-love a:hover {
+    color: #e84545;
+    border: 2px solid red;
+}
+
+.footer-end{
+    text-align: center;
+    padding: 30px 0;
+
+}
+.footer-end span{   
+    color: #808080;
+}
+.footer-end p{
+    font-family: "OpenSans";
+    color: white;
+    display: initial;
+}
+.copy{
+    width: 370px;
+    margin: 0 auto;
+}
+.copy b{
+    color: red;
+}
+
+.loc{
+    text-transform: uppercase;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.about-active{
+    width: 370px;
+    margin: 0 auto;
+}
