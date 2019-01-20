@@ -187,8 +187,7 @@ h1, h2, h3, h4, h5, h6, p {
 	font-weight: 700;
 } 
 
-.content p {
-	margin-bottom: 10px;
+.content p {	
 	color: #6c7279;
 	max-width: 300px;
 	margin: 0 auto;
