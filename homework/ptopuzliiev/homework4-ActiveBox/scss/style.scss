@@ -9,9 +9,9 @@ body {
 	font-family: "Raleway", sans-serif;
 	color: #6c7279;
 	font-weight: 400;
-	background-color: #31354f;
 	// font-family: 'Open Sans', sans-serif;
 	// font-family: 'Cardo', serif;
+}
 
 * {
 	box-sizing: border-box;
@@ -31,69 +31,89 @@ h1,h2,h3,h4,h5,h6,p {
 	text-transform: uppercase;
 }
 
-.extra-color {
-	color: #e84545;
-}
 
-	#wrapper {
+#wrapper {
 		position: relative;
 		width: 100%;
 		// overflow: hidden;
+}
 
-		header {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 9999;
-		}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
 
-		.header-wrap {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		.navigation ul {
-			line-height: 0;
-			font-size: 0;
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			margin: 0 -10px;
-
-			li {
-				display: inline-block;
-				vertical-align: top;
-				font-size: 13px;
-				line-height: 1.2;
-				padding: 0 10px;
-
-				a {
-					display: block;
-					color: #fff;
-					text-transform: uppercase;
-					padding: 45px 20px;
-					text-decoration: none;
-
-				}
-			}
-		}
-
-	}
-
-
-
-
-
-
-
-
-
-
-
+.header-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: solid 1px #505268;
 
 }
 
+.navigation ul {
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0 -10px;
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 13px;
+		line-height: 1;
+		padding: 0 10px;
+
+		&.active a:after {
+			content: "";
+		    display: block;
+		    position: relative;
+		    z-index: 1;
+		    width: 100%;
+		    transition: all 1s ease-in-out;
+		    border-bottom: 1px solid #e84545;
+		}
+
+		a {
+			display: block;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 44px 20px;
+			text-decoration: none;
+
+			&:after {
+				content: "";
+			    display: block;
+			    position: relative;
+			    z-index: -1;
+			    width: 0;
+			    transition: all 1s ease-in-out;
+			    border-bottom: 1px solid #e84545;
+			}
+
+			&:hover:after {
+				content: '';
+				display: block;
+				border-bottom: solid 1px #e84545;
+				border-bottom-width: 100%;
+				position: relative;
+				width: 100%;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.visual-bg {
+	background: url("../img/visual-bg.jpg");
+	background-size: cover;
+	padding-top: 101px;
+	min-height: 300px;
+}
