@@ -119,14 +119,12 @@ h1,h2,h3,h4,h5,h6, p {
 	background: #f7df59;
 	top: 100%;
 	left: 50%;
-	margin-top: 2px;
-	border-right: 2px solid rgba(76,47,101,1);
-	border-bottom: 2px solid rgba(76,47,101,1);
 	transform: translate(-50%,-50%) rotate(45deg) scale(0);
 	opacity: 0;
 	visibility: hidden;
 	transition: .3s all .3s ease-in-out;
 	transition: none;
+	box-shadow: 2px 2px 0px 0px rgba(76,47,101,1);
 }
 
 
@@ -313,11 +311,12 @@ h1,h2,h3,h4,h5,h6, p {
 	color: #ffffff;
 	font-size: 30px;
 	font-weight: 500;
+	margin-bottom: 70px;
 }
 .blocks{
 	line-height: 0;
 	font-size: 0px;
-	margin: 70px -35px;
+	margin: 0px -35px 70px 0px;
 }
 .blocks-box{
 	text-align: center;
@@ -471,6 +470,7 @@ h1,h2,h3,h4,h5,h6, p {
         display: block;
         position: relative;
         z-index: 4;
+        cursor: pointer;
     }
 
     .nav-btn::after, .nav-btn::before {
@@ -564,4 +564,30 @@ h1,h2,h3,h4,h5,h6, p {
     .visual-bg {
         padding-top: 15px;
     }
+}
+@media only screen and (max-width: 480px) {
+	.visual-text h1 {
+    font-size: 60px;
+	}
+	.slider-small-text {
+    font-size: 18px;
+    padding: 0px 20px;
+	}
+	.slider-bottom-text {
+    max-width: 300px;
+	}
+	.pagination li {
+    height: 8px;
+    width: 8px;
+	}
+	.visual-menu a{
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+	.visual-menu {
+    padding-bottom: 40px;
+	}
+	.footer-box {
+    padding: 30px;
+}
 }
