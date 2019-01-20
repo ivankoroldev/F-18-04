@@ -149,7 +149,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
 .nav__item {
     position: relative;
-    margin-left: 10px;
     font-size: 18px;
 	line-height: 1;
 	display: inline-block;
@@ -360,9 +359,23 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
         width: 50%;
     }
 
+    .nav__item a, .buttons__item {
+        width: auto;
+        height: auto;
+        font-size: 14px;
+    }
+
+    .nav__item {
+        padding: 0 2px;
+    }
+}
 @media only screen and (max-width: 767px) {
     .box {
         width: 100%;
+    }
+
+    .header {
+        position: relative;
     }
 
     .gallery__item {
@@ -371,6 +384,22 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
     .head-title {
         font-size: 45px;
+    }
+
+    .logo__title {
+        font-size: 12px;
+    }
+
+    .logo__link {
+        font-size: 25px;
+    }
+
+    .fa-paint-brush {
+        padding-top: 19px;
+        border: 1px solid #fff;
+        font-size: 23px;
+        width: 60px;
+        height: 60px;
     }
 
     .head-text {
@@ -383,7 +412,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
     .header {
         padding: 15px 0;
-        header: relative;
     }
 
     .main__title {
@@ -401,7 +429,6 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
         height: 30px;
         position: relative;
         z-index: 4;
-        background: #000;
     }
 
     .nav-btn::after,
@@ -429,5 +456,86 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
     .nav-btn::before {
         top: 6px; 
+    }
+
+    .wrap1 {
+		transition: all .3s ease-in-out;
+	}
+
+	.menu-active .wrap1 {
+		margin: 0 200px 0 -200px;
+    }
+    
+    .menu-active .nav-btn::after {
+        opacity: 0;
+    }
+
+    .menu-active .nav-btn::before {
+        top: 12px;
+        left: 2px;
+        transform: rotate(45deg);
+    }
+
+    .menu-active .nav-btn span {
+        top: 12px;
+        left: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .nav__list{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 200px;
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+        background: rgba(0,0,0,.7);
+        margin: 0;
+    }
+
+    .nav__item {
+        display: block;
+        border: none;
+    }
+
+    .nav__item a {
+        border: none;
+        border-radius: 0;
+        display: block;
+    }
+
+    .nav__item a::after {
+        display: none;
+    }
+
+    .menu-active .nav__list {
+		display: block;
+ 	}
+
+ 	.menu-active {
+ 		height: 100vh;
+ 		overflow: hidden;
+     }
+     
+     .visual-bg {
+        padding-top: 15px;
+        margin-bottom: 40px;
+    }
+
+    .main__undertitle {
+        margin-bottom: 40px;
+    }
+
+    .main__section-1 {
+        padding-bottom: 20px;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer__text {
+        padding-bottom: 15px;
     }
   }
