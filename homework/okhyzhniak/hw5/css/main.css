@@ -507,3 +507,117 @@ h5 {
 h6 {
   font-size: 15px;
 }
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#wrapper {
+  width: 100%;
+  position: relative;
+  background-color: green;
+  overflow: hidden;
+}
+
+.big-conteiner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  color: #fff;
+}
+
+.header-wrap {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.logo {
+  width: 15%;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation a {
+  color: inherit;
+}
+
+.navigation ul {
+  line-height: 0;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin: 0 -5px;
+}
+
+.navigation li {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 13px;
+}
+
+.navigation li a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.navigation li a:hover, .navigation li.active a {
+  background: #31263f;
+  -webkit-box-shadow: 0px 4px 0px -1px #2d264f;
+  box-shadow: 0px 4px 0px -1px #2d264f;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10%;
+}
+
+.visual {
+  background: url("../img/visul-bg.jpg");
+  color: #fff;
+  padding-top: 100px;
+  position: relative;
+  z-index: 10;
+  background-repeat: no-repeat;
+}
