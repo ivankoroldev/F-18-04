@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
 }
- 
+
 #wrapper {
 	width: 100%;
 	position: relative;
@@ -34,12 +34,27 @@ h1, h2, h3, h4, h5, h6, p {
 	list-style-type: none;
 }
 
-.header {
-	position: absolute;
+#header {
+	position:fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
 	z-index: 999;
+
+}
+
+.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	padding: 0 0 0;
+	background-color: #292c47;
+}
+
+.fixed  .header-container {
+	border-bottom: none;
 }
 
 .header-container {
@@ -81,12 +96,12 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #ccccd3;
 }
 
-.nav a:hover{
+.nav a:hover, .active a{
 	color: #f40808; 
 }
 
-.active a{
-	color:  #f40808;
+.nav-btn {
+	display: none;
 }
 
 .visual  {
@@ -96,6 +111,7 @@ h1, h2, h3, h4, h5, h6, p {
 	background-repeat: no-repeat;
 	padding: 200px 0 0;
 	margin-bottom: 50px;
+	position: relative;
 	
 }
 
@@ -146,19 +162,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .content-box {
-	font-size: 0;
-	line-height: 0;
-	margin: 0 -15px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
 }
 
 .content {
-	display: inline-block;
-	vertical-align: top;
 	width: 33.3%;
 	font-size: 14px;
-	line-height: 1.2;
-	padding: 0 15px;
-	margin-bottom: 60px;
+	text-align: center;
+	padding: 35px 45px;
 }
 
 .content img {
@@ -185,8 +202,8 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 70px;
+	justify-content: center;
+	margin-bottom: 60px;
 }
 
 .photo-wrap {
@@ -194,6 +211,8 @@ h1, h2, h3, h4, h5, h6, p {
 	position: relative;
 	font-size: 0;
 	line-height: 0;
+	padding: 1px;
+	overflow: hidden;
 }
 
 .photo-wrap a {
@@ -203,22 +222,28 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
+.photo img {
+	width: 100%;
+	height: 100%;
+}
 
 .hover-text {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 1px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
 	font-size: 15px;
-	line-height: 1;
+	line-height: 1.2;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	flex-flow: column wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 	opacity: 0;
@@ -238,13 +263,19 @@ h1, h2, h3, h4, h5, h6, p {
 
 .photo-wrap:hover .title {
 	transition: all .7s ease-in-out;
-	transform: translateY(550%);
+	transform: scale(1.2);
 }
 
 .photo-wrap:hover .text {
 	transition: all .7s ease-in-out;
-	transform: translateY(-550%);
+	transform: scale(1.2);
 }
+
+.photo-wrap:hover img  {
+	transition: all .7s ease-in-out;
+	transform: scale(1.2);
+}
+
 .work-team {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -320,18 +351,75 @@ h1, h2, h3, h4, h5, h6, p {
 	text-align: center;
 }
 
+.slider {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 60px;
+}
+
+.client {
+	width: 50%;
+	position: relative;
+	min-height: 500px;
+}
+
+.cite {
+	width: 50%;
+	background: #53354a;	
+}
+
+.cite-text {
+	font-family: "Cardo";
+	font-style: italic;
+	font-size: 36px;
+	padding: 70px 30px 70px 70px;
+	color: #fff;
+	max-width: 75%;
+	max-height: 500px;
+}
+
+.cite-text cite {
+	font-family: "Raleway";
+	font-size: 13px; 
+}
 
 
+.client img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
 
 
+.control-slider {
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	padding-bottom: 20px;
+}
 
+.li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 10px;
+	line-height: 1.2;
+	margin: 0 5px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #755d6e;
+}
 
-/*SLIDER PLACE*/
-
-
-
-
-
+ .control-slider li:hover, .active-li{
+ 	background: #fff;
+ 	cursor: pointer;
+ }
 
 
 .download-container h3 {
@@ -431,3 +519,203 @@ h1, h2, h3, h4, h5, h6, p {
 .author-container {
 	padding: 50px 0;
 }
+
+@media only screen and (max-width: 1023px) {
+	.photo-wrap {
+		width: 50%;
+	}
+
+	.navigation li {
+		padding: 0 15px;
+	}
+
+	.visual {
+		padding: 115px 0 0;
+		margin-bottom: 25px;
+	}
+
+	.visual h1 {
+		font-size: 50px;
+	}
+	.visual p {
+		font-size: 18px;
+	}
+
+	.btn a{
+		padding: 20px 35px; 
+	}
+
+	.content {
+		width: 50%;
+		padding: 20px 25px;
+	}
+
+	.work-team {
+		margin-bottom: 30px;
+	}
+
+	.slider {
+		margin-bottom: 30px;
+	}
+
+	.client {
+		width: 100%;
+	}
+
+	.cite {
+		width: 100%;
+	}
+
+	.cite-text {
+		padding: 25px 30px 40px 70px;
+	}
+
+	.download-container h3 {
+		font-size: 24px;
+	}
+
+	.download-container a {
+		padding: 15px 30px;
+	}
+
+	.footer-info {
+		padding: 10px 5px;
+	}
+
+	.author-container {
+		padding: 10px 0;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	.header-container {
+		padding: 5px 0 5px;
+	}
+
+	.visual h1 {
+		font-size: 40px;
+	}
+
+	.visual p {
+		font-size: 15px;
+	}
+
+	.btn {
+		margin-bottom: 70px;
+	}
+
+	.cite-text {
+		font-size: 25px;
+	}
+
+	.btn a {
+
+		padding: 15px 25px;
+	}
+
+	.download-container a {
+		padding: 15px 25px;
+	}
+
+	.download-container h3 {
+		font-size: 20px;
+	}
+
+  .nav-btn{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background:#e84545;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+  .nav-btn span, .nav-btn span::before, .nav-btn span::after{
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color:#fff;
+  }
+
+  .nav-btn span::before, .nav-btn span::after{
+    content:"";
+    transition: .7s;
+  }
+
+
+  .nav-btn  span::before {
+    transform: translateY(-5px);
+  }
+
+  .nav-btn span::after{
+    transform: translateY(5px);
+  }
+
+  .menu_active  span::before{
+    transform: rotate(45deg);
+  }
+
+   .menu_active span {
+		height: 0;
+  }
+	
+  .menu_active  span::after{
+    transform: rotate(-45deg);
+  }
+
+  .navigation {
+  	opacity: 0;
+  	visibility: hidden;
+  }
+
+ .menu_active .navigation {
+    opacity: 1;
+    visibility: visible;
+
+  }
+  
+  .menu_active {
+	height: 100vh;
+	overflow: hidden;
+  }
+
+  .navigation {
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	transition: all .5s ease-in-out;
+	background: rgba(0,0,0,0.7);
+	
+  }
+
+  .navigation ul {
+  	padding-top: 45%;
+  }
+
+  .navigation li {
+	display: block;
+	font-size: 25px;
+	margin-bottom: 30px;
+	}
+
+  .footer-info {
+  	width: 100%;
+  }
+
+	.photo-wrap {
+		width: 100%;
+	}
+}
+

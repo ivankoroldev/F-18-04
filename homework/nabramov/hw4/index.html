@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Activebox</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script/main.js"></script>
 </head>
 <body>
 	<div id="wrapper">
-			<header class="header">
+			<header id="header" class="">
 				<div class="container">
 					<div class="header-container">
 						<div class="logo">
 							<a href="#"><img src="img/ActiveBox.png" alt=""></a>
 						</div>
+						<strong class="nav-btn"><span></span></strong>
 						<nav class="navigation">
 							<ul class="navigation stylereset">
 								<li class="nav active"><a href="#" class="uppercase ">Features</a></li>
@@ -217,12 +221,18 @@
 			</div>
 			<div class="slider">
 				<div class="client">
-					
+					<img src="img/photo-client.png" alt="">
 				</div>
-				<ul class="control-slider stylereset">
-					<li><a href="#" class="active"></a></li>
-					<li><a href="#"></a></li>
-				</ul>
+				<div class="cite">
+					<div class="cite-text">
+						<p>“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+						<cite>Susan Sims, Interaction Designer at XYZ</cite>
+					</div>
+					<ul class="control-slider stylereset">
+						<li class="li active-li"></li>
+						<li class="li"></li>
+					</ul>
+				</div>
 			</div>
 			<div class="download-container">
 				<div class="container">
