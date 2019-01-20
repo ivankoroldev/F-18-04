@@ -2,9 +2,26 @@
 body {
     margin: 0;
     padding: 0;
+    color: #626262;
+    font-family: 'Times New Roman', 'Times' serif;
+    font-size: 14px;
+    min-width: 320px;
  }
-header {
+ *{
+ 	box-sizing: border-box;
+ }
+ .wrapper{
+	width: 100%;
+	position: relative;
+ }
+ .conteiner{
+ 	max-width: 1093px;
+ 	margin: 0 auto;
+ 	padding: 0 15px;
+ }
+.header {
 	height:212px;
+	width: 100%;
 }
 .uppercase{
 	text-transform: uppercase;
@@ -25,6 +42,7 @@ nav ul{
 nav ul li{
 	display: inline-block;
 	margin: 0 50px;
+	vertical-align: top;
 }
 nav ul a{
 	font-family: 'Times New Roman', serif;
@@ -35,16 +53,20 @@ nav ul a{
 nav ul a:hover{
 	color: #ea1313;
 }
-main {
-	width: 1063px;
-	margin: auto;
+.main {
+	width: 100%;
 }
-.banner{
+.visual{
 	margin-bottom: 52px; 
 }
-.banner img {
-	width: 1063px;
-	height:510px;
+.visual img {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+}
+.visual .conteiner{
+	padding: 0;
+	max-width: 1063px;
 }
 .linknav a {
 	font-family: 'Arial', sans-serif;
@@ -113,6 +135,21 @@ h4 {
 .articletextcenter{
 	text-align: center;
 	margin: 0px 0px 24px 0px;
+}
+.form {
+	max-width: 200px;
+	position: relative;
+}
+.forminput {
+	display: block;
+	margin: 30px auto;
+}
+.maps {
+	max-width: 500px;
+	margin-bottom: 30px;
+}
+.maps iframe{
+	width: 100%;
 }
 footer {
 	height:97px;
