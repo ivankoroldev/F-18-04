@@ -1,0 +1,17 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1366px
+);
+
+
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'common-settings/icons';
+
+@import 'basic-settings/variables';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
