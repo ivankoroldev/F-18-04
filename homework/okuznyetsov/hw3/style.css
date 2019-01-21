@@ -27,10 +27,20 @@ header {
     padding-top: 67px;
     background: #6c5283;
 	position: absolute;
-	right: 0;
+	top: 0;
 	left: 0;
+	width: 100%;
 	z-index: 2;
 	font-family: 'Montserrat';
+	
+}
+
+.head-line {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
 }
 
 .content-hold {
@@ -39,39 +49,41 @@ header {
     margin: 0 auto;
 }
 
-.logo p {
-    float: left;
-    padding:15px 12px 0 12px;
-    font-size: 28px;
-    font-weight: 100;
-    margin: 0;
-}
-
-.logo p+p {
-    font-size: 14px;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 12px;
-}
-
-.logo img {
-    float: left;
-}
 .logo {
-	display: block;
-    text-decoration: none;
+	text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
     color: #b8acc2;
 }
 
+.logo img {
+   display: inline-block;
+   vertical-align: middle;
+}
 
-.logo-line {
-    max-width: 325px;
+.logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.top-txt {
+	display: block;
+	font-size: 28px;
+	line-height: 1;
+	font-weight: 300;
+}
+
+.bottom-txt {
+	font-weight: 300;
+	display: block;
+	font-size: 14px;
+	line-height: 1;
 }
 
 .navigation {
-    position: relative;
-    float:right;
-    padding-top: 40px;
+	margin: 0 -10px;
 }
 
 .line {
@@ -331,6 +343,7 @@ footer {
 
 .links {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -374,28 +387,28 @@ clear: both;
 	}
 	
 	.navigation {
-    	padding-top: 25px;
+		margin: 0 -3px;
 	}
 	
 	.line a {
 		font-size: 16px;
 		border: 1px solid #fff;
 		position: relative;
-		padding: 10px;
+		padding: 8px;
 		border-radius: 5px;
-		margin: 0 5px;
+		margin: 0 3px;
 	}
 	
 	.logo img {
-		width: 70px;
+		width: 60px;
 	}
 	
-	.logo p {
-		font-size: 21px;
+	.logo-text {
+		padding-left: 5px;
 	}
 	
-	.logo p+p {
-		font-size: 13px;
+	.top-txt {
+		font-size: 18px;
 	}
 	
 	.second {
@@ -496,21 +509,20 @@ clear: both;
 		z-index: 10;
 	}
 	.logo img {
-    	max-width: 60px;
+    	max-width: 50px;
 	}
 	
-	.logo p {
-   		padding: 15px 12px 0 12px;
+	.logo-text {
+		padding-left: 5px;
+	}
+	
+	.top-txt {
 		font-size: 16px;
-	}
-	
-	.logo p+p {
-		font-size: 12px;
 	}
 	
 	.nav-opener {
         position: absolute;
-        top: 35%;
+        top: 30%;
         right: 5%;
     	width: 40px;
 		height: 40px;
@@ -539,16 +551,16 @@ clear: both;
 		border-radius: 3px;
 		transform: translateX(-50%);
 		background: #6c5283;
-		top: 24px;
+		top: 23px;
 		transition: all .3s ease-in-out;
  	}
 
  	.nav-btn::after {
-		top: 18px;
+		top: 17px;
  	}
 
  	.nav-btn::before {
- 		top: 12px;
+ 		top: 11px;
  	}
 
  	.active-nav .nav-btn::after {
@@ -579,7 +591,7 @@ clear: both;
  		visibility: visible;
 		top: 0;
 		height: 100vh;
-		left: 100%;
+		left: 150%;
 		width: 100%;
 		background: rgba(67, 45, 87, 0.8);
 		
@@ -629,7 +641,7 @@ clear: both;
 	}
 	.join p {
     	font-size: 14px;
-		padding-bottom: 20px;
+		padding: 20px 0;
 	}
 	
 	.carousel {

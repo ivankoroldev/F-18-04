@@ -365,8 +365,8 @@ main {
 }
 
 .list-icon a:hover {
-	color: #2b39e5;
-	background: #e84545;
+	border-color: #2b39e5;
+	color:#3a3e64;
 	border: 1px solid #e84545;
 }
 
