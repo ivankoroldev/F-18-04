@@ -768,7 +768,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__holder {
-  padding: 100px 40px 55px;
+  padding: 100px 40px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,8 +781,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__holder p {
-  line-height: 18px;
-  max-width: 295px;
+  line-height: 22px;
+  max-width: 281px;
+  font-size: 19px;
+  letter-spacing: -0.85px;
+}
+
+.skills__holder h4 {
+  margin-bottom: 11px;
 }
 
 .skills__item {
@@ -802,5 +808,77 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .skills__item .skills__text {
   display: inline-block;
   vertical-align: top;
-  padding-left: 20px;
+  padding-left: 17px;
+}
+
+.clients h2 {
+  letter-spacing: -1.5px;
+}
+
+.clients h5 {
+  font-size: 22px;
+  font-weight: 400;
+  color: gray;
+  letter-spacing: -0.45px;
+  margin-bottom: 40px;
+}
+
+.clients__feedback {
+  background: #fafafa;
+  padding: 84px 0;
+}
+
+.clients__feedback h2 span {
+  font-weight: 300;
+}
+
+.client__img {
+  background: #000;
+  width: 234px;
+  height: 234px;
+  border-radius: 50%;
+  border: 6px solid white;
+}
+
+.clients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+
+.clients__item blockquote {
+  max-width: 482px;
+}
+
+.clients__item p {
+  font-size: 26px;
+  letter-spacing: -0.5px;
+  line-height: 34px;
+}
+
+.clients__item cite {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.clients__item .client__text {
+  border: 2px solid #f2f2f2;
+  margin: 0 30px;
+  max-width: 645px;
+  padding: 33px 80px;
+  background: white;
+}
+
+.clients__item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
