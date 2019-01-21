@@ -1,3 +1,85 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?256sql");
+  src: url("../fonts/icomoon.eot?256sql#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?256sql") format("truetype"), url("../fonts/icomoon.woff?256sql") format("woff"), url("../fonts/icomoon.svg?256sql#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-man-user:before {
+  content: "\e900";
+}
+
+.icon-web-design-service:before {
+  content: "\e901";
+}
+
+.icon-smartphone:before {
+  content: "\e902";
+}
+
+.icon-video-camera:before {
+  content: "\e903";
+}
+
+.icon-google-plus-logo:before {
+  content: "\e904";
+}
+
+.icon-three:before {
+  content: "\e905";
+}
+
+.icon-multiply:before {
+  content: "\e906";
+}
+
+.icon-pinterest-logo:before {
+  content: "\e907";
+}
+
+.icon-star:before {
+  content: "\e908";
+}
+
+.icon-message-closed-envelope:before {
+  content: "\e909";
+}
+
+.icon-twitter-logo-silhouette:before {
+  content: "\e90a";
+}
+
+.icon-facebook-logo:before {
+  content: "\e90b";
+}
+
+.icon-camera:before {
+  content: "\e90f";
+}
+
+.icon-envelop:before {
+  content: "\e945";
+}
+
+.icon-mobile:before {
+  content: "\e958";
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -394,88 +476,6 @@ th {
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?256sql");
-  src: url("../fonts/icomoon.eot?256sql#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?256sql") format("truetype"), url("../fonts/icomoon.woff?256sql") format("woff"), url("../fonts/icomoon.svg?256sql#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-man-user:before {
-  content: "\e900";
-}
-
-.icon-web-design-service:before {
-  content: "\e901";
-}
-
-.icon-smartphone:before {
-  content: "\e902";
-}
-
-.icon-video-camera:before {
-  content: "\e903";
-}
-
-.icon-google-plus-logo:before {
-  content: "\e904";
-}
-
-.icon-three:before {
-  content: "\e905";
-}
-
-.icon-multiply:before {
-  content: "\e906";
-}
-
-.icon-pinterest-logo:before {
-  content: "\e907";
-}
-
-.icon-star:before {
-  content: "\e908";
-}
-
-.icon-message-closed-envelope:before {
-  content: "\e909";
-}
-
-.icon-twitter-logo-silhouette:before {
-  content: "\e90a";
-}
-
-.icon-facebook-logo:before {
-  content: "\e90b";
-}
-
-.icon-camera:before {
-  content: "\e90f";
-}
-
-.icon-envelop:before {
-  content: "\e945";
-}
-
-.icon-mobile:before {
-  content: "\e958";
-}
-
-@font-face {
   font-family: 'brandon_grotesque';
   src: url("../fonts/brandongrotesque-bold-webfont.eot");
   src: url("../fonts/brandongrotesque-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandongrotesque-bold-webfont.woff2") format("woff2"), url("../fonts/brandongrotesque-bold-webfont.woff") format("woff"), url("../fonts/brandongrotesque-bold-webfont.ttf") format("truetype"), url("../fonts/brandongrotesque-bold-webfont.svg#brandon_grotesquebold") format("svg");
@@ -623,6 +623,7 @@ img {
 p {
   color: gray;
   line-height: 24px;
+  font-family: "brandon_grotesque", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 a {
@@ -714,7 +715,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .services__holder {
   text-align: left;
-  padding: 87px 50px 95px 41px;
+  padding: 87px 50px 62px 41px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -738,10 +739,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   letter-spacing: -0.44px;
   max-width: 560px;
   padding-bottom: 33px;
-}
-
-.services__holder p:nth-child(even) {
-  padding-bottom: 0;
 }
 
 .services__img {
@@ -771,12 +768,15 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__holder {
-  padding: 100px 40px;
+  padding: 100px 40px 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   text-align: left;
 }
 
@@ -786,5 +786,21 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__item {
-  width: 50%;
+  margin-bottom: 45px;
+}
+
+.skills__item .skills__icon {
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  background: black;
+  border-radius: 50%;
+  font-size: 40px;
+  padding: 15px;
+}
+
+.skills__item .skills__text {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
 }

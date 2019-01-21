@@ -9,9 +9,10 @@ $breakpoints: (
 
 //fonts
 @import 'basic-settings/variables';
+@import 'common-settings/icons';
 @import 'common-settings/include-media';
 @import 'common-settings/normalize';
-@import 'common-settings/icons';
+
 @import 'common-settings/_fonts';
 @import 'basic-settings/reset';
 @import 'basic-settings/heading-styles';
@@ -40,6 +41,7 @@ img {
 p {
   color: gray;
   line-height: 24px;
+  font-family: $base-font-family;
 }
 
 a {
@@ -119,7 +121,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .services__holder {
   text-align: left;
-  padding: 87px 50px 95px 41px ;
+  padding: 87px 50px 62px 41px ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -133,13 +135,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
 
   p {
-    letter-spacing: -0.44px;
-    max-width: 560px;
-    padding-bottom: 33px;
-  }
-  p:nth-child(even) {
-    padding-bottom: 0;
-  }
+      letter-spacing: -0.44px;
+      max-width: 560px;
+      padding-bottom: 33px;
+    }
 }
 
 .services__img {
@@ -159,9 +158,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__holder {
-  padding: 100px 40px;
+  padding: 100px 40px 55px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   text-align: left;
   p {
     line-height: 18px;
@@ -170,6 +170,20 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__item {
-  width: 50%;
-
+    // width: 50%;
+    margin-bottom: 45px;
+    .skills__icon {
+      display: inline-block;
+      vertical-align: top;
+      color: white;
+      background: black;
+      border-radius: 50%;
+      font-size: 40px;
+      padding: 15px;
+    }
+    .skills__text {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 20px;
+    }
 }
