@@ -28,6 +28,39 @@ body {
   min-width: $base-min-width;
 }
 
+
+.test-box {
+  max-width: 830px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background: green;
+
+  h1 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+
+    .menu-active & {
+      color: pink;
+    }
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #wrapper {
   position: relative;
   width: 100%;
@@ -175,12 +208,17 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .menu-open {
   display: none;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+  
+
+  @include media("<tablet") {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
 
   &:after,
   &:before,
@@ -217,10 +255,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       opacity: 0;
       visibility: hidden;
     }
-  }
-
-  @include media("<tablet") {
-    display: block;
   }
 }
 
@@ -295,6 +329,11 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     transform: scale(1.1);
   }
 }
+
+
+@include media ("<desktop") {
+
+  }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~section-2~~~~~~~~~~~~~~~~~~~~~~~~
 .box-wrapp {
