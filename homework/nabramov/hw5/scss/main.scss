@@ -1,0 +1,318 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+	);
+
+
+@import "variables";
+
+@import "reset";
+
+@import "../fonts/fonts";
+
+@import "../icomoon/icons";
+
+
+body {
+	font-family: $base-font-family;
+	color: $basic-color-text;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	width: 970px;
+	padding: 0 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.header-container {
+	padding-top: 50px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+
+.logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+.navigation {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -20px;
+ ul {
+	font-size: 0;
+	line-height: 0;
+}
+li {
+	font-size: $base-font-size-text;
+	line-height: 1;
+	font-weight: 500;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+a {
+	text-decoration: none;
+	color: $basic-color-text;
+	font-family: $base-font-family;
+}
+}
+
+
+.visual {
+	background: url("../img/bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 150px;
+	position: relative;
+	margin-bottom: 50px;
+
+	p{
+		font-family:$base-font-family;
+		font-size: 32px;
+		font-weight: 300;
+		color: inherit;
+		margin-bottom: 30px;	
+	}
+
+	h1 {
+		font-family: inherit;
+		font-size: $h1-basic-fsz;
+		font-weight: bold;
+		margin-bottom: 50px;
+	}
+
+	.btn {
+		display: inline-block;
+		vertical-align: top;
+		border: 3px solid #fff;
+		border-radius: 5px;
+		margin-bottom: 130px;
+
+	}
+
+	.btn a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		padding: 20px 50px;
+		font-family: inherit;
+		font-size: 23px;
+	}
+}
+
+
+.service-wrap {
+	margin-bottom: 150px;
+}
+
+.service {
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	h2 {
+
+		font-family: $base-font-family;
+		font-size: $h2-basic-fsz;
+		font-weight: 300;
+		color: $add-color-text;
+		margin-bottom: 40px;
+	}
+
+	p {
+		font-family: inherit;
+		font-size: $base-font-size-text;
+		color: $basic-color-p;
+		margin-bottom: 30px;
+	}
+
+	.image-hold {
+		width: 40%;
+	}
+}
+
+
+.text {
+	display: flex;
+	flex-flow: row wrap;
+	width: 60%;
+	text-align: left;
+	align-items:center;
+
+}
+
+.service:nth-child(even){
+	flex-flow:row-reverse wrap;
+	background: #fafafa;
+}
+
+
+
+.work-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items:center;
+	margin-bottom: 150px;
+
+
+	.work {
+		width: 50%;
+		display: flex;
+		flex-flow: row wrap;
+		margin-bottom: 20px;
+	}
+
+
+	.text {
+		margin-left: 20px;
+	}
+
+	.text h3 {
+	font-family: inherit;
+	font-size: $h3-basic-fsz;
+	color: $add-color-text;
+	margin-bottom: 10px;
+	}
+
+	.text p {
+		font-family: inherit;
+		font-size: $base-font-size-text;
+		color: $basic-color-p;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
+.img-work-wrap {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: #000;
+	position: relative;
+
+	img {
+		position: absolute;
+		left: 25%;
+		top: 25%;
+	}
+
+}
+
+
+
+.clients {
+
+	background:#fafafa;
+
+	h2 {
+		font-family: inherit;
+		font-size: $h2-basic-fsz;
+		font-weight: 300;
+		color: $add-color-text;
+	}
+
+	p {
+		font-family: inherit;
+		font-size: 22px;
+		color: $basic-color-p;
+		margin-bottom: 50px;
+	}
+}
+
+
+.photo-client {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	background: #000;
+}
+
+.client {
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	
+
+	.client-feedback {
+		width: 70%;
+		border: 1px solid #ededed;
+		padding: 70px;
+		text-align: left;
+	}
+
+
+	blockquote {
+		font-family: inherit;
+		font-size: 22px;
+		color: $basic-color-p;
+		margin-bottom: 10px;
+	}
+	cite {
+		font-family: inherit;
+		font-size: 20px;
+		color: #7690c5;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+.client:nth-child(even){
+	flex-direction: row-reverse;
+}
+
+
+
+
+
+.team {
+	background: #000;
+}
+
+
+.contact-info {
+	background: #7690c5;
+}
+
+
+
+
+.footer {
+	background: #7690c5;;
+}
