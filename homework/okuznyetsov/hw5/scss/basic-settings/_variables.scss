@@ -1,0 +1,18 @@
+//color
+$p-color: #777;
+$h-color: #000;
+$extra-color: #fff;
+// Body styles
+$base-font-lato: 'Lato', sans-serif;
+$base-text-color: $h-color;
+$base-background-color: $extra-color;
+$base-font-family: $base-font-lato;
+$base-font-size: 18px;
+$base-line-height: 1.2;
+$base-min-width: 320px;
+
+// Buttons styles
+$btn-color: $extra-color;
+$btn-background:$h-color;;
+$btn-padding: 0;
+$btn-font-size: inherit;
