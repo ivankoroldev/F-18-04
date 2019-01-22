@@ -2,11 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 13px;
-    color: #6d5384;
+    color: #c4c7c9;
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    /*font-family: 'Montserrat', sans-serif;*/
 }
 
 * {
@@ -62,7 +61,7 @@ h1,h2,h3,h4,h5,h6, p {
     flex-direction: row;
     justify-content: space-between;
     -ms-align-items: center;
-align-items: center;
+    align-items: center;
 
 }
 
@@ -316,7 +315,7 @@ align-items: center;
 }
 
 main {
-    padding: 50px 0;
+    padding: 80px 0 66px;
 }
 
 .heading {
@@ -366,6 +365,10 @@ main {
     border-radius: 5px;
 }
 
+.box a:hover{
+box-shadow: 3px 3px 3px 3px rgba(76,47,101,1);
+}
+
 .box img {
     display: inline-block;
     vertical-align: top;
@@ -383,14 +386,14 @@ main {
     font-weight: 400;
 }
 
-.end {
+.text-end {
     background: #fff; 
     padding: 35px 25px;
     border-radius: 5px;
-    margin-bottom: 70px;
+   /* margin-bottom: 70px;*/
 }
 
-.end p {
+.text-end p {
     color: #9481a5;
     font-size: 13px;
     font-weight: 400;
@@ -399,12 +402,17 @@ main {
     margin: 0;
 }
 
-.end p span, a {
+.text-end p span, a {
     font-weight: 600;
 }
 
-.end-line {
+.text-end p a {
+    color: inherit;
+}
+
+.line {
     border-bottom: 2px solid #6d5384;
+    margin-bottom: 38px;
 }
 
 .footer {
@@ -420,6 +428,8 @@ main {
     align-items: center;
     font-size: 14px;
     padding-bottom: 70px;
+
+    
 }
 
 .footer a {
@@ -459,6 +469,7 @@ main {
     z-index: 4;
     border: 1px solid #fff;
     border-radius: 5px;
+    cursor: pointer;
   }
 
     .nav-btn::after, .nav-btn::before {
@@ -567,13 +578,25 @@ main {
     }
 
     .visual-bg {
-    padding-top: 15px;
+    padding: 15px 0 36px;
     font-size: 14px;
-    min-height: 50vh; 
+    min-height: 40vh; 
     }
 
     .visual-bg h1 {
-    font-size: 70px;
+    font-size: 60px;
+    }
+
+    .visual-bg p {
+        word-spacing: 5px;
+    }
+
+    .visual-text-hold {
+        padding-bottom: 0;
+    }
+
+    .slideshow {
+        padding: 20px;
     }
 
     .slide {
