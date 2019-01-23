@@ -518,6 +518,25 @@ body {
   min-width: 320px;
 }
 
+.test-box {
+  max-width: 830px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background: green;
+}
+
+.test-box h1 {
+  text-align: center;
+}
+
+.test-box h3 {
+  text-align: center;
+}
+
+.menu-active .test-box h3 {
+  color: pink;
+}
+
 #wrapper {
   position: relative;
   width: 100%;
@@ -715,14 +734,20 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .menu-open {
   display: none;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .menu-open {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 .menu-open:after, .menu-open:before,
@@ -767,12 +792,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .menu-active .menu-open span {
   opacity: 0;
   visibility: hidden;
-}
-
-@media (max-width: 767px) {
-  .menu-open {
-    display: block;
-  }
 }
 
 .bg-section-1 {
