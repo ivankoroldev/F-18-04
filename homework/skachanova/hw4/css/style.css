@@ -369,7 +369,7 @@ h1,h2,h3,h4,h5,h6, p {
 .name-face strong {
 	margin-bottom: 10px;
 	color: #2d3033;
-	line-height: 1;
+	line-height: 1.5;
 	font-size: 22px;
 }
 
@@ -400,46 +400,37 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .interview-holder {
-	background: #53354a;
-	min-height: auto;
-	position: relative;
-	text-align: center;
-	font-size: 0;
-	line-height: 0;
-	overflow: hidden;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 100px;
 }
 
 .interview {
 	width: 50%;
-	min-height: auto;
+	background-size: cover;
+	background-position: 100% 50%;
+	min-height: 300px;
+}
+
+.interview + .interview {
+	background: #53354a;
+}
+
+img {
 	display: inline-block;
 	vertical-align: top;
-	padding: 1px;
+	max-width: 100%;
+	height: auto;
+
+
 }
 
-.interview img {
-	max-width: 100%;
-	max-height: 100vh;
-	position: relative;
-}
 
 .message-holder {
-	background: #53354a;
-	color: #fff;
-	line-height: 1em;
-	cursor: pointer;
-	position: absolute;
-	top: 50px;
-	left: 55%;
-	width: 450px;
-	height: 100%;
-	text-align: left;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	justify-content: center;
-}
+padding-top: 110px;
+padding-left: 85px;
+} 
 
 .message-holder strong {
 	font-size: 30px;
@@ -546,6 +537,8 @@ h1,h2,h3,h4,h5,h6, p {
 	color: inherit;
 	display: inline-block;
 	vertical-align: top;
+	padding: 0;
+	margin: 0;
 }
 
 .footer {
@@ -566,6 +559,7 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .cont_icon {
+	padding-top: 22px;
 	display: flex;
 	justify-content: center;
 	align-items:flex-start;
