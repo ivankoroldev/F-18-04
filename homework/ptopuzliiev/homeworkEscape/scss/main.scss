@@ -120,68 +120,48 @@ h2, h3, h4, h5, h6 {
 		}
 	}
 		
-		ul {
+	ul {
+		font-size: 0;
+		line-height: 0;
+		margin: 0 -15px;
+	}
 
-			font-size: 0;
-			line-height: 0;
-			margin: 0 -15px;
+	li {
+		font-size: 18px;
+		line-height: 1;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 15px;
+		color: $base-color;
 
-				li {
-				font-size: 18px;
-				line-height: 1;
-				display: inline-block;
-				vertical-align: top;
-				padding: 0 15px;
-				color: $base-color;
+		&.active {
+			color: $base-hover-link;				
+		}
 
-				&.active {
-					color: $base-hover-link;				
-				}
+		@include media ("<tablet") {
+			display: block;
+			text-align: center;
+			padding: 10px 0;
+		}
+	}
 
-				@include media ("<tablet") {
-					display: block;
-					text-align: center;
-					padding: 10px 0;
-				}
+	a {
+		color: inherit;
+		transition: all .3s ease-in-out;
+		border-left: solid 1px #e84545;
+		border-width: 0;
+		position: relative;
+		font-weight: 500;
 
-			a {
-				color: inherit;
-				transition: all .3s ease-in-out;
-				border-left: solid 1px #e84545;
-				border-width: 0;
-				position: relative;
-				font-weight: 500;
-
-				&:hover {
-					color: $base-hover-link;
-				}
-
-				// &:before {
-				// 	content: "";
-			 //    position: absolute;
-			 //    width: 0;
-			 //    left: 0;
-			 //    bottom: 0;
-			 //    transition: all .7s ease-in-out;
-			 //    border-bottom: solid 1px $base-hover-link;
-				// }
-
-				// &:hover:before,
-				// .active & {
-				// 	content: "";
-				// 	border-bottom: solid 1px $base-hover-link;
-				// 	position: absolute;
-				// 	width: 100%;
-				// 	left: 0;
-				// 	bottom: 0;
-				// }	
-			}
+		&:hover {
+			color: $base-hover-link;
 		}
 	}
 }
 
+
 .menu-open {
-			display: none;
+	display: none;
  
   &:after,
   &:before,
@@ -280,7 +260,7 @@ h2, h3, h4, h5, h6 {
 		}
 	}
 
-	a {
+	.btn {
 		text-transform: capitalize;
 		font: bold 23px $base-font-BrandonGrotesque;
 		padding: 10px 65px 16px; 
@@ -288,6 +268,7 @@ h2, h3, h4, h5, h6 {
 		border-radius: 4px;
 		transition: all .3s ease-in-out;
 		display: inline-block;
+		vertical-align: top;
 		color: inherit;
 
 		&:hover {
@@ -300,42 +281,42 @@ h2, h3, h4, h5, h6 {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services~~~~~~~~~~~~~~~~~~~~~~~~
 .services {
-	
 	.services-holder {
-		padding: 100px 40px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		flex-direction: row;
-		align-items: center;
+	padding: 100px 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
 
-			&:nth-child(even) {
-				background: #fafafa;
-				flex-direction: row-reverse;
+	&:nth-child(even) {
+		background: #fafafa;
+		flex-direction: row-reverse;
+	}
+
+	.descr-services {
+		max-width: 555px;
+
+		h2 {
+			@extend .heading;
+		}
+
+		p {
+			margin-bottom: 40px;
+			line-height: 1.1;
+
+			+ p {
+			margin-bottom: 0;
 			}
-		
-			.descr-services {
-				max-width: 555px;
+		}
 
-				h2 {
-					@extend .heading;
-				}
-
-				p {
-					margin-bottom: 40px;
-					line-height: 1.1;
-
-					+ p {
-					margin-bottom: 0;
-				}
-			}
-
-			.images-holder {
-				max-width: 300px;
-			}
+		.images-holder {
+			max-width: 300px;
 		}
 	}
 }
+}
+
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services-info~~~~~~~~~~~~~~~~~~~~~~~~
 .box-wrapp {
@@ -345,8 +326,6 @@ h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	padding: 0 40px;
 	@extend .section-wrapp;
-
-
 
 	.info-box {
 		width: 50%;
@@ -370,97 +349,97 @@ h2, h3, h4, h5, h6 {
 			width: 100%;
     	text-align: center;
 		}
+	}
 
-		.info-icon {
-			width: 71px;
-			height: 71px;
-			background-color: #222;
-			border-radius: 50%;
-			display: inline-block;
-			vertical-align: top;
-			text-align: center;
-			padding: 18px 0;
-			cursor: pointer;
-			transition: all .3s ease-in-out;
+	.info-icon {
+		width: 71px;
+		height: 71px;
+		background-color: #222;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		padding: 18px 0;
+		cursor: pointer;
+		transition: all .3s ease-in-out;
 
-			@include media ('<desktop') {
-				margin: 0 auto;
-			}
-
-			@include media ('<tablet') {
-				display: block;
-				margin: 0 auto;
-			}
-
-			&:hover {
-						background-color: $base-hover-link;
-						transform: rotate(15deg);
-					}
-
-				i {
-					&:before {
-					font-size: 33px;
-					color: $base-color;
-				}
-			}
+		@include media ('<desktop') {
+			margin: 0 auto;
 		}
 
-		.box-content {
-			display: inline-block;
-			vertical-align: top;
-			max-width: 290px;
-			margin-left: 18px;
+		@include media ('<tablet') {
+			display: block;
+			margin: 0 auto;
+		}
 
-			@include media ('<desktop') {
-				margin: 0;
-			}
+		&:hover {
+					background-color: $base-hover-link;
+					transform: rotate(15deg);
+				}
 
-			@include media ('<tablet') {
-				max-width: 100%;
-				margin: 0;
-			}
-
-			h4 {
-				font: 700 22px $base-font-BrandonGrotesque;
-				margin-bottom: 10px;
-			}
-
-			p {
-				line-height: 1.2;
+			i {
+				&:before {
+				font-size: 33px;
+				color: $base-color;
 			}
 		}
 	}
+
+	.box-content {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 290px;
+		margin-left: 18px;
+
+		@include media ('<desktop') {
+			margin: 0;
+		}
+
+		@include media ('<tablet') {
+			max-width: 100%;
+			margin: 0;
+		}
+
+		h4 {
+			font: 700 22px $base-font-BrandonGrotesque;
+			margin-bottom: 10px;
+		}
+
+		p {
+			line-height: 1.2;
+		}
+	}	
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~clients~~~~~~~~~~~~~~~~~~~~~~~~
 .clients {
 	background-color: #fafafa;
 	@extend .section-wrapp;
 
-		.heading-box {
-			margin-bottom: 50px;
-			text-align: center;
-			font: 400 22px $base-font-BrandonGrotesque;
-			color: $base-text-color;
-				h2 {
-				@extend .heading;
-				margin-bottom: 18px;
-			}
+	.heading-box {
+		margin-bottom: 50px;
+		text-align: center;
+		font: 400 22px $base-font-BrandonGrotesque;
+		color: $base-text-color;
+			h2 {
+			@extend .heading;
+			margin-bottom: 18px;
 		}
+	}
 
-		.clients-holder {
-			display: flex;
-			flex-wrap: wrap;
-			margin-bottom: 40px;
-			flex-direction: row;
-			align-items: center;
+	.clients-holder {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+		flex-direction: row;
+		align-items: center;
 
-			@include media ('<tablet') {
-				display: block;
-			}
-			
-			&:nth-child(odd) {
-				flex-direction: row-reverse;
-			}
+		@include media ('<tablet') {
+			display: block;
+		}
+		
+		&:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
 
 		.circle {
 			width: 220px;
@@ -468,10 +447,10 @@ h2, h3, h4, h5, h6 {
 			background-color: #111;
 			border-radius: 50%;
 
-				@include media ('<tablet') {
-					margin: 0 auto;
-				}
+			@include media ('<tablet') {
+				margin: 0 auto;
 			}
+		}
 
 		.speach {
 			background-color: #f3f3f3;
@@ -517,6 +496,7 @@ h2, h3, h4, h5, h6 {
 				transform: translate(-50%,-50%) rotate(45deg);
 				border-left: solid 2px #f3f3f3;
 				border-bottom: solid 2px #f3f3f3;
+				
 				@include media ('<tablet') {
 					display: none;
 				}
@@ -528,23 +508,25 @@ h2, h3, h4, h5, h6 {
 			margin-right: 35px;
 			margin-left: 0;
 
+			&:before,
 			&:after {
 				content: '';
-				position: absolute;
 				width: 20px;
 				height: 20px;
-				background-color: #f3f3f3;
-				margin-right: -2px;
-				margin-top: -14px;
 				top: 50%;
-				right: 0;
-				transform: translate(50%,50%) rotate(45deg);
-				border-right: solid 2px #f3f3f3;
-				border-top: solid 2px #f3f3f3;
-				
+				left: 100%;
+				transform: translateY(-50%);
+				border-top: 50px solid #000;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+
 				@include media ('<tablet') {
 					display: none;
 				}
+			}
+			&:before {
+				border-width: 55px;
+				border-top-color: #fff;
 			}
 		}
 	}
@@ -553,30 +535,31 @@ h2, h3, h4, h5, h6 {
 .logos {
 	padding: 60px 0;
 
-		@include media ('<tablet') {
-			padding: 30px 0;
-		}
+	@include media ('<tablet') {
+		padding: 30px 0;
+	}
 
 	ul {
 		text-align: center;
-		li {
-			padding: 0 25px;
-			display: inline-block;
-			vertical-align: top;
+	}
 
-			@include media ('<tablet') {
-				display: block;
-				margin-bottom: 20px;
-			}
+	li {
+		padding: 0 25px;
+		display: inline-block;
+		vertical-align: top;
 
-			a {
-				display: block;
-				transition: transform .3s linear;
+		@include media ('<tablet') {
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
 
-				&:hover {
-					transform: scale(1.1);
-				}
-			}
+	a {
+		display: block;
+		transition: transform .3s linear;
+
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 }
@@ -609,105 +592,107 @@ h2, h3, h4, h5, h6 {
 		font-size: 0;
 		line-height: 0;
 		margin: 0 -15px;
-		.team-holder {
-			padding: 0 15px;
-			width: 33.33%;
-			display: inline-block;
-			vertical-align: top;
-			min-height: 50px;
-			font-size: 18px;
-			text-align: center;
-			color: $base-color;
-			margin-bottom: 45px;
+	}
+
+	.team-holder {
+		padding: 0 15px;
+		width: 33.33%;
+		display: inline-block;
+		vertical-align: top;
+		min-height: 50px;
+		font-size: 18px;
+		text-align: center;
+		color: $base-color;
+		margin-bottom: 45px;
 
 		@include media ('<tablet') {
 			width: 100%;
 		}
 
-			.title-team {
-				font-weight: 700;
-				margin-bottom: 10px;
-				line-height: 1.3;
+		.title-team {
+			font-weight: 700;
+			margin-bottom: 10px;
+			line-height: 1.3;
 
-					.proffesion {
-					font-size: 16px;
-					font-weight: 400;
+				.proffesion {
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+
+		.photo-people {
+			margin: 0 auto;
+			width: 230px;
+			height: 230px;
+			border-radius: 50%;
+			border: solid 7px #fff;
+			margin-bottom: 20px;
+		}
+
+		.team-links {
+			font-size: 0;
+			line-height: 0;
+
+			li {
+				font-size: 18px;
+				line-height: 1;
+				display: inline-block;
+				vertical-align: top;
+				padding: 10px 5px;
+			}
+
+			a {
+				display: block;
+			}
+
+			i {
+				display: block;
+				color: $base-color;
+				font-size: 18px;
+				padding: 9px;
+				border: 2px solid $base-color;
+				border-radius: 50px;
+				transition: ease-in-out .5s all;
+				position: relative;
+
+				&:hover {
+					transform: rotateY(360deg);
 				}
 			}
 
-			.photo-people {
-				margin: 0 auto;
-				width: 230px;
-				height: 230px;
-				border-radius: 50%;
-				border: solid 7px #fff;
-				margin-bottom: 20px;
+			.icon-pinterest-logo {
+				&:hover {
+					border: 2px solid $base-hover-link;
+					color: $base-color;
+					background-color: $base-hover-link;
+				}
 			}
 
-			.team-links {
-				font-size: 0;
-				line-height: 0;
-
-				li {
-					font-size: 18px;
-					line-height: 1;
-					display: inline-block;
-					vertical-align: top;
-					padding: 10px 5px;
-
-					a {
-						display: block;
-							i {
-							display: block;
-							color: $base-color;
-							font-size: 18px;
-							padding: 9px;
-							border: 2px solid $base-color;
-							border-radius: 50px;
-							transition: ease-in-out .5s all;
-
-							&:hover {
-								transform: rotateY(360deg);
-							}
-						}
-
-						.icon-pinterest-logo {
-							&:hover {
-								border: 2px solid $base-hover-link;
-								color: $base-color;
-								background-color: $base-hover-link;
-								
-							}
-						}
-
-						.icon-facebook-logo {
-							&:hover {
-								border: 2px solid #3b5998;
-								color: $base-color;
-								background-color: #3b5998;
-							}
-						}
-						.icon-twitter-logo {
-							&:hover {
-								border: 2px solid #0084b4;
-								color: $base-color;
-								background-color: #0084b4;
-							}
-						}
-					
-						.icon-google-plus {
-							&:hover {
-								border: 2px solid #FF7F50;
-								color: $base-color;
-								background-color: #FF7F50;
-							}
-						}
-					}
+			.icon-facebook-logo {
+				&:hover {
+					border: 2px solid #3b5998;
+					color: $base-color;
+					background-color: #3b5998;
+				}
+			}
+			.icon-twitter-logo {
+				&:hover {
+					border: 2px solid #0084b4;
+					color: $base-color;
+					background-color: #0084b4;
+				}
+			}
+		
+			.icon-google-plus {
+				&:hover {
+					border: 2px solid #FF7F50;
+					color: $base-color;
+					background-color: #FF7F50;
 				}
 			}
 		}
 	}
-
+	
 	.team-describe {
 		font-size: 20px;
 		color: #ebebeb;
@@ -716,7 +701,7 @@ h2, h3, h4, h5, h6 {
 		line-height: 1.3;
 		text-align: center;
 
-	@include media ('<tablet') {
+		@include media ('<tablet') {
 			font-size: 14px;
 		}
 	}
@@ -738,15 +723,15 @@ h2, h3, h4, h5, h6 {
 	@include media ('<tablet') {
 		padding: 20px 0;
 	}
-}
 
-.our-contact {
-	width: 50%;
-	padding-right: 40px;
+	.our-contact {
+		width: 50%;
+		padding-right: 40px;
 
-	@include media ('<tablet') {
-		width: 100%;
-		padding: 0;
+		@include media ('<tablet') {
+			width: 100%;
+			padding: 0;
+		}
 	}
 
 	.heading-contact {
@@ -793,49 +778,50 @@ h2, h3, h4, h5, h6 {
 				margin-bottom: 20px;
 				font-size: 15px;
 			}
+		}
 
-			a {
-				color: $base-color;
-				transition: all .5s ease-in-out;
-				
-				&:hover {
-					color: $base-hover-link;
-					font-size: 20px;
-				}
-			}
-
-			.ico-hold {
-				vertical-align: middle;
-				display: inline-block;
-				width: 30px;
-				height: 30px;
-				text-align: center;
-				font-size: 30px;
-				margin-right: 10px;
-				color: $base-color;
-			}
-			.label-hold {
-				color: $base-color;
+		a {
+			color: $base-color;
+			transition: all .5s ease-in-out;
+			
+			&:hover {
+				color: $base-hover-link;
+				font-size: 20px;
 			}
 		}
+
+		.ico-hold {
+			vertical-align: middle;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-size: 30px;
+			margin-right: 10px;
+			color: $base-color;
+		}
+
+		.label-hold {
+			color: $base-color;
+		}
 	}
-}
 
-.contact-form-hold {
-	width: 50%;
-	padding-left: 15px;
-
-	@include media ('<tablet') {
-		width: 100%;
-		padding: 0;
-	}
-
-	form {
-		max-width: 456px;
+	.contact-form-hold {
+		width: 50%;
+		padding-left: 15px;
 
 		@include media ('<tablet') {
-		max-width: 100%;
-	}
+			width: 100%;
+			padding: 0;
+		}
+
+		form {
+			max-width: 456px;
+
+			@include media ('<tablet') {
+				max-width: 100%;
+			}
+		}
 
 		.row {
 			margin-bottom: 30px;
