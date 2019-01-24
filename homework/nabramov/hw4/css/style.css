@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 	z-index: 999;
 	padding: 0 0 0;
 	background-color: #292c47;
+	transition: all .5s ease-in-out;
 }
 
 .fixed  .header-container {
@@ -109,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p {
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 200px 0 0;
+	padding: 200px 0 140px;
 	margin-bottom: 50px;
 	position: relative;
 	
@@ -136,7 +137,6 @@ h1, h2, h3, h4, h5, h6, p {
 .btn {
 	display: inline-block;
 	vertical-align: top;
-	margin-bottom: 150px;
 
 }
 
@@ -150,6 +150,7 @@ h1, h2, h3, h4, h5, h6, p {
 	background: #e84545;
 	padding: 20px 50px;
 	border-radius: 5px;
+	margin-bottom: 10px;
 	
 }
 
@@ -169,6 +170,7 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 50px;
+	margin: 0 -45px;
 }
 
 .content {
@@ -361,9 +363,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .client {
+	background-image: url(../img/photo-client.png);
+	background-size: cover;
+	background-position: 100% 50%;
 	width: 50%;
-	position: relative;
-	min-height: 500px;
+	min-height: 300px;
 }
 
 .cite {
@@ -529,7 +533,7 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 
 	.visual {
-		padding: 115px 0 0;
+		padding: 115px 0 70px;
 		margin-bottom: 25px;
 	}
 
@@ -546,7 +550,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 	.content {
 		width: 50%;
-		padding: 20px 25px;
+		padding: 20px 45px;
 	}
 
 	.work-team {
@@ -566,7 +570,8 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 
 	.cite-text {
-		padding: 25px 30px 40px 70px;
+		padding: 25px 30px 40px 30px;
+		max-width: 100%;
 	}
 
 	.download-container h3 {
@@ -591,18 +596,21 @@ h1, h2, h3, h4, h5, h6, p {
 	.header-container {
 		padding: 5px 0 5px;
 	}
+	
+	.logo a {
+		width: 150px;
+		height: 25px;
+	}
 
 	.visual h1 {
-		font-size: 40px;
+		font-size: 29px;
 	}
 
 	.visual p {
 		font-size: 15px;
 	}
 
-	.btn {
-		margin-bottom: 70px;
-	}
+	
 
 	.cite-text {
 		font-size: 25px;
@@ -623,8 +631,8 @@ h1, h2, h3, h4, h5, h6, p {
 
   .nav-btn{
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height:40px;
     background:#e84545;
     border-radius: 50%;
     position: relative;
