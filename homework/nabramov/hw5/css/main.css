@@ -309,6 +309,7 @@ body {
 #wrapper {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -369,7 +370,7 @@ body {
   font-weight: 500;
   display: inline-block;
   vertical-align: top;
-  margin-right: 30px;
+  padding-right: 30px;
 }
 
 .navigation a {
@@ -378,12 +379,16 @@ body {
   font-family: "brandon", sans-serif;
 }
 
+.navigation a:hover {
+  color: #000;
+}
+
 .visual {
   background: url("../img/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  padding-top: 250px;
+  padding: 250px 0 100px;
   position: relative;
   margin-bottom: 50px;
 }
@@ -409,7 +414,7 @@ body {
   vertical-align: top;
   border: 3px solid #fff;
   border-radius: 5px;
-  margin-bottom: 130px;
+  margin-bottom: 5px;
 }
 
 .visual .btn a {
@@ -419,6 +424,11 @@ body {
   padding: 20px 50px;
   font-family: inherit;
   font-size: 23px;
+}
+
+.visual .btn a:hover {
+  background: #fff;
+  color: #000;
 }
 
 .service-wrap {
@@ -460,6 +470,7 @@ body {
 
 .service .image-hold {
   max-width: 40%;
+  padding: 5px;
 }
 
 .text {
@@ -513,6 +524,7 @@ body {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .work-wrapper .text h3 {
@@ -722,6 +734,14 @@ cite {
   position: relative;
 }
 
+.social-media a:hover {
+  background: #fff;
+}
+
+.social-media a:hover i {
+  color: #000;
+}
+
 .social-media a i {
   position: absolute;
   left: 25%;
@@ -813,6 +833,10 @@ li .label-hold a {
   color: #fff;
 }
 
+li .label-hold a:hover {
+  color: #000;
+}
+
 li > span {
   display: inline-block;
   vertical-align: middle;
@@ -823,6 +847,7 @@ input[type="text"], input[type="email"] {
   height: 50px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 textarea {
@@ -830,6 +855,7 @@ textarea {
   resize: none;
   display: block;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .input-text {
@@ -864,6 +890,10 @@ textarea {
   background: #fff;
   padding: 10px;
   border-radius: 10%;
+}
+
+.buttons .button:hover {
+  color: #000;
 }
 
 .footer {
