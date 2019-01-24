@@ -65,6 +65,7 @@ h1, h2, h3, h4, h6, h5, p, ul, ol, blockquote, figure {
 
 .nav-btn {
     display: none;
+    cursor: pointer;
 }
 
 .head-nav {
