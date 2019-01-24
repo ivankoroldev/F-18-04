@@ -1,0 +1,895 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1366px
+);
+
+//fonts
+@import 'common-settings/fonts';
+@import 'basic-settings/variables';
+
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'common-settings/icons';
+
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-width: $base-min-width;
+  font-weight: $base-font-weight;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+h2, h3, h4, h5, h6 {
+	text-transform: capitalize;
+}
+
+.heading {
+	font: 300 66px $base-font-BrandonGrotesque;
+  text-transform: capitalize;
+  color: #222;
+  margin-bottom: 34px;
+  line-height: 1.3;
+	 span {
+	 	font-weight: bold;
+	 }
+
+	 @include media ('<tablet') {
+		font: 300 36px $base-font-BrandonGrotesque;
+	}
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 970px;
+  padding: 0 15px;
+}
+
+.section-wrapp {
+	padding: 100px 0;
+	@include media ('<tablet') {
+			padding: 30px 0 40px;
+	}
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.header {
+	width: 100%;
+	position: absolute;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+}
+
+.header-wrap {
+	padding-top: 44px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	@include media ("<tablet") {
+		padding: 20px 0;
+	}
+
+	.logo {
+		transition: 1s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1)
+		}
+	}
+
+	.nav {
+		@include media ("<tablet") {
+			top: 50px;
+	    width: 100%;
+	    left: 100%;
+	    position: absolute;
+	    background-color: #211c39;
+	    transition: all 1s ease;
+			.menu-active & {
+				opacity: 0.7;
+				left: 0;
+			}
+		}
+	}
+		
+		ul {
+
+			font-size: 0;
+			line-height: 0;
+			margin: 0 -15px;
+
+				li {
+				font-size: 18px;
+				line-height: 1;
+				display: inline-block;
+				vertical-align: top;
+				padding: 0 15px;
+				color: $base-color;
+
+				&.active {
+					color: $base-hover-link;				
+				}
+
+				@include media ("<tablet") {
+					display: block;
+					text-align: center;
+					padding: 10px 0;
+				}
+
+			a {
+				color: inherit;
+				transition: all .3s ease-in-out;
+				border-left: solid 1px #e84545;
+				border-width: 0;
+				position: relative;
+				font-weight: 500;
+
+				&:hover {
+					color: $base-hover-link;
+				}
+
+				// &:before {
+				// 	content: "";
+			 //    position: absolute;
+			 //    width: 0;
+			 //    left: 0;
+			 //    bottom: 0;
+			 //    transition: all .7s ease-in-out;
+			 //    border-bottom: solid 1px $base-hover-link;
+				// }
+
+				// &:hover:before,
+				// .active & {
+				// 	content: "";
+				// 	border-bottom: solid 1px $base-hover-link;
+				// 	position: absolute;
+				// 	width: 100%;
+				// 	left: 0;
+				// 	bottom: 0;
+				// }	
+			}
+		}
+	}
+}
+
+.menu-open {
+			display: none;
+ 
+  &:after,
+  &:before,
+  span {
+  	content: '';
+  	position: absolute;
+  	width: 20px;
+  	height: 2px;
+  	background-color: #fff;
+  	transform: translateX(-50%);
+  	left: 50%;
+  	top: 14px;
+  	transition: all ease-in-out .3s;
+  }
+	
+	&:before {
+		top: 8px;
+		.menu-active & {
+			top: 14px;
+      transform: translateX(-50%) rotate(45deg);
+		}
+	}
+
+	&:after {
+		top: 20px;
+		.menu-active & {
+			top: 14px;
+      transform: translateX(-50%) rotate(-45deg);
+		}
+	}
+
+	span {
+    .menu-active & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @include media ("<tablet") {
+  	display: block;
+  	position: relative;
+	  width: 30px;
+	  height: 30px;
+	  z-index: 4;
+	  border-radius: 5px;
+  }
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~visual-bg~~~~~~~~~~~~~~~~~~~~~~~~
+.visual-bg {
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+
+	* {
+		z-index: 10;
+		position: relative;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0, .2);
+		z-index: 0;
+	}
+}
+
+.visual {
+	padding: 225px 0 120px;
+	text-align: center;
+	font-size: 30px;
+	color: $base-color;
+	max-width: 690px;
+	margin: 0 auto;
+
+	p {
+		font-weight: 300;
+		margin-bottom: 50px;
+
+		@include media ("<widescreen") {
+			margin-bottom: 27px;
+		}
+	}
+
+	h1 {
+		font: bold 64px $base-font-BrandonGrotesque;
+		text-transform: uppercase;
+		margin-bottom: 80px;
+
+			@include media ("<widescreen") {
+				margin-bottom: 72px;
+		}
+	}
+
+	a {
+		text-transform: capitalize;
+		font: bold 23px $base-font-BrandonGrotesque;
+		padding: 10px 65px 16px; 
+		border: 3px solid $base-color;
+		border-radius: 4px;
+		transition: all .3s ease-in-out;
+		display: inline-block;
+		color: inherit;
+
+		&:hover {
+			color: $base-hover-link;
+			border-color: $base-hover-link;
+		}
+	}
+}
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services~~~~~~~~~~~~~~~~~~~~~~~~
+.services {
+	
+	.services-holder {
+		padding: 100px 40px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+
+			&:nth-child(even) {
+				background: #fafafa;
+				flex-direction: row-reverse;
+			}
+		
+			.descr-services {
+				max-width: 555px;
+
+				h2 {
+					@extend .heading;
+				}
+
+				p {
+					margin-bottom: 40px;
+					line-height: 1.1;
+
+					+ p {
+					margin-bottom: 0;
+				}
+			}
+
+			.images-holder {
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services-info~~~~~~~~~~~~~~~~~~~~~~~~
+.box-wrapp {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 0 40px;
+	@extend .section-wrapp;
+
+
+
+	.info-box {
+		width: 50%;
+		margin-bottom: 50px;
+
+		&:nth-child(even) {
+			padding-left: 45px;
+
+			@include media ('<tablet') {
+				padding: 0;
+			}
+		}
+
+		@include media ('<desktop') {
+			width: 50%;
+	    margin-bottom: 50px;
+	    text-align: center;
+		}
+
+		@include media ('<tablet') {
+			width: 100%;
+    	text-align: center;
+		}
+
+		.info-icon {
+			width: 71px;
+			height: 71px;
+			background-color: #222;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			padding: 18px 0;
+			cursor: pointer;
+			transition: all .3s ease-in-out;
+
+			@include media ('<desktop') {
+				margin: 0 auto;
+			}
+
+			@include media ('<tablet') {
+				display: block;
+				margin: 0 auto;
+			}
+
+			&:hover {
+						background-color: $base-hover-link;
+						transform: rotate(15deg);
+					}
+
+				i {
+					&:before {
+					font-size: 33px;
+					color: $base-color;
+				}
+			}
+		}
+
+		.box-content {
+			display: inline-block;
+			vertical-align: top;
+			max-width: 290px;
+			margin-left: 18px;
+
+			@include media ('<desktop') {
+				margin: 0;
+			}
+
+			@include media ('<tablet') {
+				max-width: 100%;
+				margin: 0;
+			}
+
+			h4 {
+				font: 700 22px $base-font-BrandonGrotesque;
+				margin-bottom: 10px;
+			}
+
+			p {
+				line-height: 1.2;
+			}
+		}
+	}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~clients~~~~~~~~~~~~~~~~~~~~~~~~
+.clients {
+	background-color: #fafafa;
+	@extend .section-wrapp;
+
+		.heading-box {
+			margin-bottom: 50px;
+			text-align: center;
+			font: 400 22px $base-font-BrandonGrotesque;
+			color: $base-text-color;
+				h2 {
+				@extend .heading;
+				margin-bottom: 18px;
+			}
+		}
+
+		.clients-holder {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 40px;
+			flex-direction: row;
+			align-items: center;
+
+			@include media ('<tablet') {
+				display: block;
+			}
+			
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+
+		.circle {
+			width: 220px;
+			height: 220px;
+			background-color: #111;
+			border-radius: 50%;
+
+				@include media ('<tablet') {
+					margin: 0 auto;
+				}
+			}
+
+		.speach {
+			background-color: #f3f3f3;
+			padding: 40px 80px 45px;
+			margin-left: 40px;
+			font-size: 24px;
+			line-height: 1.2;
+			border: solid 2px #f3f3f3;
+
+			@include media ('<tablet') {
+				margin-left: 0;
+				font-size: 15px;
+				padding: 20px 40px 25px;
+				text-align: center;
+			}
+
+			blockquote {
+				max-width: 480px;
+
+					cite {
+					color: #7690c5;
+					font-size: 20px;
+
+					@include media ('<tablet') {
+						font-size: 15px;
+					}
+				}
+			}	
+		}
+
+		.triangle-1 {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background-color: #f3f3f3;
+				top: 50%;
+				left: 0;
+				margin-left: -2px;
+				transform: translate(-50%,-50%) rotate(45deg);
+				border-left: solid 2px #f3f3f3;
+				border-bottom: solid 2px #f3f3f3;
+				@include media ('<tablet') {
+					display: none;
+				}
+			}
+		}
+
+		.triangle-2 {
+			position: relative;
+			margin-right: 35px;
+			margin-left: 0;
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background-color: #f3f3f3;
+				margin-right: -2px;
+				margin-top: -14px;
+				top: 50%;
+				right: 0;
+				transform: translate(50%,50%) rotate(45deg);
+				border-right: solid 2px #f3f3f3;
+				border-top: solid 2px #f3f3f3;
+				
+				@include media ('<tablet') {
+					display: none;
+				}
+			}
+		}
+	}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logos~~~~~~~~~~~~~~~~~~~~~~~~
+.logos {
+	padding: 60px 0;
+
+		@include media ('<tablet') {
+			padding: 30px 0;
+		}
+
+	ul {
+		text-align: center;
+		li {
+			padding: 0 25px;
+			display: inline-block;
+			vertical-align: top;
+
+			@include media ('<tablet') {
+				display: block;
+				margin-bottom: 20px;
+			}
+
+			a {
+				display: block;
+				transition: transform .3s linear;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~team-section~~~~~~~~~~~~~~~~~~~~~~~~
+.team-section {
+	@extend .section-wrapp;
+	background-color: #111;
+
+	@include media ('<tablet') {
+			padding: 30px 0 40px;
+	}
+
+	.heading-box {
+		text-align: center;
+		font: 400 22px $base-font-BrandonGrotesque;
+		color: $base-text-color;
+
+		h2 {
+		@extend .heading;
+		color: $base-color;
+		margin-bottom: 0;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		margin-bottom: 60px;
+	}
+
+	.wrapp-team-holder {
+		font-size: 0;
+		line-height: 0;
+		margin: 0 -15px;
+		.team-holder {
+			padding: 0 15px;
+			width: 33.33%;
+			display: inline-block;
+			vertical-align: top;
+			min-height: 50px;
+			font-size: 18px;
+			text-align: center;
+			color: $base-color;
+			margin-bottom: 45px;
+
+		@include media ('<tablet') {
+			width: 100%;
+		}
+
+			.title-team {
+				font-weight: 700;
+				margin-bottom: 10px;
+				line-height: 1.3;
+
+					.proffesion {
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+
+			.photo-people {
+				margin: 0 auto;
+				width: 230px;
+				height: 230px;
+				border-radius: 50%;
+				border: solid 7px #fff;
+				margin-bottom: 20px;
+			}
+
+			.team-links {
+				font-size: 0;
+				line-height: 0;
+
+				li {
+					font-size: 18px;
+					line-height: 1;
+					display: inline-block;
+					vertical-align: top;
+					padding: 10px 5px;
+
+					a {
+						display: block;
+							i {
+							display: block;
+							color: $base-color;
+							font-size: 18px;
+							padding: 9px;
+							border: 2px solid $base-color;
+							border-radius: 50px;
+							transition: ease-in-out .5s all;
+
+							&:hover {
+								transform: rotateY(360deg);
+							}
+						}
+
+						.icon-pinterest-logo {
+							&:hover {
+								border: 2px solid $base-hover-link;
+								color: $base-color;
+								background-color: $base-hover-link;
+								
+							}
+						}
+
+						.icon-facebook-logo {
+							&:hover {
+								border: 2px solid #3b5998;
+								color: $base-color;
+								background-color: #3b5998;
+							}
+						}
+						.icon-twitter-logo {
+							&:hover {
+								border: 2px solid #0084b4;
+								color: $base-color;
+								background-color: #0084b4;
+							}
+						}
+					
+						.icon-google-plus {
+							&:hover {
+								border: 2px solid #FF7F50;
+								color: $base-color;
+								background-color: #FF7F50;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.team-describe {
+		font-size: 20px;
+		color: #ebebeb;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.3;
+		text-align: center;
+
+	@include media ('<tablet') {
+			font-size: 14px;
+		}
+	}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~contact~~~~~~~~~~~~~~~~~~~~~~~~
+.wrapper-contact {
+	background-color: #7690c5;
+}
+
+.section-contact {
+	@extend .section-wrapp;
+	border-bottom: 1px solid #87a0d2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 70px;
+
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+}
+
+.our-contact {
+	width: 50%;
+	padding-right: 40px;
+
+	@include media ('<tablet') {
+		width: 100%;
+		padding: 0;
+	}
+
+	.heading-contact {
+		color: $base-color;
+		line-height: 1.4;
+		margin-bottom: 50px;
+
+		@include media ('<tablet') {
+			text-align: center;
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			@extend .heading;
+			color: $base-color;
+			margin-bottom: 20px;
+			line-height: 0.8;
+			word-spacing: 15px;
+		}
+	}
+
+	.main-contact-wrapp {
+
+		.contact-list {
+			font-size: 0;
+			line-height: 0;
+
+			@include media ('<tablet') {
+				text-align: center;
+			}
+		}
+
+		li {
+			font-size: 18px;
+			line-height: 1;
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 40px;
+
+			@include media ('<tablet') {
+				width: 100%;
+				margin-bottom: 20px;
+				font-size: 15px;
+			}
+
+			a {
+				color: $base-color;
+				transition: all .5s ease-in-out;
+				
+				&:hover {
+					color: $base-hover-link;
+					font-size: 20px;
+				}
+			}
+
+			.ico-hold {
+				vertical-align: middle;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				font-size: 30px;
+				margin-right: 10px;
+				color: $base-color;
+			}
+			.label-hold {
+				color: $base-color;
+			}
+		}
+	}
+}
+
+.contact-form-hold {
+	width: 50%;
+	padding-left: 15px;
+
+	@include media ('<tablet') {
+		width: 100%;
+		padding: 0;
+	}
+
+	form {
+		max-width: 456px;
+
+		@include media ('<tablet') {
+		max-width: 100%;
+	}
+
+		.row {
+			margin-bottom: 30px;
+		}
+
+		.input {
+			border-radius: 4px;
+			width: 100%;
+			display: block;
+			border: 1px solid #ccc;
+			padding: 16px 20px 20px;
+			min-height: 50px;
+			color: #bbb;
+
+			@include media ('<tablet') {
+				padding: 10px;
+				min-height: 20px;
+				font-size: 14px;
+			}
+		}
+
+		.textarea {
+			resize: vertical;
+			min-height: 208px;
+		}
+
+		.button {
+			background-color: #fff;
+			text-transform: uppercase;
+			transition: all .3s ease-in-out;
+
+			@include media ('<tablet') {
+				padding: 10px;
+			}
+
+			@include media ('<phone') {
+				padding: 0;
+			}
+
+			&:hover {
+				background-color: $base-hover-link;
+				color: #fff;
+				border-color: $base-hover-link;
+				transform: rotateX(360deg);
+			}
+		}
+	}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~footer~~~~~~~~~~~~~~~~~~~~~~~~
+.footer {
+	.footer-content {
+		text-align: center;
+		font: 500 16px $base-font-BrandonGrotesque;
+		padding: 32px;
+		color: $base-color;
+	}
+}
