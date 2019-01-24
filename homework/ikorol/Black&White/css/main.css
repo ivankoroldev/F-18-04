@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -483,10 +483,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: bold;
   color: inherit;
+  font-weight: 300;
+  margin: 0 0 20px;
 }
 
 h1 {
   font-size: 44px;
+  color: #1d1e1f;
 }
 
 h2 {
@@ -516,6 +519,10 @@ body {
   min-width: 320px;
 }
 
+body p {
+  margin: 0 0 20px;
+}
+
 #wrapper {
   position: relative;
   width: 100%;
@@ -528,7 +535,11 @@ body {
 }
 
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .nav {
@@ -552,6 +563,7 @@ body {
 }
 
 .nav ul {
+  text-transform: capitalize;
   font-family: "Roboto", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
@@ -561,7 +573,7 @@ body {
   text-align: center;
 }
 
-.nav ul li {
+.nav li {
   font-size: 13px;
   line-height: 1.2;
   display: inline-block;
@@ -571,26 +583,26 @@ body {
 }
 
 @media (max-width: 767px) {
-  .nav ul li {
+  .nav li {
     display: block;
   }
 }
 
-.nav ul li.active {
+.nav li.active {
   color: #000000;
 }
 
-.nav ul li.logo-holder {
+.nav li.logo-holder {
   padding: 0 38px;
 }
 
 @media (max-width: 767px) {
-  .nav ul li.logo-holder {
+  .nav li.logo-holder {
     display: none;
   }
 }
 
-.nav ul a {
+.nav a {
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
@@ -598,7 +610,7 @@ body {
   color: inherit;
 }
 
-.nav ul a:hover {
+.nav a:hover {
   color: #000000;
 }
 
@@ -636,4 +648,297 @@ body {
 
 .mobile-logo a {
   display: block;
+}
+
+.visual-section {
+  color: #898888;
+  text-align: center;
+  background: #f8f8f8;
+  min-height: 100vh;
+  padding: 80px 0;
+  white-space: nowrap;
+}
+
+.visual-section:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  opacity: 0;
+  visibility: hidden;
+  min-height: calc(100vh - 160px);
+}
+
+.visual-section p {
+  font: 300 italic 16px/1.2 "Merriweather", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.visual-section .btn {
+  padding: 15px;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  min-width: 190px;
+  color: #000000;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.visual-section .visual-wrap {
+  white-space: normal;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.scroll-btn {
+  position: absolute;
+  height: 80px;
+  width: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+
+.scroll-btn .one {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-name: pulseAnimate;
+  animation-name: pulseAnimate;
+}
+
+.scroll-btn .two, .scroll-btn .three {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  position: absolute;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-animation-name: pulseAnimate;
+  animation-name: pulseAnimate;
+  left: 50%;
+  -webkit-transform: translateX(-50%, -50%);
+  -ms-transform: translateX(-50%, -50%);
+  transform: translateX(-50%, -50%);
+}
+
+.scroll-btn .three {
+  top: auto;
+  bottom: 15px;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.visual-text {
+  position: relative;
+  -webkit-animation: visualTextAnimation 5s both;
+  animation: visualTextAnimation 5s both;
+}
+
+@-webkit-keyframes visualTextAnimation {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  50% {
+    -webkit-transform: translateY(-100px) scale(0.5);
+    transform: translateY(-100px) scale(0.5);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes visualTextAnimation {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  50% {
+    -webkit-transform: translateY(-100px) scale(0.5);
+    transform: translateY(-100px) scale(0.5);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.year-row {
+  margin: 0 -90px;
+}
+
+@media (max-width: 767px) {
+  .year-row {
+    margin: 0;
+  }
+}
+
+.year-row:nth-child(even) {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .year-row:nth-child(even) {
+    text-align: left;
+  }
+}
+
+.year-row:nth-child(even) .year-box:after {
+  left: 0;
+}
+
+.year-row:nth-child(even) .year {
+  text-align: left;
+}
+
+.history-section {
+  background: #000000;
+  color: #b7b7b7;
+  font-size: 15px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .history-section {
+    padding-left: 5px;
+  }
+}
+
+.history-section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fff;
+}
+
+@media (max-width: 767px) {
+  .history-section:after {
+    left: 20px;
+  }
+}
+
+.year-box {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 90px;
+  text-align: left;
+  position: relative;
+  z-index: 9;
+}
+
+@media (max-width: 767px) {
+  .year-box {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.year-box:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+@media (max-width: 767px) {
+  .year-box:after {
+    left: 0;
+  }
+}
+
+.year-box.current:after {
+  width: 30px;
+  height: 30px;
+}
+
+.year-box .year {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .year-box .year {
+    text-align: left;
+  }
+}
+
+.history-tree {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 100px 15px;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+}
+
+.img-city {
+  text-align: center;
+  position: relative;
+  z-index: 3;
 }
