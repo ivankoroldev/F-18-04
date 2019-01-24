@@ -316,7 +316,7 @@ h1,h2,h3,h4,h5,h6, p {
 .blocks{
 	line-height: 0;
 	font-size: 0px;
-	margin: 0px -35px 70px 0px;
+	margin: 0px -35px 70px -35px;
 }
 .blocks-box{
 	text-align: center;
