@@ -9,6 +9,7 @@ $h6-basic-font-size: 15px;
   font-family: inherit;
   font-weight: 400;
   color: inherit;
+
 }
 
 h1 {
@@ -33,4 +34,10 @@ h5 {
 
 h6 {
   font-size: $h6-basic-font-size;
+}
+
+p {
+	color:$p-color;
+	font-size: 16px;
+	padding: 10px 0;
 }
