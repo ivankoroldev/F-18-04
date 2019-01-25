@@ -319,101 +319,109 @@ h2, h3, h4, h5, h6 {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services-info~~~~~~~~~~~~~~~~~~~~~~~~
-.box-wrapp {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	flex-direction: row;
-	padding: 0 40px;
-	@extend .section-wrapp;
+.services-info {
+		
+	
+	.box-wrapp {
 
-	.info-box {
-		width: 50%;
-		margin-bottom: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: row;
+		padding: 100px 40px;
 
-		&:nth-child(even) {
-			padding-left: 45px;
+		.info-box {
+			width: 50%;
+			margin-bottom: 50px;
+
+			&:nth-child(even) {
+				padding-left: 45px;
+
+				@include media ('<tablet') {
+					padding: 0;
+				}
+			}
+
+			@include media ('<desktop') {
+				width: 50%;
+		    margin-bottom: 50px;
+		    text-align: center;
+			}
 
 			@include media ('<tablet') {
-				padding: 0;
+				width: 100%;
+	    	text-align: center;
 			}
 		}
 
-		@include media ('<desktop') {
-			width: 50%;
-	    margin-bottom: 50px;
-	    text-align: center;
-		}
+		.info-icon {
+			width: 71px;
+			height: 71px;
+			background-color: #222;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			padding: 18px 0;
+			cursor: pointer;
+			transition: all .3s ease-in-out;
 
-		@include media ('<tablet') {
-			width: 100%;
-    	text-align: center;
-		}
-	}
+			@include media ('<desktop') {
+				margin: 0 auto;
+			}
 
-	.info-icon {
-		width: 71px;
-		height: 71px;
-		background-color: #222;
-		border-radius: 50%;
-		display: inline-block;
-		vertical-align: top;
-		text-align: center;
-		padding: 18px 0;
-		cursor: pointer;
-		transition: all .3s ease-in-out;
+			@include media ('<tablet') {
+				display: block;
+				margin: 0 auto;
+			}
 
-		@include media ('<desktop') {
-			margin: 0 auto;
-		}
+			&:hover {
+						background-color: $base-hover-link;
+						transform: rotate(15deg);
+					}
 
-		@include media ('<tablet') {
-			display: block;
-			margin: 0 auto;
-		}
-
-		&:hover {
-					background-color: $base-hover-link;
-					transform: rotate(15deg);
+				i {
+					&:before {
+					font-size: 33px;
+					color: $base-color;
 				}
-
-			i {
-				&:before {
-				font-size: 33px;
-				color: $base-color;
 			}
 		}
+
+		.box-content {
+			display: inline-block;
+			vertical-align: top;
+			max-width: 290px;
+			margin-left: 18px;
+
+			@include media ('<desktop') {
+				margin: 0;
+			}
+
+			@include media ('<tablet') {
+				max-width: 100%;
+				margin: 0;
+			}
+
+			h4 {
+				font: 700 22px $base-font-BrandonGrotesque;
+				margin-bottom: 10px;
+			}
+
+			p {
+				line-height: 1.2;
+			}
+		}	
 	}
-
-	.box-content {
-		display: inline-block;
-		vertical-align: top;
-		max-width: 290px;
-		margin-left: 18px;
-
-		@include media ('<desktop') {
-			margin: 0;
-		}
-
-		@include media ('<tablet') {
-			max-width: 100%;
-			margin: 0;
-		}
-
-		h4 {
-			font: 700 22px $base-font-BrandonGrotesque;
-			margin-bottom: 10px;
-		}
-
-		p {
-			line-height: 1.2;
-		}
-	}	
 }
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~clients~~~~~~~~~~~~~~~~~~~~~~~~
 .clients {
 	background-color: #fafafa;
-	@extend .section-wrapp;
+	
+	.clients-wrapp {
+		@extend .section-wrapp;
+	}
 
 	.heading-box {
 		margin-bottom: 50px;
@@ -532,7 +540,7 @@ h2, h3, h4, h5, h6 {
 	}
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logos~~~~~~~~~~~~~~~~~~~~~~~~
-.logos {
+.logos-wrapp {
 	padding: 60px 0;
 
 	@include media ('<tablet') {
