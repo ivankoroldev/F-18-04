@@ -29,7 +29,7 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 
@@ -90,7 +90,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         transition: 0.3s ease-in-out;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
-        &:hover {
+        &:hover, &.active {
           border-top: 3px solid #ffffff;
           border-bottom: 3px solid #ffffff;
         }
@@ -101,7 +101,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .visual {
   background-image: url("../images/background.jpg");
-  background-position: -25px 0;
+  background-position: center;
   color: white;
   padding-top: 220px;
   @include media('<tablet') {
@@ -134,6 +134,31 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     color: white;
     border: 2px solid white;
     border-radius: 2px;
+    position: relative;
+    z-index: 0;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 0%; height: 100%;
+      background: #7690c5;
+      top: 0; left: 50%;
+      z-index: -2;
+      transition: all 0ms ease;
+    }
+    
+    &:hover{
+      box-shadow:none;
+      &:before{
+        position: absolute;
+        content: '';
+        width: 100%; height: 100%;
+        background: #7690c5;
+        top: 0; left: 0%;
+        z-index: -4;
+        transition: all 300ms ease;
+        color: white; 
+      }
+    }
   }
 }
 
@@ -261,7 +286,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   
   .clients__feedback {
     background: #fafafa;
-    padding: 88px 0 95px 0;
+    padding: 88px 0 100px 0;
     @include media('<tablet') {
       padding: 40px 0 40px 0;
     }
@@ -285,50 +310,73 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .client__img {
-  background: #000;
-    width: 234px;
-    height: 234px;
+    max-width: 234px;
+    max-height: 234px;
     border-radius: 50%;
     border: 6px solid white;
     margin: -6px;
+    @include media('<tablet') {
+      margin-bottom: 20px;
+    }
+    img {
+      min-width: 200px;
+    }
 }
 
 .clients__item {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     text-align: left;
     margin-bottom: 38px;
+    @include media('<tablet') {
+      flex-direction: column;
+    }
     
     .client__text {
       border: 2px solid #f2f2f2;
       margin: 0 30px;
-      max-width: 645px;
       padding: 34px 80px;
       background: white;
       margin: 11px 30px 0 42px;
       position: relative;
+      @include media('<desktop') {
+        padding: 34px 34px;
+      }
       p {
         font-size: 26px;
         letter-spacing: -0.5px;
         line-height: 34px;
+        max-width: 485px;
       }
       cite {
         font-style: normal;
         font-size: 20px;
         line-height: 36px;
         letter-spacing: -0.4px;
+        a:hover {
+          text-decoration: underline;
+        }
       }
       &:before {
         content: "";
         position: absolute;
         right: 100%; 
         top: 50%;
-        transform: translate(50%,-50%) rotate(45deg);
-        width: 18px;
-        height: 16px;
-        background: white;
-        box-shadow: -2px 2px 1px rgba(242, 242, 242, 1);
+        transform: translateY(-50%);
+        border-bottom: 13px solid transparent;
+        border-right: 21px solid #f2f2f2;
+        border-top: 13px solid transparent;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 100%; 
+        top: 50%;
+        transform: translateY(-50%);
+        border-bottom: 10px solid transparent;
+        border-right: 18px solid white;
+        border-top: 10px solid transparent;
       }
     }
     
@@ -337,15 +385,22 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .clients__item:nth-child(even) {
     flex-direction: row-reverse;
     margin: 0;  
+    @include media('<tablet') {
+      flex-direction: column;
+    }
     .client__text {
       margin: 0 42px 0 30px;
-    }  
-    .client__text:before {
-      content: "";
-      left: 100%; 
-      transform: translate(-50%,-50%) rotate(45deg);
-      box-shadow: 2px -2px 1px rgba(242, 242, 242, 1);
-      } 
+      &:before {
+        left: 100%; 
+        border-left: 21px solid #f2f2f2;
+        border-right: 10px solid transparent;
+      }
+      &:after {
+        left: 100%; 
+        border-left: 18px solid white;
+        border-right: 10px solid transparent;
+      }
+    } 
 }
 
 .clients__logos {
@@ -363,6 +418,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       li {
         padding: 0px 20px;
         vertical-align: -webkit-baseline-middle;
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
         @include media('<desktop') {
           width: 25%;
           padding: 0 5px;
@@ -377,6 +436,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   color: white;
   background: #111;
   padding: 87px 0 95px;
+  @include media('<tablet') {
+    padding: 40px 0 40px;
+  }
   p {
     font-size: 20px;
     max-width: 600px;
@@ -386,6 +448,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     color: white;
   }
   h2 {
+    @include media('<tablet') {
+      font-size: 35px;
+    }
     span {
       font-weight: 300;
     }
@@ -394,12 +459,18 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     font-weight: 400;
     color: gray;
     margin-bottom: 75px;
+    @include media('<tablet') {
+      margin-bottom: 35px;
+    }
   }
   .team__holder {
     font-size: 0;
     line-height: 0;
     margin: 0 -23px 44px -23px;
-    padding: 0 73px;
+    padding: 0 77px;
+    @include media('<tablet') {
+      margin-bottom: 0;
+    }
     .team__item {
       display: inline-block;
       vertical-align: top;
@@ -407,6 +478,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       font-size: 18px;
       padding: 0px 23px;
       width: 33.33%;
+      @include media('<tablet') {
+        width: 100%;
+        margin-bottom: 30px;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -416,10 +491,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
           line-height: 1;
           width: 40px;
           height: 40px;
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          justify-content: center;
           margin: 0 5px;
           
           a {
@@ -432,12 +503,21 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
             border-radius: 50%;
             border: 3px solid white;
             transition: all .3s ease-in-out;
-            &:hover {
-            color: #111;
-            background: #fafafa;
+            &.icon-facebook-logo:hover {
+              background: #3b5998;
+              border: 3px solid #3b5998;
             }
-            i {
-              vertical-align: middle;
+            &.icon-twitter-logo-silhouette:hover {
+              background: #00aced;
+              border: 3px solid #00aced;
+            }
+            &.icon-pinterest-logo:hover {
+              background: #cb2028;
+              border: 3px solid #cb2028;
+            }
+            &.icon-google-plus-logo:hover {
+              background: #d95232;
+              border: 3px solid #d95232;
             }
           }
         }
@@ -448,16 +528,119 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       }
       h6 {
         font-weight: 400;
-        margin-bottom: 11px;
+        margin-bottom: 10px;
         font-size: 15px;
       }
       .team__img {
-        width: 234px;
-        height: 234px;
+        max-width: 234px;
+        max-height: auto;
         border: 7px solid white;
         border-radius: 50%;
-        margin: 0 auto 18px;
+        margin: 0 auto 16px;
+        img {
+          border-radius: 50%;
+        }
       }  
     }
   } 
+}
+
+.contacts__wrapper {
+  background: #7690c5;
+  text-align: left;
+}
+.contacts__holder {
+  font-size: 0;
+  line-height: 0;
+  color: #fff;
+  padding: 95px 0 100px;
+  margin: 0 -10px;
+  @include media('<tablet') {
+    padding: 45px 0 45px;
+  }
+}
+.contacts__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 10px;
+  @include media('<tablet') {
+    width: 100%;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 18px;
+    @include media('<tablet') {
+      font-size: 35px;
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  h5 {
+    font-weight: 400;
+    margin-bottom: 43px;
+    line-height: 26px;
+  }
+  ul {
+    li {
+      font-size: 18px;
+      line-height: 1.2;
+      width: 50%;
+      margin-bottom: 41px;
+      a {
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        margin-left: 26px;
+        padding-left: 10px;
+        text-align: left;
+        &:before {
+          font-size: 25px;
+          position: absolute;
+          right: 100%;
+        }
+      }
+    }
+  }
+}
+
+.contact__form {
+  color: blue;
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    margin-bottom: 30px;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  background: #7690c5;
+  text-align: center;
+  p {
+    color: white;
+    font-size: 16px;
+  }
+  .footer__holder {
+    min-height: 80px;
+    border-top: 1px solid #87a0d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
