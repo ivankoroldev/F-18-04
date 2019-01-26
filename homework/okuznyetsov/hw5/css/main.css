@@ -726,6 +726,7 @@ main .strip-wrap .hold .content-wrap {
   .skills .skills-wrap {
     padding: 10px 0;
     margin: 0;
+    text-align: center;
   }
 }
 
@@ -836,6 +837,7 @@ main .strip-wrap .hold .content-wrap {
   .clients-wrap {
     padding: 10px 0;
     display: block;
+    text-align: center;
   }
 }
 
@@ -1094,7 +1096,8 @@ main .strip-wrap .hold .content-wrap {
   text-decoration: none;
   font-size: 17px;
   border-radius: 50%;
-  padding: 6px;
+  width: 40px;
+  height: 40px;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -1102,7 +1105,7 @@ main .strip-wrap .hold .content-wrap {
 
 .team-wrap .worker .inform .links li a i {
   font-size: 14px;
-  padding: 8px;
+  vertical-align: middle;
 }
 
 .team-wrap .worker .inform .links li a.twitter:hover {
