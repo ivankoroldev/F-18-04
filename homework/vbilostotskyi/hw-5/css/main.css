@@ -656,6 +656,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .header__contant {
@@ -839,6 +840,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .visual .visual__link {
   display: inline-block;
+  vertical-align: top;
   font-size: 23px;
   font-weight: bold;
   padding: 16px 66px;
@@ -1184,6 +1186,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     position: absolute;
     bottom: 100%;
     left: 50%;
+    top: auto;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -1211,6 +1214,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     content: "";
     position: absolute;
     bottom: 100%;
+    top: auto;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1243,15 +1247,27 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .clients__item:nth-child(even) .client__text:before {
-  left: 100%;
-  border-left: 21px solid #f2f2f2;
-  border-right: 10px solid transparent;
+  bottom: 100%;
+  left: 50%;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-left: 13px solid transparent;
+  border-bottom: 21px solid #f2f2f2;
+  border-right: 13px solid transparent;
 }
 
 .clients__item:nth-child(even) .client__text:after {
-  left: 100%;
-  border-left: 18px solid white;
+  bottom: 100%;
+  top: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-bottom: 18px solid white;
   border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
 }
 
 .clients__logos {
@@ -1537,6 +1553,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   text-align: left;
 }
 
+.contacts__item ul li a:hover {
+  text-decoration: underline;
+}
+
 .contacts__item ul li a:before {
   font-size: 25px;
   position: absolute;
@@ -1618,6 +1638,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 label {
   display: inline-block;
+  vertical-align: top;
   margin: 0 10px 10px 10px;
 }
 
