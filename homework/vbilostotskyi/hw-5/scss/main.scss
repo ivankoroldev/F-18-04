@@ -91,13 +91,105 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
         &:hover, &.active {
-          border-top: 3px solid #ffffff;
-          border-bottom: 3px solid #ffffff;
+          border-top: 3px solid $white;
+          border-bottom: 3px solid $white;
         }
       }
     }
   }
 }
+
+// mobile menu
+
+.menu-opener {
+    display: none;
+
+    @include media('<tablet') {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 4;
+  }
+}
+.menu-opener::after,
+    .menu-opener::before {
+        content: '';
+    }
+
+.menu-opener::after,
+    .menu-opener::before,
+    .menu-opener span {
+        position: absolute;
+        height: 4px;
+        width: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $white;
+        top: 18px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
+    }
+
+.menu-opener::after {
+  top: 12px;
+}
+
+.menu-opener::before {
+  top: 6px; 
+}
+
+.menu-active .menu-opener::after {
+  opacity: 0;
+}
+
+.menu-active .menu-opener::before {
+  top: 12px; 
+  left: 2px;
+  transform: rotate(45deg);
+}
+
+.menu-active .menu-opener span {
+  top: 12px;
+  left: 2px;
+  transform: rotate(-45deg);
+}
+
+.nav__ul {
+  @include media('<tablet') {
+  transition: all 0.3s ease-in-out;
+  padding-top: 100px;
+  opacity: 0;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  left: 100%;
+  background: rgba(0, 0, 0, 0.9);   
+  .nav__item {
+    display: block;
+    margin: 7px 0;
+  } 
+}
+}
+
+.menu-active {
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9;
+}  
+
+.menu-active .nav__ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+
+// mpbile menu end
+
+
 
 .visual {
   background-image: url("../images/background.jpg");
@@ -142,7 +234,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       width: 0%; height: 100%;
       background: #7690c5;
       top: 0; left: 50%;
-      z-index: -2;
       transition: all 0ms ease;
     }
     
@@ -154,7 +245,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         width: 100%; height: 100%;
         background: #7690c5;
         top: 0; left: 0%;
-        z-index: -4;
+        z-index: -1;
         transition: all 300ms ease;
         color: white; 
       }
@@ -262,7 +353,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         display: inline-block;
         vertical-align: top;
         color: white;
-        background: black;
+        background: $black;
         border-radius: 50%;
         font-size: 40px;
         padding: 15px;
@@ -367,6 +458,16 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         border-bottom: 13px solid transparent;
         border-right: 21px solid #f2f2f2;
         border-top: 13px solid transparent;
+        @include media('<tablet') {
+          content: "";
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border-left: 13px solid transparent;
+          border-bottom: 21px solid #f2f2f2;
+          border-right: 13px solid transparent;
+        }
       }
       &:after {
         content: "";
@@ -377,6 +478,16 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         border-bottom: 10px solid transparent;
         border-right: 18px solid white;
         border-top: 10px solid transparent;
+        @include media('<tablet') {
+          content: "";
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border-bottom: 18px solid white;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+        }
       }
     }
     
@@ -552,7 +663,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .contacts__holder {
   font-size: 0;
   line-height: 0;
-  color: #fff;
+  color: $white;
   padding: 95px 0 100px;
   margin: 0 -10px;
   @include media('<tablet') {
@@ -585,13 +696,17 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     line-height: 26px;
   }
   ul {
+    text-align: left;
     li {
       font-size: 18px;
       line-height: 1.2;
       width: 50%;
       margin-bottom: 41px;
+      @include media('<tablet') {
+        font-size: 15px;
+      }
       a {
-        color: #fff;
+        color: $white;
         display: inline-block;
         vertical-align: middle;
         text-align: center;
@@ -609,32 +724,18 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
 }
 
-.contact__form {
-  color: blue;
-  input {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 30px;
-  }
-  h3 {
-    margin-bottom: 30px;
-  }
-  textarea {
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 30px;
-  }
-}
-
 .footer {
   background: #7690c5;
   text-align: center;
   p {
     color: white;
     font-size: 16px;
+  }
+  a {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .footer__holder {
     min-height: 80px;
@@ -644,3 +745,67 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     justify-content: center;
   }
 }
+
+
+.contact__form {
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #111;
+  }
+  h3 {
+    margin-bottom: 30px;
+    color: white;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #111;
+  }
+}
+
+.radio {
+display: none;
+}
+.radio-custom {
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+border-radius: 3px;
+position: relative;
+}
+.radio-custom,
+.label {
+display: inline-block;
+vertical-align: middle;
+cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+
+}
+
+.radio:checked + .radio-custom::before {
+content: "";
+display: block;
+position: absolute;
+top: 2px;
+right: 2px;
+bottom: 2px;
+left: 2px;
+background: #413548;
+border-radius: 2px;
+}
+.radio-custom,
+.radio:checked + .radio-custom::before {
+border-radius: 50%;
+}
+
+

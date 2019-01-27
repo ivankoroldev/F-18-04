@@ -1,5 +1,15 @@
-$(document).ready(function(){
-    $('.nav-btn').on('click', function() {
-        $('body').toggleClass('menu-active');
-    })
+jQuery(function(){
+	initMenu();
 });
+
+function initMenu() {
+	var opener = jQuery('.menu-opener');
+	var page = jQuery('html');
+	var classActive = 'menu-active';
+
+	var clickHandler = function(e) {
+		e.preventDefault();
+		page.toggleClass(classActive);
+	};
+	opener.on('click', clickHandler);
+}

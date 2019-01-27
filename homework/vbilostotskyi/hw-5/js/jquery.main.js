@@ -3,7 +3,7 @@ jQuery(function(){
 });
 
 function initMenu() {
-	var opener = jQuery('.menu-open');
+	var opener = jQuery('.menu-opener');
 	var page = jQuery('html');
 	var classActive = 'menu-active';
 
