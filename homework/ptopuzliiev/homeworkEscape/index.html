@@ -7,12 +7,22 @@
 
 	<!-- main css -->
 	<link media="all" rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/animate.css">
 
 	<!-- jquery -->
 	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script>window.jQuery || document.write('<script src="libs/jquery/jquery-3.3.1.min.js" defer><\/script>')</script>
-	<script src="js/main.js" defer></script>
+	 -->
+
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/plugins-scroll.js"></script>
+	
+	<script src="js/common.js"></script>
+	<!-- main js -->
+	<script src="js/main.js"></script>
+
 
 </head>
 <body>
@@ -30,21 +40,21 @@
 								<a class="menu-open" href="#">
 									<span></span>
 								</a>
-								<nav class="nav">
+								<nav id="menu" class="nav">
 									<ul>
-										<li class="active">
+										<li class="navigation-item active">
 											<a href="#Home">Home</a>
 										</li>
-										<li>
+										<li class="navigation-item">
 											<a href="#Services">Services</a>
 										</li>
-										<li>
+										<li class="navigation-item">
 											<a href="#Clients">Clients</a>
 										</li>
-										<li>
+										<li class="navigation-item">
 											<a href="#Team">Team</a>
 										</li>
-										<li>
+										<li class="navigation-item">
 											<a href="#Contacts">Contact</a>
 										</li>
 									</ul>
@@ -55,42 +65,44 @@
 				</header>
 				<!-- ``````````````````visual-bg`````````````````````` -->
 		<div class="visual-bg" style="background-image: url(images/visual-bg.png);">
-			<div class="container">
-				<div class="visual">
-					<p>Can you build the website of my dreams?</p>
-					<h1>Yup, we can do that.</h1>
-					<a class="btn" href="#">Learn More</a>
+			<div class="visual-text-hold">
+				<div class="container">
+					<div class="visual-text">
+						<p>Can you build the website of my dreams?</p>
+						<h1>Yup, we can do that.</h1>
+						<a class="btn" href="#PageDown">Learn More</a>
+					</div>
 				</div>
 			</div>
 		</div>
 		<main id="main">
 			<!-- `````````````````services```````````````````````` -->
-			<div class="services">
+			<div id="PageDown" class="services">
 				<div class="container">
 					<div class="services-holder">
 						<div class="descr-services">
 							<h2>Web <span class="bold">Development</span></h2>
 							<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
-							<p>Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit </p>
+							<p>iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim.</p>
 						</div>
 						<div class="images-holder">
 							<img src="images/Flow Tree-Icon.png" alt="img descr">
 						</div>
-				</div>
-				<div class="services-holder">
-					<div class="descr-services">
-						<h2>Identity <span class="bold">Branding</span></h2>
-						<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
-						<p>Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit </p>
 					</div>
-					<div class="images-holder">
-						<img src="images/Users-Icon.png" alt="img descr">
+					<div class="services-holder">
+						<div class="descr-services">
+							<h2>Identity <span class="bold">Branding</span></h2>
+							<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
+							<p>iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim.</p>
+						</div>
+						<div class="images-holder">
+							<img src="images/Users-Icon.png" alt="img descr">
+						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 			<!-- ```````````````````services-info`````````````````````` -->
-			<div class="services-info">
+			<div id="Services" class="services-info">
 				<div class="container">
 					<div class="box-wrapp">
 							<div class="info-box">
@@ -142,7 +154,7 @@
 									<i class="icon-star"></i>
 								</div>
 								<div class="box-content">
-									<h4>ui/ux</h4>
+									<h4 class="uppercase">ui/ux</h4>
 									<p>Proin iaculis purus consequat sem cure 
 									digni ssim. Donec porttitora entum suscipit 
 									aenean rhoncus posuere odio in tincidunt.</p>
@@ -163,7 +175,7 @@
 				</div>
 			</div>
 			<!-- ``````````````````clients``````````````````````` -->
-			<div class="clients">
+			<div id="Clients" class="clients">
 				<div class="container">
 						<div class="clients-wrapp">
 							<div class="heading-box">
@@ -190,7 +202,7 @@
 								</blockquote>
 							</div>
 						</div>
-						</div>
+					</div>
 				</div>
 			</div>
 			<!-- ``````````````````logos``````````````````````` -->
@@ -198,16 +210,16 @@
 				<div class="container">
 					<div class="logos-wrapp">
 						<ul>
-							<li>
+							<li class="logos-item">
 								<a href="https://studio.envato.com/" target="_blank"><img src="images/Envato.png" alt="Envato"></a>
 							</li>
-							<li>
+							<li class="logos-item">
 								<a href="https://ru.wordpress.com/" target="_blank"><img src="images/WordPress.png" alt="Wordpress"></a>
 							</li>
-							<li>
+							<li class="logos-item">
 								<a href="https://tutsplus.com/" target="_blank"><img src="images/Tuts+.png" alt="Tuts"></a>
 							</li>
-							<li>
+							<li class="logos-item">
 								<a href="http://press.envato.com/46991-microlancer-new-envato-freelance-service-marketplace" target="_blank"><img src="images/Microlancer copy.png" alt="Microlancer"></a>
 							</li>
 						</ul>
@@ -215,65 +227,67 @@
 				</div>
 			</div>
 			<!-- ``````````````````team``````````````````````` -->
-			<div class="team-section">
+			<div id="Team" class="team-section">
 				<div class="container">
-						<div class="heading-box">
-							<h2>Amazing <span class="bold">Team</span></h2>
-							<p>These wonderful people make work enjoyable.</p>
-						</div>
-						<div class="wrapp-team-holder">
-							<div class="team-holder">
-								<div class="photo-people"></div>
-								<h5 class="title-team">Kimberly Thompson<br><span class="proffesion">Marketer</span></h5>
-								<ul class="team-links">
-									<li>
-										<a href="https://twitter.com/?lang=ru" target="_blank"><i class="icon-twitter-logo"></i></a>
-									</li>
-									<li>
-										<a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-logo"></i></a>
-									</li>
-									<li>
-										<a href="https://www.pinterest.com/" target="_blank"><i class="icon-pinterest-logo"></i></a>
-									</li>
-								</ul>
+						<div class="team-wrapp">
+							<div class="heading-box">
+								<h2>Amazing <span class="bold">Team</span></h2>
+								<p>These wonderful people make work enjoyable.</p>
 							</div>
-							<div class="team-holder">
-								<div class="photo-people"></div>
-								<h5 class="title-team">Rico Massimo<br><span class="proffesion">Marketer</span></h5>
-								<ul class="team-links">
-									<li>
-										<a href="https://twitter.com/?lang=ru" target="_blank"><i class="icon-twitter-logo"></i></a>
-									</li>
-									<li>
-										<a href="https://www.google.com.ua/" target="_blank"><i class="icon-google-plus"></i></a>
-									</li>
-									<li>
-										<a href="https://www.pinterest.com/" target="_blank"><i class="icon-pinterest-logo"></i></a>
-									</li>
-								</ul>		
+							<div class="wrapp-team-holder">
+								<div class="team-holder">
+									<div class="photo-people"></div>
+									<h5 class="title-team">Kimberly Thompson<br><span class="proffesion">Marketer</span></h5>
+									<ul class="team-links">
+										<li class="team-links-item">
+											<a href="https://twitter.com/?lang=ru" target="_blank"><i class="icon-team icon-twitter-logo"></i></a>
+										</li>
+										<li class="team-links-item">
+											<a href="https://www.facebook.com/" target="_blank"><i class="icon-team icon-facebook-logo"></i></a>
+										</li>
+										<li class="team-links-item">
+											<a href="https://www.pinterest.com/" target="_blank"><i class="icon-team icon-pinterest-logo"></i></a>
+										</li>
+									</ul>
+								</div>
+								<div class="team-holder">
+									<div class="photo-people"></div>
+									<h5 class="title-team">Rico Massimo<br><span class="proffesion">Marketer</span></h5>
+									<ul class="team-links">
+										<li class="team-links-item">
+											<a href="https://twitter.com/?lang=ru" target="_blank"><i class="icon-team icon-twitter-logo"></i></a>
+										</li>
+										<li class="team-links-item">
+											<a href="https://www.google.com.ua/" target="_blank"><i class="icon-team icon-google-plus"></i></a>
+										</li>
+										<li class="team-links-item">
+											<a href="https://www.pinterest.com/" target="_blank"><i class="icon-team icon-pinterest-logo"></i></a>
+										</li>
+									</ul>		
+								</div>
+								<div class="team-holder">
+									<div class="photo-people"></div>
+									<h5 class="title-team">Uku Mason<br><span class="proffesion">Marketer</span></h5>
+									<ul class="team-links">
+										<li class="team-links-item">
+											<a href="https://www.facebook.com/" target="_blank"><i class="icon-team icon-facebook-logo"></i></a>
+										</li>
+										<li class="team-links-item">
+											<a href="https://www.pinterest.com/" target="_blank"><i class="icon-team icon-pinterest-logo"></i></a>
+										</li>
+									</ul>
+								</div>
 							</div>
-							<div class="team-holder">
-								<div class="photo-people"></div>
-								<h5 class="title-team">Uku Mason<br><span class="proffesion">Marketer</span></h5>
-								<ul class="team-links">
-									<li>
-										<a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-logo"></i></a>
-									</li>
-									<li>
-										<a href="https://www.pinterest.com/" target="_blank"><i class="icon-pinterest-logo"></i></a>
-									</li>
-								</ul>
+							<div class="team-describe">
+								<p>Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit  
+								aenean rhoncus posuere odio in tincidunt proin iaculis.</p>
 							</div>
-						</div>
-						<div class="team-describe">
-							<p>Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit  
-							aenean rhoncus posuere odio in tincidunt proin iaculis.</p>
 						</div>
 				</div>
 			</div>
 		</main>
 		<!-- ``````````````````contact``````````````````````` -->
-		<div class="wrapper-contact">
+		<div id="Contacts" class="wrapper-contact">
 			<div class="container">
 				<div class="section-contact">
 					<div class="our-contact">
@@ -284,29 +298,29 @@
 						</div>
 						<div class="main-contact-wrapp">
 							<ul class="contact-list">
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-cellphone"></i></span>
 									<span class="label-hold">(416) 555-0000</span>
 								</li>
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-message"></i></span>
 									<a href="#">hello@escape.com</a>
 								</li>
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-twitter-logo"></i></span>
-									<a href="#">@escape</a>
+									<a href="https://twitter.com/?lang=ru" target="_blank">@escape</a>
 								</li>
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-facebook-logo"></i></span>
-									<a href="#">facebook.com/escape</a>
+									<a href="https://www.facebook.com/" target="_blank">facebook.com/escape</a>
 								</li>
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-google-plus"></i></span>
-									<a href="#">plus.com/escape</a>
+									<a href="https://www.google.com.ua/" target="_blank">plus.com/escape</a>
 								</li>
-								<li>
+								<li class="contact-list-item">
 									<span class="ico-hold"><i class="icon-pinterest-logo"></i></span>
-									<a href="#">pinterest.com/escape</a>
+									<a href="https://www.pinterest.com/" target="_blank">pinterest.com/escape</a>
 								</li>
 							</ul>
 						</div>
@@ -320,7 +334,7 @@
 								<input class="input" type="email" placeholder="Your E-mail *">
 							</div>
 							<div class="row">
-								<textarea class="input textarea" cols="30" rows="10" placeholder=""></textarea>
+								<textarea class="input textarea" placeholder="Your message"></textarea>
 							</div>
 							<div class="row">
 								<input class="input button" type="submit" value="submit">

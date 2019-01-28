@@ -42,19 +42,44 @@ h2, h3, h4, h5, h6 {
 	text-transform: capitalize;
 }
 
+* {
+	transition: all .5s ease;
+}
+
+// ```````````````````````Animation`````````````````````
+
+@keyframes btn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+// ```````````````````````Animation`````````````````````
 .heading {
-	font: 300 66px $base-font-BrandonGrotesque;
+	font: 300 60px $base-font-BrandonGrotesque;
   text-transform: capitalize;
   color: #222;
-  margin-bottom: 34px;
-  line-height: 1.3;
+  margin-bottom: 45px;
+  line-height: 0.8;
 	 span {
 	 	font-weight: bold;
 	 }
 
-	 @include media ('<tablet') {
-		font: 300 36px $base-font-BrandonGrotesque;
+	 @include media ('<desktop') {
+		font: 300 50px $base-font-BrandonGrotesque;
 	}
+
+	 @include media ('<tablet') {
+		font: 300 30px $base-font-BrandonGrotesque;
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
 
 .container {
@@ -75,6 +100,7 @@ h2, h3, h4, h5, h6 {
   width: 100%;
   // overflow: hidden;
 }
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .header {
@@ -99,6 +125,10 @@ h2, h3, h4, h5, h6 {
 
 	.logo {
 		transition: 1s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-duration: 2s;
+		transition-delay: 1s;
+		animation-name: bounceInLeft;
 
 		&:hover {
 			transform: scale(1.1)
@@ -126,16 +156,26 @@ h2, h3, h4, h5, h6 {
 		margin: 0 -15px;
 	}
 
-	li {
+	.navigation-item {
 		font-size: 18px;
 		line-height: 1;
 		display: inline-block;
 		vertical-align: top;
-		padding: 0 15px;
+		margin: 0 15px;
 		color: $base-color;
+		
+
+		
+		&.active a:before {
+			height: 2px;
+			width: 100%;
+			opacity: 1;
+			visibility: visible;
+			background-color: $base-hover-link;
+		}
 
 		&.active {
-			color: $base-hover-link;				
+			color: $base-hover-link;
 		}
 
 		@include media ("<tablet") {
@@ -143,22 +183,40 @@ h2, h3, h4, h5, h6 {
 			text-align: center;
 			padding: 10px 0;
 		}
-	}
 
-	a {
-		color: inherit;
-		transition: all .3s ease-in-out;
-		border-left: solid 1px #e84545;
-		border-width: 0;
-		position: relative;
-		font-weight: 500;
+			a {
+			color: inherit;
+			transition: all .3s ease-in-out;
+			font-weight: 500;
+			position: relative;
+			
 
-		&:hover {
-			color: $base-hover-link;
+			&:hover {
+				color: $base-hover-link;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 2px;
+				width: 0;
+				opacity: 0;
+				visibility: hidden;
+				transition: ease .7s all;	
+			}
+			
+			&:hover:before {
+				height: 2px;
+				width: 100%;
+				opacity: 1;
+				visibility: visible;
+				background-color: $base-hover-link;
+			}
 		}
 	}
 }
-
 
 .menu-open {
 	display: none;
@@ -214,6 +272,7 @@ h2, h3, h4, h5, h6 {
 	background-size: cover;
 	background-position: 50% 50%;
 	position: relative;
+	text-align: center;
 
 	* {
 		z-index: 10;
@@ -233,30 +292,57 @@ h2, h3, h4, h5, h6 {
 	}
 }
 
-.visual {
-	padding: 225px 0 120px;
-	text-align: center;
+.visual-text {
+	padding: 225px 0 125px;
 	font-size: 30px;
 	color: $base-color;
-	max-width: 690px;
-	margin: 0 auto;
+	animation: zoomInLeft 1s ,6s;
+  animation-fill-mode: both;
+
+	@include media ("<desktop") {
+		padding: 140px 70px;
+	}
+
+	@include media ('<tablet') {
+		padding: 70px 10px;
+		font-size: 20px;
+	}
+
+	@include media ("<phone") {
+		padding: 70px 0 30px;
+		font-size: 15px;
+	}
 
 	p {
 		font-weight: 300;
-		margin-bottom: 50px;
+		margin-bottom: 24px;
 
-		@include media ("<widescreen") {
-			margin-bottom: 27px;
+		@include media ("<desktop") {
+			margin-bottom: 20px;
+		}
+
+			@include media ("<tablet") {
+			margin-bottom: 10px;
 		}
 	}
 
 	h1 {
 		font: bold 64px $base-font-BrandonGrotesque;
 		text-transform: uppercase;
-		margin-bottom: 80px;
+		margin-bottom: 60px;
 
-			@include media ("<widescreen") {
-				margin-bottom: 72px;
+		@include media ('<desktop') {
+			font-size: 45px;
+			margin-bottom: 30px;
+		}
+
+		@include media ('<tablet') {
+			font-size: 35px;
+			margin-bottom: 15px;
+		}
+
+		@include media ('<phone') {
+			font-size: 25px;
 		}
 	}
 
@@ -270,10 +356,40 @@ h2, h3, h4, h5, h6 {
 		display: inline-block;
 		vertical-align: top;
 		color: inherit;
+		opacity: 0;
+		visibility: hidden;
+		animation-name: btn;
+		animation-duration: 2s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+
+		transition-property: transform;
+		transition-duration: 1s;
+
 
 		&:hover {
 			color: $base-hover-link;
 			border-color: $base-hover-link;
+			transform: rotateY(360deg);
+
+			@include media ('<tablet') {
+				transform: none;
+			}
+		}
+
+		@include media ('<desktop') {
+			font-size: 18px;
+			padding: 15px 40px;
+		}
+
+		@include media ('<tablet') {
+			font-size: 16px;
+			padding: 10px 30px;
+		}
+
+		@include media ('<phone') {
+			font-size: 14px;
+			padding: 8px 25px;
 		}
 	}
 }
@@ -289,31 +405,99 @@ h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	align-items: center;
 
+	@include media ('<desktop') {
+		padding: 60px 20px;
+	}
+
+	@include media ('<tablet') {
+		padding: 40px 10px;
+		flex-direction: column;
+	}
+
 	&:nth-child(even) {
 		background: #fafafa;
 		flex-direction: row-reverse;
+
+		.descr-services {
+			max-width: 536px;
+
+			@include media ('<tablet') {
+				max-width: 100%;
+				}
+			
+			h2 {
+				margin-bottom: 51px;
+				line-height: 0.6;
+				animation-name: bounceInRight;
+			}
+
+			p {
+			margin-bottom: 14px;
+
+			@include media ('<desktop') {
+				max-width: 395px;
+			}
+
+			@include media ('<tablet') {
+				max-width: 100%;
+				}
+			}
+		}
+
+		@include media ('<desktop') {
+			padding: 60px 20px;
+		}
+
+		@include media ('<tablet') {
+			padding: 40px 10px;
+			flex-direction: column;
+		}
+
 	}
 
 	.descr-services {
-		max-width: 555px;
+		max-width: 565px;
+		line-height: 1.4;
+		font-size: 17px;
+
+		@include media ('<desktop') {
+			max-width: 450px;
+		}
+
+		@include media ('<tablet') {
+			margin-bottom: 20px;
+			max-width: 100%;
+		}
 
 		h2 {
 			@extend .heading;
+			word-spacing: -5px;
+			letter-spacing: -1px;
+			animation-duration: 2s;
+			animation-delay: 0.5s;
+
+			@include media ("<tablet") {
+				text-align: center;
+				margin-bottom: 20px;
+			}
 		}
 
 		p {
-			margin-bottom: 40px;
-			line-height: 1.1;
+			margin-bottom: 36px;
+
+			@include media ("<tablet") {
+				text-align: justify;
+			}
 
 			+ p {
 			margin-bottom: 0;
 			}
 		}
-
-		.images-holder {
-			max-width: 300px;
-		}
 	}
+	.images-holder {
+			max-width: 300px;
+			margin-right: 10px;
+		}
 }
 }
 
@@ -321,30 +505,32 @@ h2, h3, h4, h5, h6 {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services-info~~~~~~~~~~~~~~~~~~~~~~~~
 .services-info {
 		
-	
 	.box-wrapp {
-
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		flex-direction: row;
-		padding: 100px 40px;
+		padding: 60px 40px;
+
+		@include media ("<tablet") {
+			padding: 20px 0;
+		}
 
 		.info-box {
 			width: 50%;
 			margin-bottom: 50px;
 
 			&:nth-child(even) {
-				padding-left: 45px;
+				padding-left: 53px;
 
-				@include media ('<tablet') {
+				@include media ('<desktop') {
 					padding: 0;
 				}
 			}
 
 			@include media ('<desktop') {
 				width: 50%;
-		    margin-bottom: 50px;
+		    margin-bottom: 30px;
 		    text-align: center;
 			}
 
@@ -362,7 +548,7 @@ h2, h3, h4, h5, h6 {
 			display: inline-block;
 			vertical-align: top;
 			text-align: center;
-			padding: 18px 0;
+			padding: 15px 0;
 			cursor: pointer;
 			transition: all .3s ease-in-out;
 
@@ -373,6 +559,7 @@ h2, h3, h4, h5, h6 {
 			@include media ('<tablet') {
 				display: block;
 				margin: 0 auto;
+				margin-bottom: 10px;
 			}
 
 			&:hover {
@@ -382,7 +569,7 @@ h2, h3, h4, h5, h6 {
 
 				i {
 					&:before {
-					font-size: 33px;
+					font-size: 38px;
 					color: $base-color;
 				}
 			}
@@ -391,8 +578,10 @@ h2, h3, h4, h5, h6 {
 		.box-content {
 			display: inline-block;
 			vertical-align: top;
-			max-width: 290px;
-			margin-left: 18px;
+			max-width: 285px;
+			margin-left: 15px;
+			line-height: 1.2;
+			font-size: 17px;
 
 			@include media ('<desktop') {
 				margin: 0;
@@ -404,12 +593,9 @@ h2, h3, h4, h5, h6 {
 			}
 
 			h4 {
-				font: 700 22px $base-font-BrandonGrotesque;
-				margin-bottom: 10px;
-			}
-
-			p {
-				line-height: 1.2;
+				font: 500 22px $base-font-BrandonGrotesque;
+				margin-bottom: 5px;
+				letter-spacing: -0.7px;
 			}
 		}	
 	}
@@ -421,6 +607,11 @@ h2, h3, h4, h5, h6 {
 	
 	.clients-wrapp {
 		@extend .section-wrapp;
+		padding: 92px 0;
+
+		@include media ("<tablet") {
+			padding: 0;
+		}
 	}
 
 	.heading-box {
@@ -428,9 +619,11 @@ h2, h3, h4, h5, h6 {
 		text-align: center;
 		font: 400 22px $base-font-BrandonGrotesque;
 		color: $base-text-color;
+		letter-spacing: -0.4px;
 			h2 {
 			@extend .heading;
-			margin-bottom: 18px;
+			margin-bottom: 7px;
+   		letter-spacing: -1px;
 		}
 	}
 
@@ -457,26 +650,34 @@ h2, h3, h4, h5, h6 {
 
 			@include media ('<tablet') {
 				margin: 0 auto;
+				width: 110px;
+				height: 110px;
+				margin-bottom: 20px;
 			}
 		}
 
 		.speach {
-			background-color: #f3f3f3;
-			padding: 40px 80px 45px;
-			margin-left: 40px;
-			font-size: 24px;
-			line-height: 1.2;
-			border: solid 2px #f3f3f3;
+			background-color: #fff;
+	    padding: 40px 80px 45px;
+	    margin-left: 41px;
+	    font-size: 24px;
+	    line-height: 1.4;
+	    border: solid 2px #fff;
+	    position: relative;
 
 			@include media ('<tablet') {
 				margin-left: 0;
 				font-size: 15px;
-				padding: 20px 40px 25px;
-				text-align: center;
+				padding: 0;
 			}
 
 			blockquote {
 				max-width: 480px;
+
+				@include media ("<tablet") {
+					max-width: 100%;
+					text-align: center;
+				}
 
 					cite {
 					color: #7690c5;
@@ -490,21 +691,19 @@ h2, h3, h4, h5, h6 {
 		}
 
 		.triangle-1 {
-			position: relative;
 
-			&:before {
+			&:before,
+			&:after {
 				content: '';
 				position: absolute;
-				width: 20px;
-				height: 20px;
-				background-color: #f3f3f3;
 				top: 50%;
-				left: 0;
-				margin-left: -2px;
-				transform: translate(-50%,-50%) rotate(45deg);
-				border-left: solid 2px #f3f3f3;
-				border-bottom: solid 2px #f3f3f3;
-				
+				right: 100%;
+    		margin-right: -10px;
+				transform: translate(-50%, -50%);
+				border-right: 20px solid #fff;
+				border-top: 11px solid transparent;
+				border-bottom: 11px solid transparent;
+
 				@include media ('<tablet') {
 					display: none;
 				}
@@ -512,72 +711,81 @@ h2, h3, h4, h5, h6 {
 		}
 
 		.triangle-2 {
-			position: relative;
-			margin-right: 35px;
+			margin-right: 46px;
 			margin-left: 0;
+			padding: 35px 80px 45px;
+			word-spacing: 1px;
 
+			@include media ('<tablet') {
+				margin-right: 0;
+				padding: 0;
+			}
+
+			
 			&:before,
-			&:after {
+			:after {
 				content: '';
-				width: 20px;
-				height: 20px;
+				position: absolute;
 				top: 50%;
 				left: 100%;
-				transform: translateY(-50%);
-				border-top: 50px solid #000;
-				border-left: 50px solid transparent;
-				border-right: 50px solid transparent;
+    		margin-left: 10px;
+				transform: translate(-50%, -50%);
+				border-left: 20px solid #fff;
+				border-top: 11px solid transparent;
+				border-bottom: 11px solid transparent;
 
 				@include media ('<tablet') {
 					display: none;
 				}
-			}
-			&:before {
-				border-width: 55px;
-				border-top-color: #fff;
 			}
 		}
 	}
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logos~~~~~~~~~~~~~~~~~~~~~~~~
 .logos-wrapp {
-	padding: 60px 0;
+	padding: 24px 0;
 
 	@include media ('<tablet') {
-		padding: 30px 0;
+		padding: 20px 0;
 	}
 
 	ul {
 		text-align: center;
 	}
 
-	li {
-		padding: 0 25px;
+	.logos-item {
+		padding: 0 20px;
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
+		transition: transform .4s linear;
 
 		@include media ('<tablet') {
+			margin-bottom: 20px;
+		}
+
+		@include media ('<phone') {
 			display: block;
 			margin-bottom: 20px;
+		}
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 
 	a {
 		display: block;
-		transition: transform .3s linear;
-
-		&:hover {
-			transform: scale(1.1);
-		}
 	}
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~team-section~~~~~~~~~~~~~~~~~~~~~~~~
 .team-section {
-	@extend .section-wrapp;
 	background-color: #111;
 
-	@include media ('<tablet') {
-			padding: 30px 0 40px;
+	.team-wrapp {
+		padding: 129px 0 97px;
+		
+		@include media ('<tablet') {
+				padding: 30px 0 40px;
+		}
 	}
 
 	.heading-box {
@@ -588,22 +796,22 @@ h2, h3, h4, h5, h6 {
 		h2 {
 		@extend .heading;
 		color: $base-color;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 		}
 		p {
 			margin-bottom: 10px;
 		}
-		margin-bottom: 60px;
+		margin-bottom: 72px;
 	}
 
 	.wrapp-team-holder {
 		font-size: 0;
 		line-height: 0;
-		margin: 0 -15px;
+		margin: 0 -21px;
 	}
 
 	.team-holder {
-		padding: 0 15px;
+		padding: 0 21px;
 		width: 33.33%;
 		display: inline-block;
 		vertical-align: top;
@@ -611,15 +819,18 @@ h2, h3, h4, h5, h6 {
 		font-size: 18px;
 		text-align: center;
 		color: $base-color;
-		margin-bottom: 45px;
+		margin-bottom: 36px;
 
 		@include media ('<tablet') {
+			width: 50%;
+		}
+
+		@include media ('<phone') {
 			width: 100%;
 		}
 
 		.title-team {
 			font-weight: 700;
-			margin-bottom: 10px;
 			line-height: 1.3;
 
 				.proffesion {
@@ -635,13 +846,25 @@ h2, h3, h4, h5, h6 {
 			border-radius: 50%;
 			border: solid 7px #fff;
 			margin-bottom: 20px;
+
+			@include media ('<tablet') {
+				width: 180px;
+				height: 180px;
+				border: solid 5px #fff;
+			}
+
+			@include media ('<phone') {
+				width: 140px;
+				height: 140px;
+				border: solid 5px #fff;
+			}
 		}
 
 		.team-links {
 			font-size: 0;
 			line-height: 0;
 
-			li {
+			.team-links-item {
 				font-size: 18px;
 				line-height: 1;
 				display: inline-block;
@@ -653,7 +876,7 @@ h2, h3, h4, h5, h6 {
 				display: block;
 			}
 
-			i {
+			.icon-team {
 				display: block;
 				color: $base-color;
 				font-size: 18px;
@@ -662,6 +885,11 @@ h2, h3, h4, h5, h6 {
 				border-radius: 50px;
 				transition: ease-in-out .5s all;
 				position: relative;
+
+				@include media ('<tablet') {
+				padding: 6px;
+				font-size: 14px;
+			}
 
 				&:hover {
 					transform: rotateY(360deg);
@@ -704,7 +932,7 @@ h2, h3, h4, h5, h6 {
 	.team-describe {
 		font-size: 20px;
 		color: #ebebeb;
-		max-width: 600px;
+		max-width: 630px;
 		margin: 0 auto;
 		line-height: 1.3;
 		text-align: center;
@@ -726,7 +954,7 @@ h2, h3, h4, h5, h6 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-bottom: 70px;
+	padding-bottom: 0;
 
 	@include media ('<tablet') {
 		padding: 20px 0;
@@ -756,7 +984,7 @@ h2, h3, h4, h5, h6 {
 		h2 {
 			@extend .heading;
 			color: $base-color;
-			margin-bottom: 20px;
+			margin-bottom: 24px;
 			line-height: 0.8;
 			word-spacing: 15px;
 		}
@@ -771,20 +999,26 @@ h2, h3, h4, h5, h6 {
 			@include media ('<tablet') {
 				text-align: center;
 			}
+
+
 		}
 
-		li {
+		.contact-list-item {
 			font-size: 18px;
 			line-height: 1;
 			width: 50%;
 			display: inline-block;
 			vertical-align: top;
-			margin-bottom: 40px;
+			margin-bottom: 35px;
 
 			@include media ('<tablet') {
 				width: 100%;
 				margin-bottom: 20px;
 				font-size: 15px;
+			}
+
+				&:nth-child(even) {
+				padding-left: 10px;
 			}
 		}
 
@@ -805,7 +1039,7 @@ h2, h3, h4, h5, h6 {
 			height: 30px;
 			text-align: center;
 			font-size: 30px;
-			margin-right: 10px;
+			margin-right: 7px;
 			color: $base-color;
 		}
 
@@ -832,7 +1066,7 @@ h2, h3, h4, h5, h6 {
 		}
 
 		.row {
-			margin-bottom: 30px;
+			margin-bottom: 22px;
 		}
 
 		.input {
@@ -840,7 +1074,7 @@ h2, h3, h4, h5, h6 {
 			width: 100%;
 			display: block;
 			border: 1px solid #ccc;
-			padding: 16px 20px 20px;
+			padding: 11px 20px 14px;
 			min-height: 50px;
 			color: #bbb;
 
@@ -854,6 +1088,10 @@ h2, h3, h4, h5, h6 {
 		.textarea {
 			resize: vertical;
 			min-height: 208px;
+
+			@include media ('<phone') {
+				min-height: 90px;
+			}
 		}
 
 		.button {
@@ -863,10 +1101,6 @@ h2, h3, h4, h5, h6 {
 
 			@include media ('<tablet') {
 				padding: 10px;
-			}
-
-			@include media ('<phone') {
-				padding: 0;
 			}
 
 			&:hover {
