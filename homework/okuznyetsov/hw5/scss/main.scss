@@ -88,7 +88,7 @@ header {
 			position: relative;
 			z-index: 4;
 
-			 & span {
+			  span {
 				position: absolute;
 				left: 50%;
 				border-radius: 3px;
@@ -189,6 +189,12 @@ header {
 		}
 	}
 	
+	@include media('<desktop'){
+		& {
+			padding: 170px 10px 75px;
+		}
+	}
+	
 	 p {
 		font-weight: 300;
 		font-size: 28px;
@@ -224,7 +230,7 @@ header {
 			vertical-align: top;
 			
 			
-			& a {
+			a {
 				display: block;
 				border:3px solid $extra-color;
 				border-radius: 3px;
@@ -236,7 +242,7 @@ header {
 				transition:all 0.3s ease-in-out; 
 				
 				@include media('<tablet'){
-				& a {
+				 a {
 					padding: 10px 35px;
 					font-size: 16px;
 				}
@@ -259,6 +265,11 @@ main {
 			padding-top: 10px;
 		}
 			}
+	@include media('<desktop'){
+		& {
+			padding: 15px;
+		}
+	}
 
 	
 	.strip-wrap {
@@ -269,13 +280,26 @@ main {
 				padding:10px 0 20px; 
 		}
 	}
+		@include media('<desktop'){
+		& {
+			padding: 10px 0 50px;
+		}
+	}
 		
 		&:nth-child(even) {
 		background: #fafafa;
 			
+			@include media('<desktop'){
+			& .hold {
+					
+				.content-wrap{
+					padding-top: 40px!important;
+				}
+			}
+		}
+			
 			@include media('<tablet') {
-				&{
-				.hold {
+				& .hold {
 					
 				.content-wrap{
 					padding-top: 10px !important;
@@ -284,9 +308,7 @@ main {
 					}
 				}
 			}
-		}
-	}
-
+		}		
 			.hold {
 				.content-wrap{
 					flex-direction: row;
@@ -301,6 +323,7 @@ main {
 					}
 			}
 		}
+			
 	}
 		
 	.hold {
@@ -338,7 +361,7 @@ main {
 			padding-left: 15px;}
 	}
 }
-	
+
 .content-txt {
 	width: 70%;
 	padding: 0 10px;
@@ -387,6 +410,11 @@ main {
 			padding: 10px 0;	
 	}
 }
+	@include media('<desktop'){
+		&{
+			padding: 20px 0;
+		}
+}
 	
 	.skills-wrap {
 		margin: 0 -50px;
@@ -398,6 +426,13 @@ main {
 			margin: 0;
 			text-align: center;}
 		}
+		
+		@include media('<desktop'){
+		& {
+			padding: 20px 0;
+			margin: 0 -20px;
+	}
+}
 		li {
 			display: inline-block;
 			vertical-align: top;
@@ -430,9 +465,14 @@ main {
 			.skill-icon {
 				display: inline-block;
 				vertical-align: top;
-				padding: 0 8px
+				padding: 0 8px;
+				
+			@include media('<desktop'){
+					& {
+					margin-bottom: 10px;
 				}
-			
+			}
+		}	
 			.skill-txt {
 				display: inline-block;
 				vertical-align: top;
@@ -457,6 +497,11 @@ main {
 			padding: 10px 0;
 		}
 	}
+	
+	@include media('<desktop'){
+		& {
+			padding: 25px 0;}
+	}
 	.awesome-wrap {
 		padding: 40px 10px;
 		
@@ -464,6 +509,11 @@ main {
 		& {
 			padding: 10px 0;}
 		}
+		
+		@include media('<desktop'){
+		& {
+			padding: 20px 10px;}
+	}
 		.awesome-heading {
 			text-align: center;
 			padding: 10px 0 25px;
@@ -499,6 +549,10 @@ main {
 			display: block;
 			text-align: center;}}
 	
+	@include media('<desktop'){
+		& { justify-content: space-around;}
+	}
+	
 	&:nth-child(even){
 		flex-direction: row-reverse;
 		.clients-feedback::after {
@@ -512,7 +566,7 @@ main {
 			background: #fff;
 			top: 50%;
 			left: 100%;
-			transform: translate(-48%, -60%) rotate(34deg) skewX(-21deg);
+			transform: translate(-48%, -54%) rotate(34deg) skewX(-21deg);
 			
 			@include media('<tablet'){
 				& {
@@ -549,6 +603,14 @@ main {
 		max-width: 635px;
 		padding: 35px 70px;
 		
+		@include media('<desktop'){
+		& {
+			max-width: 450px;
+			padding: 35px;
+		}
+		}
+		
+		
 		@include media('<tablet'){
 			& {
 			max-width: 100%;
@@ -569,8 +631,15 @@ main {
 			right: 100%;
 			transform: translate(48%, -60%) rotate(34deg) skewX(-21deg);
 			
+			@include media('<desktop'){
+				& { 
+					display: none;
+				}
+			}
+			
 			@include media('<tablet'){
 			& {
+				display: block;
 				top: 0;
 				right: 50%;
 				border-top: 1px solid #ededed;
@@ -578,7 +647,7 @@ main {
 				transform: translate(48%, -50%) rotate(34deg) skewX(-21deg);
 				}
 			}
-			}
+		}
 		
 		blockquote {
 			color: $p-color;
@@ -640,11 +709,12 @@ main {
 			margin: 0;
 			padding: 10px;
 			
-			& .source-logo {
+			 .source-logo {
 				margin-bottom: 10px;
 			}
 			
-			}}
+			}
+		}
 	}
 }
 .team {
@@ -669,7 +739,7 @@ main {
 	@include media('<tablet'){
 		& { padding: 10px 0;
 			
-			& .heading-txt {
+			 .heading-txt {
 				padding: 10px 0;
 				font-size: 18px;
 				
@@ -679,6 +749,10 @@ main {
 			}
 	
 		}
+	}
+	
+	@include media('<desktop'){
+		& { padding: 25px 0;}
 	}
 }
 
@@ -765,17 +839,17 @@ main {
 		& { padding: 10px 0;
 			display: block;
 			
-		& .worker {
+		 .worker {
 				
 			width: 100%;
 			
-		& .clients-photo {
+		 .clients-photo {
 				width: 100px;
 				height: 100px;
 				margin: 0 auto;
 			}
 			}
-			& .end-txt {
+			 .end-txt {
 				padding: 10px 0;
 			}
 		}
@@ -859,10 +933,21 @@ footer {
 						width: 100%;
 					}
 					
-					}}
+					}
+				}
 			}
 		}
+	}
+	
+		@include media('<desktop'){
+		& { padding: 25px 0;
+			
+			.pre-wrap {
+				margin-bottom: 15px;
+			}
 		}
+	}
+	
 		@include media('<tablet'){
 		& { 
 			padding: 10px 0;
@@ -922,6 +1007,12 @@ footer {
 					vertical-align: middle;
 				}
 			}
+	@include media('<desktop'){
+		& .write, textarea {
+			width: 350px;
+			}
+		}
+	
 	@include media('<tablet'){
 		& { 
 			padding: 10px 0;

@@ -511,6 +511,12 @@ header .header-wrap .logo a {
   }
 }
 
+@media (max-width: 1023px) {
+  .visual-wrap {
+    padding: 170px 10px 75px;
+  }
+}
+
 .visual-wrap p {
   font-weight: 300;
   font-size: 28px;
@@ -586,6 +592,12 @@ main {
   }
 }
 
+@media (max-width: 1023px) {
+  main {
+    padding: 15px;
+  }
+}
+
 main .strip-wrap {
   padding: 20px 0 100px;
 }
@@ -596,8 +608,20 @@ main .strip-wrap {
   }
 }
 
+@media (max-width: 1023px) {
+  main .strip-wrap {
+    padding: 10px 0 50px;
+  }
+}
+
 main .strip-wrap:nth-child(even) {
   background: #fafafa;
+}
+
+@media (max-width: 1023px) {
+  main .strip-wrap:nth-child(even) .hold .content-wrap {
+    padding-top: 40px !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -717,6 +741,12 @@ main .strip-wrap .hold .content-wrap {
   }
 }
 
+@media (max-width: 1023px) {
+  .skills {
+    padding: 20px 0;
+  }
+}
+
 .skills .skills-wrap {
   margin: 0 -50px;
   padding: 50px 0;
@@ -727,6 +757,13 @@ main .strip-wrap .hold .content-wrap {
     padding: 10px 0;
     margin: 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .skills .skills-wrap {
+    padding: 20px 0;
+    margin: 0 -20px;
   }
 }
 
@@ -764,6 +801,12 @@ main .strip-wrap .hold .content-wrap {
   padding: 0 8px;
 }
 
+@media (max-width: 1023px) {
+  .skills .skills-wrap li .skill-icon {
+    margin-bottom: 10px;
+  }
+}
+
 .skills .skills-wrap li .skill-txt {
   display: inline-block;
   vertical-align: top;
@@ -786,6 +829,12 @@ main .strip-wrap .hold .content-wrap {
   }
 }
 
+@media (max-width: 1023px) {
+  .awesome-clients {
+    padding: 25px 0;
+  }
+}
+
 .awesome-clients .awesome-wrap {
   padding: 40px 10px;
 }
@@ -793,6 +842,12 @@ main .strip-wrap .hold .content-wrap {
 @media (max-width: 767px) {
   .awesome-clients .awesome-wrap {
     padding: 10px 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .awesome-clients .awesome-wrap {
+    padding: 20px 10px;
   }
 }
 
@@ -841,6 +896,13 @@ main .strip-wrap .hold .content-wrap {
   }
 }
 
+@media (max-width: 1023px) {
+  .clients-wrap {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
 .clients-wrap:nth-child(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -859,9 +921,9 @@ main .strip-wrap .hold .content-wrap {
   background: #fff;
   top: 50%;
   left: 100%;
-  -webkit-transform: translate(-48%, -60%) rotate(34deg) skewX(-21deg);
-  -ms-transform: translate(-48%, -60%) rotate(34deg) skewX(-21deg);
-  transform: translate(-48%, -60%) rotate(34deg) skewX(-21deg);
+  -webkit-transform: translate(-48%, -54%) rotate(34deg) skewX(-21deg);
+  -ms-transform: translate(-48%, -54%) rotate(34deg) skewX(-21deg);
+  transform: translate(-48%, -54%) rotate(34deg) skewX(-21deg);
 }
 
 @media (max-width: 767px) {
@@ -897,6 +959,13 @@ main .strip-wrap .hold .content-wrap {
   padding: 35px 70px;
 }
 
+@media (max-width: 1023px) {
+  .clients-feedback {
+    max-width: 450px;
+    padding: 35px;
+  }
+}
+
 @media (max-width: 767px) {
   .clients-feedback {
     max-width: 100%;
@@ -920,8 +989,15 @@ main .strip-wrap .hold .content-wrap {
   transform: translate(48%, -60%) rotate(34deg) skewX(-21deg);
 }
 
+@media (max-width: 1023px) {
+  .clients-feedback::after {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .clients-feedback::after {
+    display: block;
     top: 0;
     right: 50%;
     border-top: 1px solid #ededed;
@@ -1035,6 +1111,12 @@ main .strip-wrap .hold .content-wrap {
   }
   .team .heading-txt h2 {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .team {
+    padding: 25px 0;
   }
 }
 
@@ -1228,6 +1310,15 @@ footer .pre-wrap .contacts .contact-basket a:hover {
   }
 }
 
+@media (max-width: 1023px) {
+  footer {
+    padding: 25px 0;
+  }
+  footer .pre-wrap {
+    margin-bottom: 15px;
+  }
+}
+
 @media (max-width: 767px) {
   footer {
     padding: 10px 0;
@@ -1283,6 +1374,12 @@ footer .pre-wrap .contacts .contact-basket a:hover {
   font-size: 18px;
   padding: 0 10px;
   vertical-align: middle;
+}
+
+@media (max-width: 1023px) {
+  .comments .write, .comments textarea {
+    width: 350px;
+  }
 }
 
 @media (max-width: 767px) {
