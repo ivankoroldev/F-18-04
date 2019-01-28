@@ -70,7 +70,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 99999999999;
 }
 
 .header__contant {
@@ -195,10 +195,28 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .visual {
   background-image: url("../images/background.jpg");
   background-position: center;
+  background-size: cover;
   color: white;
-  padding-top: 220px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   @include media('<tablet') {
-    padding-top: 130px;
+    padding-top: 50px;
+  }
+  .visual__wrapper {
+    padding-top: 117px;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include media('<tablet') {
+      min-height: 0;
+      padding-top: 50px;
+    }
   }
 
   h3 {
@@ -214,7 +232,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     }
   }
   .visual__holder {
-    padding-bottom: 126px;
+    // padding-bottom: 126px;
     @include media('<tablet') {
       padding-bottom: 50px;
     }
@@ -345,7 +363,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     margin-bottom: 45px;
     @include media('<desktop') {
       width: 50%;
-      text-align: center;
     }
     @include media('<tablet') {
       width: 100%;
@@ -375,7 +392,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .clients {
-  // padding: 78px 0;
   
   .clients__feedback {
     background: #fafafa;
@@ -403,16 +419,17 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .client__img {
-    max-width: 234px;
-    max-height: 234px;
+    min-width: 233px;
+    min-height: 233px;
     border-radius: 50%;
     border: 6px solid white;
     margin: -6px;
+    overflow: hidden;
+    background-position: center center; 
+    background-size: cover;
+    background-repeat: no-repeat;
     @include media('<tablet') {
       margin-bottom: 20px;
-    }
-    img {
-      min-width: 200px;
     }
 }
 
@@ -435,6 +452,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       position: relative;
       @include media('<desktop') {
         padding: 34px 34px;
+      }
+
+      @include media('<tablet') {
+        margin: 0;
       }
       p {
         font-size: 26px;
@@ -506,28 +527,40 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     .client__text {
       margin: 0 42px 0 30px;
       &:before {
-        bottom: 100%;
+        left: 100%; 
+        top: 50%;
+        border-bottom: 13px solid transparent;
+        border-left: 21px solid #f2f2f2;
+        border-top: 13px solid transparent;
+        border-right: 13px solid transparent;
+        @include media('<tablet') {
+          bottom: 100%;
           left: 50%;
           top: auto;
-          transform: translateX(-50%);
           border-left: 13px solid transparent;
           border-bottom: 21px solid #f2f2f2;
-          border-right: 13px solid transparent;
+        }
       }
       &:after {
-        bottom: 100%;
+        left: 100%; 
+        top: 50%;
+        border-bottom: 10px solid transparent;
+        border-left: 18px solid white;
+        border-right: 13px solid transparent;
+        @include media('<tablet') {
+          bottom: 100%;
           top: auto;
           left: 50%;
-          transform: translateX(-50%);
           border-bottom: 18px solid white;
           border-right: 10px solid transparent;
           border-left: 10px solid transparent;
+        }
       }
     } 
 }
 
 .clients__logos {
-  max-height: 160px;
+  // max-height: 160px;
   .clients__logos-holder {
     height: 160px;
     display: flex;
@@ -540,7 +573,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     ul {
       li {
         padding: 0px 20px;
-        vertical-align: -webkit-baseline-middle;
+        display: inline-block;
+        vertical-align: middle;
         transition: all .2s ease-in-out;
         &:hover {
           transform: scale(1.1);
@@ -591,6 +625,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     line-height: 0;
     margin: 0 -23px 44px -23px;
     padding: 0 77px;
+    @include media('<desktop') {
+      padding: 0px 20px;
+    }
     @include media('<tablet') {
       margin-bottom: 0;
     }
@@ -601,6 +638,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       font-size: 18px;
       padding: 0px 23px;
       width: 33.33%;
+      @include media('<desktop') {
+        padding: 0px 10px;
+      }
       @include media('<tablet') {
         width: 100%;
         margin-bottom: 30px;
@@ -655,14 +695,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         font-size: 15px;
       }
       .team__img {
-        max-width: 234px;
-        max-height: auto;
+        width: 234px;
+        height: 234px;
         border: 7px solid white;
         border-radius: 50%;
         margin: 0 auto 16px;
-        img {
-          border-radius: 50%;
-        }
+        background-size: cover;
+        background-position: 50% 50%;
+        overflow: hidden;
       }  
     }
   } 
@@ -763,24 +803,25 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 
 .contact__form {
-  input {
+  input[type="text"],
+  input[type="email"],
+  input[type="submit"],
+  textarea {
     width: 100%;
     height: 50px;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 30px;
     color: #111;
+    border: none;
   }
   h3 {
     margin-bottom: 30px;
     color: white;
   }
   textarea {
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 30px;
-    color: #111;
+    height: 100px;
+    resize: none;
   }
 }
 

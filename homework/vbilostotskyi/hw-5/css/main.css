@@ -656,7 +656,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 99999999999;
 }
 
 .header__contant {
@@ -801,13 +801,53 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .visual {
   background-image: url("../images/background.jpg");
   background-position: center;
+  background-size: cover;
   color: white;
-  padding-top: 220px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (max-width: 767px) {
   .visual {
-    padding-top: 130px;
+    padding-top: 50px;
+  }
+}
+
+.visual .visual__wrapper {
+  padding-top: 117px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .visual .visual__wrapper {
+    min-height: 0;
+    padding-top: 50px;
   }
 }
 
@@ -826,10 +866,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   .visual h1 {
     font-size: 40px;
   }
-}
-
-.visual .visual__holder {
-  padding-bottom: 126px;
 }
 
 @media (max-width: 767px) {
@@ -1024,7 +1060,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 @media (max-width: 1023px) {
   .skills__holder .skills__item {
     width: 50%;
-    text-align: center;
   }
 }
 
@@ -1095,21 +1130,21 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .client__img {
-  max-width: 234px;
-  max-height: 234px;
+  min-width: 233px;
+  min-height: 233px;
   border-radius: 50%;
   border: 6px solid white;
   margin: -6px;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
   .client__img {
     margin-bottom: 20px;
   }
-}
-
-.client__img img {
-  min-width: 200px;
 }
 
 .clients__item {
@@ -1146,6 +1181,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 @media (max-width: 1023px) {
   .clients__item .client__text {
     padding: 34px 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients__item .client__text {
+    margin: 0;
   }
 }
 
@@ -1247,31 +1288,41 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .clients__item:nth-child(even) .client__text:before {
-  bottom: 100%;
-  left: 50%;
-  top: auto;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-left: 13px solid transparent;
-  border-bottom: 21px solid #f2f2f2;
+  left: 100%;
+  top: 50%;
+  border-bottom: 13px solid transparent;
+  border-left: 21px solid #f2f2f2;
+  border-top: 13px solid transparent;
   border-right: 13px solid transparent;
 }
 
-.clients__item:nth-child(even) .client__text:after {
-  bottom: 100%;
-  top: auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-bottom: 18px solid white;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
+@media (max-width: 767px) {
+  .clients__item:nth-child(even) .client__text:before {
+    bottom: 100%;
+    left: 50%;
+    top: auto;
+    border-left: 13px solid transparent;
+    border-bottom: 21px solid #f2f2f2;
+  }
 }
 
-.clients__logos {
-  max-height: 160px;
+.clients__item:nth-child(even) .client__text:after {
+  left: 100%;
+  top: 50%;
+  border-bottom: 10px solid transparent;
+  border-left: 18px solid white;
+  border-right: 13px solid transparent;
+}
+
+@media (max-width: 767px) {
+  .clients__item:nth-child(even) .client__text:after {
+    bottom: 100%;
+    top: auto;
+    left: 50%;
+    border-bottom: 18px solid white;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
 }
 
 .clients__logos .clients__logos-holder {
@@ -1297,7 +1348,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .clients__logos .clients__logos-holder ul li {
   padding: 0px 20px;
-  vertical-align: -webkit-baseline-middle;
+  display: inline-block;
+  vertical-align: middle;
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -1366,6 +1418,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   padding: 0 77px;
 }
 
+@media (max-width: 1023px) {
+  .team .team__holder {
+    padding: 0px 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .team .team__holder {
     margin-bottom: 0;
@@ -1379,6 +1437,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   font-size: 18px;
   padding: 0px 23px;
   width: 33.33%;
+}
+
+@media (max-width: 1023px) {
+  .team .team__holder .team__item {
+    padding: 0px 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1459,15 +1523,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .team .team__holder .team__item .team__img {
-  max-width: 234px;
-  max-height: auto;
+  width: 234px;
+  height: 234px;
   border: 7px solid white;
   border-radius: 50%;
   margin: 0 auto 16px;
-}
-
-.team .team__holder .team__item .team__img img {
-  border-radius: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
 }
 
 .contacts__wrapper {
@@ -1595,13 +1658,17 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   justify-content: center;
 }
 
-.contact__form input {
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form input[type="submit"],
+.contact__form textarea {
   width: 100%;
   height: 50px;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 30px;
   color: #111;
+  border: none;
 }
 
 .contact__form h3 {
@@ -1610,11 +1677,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .contact__form textarea {
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 30px;
-  color: #111;
+  height: 100px;
+  resize: none;
 }
 
 .radio {
