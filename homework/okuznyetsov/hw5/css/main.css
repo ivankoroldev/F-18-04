@@ -594,7 +594,7 @@ main {
 
 @media (max-width: 1023px) {
   main {
-    padding: 15px;
+    padding: 15px 0;
   }
 }
 
@@ -989,12 +989,6 @@ main .strip-wrap .hold .content-wrap {
   transform: translate(48%, -60%) rotate(34deg) skewX(-21deg);
 }
 
-@media (max-width: 1023px) {
-  .clients-feedback::after {
-    display: none;
-  }
-}
-
 @media (max-width: 767px) {
   .clients-feedback::after {
     display: block;
@@ -1133,7 +1127,7 @@ main .strip-wrap .hold .content-wrap {
 
 .team-wrap .clients-photo {
   width: 220px;
-  height: 240px;
+  height: 220px;
   margin: 0 auto;
   background: #000;
   border-radius: 50%;
