@@ -236,7 +236,20 @@ header {
 	text-align: center;
 	padding-bottom: 95px;
 }
+
+.registration ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.registration li {
+	display: inline-block;
+	vertical-align: top;
+}
+
 .btn {
+	display: block;
 	background: none;
 	text-decoration: none;
     font-size: 18px;
