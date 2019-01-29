@@ -98,7 +98,7 @@ h2, h3, h4, h5, h6 {
 #wrapper {
   position: relative;
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 
@@ -309,7 +309,7 @@ h2, h3, h4, h5, h6 {
 	}
 
 	@include media ("<phone") {
-		padding: 70px 0 30px;
+		padding: 72px 0 50px;
 		font-size: 15px;
 	}
 
@@ -366,17 +366,14 @@ h2, h3, h4, h5, h6 {
 		transition-property: transform;
 		transition-duration: 1s;
 
-
-		&:hover {
-			color: $base-hover-link;
-			border-color: $base-hover-link;
-			transform: rotateY(360deg);
-
-			@include media ('<tablet') {
-				transform: none;
+		@include media (">=tablet") {
+			&:hover {
+				color: $base-hover-link;
+				border-color: $base-hover-link;
+				transform: rotateY(360deg);
 			}
-		}
-
+		}		
+		
 		@include media ('<desktop') {
 			font-size: 18px;
 			padding: 15px 40px;
@@ -398,7 +395,7 @@ h2, h3, h4, h5, h6 {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services~~~~~~~~~~~~~~~~~~~~~~~~
 .services {
 	.services-holder {
-	padding: 100px 40px;
+	padding: 100px 40px 80px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -426,8 +423,8 @@ h2, h3, h4, h5, h6 {
 				}
 			
 			h2 {
-				margin-bottom: 51px;
-				line-height: 0.6;
+				line-height: 1.3;
+				margin-bottom: 30px;
 				animation-name: bounceInRight;
 			}
 
@@ -498,10 +495,8 @@ h2, h3, h4, h5, h6 {
 			max-width: 300px;
 			margin-right: 10px;
 		}
+	}
 }
-}
-
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~services-info~~~~~~~~~~~~~~~~~~~~~~~~
 .services-info {
 		
@@ -510,7 +505,7 @@ h2, h3, h4, h5, h6 {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		flex-direction: row;
-		padding: 60px 40px;
+		padding: 80px 40px 62px;
 
 		@include media ("<tablet") {
 			padding: 20px 0;
@@ -519,6 +514,9 @@ h2, h3, h4, h5, h6 {
 		.info-box {
 			width: 50%;
 			margin-bottom: 50px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
 
 			&:nth-child(even) {
 				padding-left: 53px;
@@ -545,27 +543,27 @@ h2, h3, h4, h5, h6 {
 			height: 71px;
 			background-color: #222;
 			border-radius: 50%;
-			display: inline-block;
-			vertical-align: top;
-			text-align: center;
-			padding: 15px 0;
+			justify-content: center;
+			display: flex;
+			align-items: center;
 			cursor: pointer;
 			transition: all .3s ease-in-out;
+
 
 			@include media ('<desktop') {
 				margin: 0 auto;
 			}
 
 			@include media ('<tablet') {
-				display: block;
-				margin: 0 auto;
 				margin-bottom: 10px;
 			}
 
-			&:hover {
-						background-color: $base-hover-link;
-						transform: rotate(15deg);
-					}
+			@include media (">=tablet") {
+				&:hover {
+					background-color: $base-hover-link;
+					transform: rotate(15deg);
+				}
+			}
 
 				i {
 					&:before {
@@ -579,12 +577,12 @@ h2, h3, h4, h5, h6 {
 			display: inline-block;
 			vertical-align: top;
 			max-width: 285px;
-			margin-left: 15px;
+			margin-left: 20px;
 			line-height: 1.2;
 			font-size: 17px;
 
 			@include media ('<desktop') {
-				margin: 0;
+				margin: 0 auto;
 			}
 
 			@include media ('<tablet') {
@@ -607,7 +605,7 @@ h2, h3, h4, h5, h6 {
 	
 	.clients-wrapp {
 		@extend .section-wrapp;
-		padding: 92px 0;
+		padding: 90px 0;
 
 		@include media ("<tablet") {
 			padding: 0;
@@ -650,8 +648,6 @@ h2, h3, h4, h5, h6 {
 
 			@include media ('<tablet') {
 				margin: 0 auto;
-				width: 110px;
-				height: 110px;
 				margin-bottom: 20px;
 			}
 		}
@@ -743,7 +739,7 @@ h2, h3, h4, h5, h6 {
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~logos~~~~~~~~~~~~~~~~~~~~~~~~
 .logos-wrapp {
-	padding: 24px 0;
+	padding: 25px 0 52px;
 
 	@include media ('<tablet') {
 		padding: 20px 0;
@@ -767,9 +763,11 @@ h2, h3, h4, h5, h6 {
 			display: block;
 			margin-bottom: 20px;
 		}
-		&:hover {
-			transform: scale(1.1);
-		}
+		@include media (">=tablet") {
+						&:hover {
+						transform: rotateY(360deg);
+					}
+				}
 	}
 
 	a {
@@ -781,7 +779,7 @@ h2, h3, h4, h5, h6 {
 	background-color: #111;
 
 	.team-wrapp {
-		padding: 129px 0 97px;
+		padding: 100px 0 97px;
 		
 		@include media ('<tablet') {
 				padding: 30px 0 40px;
@@ -805,18 +803,18 @@ h2, h3, h4, h5, h6 {
 	}
 
 	.wrapp-team-holder {
-		font-size: 0;
-		line-height: 0;
-		margin: 0 -21px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
 	}
 
 	.team-holder {
 		padding: 0 21px;
-		width: 33.33%;
+		width: 280px;
 		display: inline-block;
 		vertical-align: top;
 		min-height: 50px;
-		font-size: 18px;
 		text-align: center;
 		color: $base-color;
 		margin-bottom: 36px;
@@ -846,18 +844,6 @@ h2, h3, h4, h5, h6 {
 			border-radius: 50%;
 			border: solid 7px #fff;
 			margin-bottom: 20px;
-
-			@include media ('<tablet') {
-				width: 180px;
-				height: 180px;
-				border: solid 5px #fff;
-			}
-
-			@include media ('<phone') {
-				width: 140px;
-				height: 140px;
-				border: solid 5px #fff;
-			}
 		}
 
 		.team-links {
@@ -891,39 +877,50 @@ h2, h3, h4, h5, h6 {
 				font-size: 14px;
 			}
 
-				&:hover {
-					transform: rotateY(360deg);
+				@include media (">=tablet") {
+						&:hover {
+						transform: rotateY(360deg);
+					}
 				}
 			}
 
 			.icon-pinterest-logo {
-				&:hover {
-					border: 2px solid $base-hover-link;
-					color: $base-color;
-					background-color: $base-hover-link;
+					@include media (">=tablet") {
+						&:hover {
+						border: 2px solid #FF7F50;
+						color: $base-color;
+						background-color: #FF7F50;
+					}
 				}
 			}
 
 			.icon-facebook-logo {
-				&:hover {
-					border: 2px solid #3b5998;
-					color: $base-color;
-					background-color: #3b5998;
+					@include media (">=tablet") {
+						&:hover {
+						border: 2px solid #FF7F50;
+						color: $base-color;
+						background-color: #FF7F50;
+					}
 				}
 			}
 			.icon-twitter-logo {
-				&:hover {
-					border: 2px solid #0084b4;
-					color: $base-color;
-					background-color: #0084b4;
+					@include media (">=tablet") {
+						&:hover {
+						border: 2px solid #FF7F50;
+						color: $base-color;
+						background-color: #FF7F50;
+					}
 				}
 			}
 		
 			.icon-google-plus {
-				&:hover {
-					border: 2px solid #FF7F50;
-					color: $base-color;
-					background-color: #FF7F50;
+
+					@include media (">=tablet") {
+						&:hover {
+						border: 2px solid #FF7F50;
+						color: $base-color;
+						background-color: #FF7F50;
+					}
 				}
 			}
 		}
@@ -999,8 +996,6 @@ h2, h3, h4, h5, h6 {
 			@include media ('<tablet') {
 				text-align: center;
 			}
-
-
 		}
 
 		.contact-list-item {
@@ -1026,9 +1021,10 @@ h2, h3, h4, h5, h6 {
 			color: $base-color;
 			transition: all .5s ease-in-out;
 			
-			&:hover {
-				color: $base-hover-link;
-				font-size: 20px;
+			@include media (">=tablet") {
+					&:hover {
+					color: $base-hover-link;
+				}
 			}
 		}
 
@@ -1065,8 +1061,8 @@ h2, h3, h4, h5, h6 {
 			}
 		}
 
-		.row {
-			margin-bottom: 22px;
+		.contact-row {
+			margin-bottom: 24px;
 		}
 
 		.input {
@@ -1099,15 +1095,18 @@ h2, h3, h4, h5, h6 {
 			text-transform: uppercase;
 			transition: all .3s ease-in-out;
 
-			@include media ('<tablet') {
-				padding: 10px;
+			@include media ('>=tablet') {
+				
+					&:hover {
+					background-color: $base-hover-link;
+					color: #fff;
+					border-color: $base-hover-link;
+					transform: rotateX(360deg);
+				}
 			}
 
-			&:hover {
-				background-color: $base-hover-link;
-				color: #fff;
-				border-color: $base-hover-link;
-				transform: rotateX(360deg);
+			@include media ("<tablet") {
+				padding: 10px;
 			}
 		}
 	}
@@ -1117,7 +1116,7 @@ h2, h3, h4, h5, h6 {
 	.footer-content {
 		text-align: center;
 		font: 500 16px $base-font-BrandonGrotesque;
-		padding: 32px;
+		padding: 26px 0;
 		color: $base-color;
 	}
 }

@@ -13,14 +13,17 @@ function initMenu() {
 	};
 	opener.on('click', clickHandler);
 
-	$(".heading-box").animated("flipInY")
-	$(".section-contact, .images-holder, .team-holder, .clients-holder, .descr-services h2, .descr-services p, .info-box").animated("fadeInUp")
-	$(".logo").animated("bounceInLeft");
 	$(".logos-item a").animated("flipInX")
+	$(".heading-box").animated("flipInY")
+
+	$(".section-contact, .images-holder, .team-holder, .clients-holder, .descr-services h2, .descr-services p, .info-box").animated("fadeInUp")
+	
 	$(".our-contact").animated("fadeInLeft")
 	$(".contact-form-hold").animated("fadeInRight")
 
-
+	$(".logo").animated("bounceInLeft");
+	
+	$(".navigation").animated("bounceInDown");
 
 	$("html").on("click","a", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
