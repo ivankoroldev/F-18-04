@@ -267,7 +267,7 @@ main {
 			}
 	@include media('<desktop'){
 		& {
-			padding: 15px 0;
+			padding-top: 20px;
 		}
 	}
 
@@ -853,6 +853,9 @@ main {
 	}
 }
 .end-txt {
+	max-width: 600px;
+	margin: 0 auto;
+	line-height: 1.5;
 	text-align: center;
 	padding: 20px 0;
 	color: $extra-color;

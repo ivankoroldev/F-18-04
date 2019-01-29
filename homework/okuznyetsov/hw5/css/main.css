@@ -594,7 +594,7 @@ main {
 
 @media (max-width: 1023px) {
   main {
-    padding: 15px 0;
+    padding-top: 20px;
   }
 }
 
@@ -1219,6 +1219,9 @@ main .strip-wrap .hold .content-wrap {
 }
 
 .end-txt {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
   text-align: center;
   padding: 20px 0;
   color: #fff;
