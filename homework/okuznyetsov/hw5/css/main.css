@@ -1299,6 +1299,16 @@ footer .pre-wrap .contacts .contact-basket a:hover {
   color: #4c2f65;
 }
 
+@media (max-width: 1023px) {
+  footer .pre-wrap .contacts .contact-basket a {
+    font-size: 16px;
+    margin: 0;
+  }
+  footer .pre-wrap .contacts .contact-basket a i {
+    padding: 0;
+  }
+}
+
 @media (max-width: 767px) {
   footer .pre-wrap .contacts .contact-basket {
     padding: 0;

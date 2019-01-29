@@ -921,6 +921,17 @@ footer {
 					&:hover {
 						color: #4c2f65;
 					}
+					
+					@include media('<desktop'){
+					&{
+						 font-size: 16px;
+						margin: 0;
+						
+						i {
+							padding: 0;
+						}
+					 }
+					}
 				}
 				
 				@include media('<tablet'){
@@ -966,7 +977,7 @@ footer {
 			}	
 		}
 	}
-	}
+}
 		
 .comments {
 	width: 50%;
