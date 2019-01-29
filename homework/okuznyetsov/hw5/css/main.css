@@ -1132,8 +1132,9 @@ main .strip-wrap .hold .content-wrap {
 }
 
 .team-wrap .clients-photo {
-  min-width: 220px;
-  min-height: 240px;
+  width: 220px;
+  height: 240px;
+  margin: 0 auto;
   background: #000;
   border-radius: 50%;
   border: 3px solid #fff;
