@@ -70,7 +70,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999999999;
+  z-index: 99;
 }
 
 .header__contant {
@@ -92,10 +92,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
         &:hover, &.active {
-          border-top: 3px solid $white;
-          border-bottom: 3px solid $white;
+          opacity: 0.7;
         }
       }
+      
     }
   }
 }
@@ -158,22 +158,95 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .nav__ul {
   @include media('<tablet') {
-  transition: all 0.3s ease-in-out;
-  padding-top: 100px;
+    transition: all 0.3s ease-in-out;
+    padding-top: 100px;
+    opacity: 0;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    left: 100%;
+    background: rgba(0, 0, 0, 0.9);   
+    .nav__item {
+      display: block;
+      margin: 7px 0;
+    } 
+  }
+}
+
+.dropdown {
+  width: 150px;
+  background: $white;
+  transition: all .3s ease-in-out;
   opacity: 0;
-  visibility: visible;
-  position: fixed;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown2 {
+  width: 150px;
+  background: $white;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
   top: 0;
-  right: 0;
-  height: 100vh;
   left: 100%;
-  background: rgba(0, 0, 0, 0.9);   
+}
+
+.nav__ul {
   .nav__item {
-    display: block;
-    margin: 7px 0;
-  } 
+    position: relative;
+    &:hover {
+      .dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .dropdown {
+      > ul {
+          li {
+            font-size: 13px;
+            line-height: 1.2;
+            display: block;
+            position: relative;
+            padding-left: 10px;
+            a {
+              display: block;
+              padding: 5px 0;
+            }
+          }
+        > li {
+          background: #87a0d2;
+          text-align: left;
+          &:hover {
+            background: #413548;
+            .dropdown2 {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          > ul {
+            > li {
+              background: #87a0d2;
+              &:hover {
+                background: #cb2028;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
 }
-}
+
+
+
+
 
 .menu-active {
   height: 100vh;
@@ -188,7 +261,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   left: 0;
 }
 
-// mpbile menu end
+// mobile menu end
 
 
 
@@ -339,17 +412,22 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .skills__holder {
-  padding: 100px 40px 48px;
+  padding: 100px 40px 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   text-align: left;
+  margin: 0 -55px;
+  @include media('<desktop') {
+    margin: 0 -30px;
+  }
+
   @include media('<tablet') {
-    padding: 50px 40px 48px;
+    padding: 50px 40px 40px;
   }
   p {
     line-height: 22px;
-    max-width: 281px;
+    // max-width: 281px;
     font-size: 19px;
     letter-spacing: -0.85px;
     @include media('<desktop') {
@@ -361,33 +439,34 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
   .skills__item {
     margin-bottom: 45px;
+    width: 50%;
+    padding: 0 55px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     @include media('<desktop') {
-      width: 50%;
+      padding: 0 30px;
     }
     @include media('<tablet') {
       width: 100%;
-      text-align: center;
     }
-      .skills__icon {
-        display: inline-block;
-        vertical-align: top;
-        color: white;
-        background: $black;
-        border-radius: 50%;
-        font-size: 40px;
-        padding: 15px;
+    .skills__icon {
+      display: inline-block;
+      vertical-align: top;
+      color: white;
+      background: $black;
+      border-radius: 50%;
+      font-size: 40px;
+      padding: 15px;
+    }
+    .skills__text {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 20px;
+      & h4 {
+        font-size: 21px;
       }
-      .skills__text {
-        display: inline-block;
-        vertical-align: top;
-        padding-left: 17px;
-        @include media('<desktop') {
-          padding: 0;
-        }
-        & h4 {
-          font-size: 21px;
-        }
-      }
+    }
   }
 }
 
@@ -562,28 +641,33 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .clients__logos {
   // max-height: 160px;
   .clients__logos-holder {
-    height: 160px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    // height: 160px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    // padding: 0 80px;
     @include media('<phone') {
-      max-height: 100px;
+      // max-height: 100px;
     }
     ul {
+        margin: 0 -20px;
       li {
-        padding: 0px 20px;
+        padding: 60px 20px;
         display: inline-block;
         vertical-align: middle;
         transition: all .2s ease-in-out;
+        @include media('<desktop') {
+         width: 25%;
+         padding: 40px 10px;
+        }
+        
         &:hover {
           transform: scale(1.1);
         }
-        @include media('<desktop') {
-          width: 25%;
-          padding: 0 5px;
+        a {
+          display: inline-block;
         }
-        
       }
     }
   }
