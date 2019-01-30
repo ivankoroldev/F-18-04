@@ -56,18 +56,15 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 0 0;
+	padding: 45px 0 0;
 	z-index: 9999;
+
+	@include media ("<tablet") {
+		padding: 20px 0 0;
+	}
 }
 
-
-.header-wrap {
-	display: flex;
-	flex-wrap:wrap;
-	justify-content: space-between;
-	align-items: center;
-	
-	.nav-btn{
+.nav-btn{
 		display: none;
 
 		@include media ("<tablet") {
@@ -81,7 +78,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	    z-index: 3;
 	    cursor: pointer;
 
-	  	 span, span::before,  span::after{
+	  	span, span::before,  span::after{
 	    position: absolute;
 	    top: 50%;
 	    margin-top: -1px;
@@ -90,40 +87,43 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	    width: 20px;
 	    height: 2px;
 	    background-color:#fff;
-
-		 span::before,  span::after{
+		}
+		span::before,  span::after{
 	    content:"";
 	    transition: .7s;
 	  }
-
-
-	    span::before {
-	    transform: translateY(-5px);
+		
+		 span::before {
+	    	transform: translateY(-5px);
 	  }
 
-	   span::after{
-	    transform: translateY(5px);
+	   	span::after{
+	    	transform: translateY(5px);
 	  }
-
-	  .menu_active  span::before{
+}
+}
+	.menu_active  span::before{
 	    transform: rotate(45deg);
 	  }
 
-	   .menu_active span {
+	.menu_active span {
 			height: 0;
 	  }
 		
-	  .menu_active  span::after{
+	.menu_active  span::after{
 	    transform: rotate(-45deg);
 	  }
 
-	  }
 
-	 
-	  
 
-	}
-}
+
+.header-wrap {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	align-items: center;
+	
+	
 
 }
 	.logo {
@@ -163,7 +163,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		color: $black;
 	}
 	}
-
+	
 
 }
 
@@ -171,10 +171,16 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 .visual {
 	background: url("../img/bg.png");
 	background-size: cover;
-	padding: 180px 0 120px;
+	padding: 205px 0 105px;
 	color: $white;
 	min-height: 620px;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
+
+	@include media ("<tablet") {
+		padding: 100px 0 50px;
+		min-height: 400px;
+		margin-bottom: 30px;
+	}
 
 	.text-hold {
 		padding: 10px 0;
@@ -184,6 +190,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		font-size: 32px;
 		font-weight: 300;
 		margin-bottom: 20px;
+		letter-spacing: -1px;
+		@include media ("<tablet") {
+			font-size: 25px;
+		}
 		
 	}
 
@@ -193,6 +203,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		font-weight: bold;
 		text-transform: uppercase;
 		margin-bottom: 55px;
+		letter-spacing: -1px;
+		@include media ("<tablet") {
+			font-size: 30px;
+		}
 	}
 }
 	
@@ -208,7 +222,12 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		font-weight: bold;
 		color: inherit;
 		text-decoration: none;
-		padding: 10px 65px;
+		padding: 12px 65px;
+
+		@include media ("<tablet") {
+			padding: 10px 30px;
+			font-size: 20px;
+		}
 	&:hover {
 		background: $white;
 		color: $black;
@@ -219,29 +238,47 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 }
 
 .main {
-
-	.text-hold {
+		.text-hold {
 		font-family: inherit;
 		margin-bottom: 20px;
 
-	
-	h2 {
+		h2 {
 		font-size: $h2-basic-fsz;
 		color: $black;
 		font-weight: 300;
-		margin-bottom: 10px;
+		
+		@include media ("<tablet") {
+			font-size: 30px;
+		}
+
+		}
+		p{
+		font-size: 18px;
+		color: $basic-color-p;
+
+		@include media ("<tablet") {
+			font-size: 14px;
+		}
+		}
+	}
+	.service-wrap {
+		margin-bottom: 120px;
+
+		@include media ("<tablet") {
+			margin-bottom: 40px;
+		} 
+
+
+	
+	h2 {
+		
+		margin-bottom: 20px;
 	}
 
 	p {
-		font-size: 18px;
-		color: $basic-color-p;
+		
 		margin-bottom: 30px;
 	}
-}
-
-
-	.service-wrap {
-		margin-bottom: 165px;
 	}
 
 	.service{
@@ -249,9 +286,23 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
-		margin-bottom: 125px;
+		margin-bottom: 120px;
+
+		@include media ("<tablet") {
+			margin-bottom: 40px;
+		}
 
 	.text-hold {
+		@include media ("<tablet") {
+			padding-left: 0;
+			max-width: 100%;
+		}
+
+        h2 {
+        	letter-spacing: -1px;
+        	padding-left: 7px;
+        }
+
       @include media("<desktop") {
       	width: 100%;
       }
@@ -259,11 +310,14 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		max-width: 65%;
 		text-align:left;
 		font-size: 22px;
+		padding-left: 15px;
 
 	}
 	.image-hold {
+		padding: 0 30px 25px 0;
+
 		@include media("<desktop") {
-			width: 100%;
+		max-width: 100%;
 		}
 		max-width: 35%;
 		margin: 5px;
@@ -274,6 +328,11 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 .service:nth-child(even){
 	flex-direction: row-reverse;
+	padding-left: 25px; 
+
+	@include media ("<tablet") {
+		padding-left: 0;
+	} 
 }
 }
 
@@ -285,7 +344,13 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	align-items:center;
 	justify-content: space-between;
 	margin-bottom: 100px;
-}
+	padding-top: 25px;
+
+	@include media ("<tablet") {
+		margin-bottom: 30px;
+	}
+}	
+
 
 .work {
 	font-family: inherit;
@@ -297,6 +362,14 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	max-width: 50%;
 	margin-bottom: 40px;
 	padding: 0 40px;
+
+	@include media ("<tablet") {
+		justify-content: center;
+		max-width: 100%;
+		padding: 0 15px;
+	}
+
+
 
 	.img-work-wrap{
 		display: flex;
@@ -320,7 +393,11 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		text-align: left;
 		max-width: 80%;
 
-		h3 {
+		@include media ("<tablet") {
+			text-align: center;
+		}
+
+ 		h3 {
 			font-size: $h3-basic-fsz;
 			color: $base-color-h2;
 			font-weight: 500;
@@ -330,6 +407,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 .clients-wrap {
 	padding-bottom: 80px;
+
+	@include media ("<tablet") {
+		padding-bottom: 0;
+	}
 }
 
 .clients {
@@ -339,7 +420,13 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	justify-content: space-between;
 	align-items :center;
 	padding-top: 20px;
+
+
 	.text-hold {
+
+		h2 {
+			letter-spacing: -1px;
+		}
 			p{
 			font-size: 22px;
 		}
@@ -352,6 +439,11 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 20px;
+		padding-top: 20px;
+
+		@include media ("<tablet") {
+		justify-content: center;
+	}
 
 		
 	}
@@ -366,14 +458,23 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		height: 220px;
 		border-radius: 50%;
 		background: $black;
+		@include media ("<tablet") {
+			margin-bottom: 10px;
+		}
 
 	}
 
-	.client-feedback  {
+.client-feedback  {
 		border: 2px solid #f2f2f2;
 		width: 70%;
 		position: relative;
 		background: $white;
+		padding: 25px 0 0 10px;
+
+		@include media ("<tablet") {
+			max-width: 100%;
+			padding: 10px;
+		}
 
 		@include media ("<desktop") {
 			width: 60%;
@@ -382,13 +483,22 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		blockquote {
 			font-size: 26px;
 			color: $basic-color-p;
-			padding: 20px 50px;
 			text-align: left;
+
+			@include media ("<tablet") {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
 		}
 
 		cite {
 			font-size: 20px;
 			color: #7690c5;
+			display: block;
+			text-align: left;
+
+			@include media ("<tablet") {
+				font-size: 14px;
 
 		}
 
@@ -411,22 +521,26 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			border-right-color: #f2f2f2;
 		}
 	}	
-
+}
 	.logos {
-		margin-bottom: 30px;
-		padding-top: 70px;
+		margin-bottom: 45px;
+		padding-top: 45px;
 		.logo {
 			display: inline-block;
 			vertical-align: middle;
 			padding: 10px 20px;
 		}
 	}
-}
 
+}
 .team {
 	background: $black;
-	padding-top: 100px;
+	padding-top: 80px;
 	padding-bottom: 10px;
+
+	@include media ("<tablet") {
+		padding-top: 40px;
+	}
 	
 	.text-hold {
 		h2 {
@@ -434,6 +548,9 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		}
 		p {
 			font-size: 22px;
+			@include media ("<tablet") {
+			font-size: 15px;
+			}
 		}
 	}
 
@@ -443,9 +560,8 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		justify-content: space-around;
 		align-items:center;
 		margin-bottom: 20px;
-		padding-top: 35px;
+		padding: 40px 50px;
 		.worker {
-			
 			color: $white;
 			
 		}
@@ -453,9 +569,9 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		.worker-photo {
 			width: 235px;
 			height: 235px;
-			border: 2px solid $white;
+			border: 8px solid $white;
 			border-radius: 50%;
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 
 		}
 
@@ -463,7 +579,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			font-family: inherit;
 			font-size: $base-font-size-text;
 			display: block;
-			margin-bottom: 10px;
+			margin-bottom: 1px;
 
 		}
 
@@ -471,7 +587,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			font-size: 16px;
 			color: #ebebeb;
 			display: block;
-			margin-bottom: 10px;
+			margin-bottom: 5px;
 		}
 	
 		.social-media {
@@ -513,6 +629,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		font-size: 20px;
 		color: #ebebeb;
 		text-align: center;
+
+		@include media ("<tablet") {
+			margin-bottom: 40px;
+		}
 		
 	}
 
@@ -520,7 +640,11 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 .contact-info {
 		background: #7690c5;
-		padding-bottom: 10px;
+		padding-bottom: 30px;
+
+		@include media ("<tablet") {
+			padding-bottom: 15px;
+		}
 	}
 
 
@@ -529,13 +653,22 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items:flex-start;
-	padding-top: 75px;
+	padding-top: 55px;
 	margin-bottom: 50px;
+
+	@include media ("<tablet") {
+		padding-top: 30px;
+		margin-bottom: 15px;
+	}
 }
 
 .text-info {
 	max-width: 50%;
-	padding-right: 20px;
+	padding-right: 53px;
+
+	@include media ("<tablet") {
+			padding-right: 10px;
+		}
 	.text-hold {
 		h2,p {
 		color: #fff;
@@ -543,6 +676,12 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	}
 	p {
 		font-size: 18px;
+		margin-bottom: 50px;
+
+		@include media ("<tablet") {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
 	}
 	}
 }
@@ -567,19 +706,26 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		color: $white;
 		display: inline-block;
 		vertical-align: middle;
-		padding: 0 10px;
-		margin-bottom: 20px;
-
-
+		margin-bottom: 25px;
 		}
 
 		.ico-hold {
 			font-size: 25px;
+			@include media ("<tablet") {
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
 		}
 
 		.label-hold {
 		padding-left: 10px;
-		font-size: 18px;	
+		font-size: 18px;
+
+		@include media ("<tablet") {
+			font-size: 15px;
+			margin-bottom: 20px;
+			padding-left: 5px;
+		}	
 		}
 
 		 a{
@@ -597,8 +743,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 .form {
 	width: 50%;
+	padding-left: 15px;
+	padding-top: 20px;
 
-	.input-text {
+	input[type="text"], input[type="email"] {
 		display: block;
 		width: 100%;
 		min-height: 50px;
@@ -610,6 +758,8 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 	textarea {
 		resize:none;
+		min-height: 210px;
+		width: 100%;
 	}
 
 	.buttons {
@@ -618,7 +768,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			vertical-align: top;
 			width: 100px;
 			height: 30px;
-			margin: 0 15px;
+			margin: 10px 15px;
 			border-radius: 10px;
 
 			&:hover {
@@ -634,6 +784,11 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	color: $white;
 
 	p{
+		border-top: 1px solid #87a0d2;
 		padding: 20px 0;
+
+		@include media ("<tablet") {
+			font-size: 14px;
+		}
 	}
 }
