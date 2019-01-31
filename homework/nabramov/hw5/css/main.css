@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     display: block;
     width: 40px;
     height: 40px;
-    background: #e84545;
+    background: #000;
     border-radius: 50%;
     position: relative;
     z-index: 3;
@@ -319,7 +319,46 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 }
 
 .navigation a:hover {
-  color: #000;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.menu_active .navigation {
+  opacity: 1;
+  visibility: visible;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.menu_active .navigation ul {
+  padding-top: 45%;
+}
+
+.menu_active .navigation li {
+  display: block;
+  font-size: 25px;
+}
+
+.navigation .menu_active {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .visual {
@@ -676,6 +715,31 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   flex-direction: row-reverse;
 }
 
+.clients .client:nth-child(even):before, .clients .client:nth-child(even):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #fff;
+  border-top: 20px solid transparent;
+  z-index: 4;
+}
+
+@media (max-width: 767px) {
+  .clients .client:nth-child(even):before, .clients .client:nth-child(even):after {
+    display: none;
+  }
+}
+
+.clients .client:nth-child(even):before {
+  border-width: 22px;
+  border-right-color: #f2f2f2;
+}
+
 .clients .photo-client {
   width: 220px;
   height: 220px;
@@ -697,16 +761,16 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   padding: 25px 0 0 10px;
 }
 
-@media (max-width: 767px) {
-  .clients .client-feedback {
-    max-width: 100%;
-    padding: 10px;
-  }
-}
-
 @media (max-width: 1023px) {
   .clients .client-feedback {
     width: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients .client-feedback {
+    width: 100%;
+    padding: 10px;
   }
 }
 
@@ -736,7 +800,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   }
 }
 
-.clients .client-feedback cite:before, .clients .client-feedback cite:after {
+.clients .client-feedback:before, .clients .client-feedback:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -750,7 +814,13 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   z-index: 4;
 }
 
-.clients .client-feedback cite:before {
+@media (max-width: 767px) {
+  .clients .client-feedback:before, .clients .client-feedback:after {
+    display: none;
+  }
+}
+
+.clients .client-feedback:before {
   border-width: 22px;
   border-right-color: #f2f2f2;
 }

@@ -12,6 +12,7 @@ $breakpoints: (
 @import "../fonts/fonts";
 
 @import "../icomoon/icons";
+
 @import "include-media";
 
 body {
@@ -72,7 +73,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	    display: block;
 	    width: 40px;
 	    height:40px;
-	    background:#e84545;
+	    background:$black;
 	    border-radius: 50%;
 	    position: relative;
 	    z-index: 3;
@@ -100,6 +101,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	   	span::after{
 	    	transform: translateY(5px);
 	  }
+
 }
 }
 	.menu_active  span::before{
@@ -114,6 +116,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	    transform: rotate(-45deg);
 	  }
 
+	  
 
 
 
@@ -160,10 +163,44 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		text-decoration: none;
 		color: $white;
 	&:hover {
-		color: $black;
+		opacity: 0.8;
 	}
 	}
 	
+	@include media ("<tablet") {
+		opacity: 0;
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.menu_active &{
+	  	opacity: 1;
+	  	visibility: visible;
+	  	text-align: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		transition: all .5s ease-in-out;
+		background: rgba(0,0,0,0.9);
+		
+		ul {
+			padding-top: 45%;
+		}
+		li {
+			display: block;
+			font-size: 25px;
+		}
+
+	  }
+
+	  .menu_active {
+	  	height: 100vh;
+	  	overflow: hidden;
+	  }
+
 
 }
 
@@ -413,6 +450,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	}
 }
 
+
 .clients {
 	background:#fafafa;
 	display: flex;
@@ -450,7 +488,28 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 
 	.client:nth-child(even){
 		flex-direction: row-reverse;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform:translateY(-50%);
+			border-bottom: 20px solid transparent;
+			border-right: 20px solid $white;
+			border-top: 20px solid transparent; 
+			z-index: 4;
+			@include media ("<tablet") {
+				display: none;
+			}
+
+		}
+
+		&:before {
+			border-width: 22px;
+			border-right-color: #f2f2f2;
 	}
+}
 
 	
 	.photo-client {
@@ -460,6 +519,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		background: $black;
 		@include media ("<tablet") {
 			margin-bottom: 10px;
+
 		}
 
 	}
@@ -470,15 +530,17 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		position: relative;
 		background: $white;
 		padding: 25px 0 0 10px;
-
-		@include media ("<tablet") {
-			max-width: 100%;
-			padding: 10px;
-		}
-
+		
 		@include media ("<desktop") {
 			width: 60%;
 		}
+
+		@include media ("<tablet") {
+			width: 100%;
+			padding: 10px;
+		}
+
+		
 
 		blockquote {
 			font-size: 26px;
@@ -496,10 +558,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			color: #7690c5;
 			display: block;
 			text-align: left;
-
+			
 			@include media ("<tablet") {
 				font-size: 14px;
-
+		}
 		}
 
 		&:before,
@@ -513,15 +575,17 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			border-right: 20px solid $white;
 			border-top: 20px solid transparent; 
 			z-index: 4;
+			@include media ("<tablet") {
+				display: none;
+			}
 
 		}
 
 		&:before {
 			border-width: 22px;
 			border-right-color: #f2f2f2;
-		}
-	}	
-}
+	}
+}	
 	.logos {
 		margin-bottom: 45px;
 		padding-top: 45px;
