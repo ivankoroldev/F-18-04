@@ -30,6 +30,12 @@ $breakpoints: (
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#wrapper {
+	width: 100%;
+    position: relative;
+	overflow: hidden;
+}
+
 header {
 	position: absolute;
 	top: 0;
@@ -87,7 +93,7 @@ header {
 			display: block;
 			position: relative;
 			z-index: 4;
-
+				
 			  span {
 				position: absolute;
 				left: 50%;
@@ -181,17 +187,17 @@ header {
 	text-align: center;
 	padding: 218px 10px 95px;
 	
-	@include media('<tablet'){
-		& {
-			padding: 75px 10px 20px;
-			font-size: 18px;
-			
-		}
-	}
-	
 	@include media('<desktop'){
 		& {
 			padding: 170px 10px 75px;
+		}
+	}
+	
+	@include media('<tablet'){
+		& {
+			padding: 100px 10px 20px;
+			font-size: 18px;
+			
 		}
 	}
 	
@@ -209,6 +215,7 @@ header {
 		word-spacing: -7px;
 		@include media('<tablet'){ 
 			& {
+				padding: 20px 0;
 				font-size: 30px;
 				word-spacing: normal;
 			}
@@ -222,13 +229,21 @@ header {
 	@include media('<tablet'){
 		& {
 			padding: 20px 0;
-			font-size: 18px;}
+		
+		}
 	}
 	
 		.btn-wrap{
 			display: inline-block;
 			vertical-align: top;
 			
+		@include media('<tablet'){
+			
+			.btn {
+					padding: 10px 40px;
+					font-size: 16px;
+				}
+			}
 			
 			a {
 				display: block;
@@ -241,14 +256,6 @@ header {
 				color:$extra-color;
 				transition:all 0.3s ease-in-out; 
 				
-				@include media('<tablet'){
-				 a {
-					padding: 10px 35px;
-					font-size: 16px;
-				}
-			}
-
-				
 				&:hover {
 					transform: scale(1.2);
 					background: rgba(81, 67, 106, 0.51);
@@ -258,34 +265,20 @@ header {
 }
 
 main {
-	padding-top: 50px;
-	
-	@include media('<tablet'){
-		& {
-			padding-top: 10px;
-		}
-			}
-	@include media('<desktop'){
-		& {
-			padding-top: 20px;
-		}
-	}
-
-	
 	.strip-wrap {
 		padding: 20px 0 100px;
 		
+			@include media('<desktop'){
+		& {
+			padding: 10px 0 50px;
+		}
+	}
 		@include media('<tablet') {
 			&{
 				padding:10px 0 20px; 
 		}
 	}
-		@include media('<desktop'){
-		& {
-			padding: 10px 0 50px;
-		}
-	}
-		
+	
 		&:nth-child(even) {
 		background: #fafafa;
 			
@@ -344,7 +337,13 @@ main {
 }
 
 .content {
-	padding: 20px 0;
+	padding: 70px 0;
+	
+	@include media('<desktop'){
+		& {
+			padding: 30px 0;
+		}
+	}
 	
 	@include media('<tablet'){
 		& {
@@ -430,7 +429,7 @@ main {
 		@include media('<desktop'){
 		& {
 			padding: 20px 0;
-			margin: 0 -20px;
+			margin: 0 -38px;
 	}
 }
 		li {
@@ -441,15 +440,23 @@ main {
 			width: 50%;
 			margin-bottom: 50px;
 			
+			@include media('<desktop'){
+					& { 
+						padding: 0 30px;
+						margin-bottom: 25px;
+				}
+			}
+			
 			@include media('<tablet'){
 				
-			& {
-			padding: 0 10px;
-			width: 100%;
-			margin-bottom: 20px;
+				& {
+				padding: 0 10px;
+				width: 100%;
+				margin-bottom: 20px;
 				
 				.skill-icon {
 					padding: 10px 8px ;
+					width: 100%;
 				}
 				
 				.skill-txt {
@@ -462,6 +469,7 @@ main {
 				}
 		}
 }
+			
 			.skill-icon {
 				display: inline-block;
 				vertical-align: top;
@@ -482,10 +490,16 @@ main {
 				h4 {
 					margin-bottom: 7px;
 				}
+				
+				@include media('<desktop'){
+					& { 
+						max-width: 300px;
+					}
 				}
 			}
 		}
 	}
+}
 
 
 .awesome-clients {
@@ -503,17 +517,17 @@ main {
 			padding: 25px 0;}
 	}
 	.awesome-wrap {
-		padding: 40px 10px;
+		padding: 40px 0;
 		
+		@include media('<desktop'){
+		& {
+			padding: 20px 0;}
+	}
 		@include media('<tablet'){
 		& {
 			padding: 10px 0;}
 		}
 		
-		@include media('<desktop'){
-		& {
-			padding: 20px 10px;}
-	}
 		.awesome-heading {
 			text-align: center;
 			padding: 10px 0 25px;
@@ -544,14 +558,14 @@ main {
 	justify-content: space-between;
 	padding: 25px 0;
 	
+	@include media('<desktop'){
+		& { justify-content: space-around;}
+	}
+	
 	@include media('<tablet'){
 		& { padding: 10px 0;
 			display: block;
 			text-align: center;}}
-	
-	@include media('<desktop'){
-		& { justify-content: space-around;}
-	}
 	
 	&:nth-child(even){
 		flex-direction: row-reverse;
@@ -581,16 +595,16 @@ main {
 }
 	
 	.clients-photo{
-		min-width: 220px;
-		min-height: 220px;
+		width: 220px;
+		height: 220px;
 		background: $h-color;
 		border-radius: 50%;
 		border: 3px solid #fff;
 		
 		@include media('<tablet'){
 			& {
-			width: 100px;
-			height: 100px;
+			width: 150px;
+			height: 150px;
 			margin: 0 auto 15px;
 			}
 		} 
@@ -608,8 +622,7 @@ main {
 			max-width: 450px;
 			padding: 35px;
 		}
-		}
-		
+	}
 		
 		@include media('<tablet'){
 			& {
@@ -630,8 +643,6 @@ main {
 			top: 50%;
 			right: 100%;
 			transform: translate(48%, -60%) rotate(34deg) skewX(-21deg);
-			
-			
 			
 			@include media('<tablet'){
 			& {
@@ -672,6 +683,10 @@ main {
 .source {
 	padding: 40px 0;
 	
+	@include media('<desktop'){
+		& { padding: 0;}
+	}
+	
 	@include media('<tablet'){
 		& { 
 			padding: 20px 0;}}
@@ -703,7 +718,7 @@ main {
 		@include media('<tablet'){
 		& { display: block;
 			margin: 0;
-			padding: 10px;
+			padding: 10px 0;
 			
 			 .source-logo {
 				margin-bottom: 10px;
@@ -758,7 +773,7 @@ main {
 	justify-content: space-around;
 	margin: 0 -15px;
 	
-	.clients-photo{
+	.worker-photo{
 		width: 220px;
 		height: 220px;
 		margin: 0 auto;
@@ -840,9 +855,9 @@ main {
 				
 			width: 100%;
 			
-		 .clients-photo {
-				width: 100px;
-				height: 100px;
+		 .worker-photo {
+				width: 150px;
+				height: 150px;
 				margin: 0 auto;
 			}
 			}
@@ -862,9 +877,11 @@ main {
 	font-size: 20px;
 }
 footer {
-	padding: 100px 0 30px;
 	background: #7690c5;
 	
+	.pre-footer {
+		padding: 100px 0 30px;
+		
 	.pre-wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -939,8 +956,7 @@ footer {
 					padding: 0;
 					 
 					li {
-						margin-bottom: 20px;
-						width: 100%;
+						margin-bottom: 10px;
 					}
 					
 					}
@@ -972,9 +988,10 @@ footer {
 					 h2 {
 						 font-size: 24px;
 						 margin-bottom: 5px !important;
-					 }
-				}
-			}	
+						 }
+					}
+				}	
+			}
 		}
 	}
 }
@@ -1018,40 +1035,43 @@ footer {
 				}
 			}
 	@include media('<desktop'){
-		& .write, textarea {
+		
+		& {
+			padding: 10px 0;
+			
+		.write, textarea {
 			width: 350px;
 			}
 		}
+	}
 	
 	@include media('<tablet'){
 		& { 
 			padding: 10px 0;
 			width: 100%;
 			text-align: left;
+			font-size: 16px;
 			
 			.write {
-				width: 300px;
-				height: 20px;
-				padding: 5px;
-				margin-bottom: 10px;
+				height: 30px;
+				padding: 10px;
+				margin-bottom: 5px;
 			}
 			textarea {
-				width: 300px;
 				padding: 10px;
-				margin-bottom: 10px;
-				font-size: 18px;
+				margin: 10px 0;
+				font-size: 16px;
 				color: #bbb;
 			}
 			
 			.submit {
 				display: block;
+				font-size: 16px;
 			}
 		}
 	}
 }
 	
-	
-
 .made-in {
 	padding: 20px 0;
 	border-top: 1px solid #989898;
