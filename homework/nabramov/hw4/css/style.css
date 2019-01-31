@@ -290,17 +290,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .worker {
-	margin-bottom: 15px;
 	max-width: 270px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-start;
-	align-items: flex-start;
 	text-align: left;
+	margin: 0 5px 10px;
+
+
+	
 }
 
 .worker img {
@@ -723,6 +718,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 	.photo-wrap {
 		width: 100%;
+	}
+
+	.content {
+		width: 100%;
+		padding: 20px 45px;
 	}
 }
 
