@@ -661,6 +661,12 @@ main {
 			font-size: 26px;
 			margin: 0;
 			
+			@include media('<desktop'){
+		& {
+			font-size: 18px;
+		}
+	}
+			
 			@include media('<tablet'){
 			& {
 				font-size: 18px;
