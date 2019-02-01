@@ -449,6 +449,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     }
     @include media('<tablet') {
       width: 100%;
+      padding: 0;
     }
     .skills__icon {
       display: inline-block;
@@ -605,6 +606,9 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     }
     .client__text {
       margin: 0 42px 0 30px;
+      @include media('<tablet') {
+        margin: 0;
+      }
       &:before {
         left: 100%; 
         top: 50%;

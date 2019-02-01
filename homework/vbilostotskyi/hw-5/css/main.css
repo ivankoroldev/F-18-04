@@ -1148,6 +1148,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 @media (max-width: 767px) {
   .skills__holder .skills__item {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -1360,6 +1361,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .clients__item:nth-child(even) .client__text {
   margin: 0 42px 0 30px;
+}
+
+@media (max-width: 767px) {
+  .clients__item:nth-child(even) .client__text {
+    margin: 0;
+  }
 }
 
 .clients__item:nth-child(even) .client__text:before {
