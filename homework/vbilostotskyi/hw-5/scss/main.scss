@@ -65,6 +65,11 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   padding: 0 15px;
 }
 
+.logo {
+  position: relative;
+  z-index: 44;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -83,19 +88,124 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     margin: 0 -13px;
     line-height: 1.2;
     font-size: 18px;
+    @include media('<tablet') {
+      margin: 0;
+    }
+    @include media('<tablet') {
+      transition: all 0.3s ease-in-out;
+      padding-top: 100px;
+      opacity: 0;
+      visibility: visible;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      left: 100%;
+      background: rgba(0, 0, 0, 0.9);   
+      .nav__item {
+        display: block;
+        margin: 0;
+      } 
+    }
     li {
       font-weight: 500;
       padding: 0 13px;
+      @include media('<tablet') {
+        padding: 10px 0;
+      }
+      &:hover, &.active {
+        > a {
+          opacity: 0.7;
+        }
+        
+      }
       a {
         color: white;
         transition: 0.3s ease-in-out;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
-        &:hover, &.active {
-          opacity: 0.7;
-        }
       }
       
+    }
+  }
+}
+
+.dropdown {
+  transition: all .3s ease-in-out;
+  display: none;
+  @include media('>=tablet') {
+    width: 150px;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+.dropdown2 {
+  display: none;
+  transition: all .3s ease-in-out;
+  @include media('>=tablet') {
+    width: 150px;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+  }
+}
+
+.nav__ul {
+  .nav__item {
+    position: relative;
+    &:hover {
+      .dropdown {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+      }
+    }
+    .dropdown {
+      > ul {
+          li {
+            font-size: 13px;
+            line-height: 1.2;
+            display: block;
+            position: relative;
+            // padding: 10px;
+
+            a {
+              display: block;
+              padding: 10px 10px;
+            }
+          }
+        > li {
+          background: #87a0d2;
+          text-align: left;
+          &:hover {
+            background: #413548;
+            .dropdown2 {
+              opacity: 1;
+              visibility: visible;
+              display: block;
+            }
+          }
+          > ul {
+            > li {
+              background: #87a0d2;
+              &:hover {
+                background: blue;
+              }
+            }
+          }
+          
+        }
+      }
     }
   }
 }
@@ -104,7 +214,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .menu-opener {
     display: none;
-
     @include media('<tablet') {
       display: block;
       width: 30px;
@@ -156,98 +265,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   transform: rotate(-45deg);
 }
 
-.nav__ul {
-  @include media('<tablet') {
-    transition: all 0.3s ease-in-out;
-    padding-top: 100px;
-    opacity: 0;
-    visibility: visible;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    left: 100%;
-    background: rgba(0, 0, 0, 0.9);   
-    .nav__item {
-      display: block;
-      margin: 7px 0;
-    } 
-  }
-}
-
-.dropdown {
-  width: 150px;
-  background: $white;
-  transition: all .3s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown2 {
-  width: 150px;
-  background: $white;
-  transition: all .3s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 100%;
-}
-
-.nav__ul {
-  .nav__item {
-    position: relative;
-    &:hover {
-      .dropdown {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-    .dropdown {
-      > ul {
-          li {
-            font-size: 13px;
-            line-height: 1.2;
-            display: block;
-            position: relative;
-            padding-left: 10px;
-            a {
-              display: block;
-              padding: 5px 0;
-            }
-          }
-        > li {
-          background: #87a0d2;
-          text-align: left;
-          &:hover {
-            background: #413548;
-            .dropdown2 {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-          > ul {
-            > li {
-              background: #87a0d2;
-              &:hover {
-                background: #cb2028;
-              }
-            }
-          }
-          
-        }
-      }
-    }
-  }
-}
-
-
-
-
-
 .menu-active {
   height: 100vh;
   overflow: hidden;
@@ -262,7 +279,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 // mobile menu end
-
 
 
 .visual {
@@ -415,7 +431,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   padding: 100px 40px 40px;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
   text-align: left;
   margin: 0 -55px;
   @include media('<desktop') {
@@ -427,12 +442,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
   p {
     line-height: 22px;
-    // max-width: 281px;
     font-size: 19px;
     letter-spacing: -0.85px;
-    @include media('<desktop') {
-      // max-width: 100%;
-    }
   }
   h4 {
     margin-bottom: 11px;
@@ -643,17 +654,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .clients__logos {
-  // max-height: 160px;
   .clients__logos-holder {
-    // height: 160px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: center;
-    // padding: 0 80px;
-    @include media('<phone') {
-      // max-height: 100px;
-    }
     ul {
         margin: 0 -20px;
       li {
