@@ -1,0 +1,417 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1366px
+);
+
+//fonts
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700');
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'common-settings/icons';
+
+@import 'basic-settings/variables';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+@import 'basic-settings/mixins';
+@import 'basic-settings/helpers';
+
+@import 'common-settings/slick';
+@import 'common-settings/slick-theme';
+
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-width: $base-min-width;
+
+  p {
+    margin: 0 0 20px; 
+  }
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.listreset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 38px 0;
+}
+
+.header-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: $white;
+  @include media('<tablet') {
+    position: relative;
+    z-index: 3;
+  }
+
+  a {
+    color: inherit;
+  }
+} 
+
+.menu-opener {
+  @include size(20px);
+  @include v-align-ap;
+
+  right: 15px;
+  z-index: 3;
+  background: green;
+
+  @include media('>=tablet') {
+    display: none;
+  }
+}
+
+.drop {
+  font-size: 14px;
+ 
+  @include media('<tablet') {
+      
+      @include animate(all);
+      position: absolute;
+      top: 0;
+      left: 100%;
+      visibility: hidden;
+      opacity: 0;
+      width: 100%;
+      padding-top: 100px;
+      background: rgba($black,.7);
+  }
+
+  .menu-active & {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+  }
+
+
+   > ul {
+    margin: 0 -15px;
+
+    > li {
+      
+      padding: 0 16px;
+      color: $white;
+      position: relative;
+      @include media('>=tablet') {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      &:last-child {
+        .dropdown {
+          left: auto;
+          right: 0;
+        }
+
+        .dropdown-second {
+          left: auto;
+          right: 100%;
+        }
+      }
+
+      &:hover {
+        color: green;
+        @include media('<tablet') {
+          background: #fff;
+        }
+
+        .dropdown {
+          visibility: visible;
+          opacity: 1;
+          @include media('<tablet') {
+            display: block;
+          }
+        }
+      }
+
+      > a {
+        color: inherit;
+        position: relative;
+        z-index: 2;
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+  } 
+
+  a {
+    display: block;
+    @include animate(all);
+
+     @include media('<tablet') {
+        padding: 15px;
+      }
+  } 
+}
+
+.dropdown {
+  background: $white;
+  display: none;
+  transition: all .3s ease-in-out;
+  @include media('>=tablet') {
+      width: 200px;
+      background: $white;
+      transition: all .3s ease-in-out;
+      opacity: 0;
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+  }
+
+  // &:after {
+  //   content: '';
+  //   background: pink;
+  //   bottom: 100%;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 50px;
+  //   position: absolute;
+  // }
+
+  > ul {
+
+    > li {
+      position: relative;
+      color: red;
+
+      &:hover {
+
+        > a {
+          background: red;
+          color: $white;
+        }
+
+        .dropdown-second {
+          opacity: 1;
+          visibility: visible;
+          @include media('<tablet') {
+            display: block;
+          }
+        }
+      }
+
+      > a {
+        color: inherit;
+        padding: 10px;
+        @include media('<tablet') {
+            padding: 15px 40px;
+          }
+
+
+        &:hover {
+          background: red;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-second {
+ transition: all .3s ease-in-out;
+ background: darken(red,20%);
+ display: none;
+   @include media('>=tablet') {
+       width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      display: block;
+  }
+
+  a {
+    color: $white;
+    padding: 10px;
+    @include media('<tablet') {
+            padding: 15px 80px;
+          }
+    &:hover {
+      background: black;
+      color: red;
+    }
+  }
+}
+
+
+.some-div {
+  padding: 80px;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &.active-box {
+      ul {
+
+        li {
+
+          a {
+            color: red;
+          }
+        }
+      }
+
+      > span {
+
+        > strong {
+          color: pink;
+        }
+      }
+  }
+
+  
+
+  h3 {
+
+    span {
+      text-transform: uppercase;
+      display: block;
+    }
+
+    strong {
+      display: block;
+
+      .active-box & {
+        background: yellow;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    color: green;
+  }
+
+  p {
+    &:first-of-type {
+      font-size: 30px;
+      color: $black;
+    }
+  }
+}
+
+.sidebar {
+  float: left;
+  width: 200px;
+}
+
+.page {
+  @extend %clearfix;
+
+  //background: green;
+  padding: 15px;
+}
+
+.main {
+  position: relative;
+  float: left;
+  width: calc(100% - 200px);
+
+  &:only-child {
+    width: 100%;
+  }
+}
+
+.custom-box {
+  @include circle(20px);
+
+  background: #000;
+  // position: relative;
+
+  &:after {
+    @include triangle(50px, gray, up);
+
+    
+    content:"";
+    position: absolute;
+    left: 100%;
+  }
+}
+
+.content-hold {
+  padding: 100px 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.visual-section {
+  @include v-align(770px,middle); 
+  min-height: 770px;
+  background: $black;
+  background-size: cover;
+}
+
+.input {
+
+   @include placeholder {
+      color: red;
+     }
+}
+
+.your-class {
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.slick-dots {
+
+  li {
+      
+      &.slick-active {
+
+      }
+  }
+
+  button {
+
+  }
+}
+
+.slide-wrap {
+  padding: 10px;
+}
