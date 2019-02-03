@@ -1750,7 +1750,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .footer .footer__holder {
-  min-height: 80px;
+  height: 80px;
   border-top: 1px solid #87a0d2;
   display: -webkit-box;
   display: -ms-flexbox;
