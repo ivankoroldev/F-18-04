@@ -543,8 +543,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 60px;
-  color: h1 white;
-  font-weight: regular;
+  color: #fff;
+  font-weight: 400;
 }
 
 h2 {
@@ -607,7 +607,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1170px;
   padding: 0 15px;
 }
 
@@ -617,19 +617,20 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 99;
+  background: #fff;
 }
 
 .header-wrap {
-  height: 75px;
+  padding: 24px 0;
+  min-height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -739,7 +740,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     padding-top: 100px;
     text-align: center;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -758,6 +759,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   line-height: 1;
 }
 
+@media (max-width: 767px) {
+  .drop li {
+    color: #fff;
+  }
+}
+
 .drop li:hover > a {
   color: #fc5f45;
 }
@@ -773,14 +780,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .drop > ul {
-  margin: 0 -10px;
+  margin: 0 -11px;
 }
 
 .drop > ul > li {
   display: inline-block;
   vertical-align: top;
   line-height: 1;
-  padding: 0 10px;
+  padding: 0 11px;
   position: relative;
 }
 
@@ -816,19 +823,18 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 150px;
-  opacity: 0;
-  visibility: hidden;
+  width: 100%;
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .dropdown {
-    width: 100%;
-    position: static;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -863,31 +869,88 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 }
 
 .dropdown-second {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 150px;
-  opacity: 0;
-  visibility: hidden;
   display: none;
+  width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .dropdown-second {
-    width: 100%;
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
   }
-}
-
-.dropdown-second > ul > li {
-  position: relative;
 }
 
 .dropdown-second > ul > li:hover > a {
   background: #000;
-  color: white;
+  color: #fff;
 }
 
 .dropdown-second > ul > li > a {
   background: red;
+}
+
+.visual {
+  background: #3f4049;
+  min-height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.visual-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.visual-wrapper h1 {
+  margin-bottom: 40px;
+  max-width: 830px;
+  line-height: 85px;
+}
+
+.visual-wrapper .visual-holder {
+  padding: 100px 0;
+}
+
+.visual-button a {
+  display: block;
+  padding: 17px 42px;
+  max-width: 182px;
+  max-height: 50px;
+  color: #fff;
+  background: #fc5f45;
+  border-radius: 25px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
