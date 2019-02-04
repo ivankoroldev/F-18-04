@@ -723,13 +723,6 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   z-index: 9;
 }
 
-.menu-active .nav__ul {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  left: 0;
-}
-
 .drop {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -756,6 +749,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     left: 0;
     opacity: 1;
     visibility: visible;
+    display: block;
   }
 }
 
@@ -921,14 +915,14 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   max-width: 100%;
 }
 
+.visual-wrapper {
+  padding: 75px 0;
+}
+
 .visual-wrapper h1 {
   margin-bottom: 40px;
   max-width: 830px;
   line-height: 85px;
-}
-
-.visual-wrapper .visual-holder {
-  padding: 100px 0;
 }
 
 .visual-button a {

@@ -29,7 +29,7 @@ body {
 #wrapper {
   position: relative;
   width: 100%;
-  // overflow: hidden;
+  //overflow: hidden;
 }
 
 img {
@@ -152,12 +152,12 @@ overflow: hidden;
 z-index: 9;
 }  
 
-.menu-active .nav__ul {
-display: block;
-opacity: 1;
-visibility: visible;
-left: 0;
-}
+// .menu-active .dropdown {
+// display: block;
+// opacity: 1;
+// visibility: visible;
+// left: 0;
+// }
 
 // mobile menu end
 
@@ -179,6 +179,7 @@ left: 0;
       left: 0;
       opacity: 1;
       visibility: visible;
+      display: block;
     }
   }
   li {
@@ -305,13 +306,11 @@ left: 0;
 }
 
 .visual-wrapper {
+  padding: 75px 0;
   h1 {
     margin-bottom: 40px;
     max-width: 830px;
     line-height: 85px;
-  }
-  .visual-holder {
-    padding: 100px 0;
   }
 }
 
