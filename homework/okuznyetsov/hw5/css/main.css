@@ -484,7 +484,7 @@ header .header-wrap .logo a {
     padding-top: 75px;
     text-align: center;
     opacity: 1;
-    z-index: 99;
+    z-index: 9;
     position: absolute;
     visibility: visible;
     top: 0;
@@ -508,9 +508,28 @@ header .header-wrap .logo a {
     transition: all .5s ease-in-out;
   }
   .navigation > nav > ul > li {
-    line-height: 2;
+    line-height: 1.6;
     display: block;
     float: none;
+    position: relative;
+    padding: 0;
+    height: auto;
+  }
+  .navigation > nav > ul > li:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .navigation > nav > ul > li:hover .dropdown {
+    display: block;
+  }
+  .navigation > nav > ul > li:hover > a {
+    color: #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    text-shadow: 4px 4px 2px #a0a0a0;
+  }
+  .navigation > nav > ul > li > a {
+    padding: 10px 0;
   }
 }
 
@@ -534,15 +553,23 @@ header .header-wrap .logo a {
 
 @media (max-width: 767px) {
   .dropdown {
+    display: none;
     position: relative;
+    background: rgba(118, 144, 197, 0.4);
     top: auto;
     left: auto;
     width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  .dropdown > li > a {
+    padding: 5px 0 5px 25px;
   }
 }
 
 .dropdown > li {
   display: block;
+  position: relative;
   line-height: 1.7;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1572,7 +1599,7 @@ footer .pre-footer .pre-wrap .contacts .contact-basket a:hover {
     padding: 10px 0;
   }
   .comments .write, .comments textarea {
-    width: 350px;
+    width: 330px;
   }
 }
 
