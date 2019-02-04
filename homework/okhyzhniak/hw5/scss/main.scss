@@ -25,6 +25,11 @@ $breakpoints: (
 .uppercase {
 	text-transform: uppercase;
 }
+.listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 #wrapper {
 	width: 100%;
 	position: relative;
@@ -79,61 +84,39 @@ $breakpoints: (
 
     > li {
       font-family: 'Brandon Grotesque', sans-serif;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1;
-	display: inline-block;
-	vertical-align: top;
-	padding: 0 13px;
-	position: relative;
-
-
-      &:last-child {
-        .dropdown {
-          left: auto;
-          right: 0;
-        }
-
-        .dropdown-second {
-          left: auto;
-          right: 100%;
-        }
-      }
-
-      &:hover {
-         .dropdown {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      > a {
-      	display: block;
-		text-decoration: none;
-		position: relative;
-		transition: all .3s ease-in-out;
-        color: inherit;
-         z-index: 2;
-
-        
-      }
-       &:hover, &.active &{
-		background: #31263f;
-		box-shadow: 0px 4px 0px -1px #2d264f;
-		transform: scale(1.1);
-		padding: 5px;
-		font-size: 20px;
-		border-radius: 10%;
-		}
-    }
-  } 
+    	font-size: 18px;
+    	font-weight: 500;
+    	line-height: 1;
+    	display: inline-block;
+    	vertical-align: top;
+    	position: relative;
+          &:hover {
+              .dropdown {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          &:hover, &.active &{
+            background: #fff;
+            color: #31263f;
+            }
+        > a {
+        	display: block;
+      		text-decoration: none;
+      		position: relative;
+      		transition: all .3s ease-in-out;
+          color: inherit;
+          z-index: 2;
+          padding: 0 13px;
+          }
+    } 
 
   a {
     display: block;
     transition: all .3s ease-in-out;
   } 
+  }
 }
-
 .dropdown {
   width: 200px;
   background: $white;
@@ -145,38 +128,23 @@ $breakpoints: (
   left: 0;
 
   > ul {
-
+ 
     > li {
-      position: relative;
-      color: #fff;
       background: #31263f;
-		box-shadow: 0px 4px 0px -1px #2d264f;
-		display:block;
-		text-align: center;
-		border-radius: 15px;
+		      &:hover{
+            background-color: #dfdfdf;
+    		   .dropdown-second {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          
+          > a {
+            color: $white;
+            padding: 10px;
 
-      &:hover{
-		  
-          background: #e0e0e0;
-          color: #31263f;
-        
-        .dropdown-second {
-          opacity: 1;
-          visibility: visible;
-        }
+          }
       }
-
-      > a {
-        color: inherit;
-        padding: 10px;
-
-
-        &:hover , &.active {
-          background: #e0e0e0;
-          color: #31263f;
-        }
-      }
-    }
   }
 }
 
@@ -193,7 +161,7 @@ $breakpoints: (
   a {
     color: $white;
     
-}
+    }
 	
 	li{
 		display: block;
@@ -201,9 +169,39 @@ $breakpoints: (
 		&:hover {
       background: #e0e0e0;
        color: #31263f;
+        .dropdown-third {
+              opacity: 1;
+              visibility: visible;
+            }
 
     }
 	}
+    
+  
+}
+.dropdown-third {
+  width: 200px;
+  background: #31263f;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 100%;
+
+  a {
+    color: $white;
+    
+    }
+  
+  li{
+    display: block;
+    padding: 10px;
+    &:hover {
+      background: #e0e0e0;
+       color: #31263f;
+    }
+  }
     
   
 }
@@ -216,4 +214,41 @@ $breakpoints: (
 	background-repeat: no-repeat;
 	min-height: 618px;
 
+}
+.visual-wrap{
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Brandon Grotesque';
+  text-align: center;
+  line-height: 0;
+  font-size: 0px;
+  color: $white;
+}
+.visual-wrap p{
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+
+}
+.visual-wrap h1{
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 1.2;
+}
+.visual-wrap a{
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.2;
+  display: inline-block;
+  color: inherit;
+  padding: 30px 70px;
+  border: 3px solid $white;
+}
+.visual-wrap a:hover{
+  border: 3px solid #31263f;
+  background-color: rgba(49,38,63,.5);
+}
+.services{
+  padding: 0px 40px;
 }
