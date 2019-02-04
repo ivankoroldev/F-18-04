@@ -166,3 +166,30 @@
     font-weight: 800;
     font-style: italic;
 }
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?uvwhr3');
+  src:  url('../fonts/icomoon.eot?uvwhr3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?uvwhr3') format('truetype'),
+    url('../fonts/icomoon.woff?uvwhr3') format('woff'),
+    url('../fonts/icomoon.svg?uvwhr3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {font-family:'Cardo Italic';src:url('../fonts/Cardo-Italic.eot?') format('eot'),url('../fonts/Cardo-Italic.woff') format('woff'),url('../fonts/Cardo-Italic.ttf') format('truetype'),url('../fonts/Cardo-Italic.svg#Cardo-Italic') format('svg');font-weight:normal;font-style:normal;}

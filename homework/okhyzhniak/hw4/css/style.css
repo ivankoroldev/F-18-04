@@ -15,6 +15,9 @@ body {
 h1,h2,h3,h4,h5,h6, p {
 	margin: 0 0 20px;
 }
+a {
+	text-decoration: none;
+}
 .listreset {
 	margin: 0;
 	padding: 0;
@@ -241,157 +244,232 @@ h1 {
 .team {
 	display: flex;
 	flex-wrap: wrap;
+	padding: 50px 0px 100px 0px;
 }
 .team-box{
 	width: 25%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 50px 15px 0px;
 }
 .team-box p{
-	padding: 0;
 	margin: 0;
 }
 .team-box img{
 	display: block;
 	margin: 0 auto;
+	max-width: 100%
 }
-@media only screen and (max-width: 1023px) {
-	.visual{
-		padding-top: 0px;
-	}
-	.visual-wrap{
-		padding: 120px 0;
-		max-width: 670px;
-		font-size: 18px
-	}
-	h1 {
-	    font-size: 50px;
-	}
-	.visual-wrap  a {
-	padding: 15px 40px;
-	border-radius: 5px;
-	transition: all .3s ease-in-out;
-	}
-	.visual-wrap  a:hover {
-		padding: 18px 43px;
-	}
-	.main-one-block{
-		width: 50%;
-	}
-	.work-block{
-	width: 50%;
-	}
-	.team-box{
-	width: 50%;
-	}
+.team-name{
+	font-size: 22px;
+	color: #2d3033; 
+	padding: 25px 0px 0px;
+	font-weight: 500;
 }
-@media only screen and (max-width: 767px) {
-	.nav-btn {
-        width: 30px;
-        height: 30px;
-        display: block;
-        position: relative;
-        z-index: 4;
-    }
+.team-position{
+	font-size: 13px;
+	color: #e84545;
+	padding: 10px 0px 25px 0px;
+}
+.team-description{
+	font-size: 14px;
+	color: #6c7279;
+	padding-bottom: 30px;
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
 
-    .nav-btn::after, .nav-btn::before {
-        content: '';
-    }
+.team-social-icon {
+	font-size: 14px;
+	line-height: 3em;
+	display: inline-block;
+	vertical-align: top;
+}
 
-    .nav-btn::after, .nav-btn::before, .nav-btn span {
-        position: absolute;
-        height: 4px;
-        width: 26px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #fff;
-        top: 18px;
-        transition: all .3s ease-in-out;
-    }
+.team-social-icon a {
+	text-decoration: none;
+	color: inherit;
+}
+.team-social-icon i {
+	color: #c6cacc;
+	border: 1px solid #c6cacc;
+	padding: 10px;
+	margin: 0 1px;
+}
+.clients{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+.clients-big-photo{
+	background-image: url(../img/clients-big-photo.jpg);
+	width: 50%;
+	background-size: cover;
+	background-position: 100% 50%;
+	min-height: 500px; 
+}
+.clients-text{
+	width: 50%;
+    background-color: #53354a;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.clients-text-box{
+	width: 90%;
+    margin: 0 auto;
+}
 
-    .nav-btn::after {
-        top: 12px;
-    }
-
-    .nav-btn::before {
-        top: 6px;
-    }
-
-    .menu-active .nav-btn::after {
-        opacity: 0;
-    }
-
-    .menu-active .nav-btn::before {
-        top: 12px;
-        left: 2px;
-        transform: rotate(45deg);
-    }
-
-    .menu-active .nav-btn span {
-        top: 12px;
-        left: 2px;
-        transform: rotate(-45deg);
-    }
-
-    nav {
-        padding-top: 100px;
-        text-align: center;
-        opacity: 1;
-        position: absolute;
-        visibility: visible;
-        top: 0;
-        height: 100vh;
-        left: 110%;
-        width: 200px;
-        background: rgba(48,51,78,.9);
-
-    }
-
-    .navigation li {
-        display: block;
-        border: none;
-	    font-size: 30px;
-	    }
-
-    .navigation li a {
-        border: none;
-        border-radius: 0;
-        color: #fff;
-        padding: 20px 0px 20px 0px;
-        background-color: #b7b8c1;
-        border-top: 1px solid #30324d;
-    }
-
-    .menu-active nav {
-        display: block;
-        left: 0;
-    	width: 100%;
-    	transition: all .7s ease-in;
-    }
-
-    .menu-active {
-        height: 100vh;
-        overflow: hidden;
-    }
-
-	.visual{
-		padding-top: 0px;
-	}
-	.visual-wrap{
-		padding: 100px 0;
-	}
-	h1 {
-	    font-size: 30px;
-	}
-	.visual-wrap p {
-		font-size: 18px;
-	}
- 	.main-one-block{
-		width: 100%;
-	}
-	.work-block{
-	width: 100%;
-	}
-	.team-box{
-	width: 100%;
+.clients-slider{
+	color: #fff;
+}
+.slick-arrow{
+	display: none !important;
+}
+.clients-slider-item h3{
+	font-family:'Cardo Italic', Italic;
+	font-size: 36px;
+	line-height: 1;
+	color:inherit;
+	padding: 15px;
+	height: auto;
+	margin: 0;
+}
+.clients-slider-item p{
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	color:inherit;
+	padding: 10px 15px;
+	margin: 0;
+}
+.slick-dots li button:before {
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+}
+.downloads-wrap{
+	max-width: 630px;
+	margin: 0 auto;
+	font-family: 'Raleway', sans-serif;
+	color: #2d3033;
 	text-align: center;
-	}
+	padding: 100px 0;
+}
+.downloads-wrap p{
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 1;
+	color:inherit;
+}
+.downloads-wrap strong{
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	color:inherit;
+	display: block;
+	padding-bottom: 40px;
+}
+.downloads-wrap a{
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+	color: #fff;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #e84545;
+	padding: 20px 85px;
+}
+.downloads-wrap a:hover{
+	color: #fff;
+	background-color: #bc3131;
+	padding: 22px 87px;
+
+}
+.contacts{
+	background-color: #3a3e64;
+	width: 100%;
+	min-height: 250px;
+}
+.contacts-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-top: 40px;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	line-height: 1.5;
+	text-align: center;
+}
+.contacts-wrap > div {
+	width: 33.33%;
+}
+.location{
+	padding: 0px 110px;
+}
+.location-name, .contacts-social-name, .about-activebox-name{
+	font-size: 14px;
+	font-weight: 700;
+	padding-bottom: 22px;
+	
+}
+.location-content, .about-activebox-content{
+	font-weight: 400;
+}
+.about-activebox{
+	padding: 0 20px;
+}
+.contacts-social-icon {
+	font-size: 14px;
+	line-height: 3em;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.contacts-social-icon i {
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 10px;
+	margin: 0 1px;
+}
+.contacts p{
+	margin: 0;
+}
+
+.footer{
+	background-color: #313454;
+}
+.footer-wrap{
+	width: 320px;
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: center;
+	font-weight: 400;
+	padding: 30px 0px;
+}
+.footer-wrap-gray{
+	font-family: 'Raleway', sans-serif;
+	color: #808080;
+}
+.footer-wrap-red{
+	color: #e84545;
+}
+.footer-wrap-white{
+	 font-family: 'Open Sans';
+	color: #fff;
 }
