@@ -133,10 +133,6 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 
-.logo {
-    
-}
-
 .logo-hold {
     text-align: center;
     display: inline-block;
@@ -365,11 +361,6 @@ main {
     border-radius: 5px;
 }
 
-.box a:hover{
-    color: #000;
-    box-shadow: 3px 3px 3px 3px rgba(76,47,101,1);
-}
-
 .box img {
     display: inline-block;
     vertical-align: top;
@@ -385,6 +376,15 @@ main {
 .box h4 {
     margin-bottom: 15px;
     font-weight: 400;
+}
+
+.box a:hover {
+    box-shadow: 4px 4px 4px 4px rgba(76,47,101,1); 
+     font-weight: bold; 
+}
+
+.box h4:hover {
+    
 }
 
 .text-end {
@@ -553,10 +553,6 @@ main {
         display: none;
     }    
     
-    .header {
-    position: relative;
-    background: url("../img/visual-bg.png"); 
-  }
 
     .menu-active nav {
         opacity: 1;
@@ -570,6 +566,11 @@ main {
         overflow: hidden;
     }
 
+    .header {
+    position: relative;
+    background: url("../img/visual-bg.png"); 
+    }
+    
     .header-wrap {
         padding:15px 0;
     }
