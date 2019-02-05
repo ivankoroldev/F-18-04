@@ -933,16 +933,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   text-decoration: none;
 }
 
-.team .worker-team .social-media a:hover {
-  color: #000;
-  background: #fff;
+@media (min-width: 768px) {
+  .team .worker-team .social-media a:hover {
+    color: #000;
+    background: #fff;
+  }
 }
 
-.team .worker-team .social-media i {
+.team .worker-team i {
   font-size: 20px;
 }
 
-.team .description {
+.description {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 85px;
@@ -953,7 +955,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 }
 
 @media (max-width: 767px) {
-  .team .description {
+  .description {
     margin-bottom: 40px;
   }
 }
@@ -1076,8 +1078,13 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   color: inherit;
 }
 
-.contacts li a:hover {
-  color: #000;
+@media (min-width: 768px) {
+  .contacts li a:hover {
+    color: #000;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
 }
 
 .form {
@@ -1098,6 +1105,79 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   resize: none;
   min-height: 210px;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.form .radio-btn {
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.form .radio-btn label {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+  .form .radio-btn label {
+    margin: 0 15px;
+  }
+}
+
+.form .radio-btn .gender {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .form .radio-btn .gender {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
+.form .radio-btn .fake-radio {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.form .radio-btn .fake-radio:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+}
+
+.form .radio-btn input[type="radio"]:checked + .fake-radio:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form .radio-btn .radio {
+  position: absolute;
+  top: -9999999px;
+  left: -9999999px;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 .form .buttons .button {
@@ -1107,11 +1187,17 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   height: 30px;
   margin: 10px 15px;
   border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
-.form .buttons .button:hover {
-  background: #000;
-  color: #fff;
+@media (min-width: 768px) {
+  .form .buttons .button:hover {
+    background: #000;
+    color: #fff;
+  }
 }
 
 .footer {

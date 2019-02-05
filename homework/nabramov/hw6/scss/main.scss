@@ -1,0 +1,168 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+	);
+
+
+
+
+
+@import "variables";
+
+@import "../fonts/fonts";
+
+// @import "../icomoon/icons";
+@import "_reset";
+@import "include-media";
+@import "_helpers";
+@import "_mixins";
+
+
+body {
+font-family: $base-font-family;
+}
+
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	// overflow: hidden;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	align-items:center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 35px;
+
+	a {
+		color: #616161;
+		text-decoration: none;
+
+	}
+}
+
+.navigation {
+	color: #272727;
+	.menu-btn {
+		@include media (">=tablet") {
+		display: none;
+		}
+	}
+	.drop {
+		>ul {
+			margin: 0 -15px;
+			font-size: 0;
+			line-height: 0;
+			@extend %listreset;
+
+			>li {
+				font-size: 15px;
+				line-height: 1.2;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				padding: 25px 15px;
+				@extend %transition;
+				
+				&:last-child {
+					.dropdown{
+						left: auto;
+						right: 0;
+					}
+				}
+				&:hover {
+					background: #a3043c;
+					>a {
+						color: $white;
+					}
+					.dropdown {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+				>a {
+					text-decoration: none;
+					color: #272727;
+				}
+				.dropdown {
+					width: 200px;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					opacity: 0;
+					visibility: hidden;
+					@extend %transition;
+					>ul {
+						@extend %listreset;
+						
+						>li {
+							padding: 10px 15px;
+							position: relative;
+							background: $black;
+							@extend %transition;
+						&:hover {
+							background: #0682e0;
+							.dropdown-second{
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+							>a {
+								text-decoration: none;
+								color: $white;
+							}
+						}
+						.dropdown-second {
+							width: 200px;
+							position: absolute;
+							top: 0;
+							left: 100%;
+							opacity: 0;
+							visibility: hidden;
+							@extend %transition;
+
+							>ul {
+								@extend %listreset;
+								
+								>li {
+									padding: 10px 15px;
+									background: red;
+									@extend %transition;
+									&:hover {
+										background: #c1cc00;
+									}
+									>a {
+										text-decoration: none;
+										color:$black;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

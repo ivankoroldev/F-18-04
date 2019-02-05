@@ -673,9 +673,15 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			border-radius: 50%;
 			color: $white;
 			text-decoration: none;
-		&:hover {
-			color: $black;
-			background: $white;
+
+
+			@include media (">=tablet") {
+				&:hover{
+					color: $black;
+					background: $white;
+				}
+			}
+			
 		}
 		
 		}
@@ -697,10 +703,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		@include media ("<tablet") {
 			margin-bottom: 40px;
 		}
-		
-	}
+	}	
+	
 
-}
+
 
 .contact-info {
 		background: #7690c5;
@@ -750,8 +756,6 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	}
 }
 
-
-
 .contact-us {
 	display: flex;
 	flex-wrap: wrap;
@@ -771,6 +775,8 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		display: inline-block;
 		vertical-align: middle;
 		margin-bottom: 25px;
+
+
 		}
 
 		.ico-hold {
@@ -785,6 +791,7 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		padding-left: 10px;
 		font-size: 18px;
 
+
 		@include media ("<tablet") {
 			font-size: 15px;
 			margin-bottom: 20px;
@@ -796,9 +803,14 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			text-decoration: none;
 			color: inherit;
 
-			&:hover {
+			
+			@include media (">=tablet") {
+				&:hover {
 				color: $black;
+				transition: all .5s ease-in-out;
+				}
 			}
+			
 		}
 
 	}
@@ -824,6 +836,74 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 		resize:none;
 		min-height: 210px;
 		width: 100%;
+		margin-bottom: 20px;
+	}
+
+
+	.radio-btn {
+			margin-bottom: 20px;
+			color: $white;
+			font-family: inherit;
+		
+			label {
+				cursor: pointer;
+				margin: 0 5px;
+
+				@include media (">=tablet") {
+					margin: 0 15px;
+				}
+			}
+			.gender {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 5px;
+				font-size: 16px;
+
+				@include media (">=tablet") {
+				font-size: 18px;
+				margin-left: 10px;
+				}
+
+				
+			}
+		.fake-radio {
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 1px solid $white;
+			position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			opacity: 0;
+			visibility: hidden;
+			background: $white;
+			}	
+		}
+
+	input[type="radio"]:checked + .fake-radio:after{
+			opacity: 1;
+			visibility: visible;
+		}
+
+	.radio {
+		position: absolute;
+		top: -9999999px;
+		left: -9999999px;
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	}
 	}
 
 	.buttons {
@@ -834,10 +914,16 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 			height: 30px;
 			margin: 10px 15px;
 			border-radius: 10px;
+			cursor: pointer;
+			transition: all .5s ease-in-out;
 
-			&:hover {
+			
+
+			@include media (">=tablet") {
+				&:hover {
 				background: $black;
 				color: $white;
+			}
 			}
 		}
 	}
