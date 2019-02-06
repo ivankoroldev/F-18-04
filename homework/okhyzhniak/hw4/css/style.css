@@ -144,7 +144,7 @@ h1 {
 
 }
 .visual-wrap  a:hover {
-	padding: 18px 63px;
+	transform: scale(1.1);
 }
 .main{
 	background-color: #fff;
@@ -397,7 +397,7 @@ h1 {
 .downloads-wrap a:hover{
 	color: #fff;
 	background-color: #bc3131;
-	padding: 22px 87px;
+	transform: scale(1.1);
 
 }
 .contacts{

@@ -62,6 +62,7 @@
         display: block;
         position: relative;
         z-index: 4;
+       cursor: pointer;
     }
 
     .nav-btn::after, .nav-btn::before {
