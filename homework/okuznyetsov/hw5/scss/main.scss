@@ -365,18 +365,17 @@ header {
 					background: rgba(81, 67, 106, 0.51);
 					
 				}
-				
-				@keyframes pulse {
-					0%{
-						transform: scale(1);
-					}
-					
-					100% {
-						transform: scale(1.4);
-					}
-				}
-				
 			}
+	}
+}
+
+@keyframes pulse {
+	0%{
+		transform: scale(1);
+	}
+					
+	100% {
+		transform: scale(1.4);
 	}
 }
 
@@ -1121,7 +1120,7 @@ footer {
 .comments {
 	width: 50%;
 	text-align: right;
-	padding: 25px 0;
+	padding: 10px 0;
 		
 	.write {
 		border: none;
@@ -1143,12 +1142,61 @@ footer {
 	
 	.radio-txt {
 		color: $extra-color;
+		margin-bottom: 25px;
 		
-		.radio-btn {
-			margin: 0 10px;
-			}
+		
+		@include media ('<tablet'){
+			text-align: left;
 		}
 			
+		
+		.radio-wrap{
+			margin: 0 15px;
+			
+			.fake-radio {
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				width: 16px;
+				height: 16px;
+				background: #fff;
+				border-radius: 50%;
+				margin: 0 10px 3px;
+				cursor: pointer;
+			
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 10px;
+				height: 10px;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				background: #7690c5;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		
+			.radio-btn {
+				padding: 10px 0;
+				position: absolute;
+				z-index: -1;
+				opacity: 0;
+				margin: 10px 0 0 7px;
+				visibility: hidden;
+				}
+	
+			.radio-btn:checked + .fake-radio::after {
+				opacity: 1;
+				visibility: visible;
+		}		
+	} 
+}
+	
+	
+	
 			.submit {
 				background: $extra-color;
 				border: none;
@@ -1160,26 +1208,6 @@ footer {
 				&:hover {
 					animation: pulse-btn .3s infinite;
 					animation-direction: alternate;
-				}
-				
-				@keyframes pulse-btn {
-					0%{
-						transform: rotate(0);
-					}
-					
-					25% {
-						transform: rotate(-5deg);
-					}
-					
-					50% {
-						transform: rotate(5deg);
-					}
-					75% {
-						transform: rotate(-5deg);
-					}
-					100% {
-						transform: rotate(5deg);
-					}
 				}
 				
 				.sbt-txt {
@@ -1225,6 +1253,28 @@ footer {
 			}
 		}
 	}
+}
+
+
+
+@keyframes pulse-btn {
+	0%{
+		transform: rotate(0);
+	}
+					
+	25% {
+		transform: rotate(-5deg);
+	}
+					
+	50% {
+		transform: rotate(5deg);
+		}
+	75% {
+		transform: rotate(-5deg);
+		}
+	100% {
+		transform: rotate(5deg);
+		}
 }
 	
 .made-in {

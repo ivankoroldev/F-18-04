@@ -1493,7 +1493,7 @@ footer .pre-footer .pre-wrap .contacts .contact-basket a:hover {
 .comments {
   width: 50%;
   text-align: right;
-  padding: 25px 0;
+  padding: 10px 0;
 }
 
 .comments .write {
@@ -1517,10 +1517,59 @@ footer .pre-footer .pre-wrap .contacts .contact-basket a:hover {
 
 .comments .radio-txt {
   color: #fff;
+  margin-bottom: 25px;
 }
 
-.comments .radio-txt .radio-btn {
-  margin: 0 10px;
+@media (max-width: 767px) {
+  .comments .radio-txt {
+    text-align: left;
+  }
+}
+
+.comments .radio-txt .radio-wrap {
+  margin: 0 15px;
+}
+
+.comments .radio-txt .radio-wrap .fake-radio {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 10px 3px;
+  cursor: pointer;
+}
+
+.comments .radio-txt .radio-wrap .fake-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #7690c5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.comments .radio-txt .radio-wrap .radio-btn {
+  padding: 10px 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+  visibility: hidden;
+}
+
+.comments .radio-txt .radio-wrap .radio-btn:checked + .fake-radio::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .comments .submit {
@@ -1539,6 +1588,46 @@ footer .pre-footer .pre-wrap .contacts .contact-basket a:hover {
   animation: pulse-btn .3s infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
+}
+
+.comments .submit .sbt-txt {
+  color: #7690c5;
+  font-size: 18px;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1023px) {
+  .comments {
+    padding: 10px 0;
+  }
+  .comments .write, .comments textarea {
+    width: 330px;
+  }
+}
+
+@media (max-width: 767px) {
+  .comments {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+  }
+  .comments .write {
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .comments textarea {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #bbb;
+  }
+  .comments .submit {
+    display: block;
+    font-size: 16px;
+  }
 }
 
 @-webkit-keyframes pulse-btn {
@@ -1584,46 +1673,6 @@ footer .pre-footer .pre-wrap .contacts .contact-basket a:hover {
   100% {
     -webkit-transform: rotate(5deg);
     transform: rotate(5deg);
-  }
-}
-
-.comments .submit .sbt-txt {
-  color: #7690c5;
-  font-size: 18px;
-  padding: 0 10px;
-  vertical-align: middle;
-}
-
-@media (max-width: 1023px) {
-  .comments {
-    padding: 10px 0;
-  }
-  .comments .write, .comments textarea {
-    width: 330px;
-  }
-}
-
-@media (max-width: 767px) {
-  .comments {
-    padding: 10px 0;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-  }
-  .comments .write {
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-  .comments textarea {
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    color: #bbb;
-  }
-  .comments .submit {
-    display: block;
-    font-size: 16px;
   }
 }
 
