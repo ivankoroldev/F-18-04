@@ -1,0 +1,53 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1366px
+);
+
+
+.container {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#wrapper {
+	width: 100%;
+	position: relative;
+	background-color: green;
+	overflow: hidden;
+}
+.navigation{
+  max-width: 500px;
+  background-color: red;
+
+}
+.navigation {
+ > nav{
+  >  ul{
+      font-size: 0;
+       line-height: 0;
+     > li{
+          display: inline-block;
+          vertical-align: top;
+          padding: 10px;
+          font-size: 15px;
+          line-height: 1.2;
+           color: green;
+
+      }
+    }
+  }
+ 
+}
