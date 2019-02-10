@@ -13,3 +13,10 @@ function initMenu() {
 	};
 	opener.on('click', clickHandler);
 }
+
+$('.grid').masonry({
+	columnWidth: 200,
+	itemSelector: '.grid-item',
+	columnWidth: 200,
+	horizontalOrder: true
+  });
