@@ -888,7 +888,7 @@ input[type="submit"]:hover {
 .footer-box a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: inherit;
     text-align: center;
     padding:10px;
 }
