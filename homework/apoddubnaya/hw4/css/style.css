@@ -437,23 +437,24 @@ img {
     color: #fff;
     padding: 250px 0 155px;
     position: relative;
-
-    :after{
-        content:'';
-        left:0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: $black;
-        opacity: .35;
-        position: absolute;
-    }
+}
+.visual-bg:after {
+    content:'';
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .35;
+    position: absolute;
 }
 
 .visual-text {
     margin: 0 auto;
     max-width: 900px;
     padding-bottom: 80px; 
+    z-index: 999;
+    position: relative
 }
 
 .visual-text h1 {
@@ -484,6 +485,8 @@ img {
     border-color: #e84545;
     border-radius: 5px;
     transition: all .3s ease-in-out;
+    z-index: 999;
+    position: relative
 }
 
 .btns-hold a:hover {
@@ -933,11 +936,18 @@ input[type="submit"]:hover {
     width: 100%;
     margin-bottom: 30px;
   }
-   .profile-box {
+    .pictures-box {
     width: 50%;
+    }
+   .profile-box {
+    width: 100%;
     margin-bottom:10px;
   }
    .interview-box {
+    width: 100%;
+  }
+
+  .footer-box {
     width: 100%;
   }
 }
@@ -1114,7 +1124,7 @@ input[type="submit"]:hover {
     }
 
     .pagination {
-        margin-bottom: 0;
+        margin-bottom: 15px;
     }
 
     .end-text h2 {
@@ -1140,4 +1150,5 @@ input[type="submit"]:hover {
 
     .footer-autor p {
         padding: 15px 0;
+        font-size: 12px;
     }
