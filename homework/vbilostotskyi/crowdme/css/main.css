@@ -569,18 +569,14 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: bold;
-  color: inherit;
-  font-family: 'Libre Baskerville', serif; }
+  color: inherit; }
 
 h1 {
-  font-size: 60px;
-  color: #fff;
-  font-weight: 400; }
+  font-size: 50px;
+  font-weight: 600; }
 
 h2 {
-  font-size: 50px;
-  color: #313131;
-  font-weight: bold; }
+  font-size: 50px; }
 
 h3 {
   font-size: 32px; }
@@ -597,8 +593,8 @@ h6 {
 body {
   color: #616161;
   background: #fff;
-  font: 15px/1 "Poppins", sans-serif;
-  min-width: 320px; }
+  min-width: 320px;
+  font-family: 'Open Sans', sans-serif; }
 
 #wrapper {
   position: relative;
@@ -624,34 +620,80 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1050px; }
 
 .header {
-  font-size: 14px; }
-
-.jumbotron {
-  background-color: transparent; }
+  font-size: 14px;
+  padding: 16px 0; }
 
 .navbar-brand {
   height: auto;
   padding: 0; }
 
+.navbar-default {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
 .navbar {
   margin: 0; }
-
-.navbar-collapse .btn {
-  color: white;
-  background: #99c50a;
-  border-radius: 25px;
-  padding: 15px 30px; }
-
-.visual {
-  background-image: url("../images/visual.jpg");
-  background-size: cover;
-  background-position: center center;
-  min-height: 100vh;
-  color: white; }
-  .visual .btn {
+  .navbar a {
+    color: #666; }
+  .navbar .navbar-btn {
     background: #99c50a;
-    padding: 25px 45px;
-    border: none; }
+    border: none;
+    color: #fff;
+    padding: 9px 30px;
+    border-radius: 18px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    min-height: 37px;
+    min-width: 100px; }
+    .navbar .navbar-btn:hover {
+      background: #92b12d; }
+
+.item {
+  min-height: 500px;
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.3;
+  background: #425948; }
+
+.controls-holder {
+  position: relative; }
+
+.controls-wrap {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50px; }
+
+.carousel-caption {
+  right: 10%;
+  left: 10%; }
+
+.jumbotron {
+  background: transparent;
+  position: relative;
+  z-index: 4; }
+  .jumbotron h1 {
+    font-size: 49px;
+    margin-bottom: 20px; }
+  .jumbotron p {
+    font-size: 35px;
+    margin-bottom: 55px; }
+  .jumbotron .btn {
+    background: #99c50a;
+    border: none;
+    color: #fff;
+    padding: 25px 40px; }

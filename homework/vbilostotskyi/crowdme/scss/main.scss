@@ -22,8 +22,8 @@ $breakpoints: (
 body {
   color: $base-text-color;
   background: $base-background-color;
-  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
   min-width: $base-min-width;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #wrapper {
@@ -59,15 +59,12 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1050px;
 }
 
 .header {
   font-size: 14px;
-}
-
-.jumbotron {
-  background-color: transparent;
+  padding: 16px 0;
 }
 
 .navbar-brand {
@@ -75,29 +72,85 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     padding: 0;
 }
 
-.navbar {
-  margin: 0;
+.navbar-default {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-.navbar-collapse {
-  .btn {
-    color: white;
+.navbar {
+  margin: 0;
+  a {
+    color: #666;
+  }
+  .navbar-btn {
     background: #99c50a;
-    border-radius: 25px;
-    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    padding: 9px 30px;
+    border-radius: 18px;
+    transition: 0.3s;
+    min-height: 37px;
+    min-width: 100px;
+    &:hover {
+      background: #92b12d;
+    }
   }
 }
 
-.visual {
-  background-image: url("../images/visual.jpg");
+
+
+.item {
+  min-height: 500px;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
   background-size: cover;
-  background-position: center center;
-  min-height: 100vh;
-  color: white;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.3;
+  background: #425948;
+}
+
+.controls-holder {
+  position: relative;
+}
+
+.controls-wrap {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+}
+
+.carousel-caption {
+  right: 10%;
+  left: 10%;
+}
+
+.jumbotron {
+  background: transparent;
+  position: relative;
+  z-index: 4;
+  h1 {
+    font-size: 49px;
+    margin-bottom: 20px;
+  } 
+  p {
+    font-size: 35px;
+    margin-bottom: 55px;
+  }
   .btn {
     background: #99c50a;
-    padding: 25px 45px;
     border: none;
+    color: #fff;
+    padding: 25px 40px;
   }
 }
 
