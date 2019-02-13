@@ -1,0 +1,104 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+//fonts
+@import 'basic-settings/variables';
+@import 'common-settings/icons';
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'basic-settings/mixins';
+@import 'basic-settings/helpers';
+@import 'common-settings/_fonts';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-width: $base-min-width;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  //overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 25px;
+  font-family: $base-font-family;
+}
+
+a {
+  color: $base-link-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header {
+  font-size: 14px;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 0;
+}
+
+.navbar {
+  margin: 0;
+}
+
+.navbar-collapse {
+  .btn {
+    color: white;
+    background: #99c50a;
+    border-radius: 25px;
+    padding: 15px 30px;
+  }
+}
+
+.visual {
+  background-image: url("../images/visual.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  color: white;
+  .btn {
+    background: #99c50a;
+    padding: 25px 45px;
+    border: none;
+  }
+}
+
+
