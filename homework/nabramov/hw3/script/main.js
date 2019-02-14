@@ -1,3 +1,8 @@
+$(document).ready(function(){
+	$(".nav-btn").on("click", function(){
+		$("body").toggleClass("menu_active");
+});	
+})
 window.onload = function(){
 let elem = document.getElementsByClassName('nav');
 let elem1=document.getElementsByClassName("li");
@@ -20,4 +25,3 @@ toggleClass=function() {
 		elem1[i].addEventListener("click",toggleClass);
 	}
 }
-
