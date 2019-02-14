@@ -1,0 +1,24 @@
+//color
+$black: #000;
+$white: #fff;
+$gray: #9b9b9b;
+$blue: #7690c5;
+$light-gray: #b6b7c0;
+
+// Body styles
+$base-font-brandon: 'brandon_grotesque', 'Arial';
+$base-text-color: $gray;
+$base-background-color: $white;
+$base-font-family: $base-font-brandon;
+$base-font-size: 18px;
+$base-line-height: 1.1;
+$base-min-width: 320px;
+
+// Links styles
+$base-link-color: $blue;
+
+// Buttons styles
+$btn-color: $white;
+$btn-background: $black;
+$btn-padding: 0;
+$btn-font-size: inherit;
