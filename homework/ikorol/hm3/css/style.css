@@ -1,3 +1,57 @@
+
+@font-face {
+    font-family: 'amatic';
+    src: url('../fonts/amatic-bold-webfont.eot');
+    src: url('../fonts/amatic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amatic-bold-webfont.woff2') format('woff2'),
+         url('../fonts/amatic-bold-webfont.woff') format('woff'),
+         url('../fonts/amatic-bold-webfont.svg#amaticbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amatic';
+    src: url('../fonts/amaticsc-regular-webfont.eot');
+    src: url('../fonts/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
+         url('../fonts/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-pacman:before {
+  content: "\e916";
+}
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -21,8 +75,14 @@ h1,h2,h3,h4,h5,h6, p {
 	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
-	background:green;
+
 }
+
+
+h1 {
+	font-family: "amatic" !important; 
+}
+
 
 .listreset {
 	margin: 0;
@@ -40,6 +100,7 @@ h1,h2,h3,h4,h5,h6, p {
 	background: url("../img/main-bg.png");
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .header {
@@ -443,3 +504,136 @@ scss
 		font-size: 30px;
 	}
 }*/
+<<<<<<< HEAD
+
+
+.nav-btn {
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.wrap1 {
+		transition: all .3s ease-in-out;
+	}
+
+	.menu-active .wrap1 {
+		margin: 0 200px 0 -200px;
+	}
+
+  	.nav-btn {
+  		width: 30px;
+		height: 30px;
+		display: block;
+		position: relative;
+		z-index: 4;
+  	}
+
+  	.nav-btn::after, .nav-btn::before {
+  		content: '';
+  	}
+
+ 	.nav-btn::after, .nav-btn::before, .nav-btn span {
+		position: absolute;
+		height: 4px;
+		width: 26px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #fff;
+		top: 18px;
+		transition: all .3s ease-in-out;
+ 	}
+
+ 	.nav-btn::after {
+		top: 12px;
+ 	}
+
+ 	.nav-btn::before {
+ 		top: 6px;
+ 	}
+
+ 	.menu-active .nav-btn::after {
+ 		opacity: 0;
+ 	}
+
+ 	.menu-active .nav-btn::before {
+ 		top: 12px;
+ 		left: 2px;
+ 		transform: rotate(45deg);
+ 	}
+
+ 	.menu-active .nav-btn span {
+ 		top: 12px;
+ 		left: 2px;
+ 		transform: rotate(-45deg);
+ 	}
+
+ 	nav {
+ 		padding-top: 100px;
+ 		text-align: center;
+ 		opacity: 1;
+ 		position: absolute;
+ 		visibility: visible;
+		top: 0;
+		height: 100vh;
+		left: 100%;
+		width: 200px;
+		background: rgba(0,0,0,.7);
+
+ 	}
+
+ 	.navigation li {
+ 		display: block;
+ 		border: none;
+ 	}
+
+ 	.navigation li a {
+		border: none;
+		border-radius: 0;
+ 	}
+
+ 	.navigation li a:after {
+ 		display: none;
+ 	}
+
+ 	.header {
+ 		position: relative;
+ 	}
+
+ 	.menu-active nav {
+		display: block;
+ 	}
+
+ 	.menu-active {
+ 		height: 100vh;
+ 		overflow: hidden;
+ 	}
+
+ 	.header-wrap {
+ 		padding: 15px 0;
+ 	}
+
+ 	.visual-bg {
+ 		padding-top: 15px;
+ 	}
+}
+
+
+@media only screen and (min-width: 1024px) {
+	.box {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.box {
+		width: 50%;
+	}
+}
+
+320 - 767 - mobile
+768 - 1023 - tablet
+1024 - 1199 - desktop
+1200 + - large
+=======
+>>>>>>> skachanova
