@@ -1,0 +1,157 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+//fonts
+@import 'basic-settings/variables';
+@import 'common-settings/icons';
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'basic-settings/mixins';
+@import 'basic-settings/helpers';
+@import 'common-settings/_fonts';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  min-width: $base-min-width;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  //overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 25px;
+  font-family: $base-font-family;
+}
+
+a {
+  color: $base-link-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1050px;
+}
+
+.header {
+  font-size: 14px;
+  padding: 16px 0;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 0;
+}
+
+.navbar-default {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar {
+  margin: 0;
+  a {
+    color: #666;
+  }
+  .navbar-btn {
+    background: #99c50a;
+    border: none;
+    color: #fff;
+    padding: 9px 30px;
+    border-radius: 18px;
+    transition: 0.3s;
+    min-height: 37px;
+    min-width: 100px;
+    &:hover {
+      background: #92b12d;
+    }
+  }
+}
+
+
+
+.item {
+  min-height: 500px;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.3;
+  background: #425948;
+}
+
+.controls-holder {
+  position: relative;
+}
+
+.controls-wrap {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+}
+
+.carousel-caption {
+  right: 10%;
+  left: 10%;
+}
+
+.jumbotron {
+  background: transparent;
+  position: relative;
+  z-index: 4;
+  h1 {
+    font-size: 49px;
+    margin-bottom: 20px;
+  } 
+  p {
+    font-size: 35px;
+    margin-bottom: 55px;
+  }
+  .btn {
+    background: #99c50a;
+    border: none;
+    color: #fff;
+    padding: 25px 40px;
+  }
+}
+
+

@@ -173,6 +173,7 @@
 .slick-dots li button:focus:before
 {
     opacity: 1;
+    color: #443255;
 }
 .slick-dots li button:before
 {
