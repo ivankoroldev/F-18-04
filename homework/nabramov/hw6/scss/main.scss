@@ -22,6 +22,10 @@ $breakpoints: (
 @import "_mixins";
 
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 font-family: $base-font-family;
 }
@@ -277,6 +281,8 @@ font-family: $base-font-family;
 	.text-hold {
 		margin-bottom: 30px;
 		text-align: center;
+		position: relative;
+	
 		h2 {
 			font-family: "libre_baskerville";
 			font-weight: 700;
@@ -289,12 +295,75 @@ font-family: $base-font-family;
 			margin-bottom: 20px;
 			}
 	}
+
+
+	.about-us-wrap {
+		display: flex;
+		flex-flow:row wrap;
+		justify-content: space-between;
+		align-items:center;
+		position: relative;
+		.our-photo {
+			min-width: 545px;
+			min-height: 690px;
+			background: linear-gradient(to top, #d9aca5, #cbcbcb);
+			position: relative;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				right: -5px;
+				bottom: -5px;
+				background: linear-gradient(to top, #ae8a83, #a3a3a3);
+				z-index: -1;
+			}
+		}
+
+		.our-info {
+			max-width: 650px;
+			min-height: 550px;
+			margin:0 -65px;
+			padding: 40px 65px;
+			z-index: 1;
+			background: pink;
+			position: relative;
+			z-index: 111;
+			color: white;
+
+			&:before {
+				content: "01";
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 270px;
+				font-family: inherit;
+				color: #e0e0e0;
+				opacity: .6;
+				font-weight: bold;
+				z-index: -1;
+			}
+		}
+}
 	.our-focus {
 		text-align: center;
 		background: #f7f7f7;
-		padding: 90px 0 30px;
-
-	
+		padding: 100px 0 30px;
+		position: relative;
+		
+		
+			&:before {
+			content: "02";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			font-family: inherit;
+			font-size: 270px;
+			font-weight: bold;
+			color: #e0e0e0;
+		}
 
 		.works-wrap {
 			display: flex;
@@ -302,6 +371,7 @@ font-family: $base-font-family;
 			justify-content: space-between;
 			align-items:center;
 			margin: 0 -15px;
+			padding-top: 50px;
 			
 			
 			.work-wrap {
@@ -393,13 +463,28 @@ font-family: $base-font-family;
 	}
 
 	.portfolio {
-		padding: 50px 0;
-		margin-bottom: 50px;	
+		padding: 120px 0;
+		margin-bottom: 50px;
+		position: relative;
+
+			&:before {
+			content: "03";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			font-family: inherit;
+			font-size: 270px;
+			font-weight: bold;
+			color: #e0e0e0;
+			// z-index: -1;
+		}	
 		.works-examples {
 			display: flex;
 			flex-flow:row wrap;
 			justify-content: space-around;
 			align-items:center;
+			padding-top: 80px;
 		
 		.example {
 			margin: 10px;
@@ -472,6 +557,21 @@ font-family: $base-font-family;
 
 	.our-team {
 		background: #f7f7f7;
+		position: relative;
+		padding: 100px 0;
+
+			&:before {
+			content: "04";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			font-family: inherit;
+			font-size: 270px;
+			font-weight: bold;
+			color: #e0e0e0;
+			// z-index: -1;
+		}
 		.team-wrap {
 			display: flex;
 			flex-flow:row wrap;
@@ -479,6 +579,7 @@ font-family: $base-font-family;
 			align-items: center;
 			text-align: center;
 			margin-bottom: 40px;
+			padding-top: 100px;
 			
 			.worker {
 				padding: 10px;
@@ -542,8 +643,7 @@ font-family: $base-font-family;
 		justify-content: space-between;
 		align-items:center;
 		padding: 50px;
-		opacity: 0;
-		visibility: hidden;
+}
 
 		.description {
 			max-width: 660px;
@@ -584,8 +684,200 @@ font-family: $base-font-family;
 				i {
 					padding-right: 5px;
 				}
+		}
+
+	}
+}
+
+.our-features {
+	background: url("../img/coffee-pic.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	padding: 50px 0;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #262732;
+		opacity: 0.85;
+	} 
+
+	.features-wrap {
+		display: flex;
+		flex-flow:row wrap;
+		justify-content: space-between;
+		align-items:center;
+		text-align: center;
+			
+		.feature {
+			
+			color: $white;
+			font-family: inherit;
+			padding: 10px;
+			.icon {
+				padding: 20px;
 			}
+
+			.digits {
+				font-size: 20px;
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			.descr {
+				font-size: 15px;
+				display: block;
+				margin-bottom: 30px;
+			
+			}
+			.circle {
+				display: inline-block;
+				vertical-align: top;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $white;
+				position: relative;
+			
+				&:after {
+					content: "";
+					position: absolute;
+					left: -3px;
+					top: -3px;
+					right: -3px;
+					bottom: -3px;
+					border: 2px solid $white;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+}
+
+
+.work-steps {
+	position: relative;
+	padding-top: 100px;
+		&:before {
+			content: "05";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			font-family: inherit;
+			font-size: 270px;
+			font-weight: bold;
+			color: #e0e0e0;
+			// z-index: -1;
+		}
+
+	.works-hold {
+		padding-top: 100px;
+		.works-row {
+			margin-bottom: 50px;
+			.works {
+				display: inline-block;
+				vertical-align: middle;
+				width: 40%;
+				min-height: 300px;
+				text-align: left;
+				background: pink;
+				padding: 60px;
+				font-family: inherit;	
+
+				.works-descr {
+					font-size: 25px;
+					display: block;
+					margin-bottom: 10px;
+				}
+				p{
+					font-size: 15px;
+					margin-bottom: 10px;
+				}	
+			}
+			&:nth-child(even) {
+				text-align: right;
+			}
+		.bg-color {
+			background: red;
+			width: 60%;
+			min-height: 300px;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			margin-left: -50px;
+		}
 
 		}
 	}
+}
+
+.pricing-table {
+	background: #f7f7f7;
+	padding-top: 100px;
+	position: relative;
+	&:before {
+			content: "06";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			font-family: inherit;
+			font-size: 270px;
+			font-weight: bold;
+			color: #e0e0e0;
+			// z-index: -1;
+		}
+
+		.price-offer-wrap {
+			padding-top: 50px;
+			display: flex;
+			flex-flow:row wrap;
+			justify-content: space-around;
+			align-items:center;
+			margin: 0 -25px;
+
+			.price-offer {
+			background: $white;
+			padding: 50px;
+			text-align: center;
+			padding: 40px 25px;
+			margin-bottom: 10px;
+
+			.name-offer {
+				display: block;
+
+
+			}
+
+			.price-circle {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background: pink;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				color: $white;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: -3px;
+					top: -3px;
+					right: -3px;
+					bottom: -3px;
+					border-radius: 50%;
+					border: 2px solid pink;
+
+					}
+				}
+			}
+		}
 }
