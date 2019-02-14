@@ -7,6 +7,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	/*font-family: 'Montserrat', sans-serif;*/
+
 }
 
 * {
@@ -35,6 +36,7 @@ h1,h2,h3,h4,h5,h6, p {
 	width: 100%;
 	position: relative;
 	background: url("../img/bg-wrapper.jpg");
+	overflow: hidden;
 }
 .header {
 	position: absolute;
@@ -47,10 +49,19 @@ h1,h2,h3,h4,h5,h6, p {
 .header-wrap {
 	color: #fff;
 	padding: 65px 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    align-items:center;
+    flex-direction: row;
 }
 
 .navigation {
-	float: right;
+	
 }
 
 .navigation a {
@@ -108,19 +119,17 @@ h1,h2,h3,h4,h5,h6, p {
 	background: #f7df59;
 	top: 100%;
 	left: 50%;
-	margin-top: 2px;
-	border-right: 2px solid rgba(76,47,101,1);
-	border-bottom: 2px solid rgba(76,47,101,1);
 	transform: translate(-50%,-50%) rotate(45deg) scale(0);
 	opacity: 0;
 	visibility: hidden;
 	transition: .3s all .3s ease-in-out;
 	transition: none;
+	box-shadow: 2px 2px 0px 0px rgba(76,47,101,1);
 }
 
 
 .logo {
-	float: left;
+	/*float: left;*/
 }
 
 .logo-hold {
@@ -210,10 +219,11 @@ h1,h2,h3,h4,h5,h6, p {
 }
 .slider-bottom-text{
 	font-size: 28px;
-	font-weight: 100;
-	padding: 50px 170px;
+    font-weight: 100;
+    max-width: 830px;
+    margin: 0 auto;
 }
-pagination	{
+.pagination	{
 	font-size: 0;
 	line-height: 0;
 	padding: 20px 0;
@@ -264,6 +274,9 @@ pagination	{
 .slide {
 	font-size: 28px;
 }
+.visual-menu{
+	padding-bottom: 80px;
+}
 .visual-menu a {
 	display: inline-block;
 	vertical-align: top;
@@ -274,8 +287,8 @@ pagination	{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	font-weight: 900;
-	border-radius: 10%;
-	margin: 0px 5px 95px 5px;
+	border-radius: 5px;
+	margin: 0px 5px 15px 5px;
 }
 .visual-menu a:hover {
 	color: #fefefe;
@@ -292,18 +305,18 @@ pagination	{
 	color: #654d7b;
 	font-size: 60px;
 	font-weight: 100;
-	margin-top: 70px;
 
 }
 .main-small-text{
 	color: #ffffff;
 	font-size: 30px;
 	font-weight: 500;
+	margin-bottom: 70px;
 }
 .blocks{
 	line-height: 0;
 	font-size: 0px;
-	margin: 0 -35px;
+	margin: 0px -35px 70px -35px;
 }
 .blocks-box{
 	text-align: center;
@@ -326,12 +339,21 @@ pagination	{
 	display: block;
 	background: #fff;
 	color: #6b5181;
+	border-radius: 5px;
+}
+.blocks-box a:hover{
+	box-shadow: 0px 10px 14px 2px #6d5384;
 }
 .blocks-box a img{ 
 	max-width: 100%;
 	height: auto;
 	display: inline-block;
-	vertical-align: top;	
+	vertical-align: top;
+	margin-bottom: 30px;	
+}
+.blocks-box a p{ 
+	padding: 0;
+	margin: 0;
 }
 .main-article{
 	max-width: 100%;
@@ -342,6 +364,7 @@ pagination	{
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 2;
+	border-radius: 5px;
 }
 .bold-text{
 	font-weight: 700;
@@ -349,6 +372,11 @@ pagination	{
 .main-article a{
 	color: inherit;
 }
+.main-article a:hover{
+	color: #ddd1e7;
+}
+
+
 .footer {
  	margin: 0;
  	padding: 0;
@@ -367,27 +395,57 @@ pagination	{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 0 70px 0;
+    padding: 40px;
 }
 .footer-box a{
 	color: inherit;
 	text-decoration: none;
 }
+.footer-box a:hover{
+	text-decoration: underline;
+}
+.footer-box p{
+	padding: 0;
+	margin: 0;
+}
 @media only screen and (max-width: 1023px) {
+  .logo-hold {
+    width: 60px;
+    height: 60px;
+    padding-top: 11px;
+	}
+	.header-wrap {
+    padding: 30px 0;
+	}
+	.navigation li {
+    font-size: 15px;
+    }
+    .top-text {
+    font-size: 20px;
+    }
+    .bottom-text {
+    font-size: 12px;
+ 	}
+	.visual {
+    padding-top: 130px;
+	 }
   .blocks-box {
   	width: 50%;
-  }
+  	}
   .visual-text h1 {
-	font-size: 100px;
+	font-size: 75px;
   }
   .slider-small-text{
-	font-size: 25px;
+	font-size: 22px;
   }
   .main h2{
   	font-size: 50px;
   }
+  .slider-bottom-text {
+    font-size: 26px;
+    max-width: 600px;
+	}
 }
-
 @media only screen and (max-width: 767px) {
   .blocks-box {
   	width: 100%;
@@ -401,4 +459,135 @@ pagination	{
   .main h2{
   	font-size: 40px;
   }
+    .slider-bottom-text {
+    font-size: 15px;
+	}
+
+
+	.nav-btn {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        z-index: 4;
+        cursor: pointer;
+    }
+
+    .nav-btn::after, .nav-btn::before {
+        content: '';
+    }
+
+    .nav-btn::after, .nav-btn::before, .nav-btn span {
+        position: absolute;
+        height: 4px;
+        width: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        top: 18px;
+        transition: all .3s ease-in-out;
+    }
+
+    .nav-btn::after {
+        top: 12px;
+    }
+
+    .nav-btn::before {
+        top: 6px;
+    }
+
+    .menu-active .nav-btn::after {
+        opacity: 0;
+    }
+
+    .menu-active .nav-btn::before {
+        top: 12px;
+        left: 2px;
+        transform: rotate(45deg);
+    }
+
+    .menu-active .nav-btn span {
+        top: 12px;
+        left: 2px;
+        transform: rotate(-45deg);
+    }
+
+    nav {
+        padding-top: 100px;
+        text-align: center;
+        opacity: 1;
+        position: absolute;
+        visibility: visible;
+        top: 0;
+        height: 100vh;
+        left: 110%;
+        width: 200px;
+        background: rgba(76,47,101,.7);
+
+    }
+
+    .navigation li {
+        display: block;
+        border: none;
+	    font-size: 30px;
+	    }
+
+    .navigation li a {
+        border: none;
+        border-radius: 0;
+    }
+
+    .navigation li a:after {
+        display: none;
+    }
+
+    .header {
+        position: absolute;
+    }
+
+    .menu-active nav {
+        display: block;
+        left: 0;
+    	width: 100%;
+    	transition: all .7s ease-in;
+    }
+
+    .menu-active {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .header-wrap {
+        padding: 15px 0;
+    }
+
+    .visual-bg {
+        padding-top: 15px;
+    }
+}
+@media only screen and (max-width: 480px) {
+	.visual-text h1 {
+    font-size: 60px;
+	}
+	.slider-small-text {
+    font-size: 18px;
+    padding: 0px 20px;
+	}
+	.slider-bottom-text {
+    max-width: 300px;
+	}
+	.pagination li {
+    height: 8px;
+    width: 8px;
+	}
+	.visual-menu a{
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+	.visual-menu {
+    padding-bottom: 40px;
+	}
+	.footer-box {
+    padding: 30px;
+}
 }
