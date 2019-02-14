@@ -1,0 +1,159 @@
+// breakpoints for media
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+//fonts
+@import 'basic-settings/variables';
+@import 'common-settings/icons';
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'basic-settings/mixins';
+@import 'basic-settings/helpers';
+@import 'common-settings/_fonts';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  min-width: $base-min-width;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  //overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  line-height: 25px;
+  font-family: $base-font-family;
+}
+
+a {
+  color: $base-link-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.header {
+  font-size: 14px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-opener {
+  display: none;
+  @include media('<tablet') {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 4;
+}
+}
+.menu-opener::after,
+  .menu-opener::before {
+      content: '';
+  }
+
+.menu-opener::after,
+  .menu-opener::before,
+  .menu-opener span {
+      position: absolute;
+      height: 4px;
+      width: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #606061;
+      top: 18px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 3px;
+  }
+
+.menu-opener::after {
+top: 12px;
+}
+
+.menu-opener::before {
+top: 6px; 
+}
+
+.menu-active .menu-opener::after {
+opacity: 0;
+}
+
+.menu-active .menu-opener::before {
+top: 12px; 
+left: 2px;
+transform: rotate(45deg);
+}
+
+.menu-active .menu-opener span {
+top: 12px;
+left: 2px;
+transform: rotate(-45deg);
+}
+
+.drop {
+  display: none;
+  @include media('>=tablet') {
+    display: block;
+  }
+  > ul {
+    margin: 0 -20px;
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 20px;
+      > a {
+        color: #606061;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
