@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?xqonl9");
+  src: url("../fonts/icomoon.eot?xqonl9#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xqonl9") format("truetype"), url("../fonts/icomoon.woff?xqonl9") format("woff"), url("../fonts/icomoon.svg?xqonl9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-airplane:before {
+  content: "\e901"; }
+
+.icon-arrow-down:before {
+  content: "\e902"; }
+
+.icon-arrow-left:before {
+  content: "\e904"; }
+
+.icon-arrow-right:before {
+  content: "\e905"; }
+
+.icon-arrow-right-2:before {
+  content: "\e906"; }
+
+.icon-arrow-up:before {
+  content: "\e907"; }
+
+.icon-bag:before {
+  content: "\e908"; }
+
+.icon-calendar:before {
+  content: "\e909"; }
+
+.icon-camera:before {
+  content: "\e90a"; }
+
+.icon-cog:before {
+  content: "\e90b"; }
+
+.icon-comment:before {
+  content: "\e90c"; }
+
+.icon-google-plus:before {
+  content: "\e90e"; }
+
+.icon-music:before {
+  content: "\e90f"; }
+
+.icon-palette:before {
+  content: "\e910"; }
+
+.icon-plus:before {
+  content: "\e911"; }
+
+.icon-rss:before {
+  content: "\e912"; }
+
+.icon-search:before {
+  content: "\e913"; }
+
+.icon-star:before {
+  content: "\e914"; }
+
+.icon-subscribe:before {
+  content: "\e915"; }
+
+.icon-suitcase:before {
+  content: "\e916"; }
+
+.icon-user:before {
+  content: "\e917"; }
+
+.icon-video:before {
+  content: "\e918"; }
+
+.icon-facebook1:before {
+  content: "\ea91"; }
+
+.icon-twitter1:before {
+  content: "\ea97"; }
+
+.icon-close:before {
+  content: "\e919"; }
+
+.icon-pinterest-p:before {
+  content: "\e91a"; }
+
+.icon-google:before {
+  content: "\e91b"; }
+
+.icon-mobile:before {
+  content: "\e958"; }
