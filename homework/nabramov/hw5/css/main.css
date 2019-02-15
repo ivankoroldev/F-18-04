@@ -1001,13 +1001,20 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 @media (max-width: 767px) {
   .text-info {
-    padding-right: 10px;
+    max-width: 100%;
+    padding-right: 0;
   }
 }
 
 .text-info .text-hold h2, .text-info .text-hold p {
   color: #fff;
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .text-info .text-hold h2, .text-info .text-hold p {
+    text-align: center;
+  }
 }
 
 .text-info .text-hold p {
@@ -1091,6 +1098,13 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
   width: 50%;
   padding-left: 15px;
   padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .form {
+    width: 100%;
+    padding: 20px 0;
+  }
 }
 
 .form input[type="text"], .form input[type="email"] {

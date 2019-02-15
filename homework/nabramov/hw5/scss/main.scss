@@ -747,12 +747,16 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	padding-right: 53px;
 
 	@include media ("<tablet") {
-			padding-right: 10px;
+			max-width: 100%;
+			padding-right: 0;
 		}
 	.text-hold {
 		h2,p {
 		color: #fff;
 		text-align: left;
+		@include media ("<tablet") {
+			text-align: center;
+		}
 	}
 	p {
 		font-size: 18px;
@@ -831,6 +835,10 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 	width: 50%;
 	padding-left: 15px;
 	padding-top: 20px;
+	@include media ("<tablet") {
+			width: 100%;
+			padding: 20px 0;
+		}
 
 	input[type="text"], input[type="email"] {
 		display: block;
