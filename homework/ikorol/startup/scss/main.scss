@@ -254,7 +254,7 @@ body {
  background: darken(red,20%);
  display: none;
    @include media('>=tablet') {
-       width: 200px;
+      width: 200px;
       opacity: 0;
       visibility: hidden;
       position: absolute;

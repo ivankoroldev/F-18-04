@@ -1,0 +1,22 @@
+// Heading font-size
+$h1-basic-font-size: 66px;
+$h2-basic-font-size: 60px;
+$h3-basic-font-size: 22px;
+
+ h1,h2,h3 {
+  font-family: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+h1 {
+  font-size: $h1-basic-font-size;
+}
+
+h2{
+  font-size: $h2-basic-font-size;
+}
+
+h3 {
+  font-size: $h3-basic-font-size;
+}
