@@ -1,0 +1,223 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1366px
+);
+
+//fonts
+@import 'common-settings/fonts';
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'common-settings/icons';
+
+@import 'basic-settings/variables';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-width: $base-min-width;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.listreset{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.h2-weight{
+  font-weight: 300;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+}
+.header{
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+.container{
+  max-width: 940px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+  .header-holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    z-index: 99;
+
+  }
+  .menu-open{
+    display: none; 
+  }
+.drop{
+    font-size: 18px;
+ >ul{
+    margin: 0 -15px;
+    >li{
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 0 15px;
+      position: relative;
+      &:hover{
+        .dropdown{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+ 
+  >a{
+    display: block;
+    color: $white;
+    transition: all .3s ease-in-out;
+    &:hover{
+      color: $blue;
+    } 
+    }
+   }
+  }
+}
+.dropdown{
+    font-size: 18px; 
+    width: 100px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: visible;
+    
+    a{
+    border-radius: 5px;
+    display: block;
+    color: $white;
+    background: rgba($black, .7);
+    opacity: 0.7;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+    &:hover{
+      color: $white;
+      background: $blue;
+    }
+   }
+  }
+.visual-bg{
+  background-image: url(../img/visual-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  min-height: 620px;
+  .visual-text{
+    word-spacing: 2px;
+    text-align: center;
+    padding-top: 180px;
+    margin: 0 auto;
+    color: $white;
+  }
+  h3{
+    font-weight: 300;
+  }
+  h1{
+    font-weight: bold;
+  }
+}
+
+.btn{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 240px;
+  color: $white;
+  a{
+  display: block;
+  color: inherit;
+  border: 1px solid $white;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 23px;
+  text-transform: capitalize;
+  display: block;
+  &:hover{
+    background: rgba($blue, .6);
+    border: 1px solid $blue;
+  }
+  }
+}
+.main-hold{
+
+}
+.content-hold{
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -35px;
+}
+  .text-box{
+   width: 70%;
+   padding: 0 35px;
+   h2{
+
+   }
+   p{
+    font-size: 18px;
+
+   }
+  }
+  .img-box{
+   width: 30%;
+
+  }
+
+.bg-main{
+  background: $bg;
+  width: 100%;
+  min-height: 440px;
+}
+.content-hold2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -35px;
+   padding: 50px 40px;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  i{
+    font-size: 20px;
+    padding: 5px;
+   color: $white;
+  }
+}
+
+  @include media ("<widescreen") {
+  
+  }
+  @include media ("<desktop") {
+   
+  }
+  @include media ("<tablet") {
+   
+  }
