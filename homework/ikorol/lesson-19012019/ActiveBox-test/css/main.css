@@ -518,7 +518,7 @@ body {
   min-width: 320px;
 }
 
-.test-box {
+/*.test-box {
   max-width: 830px;
   padding: 0 15px;
   margin: 0 auto;
@@ -535,7 +535,7 @@ body {
 
 .menu-active .test-box h3 {
   color: pink;
-}
+}*/
 
 #wrapper {
   position: relative;
