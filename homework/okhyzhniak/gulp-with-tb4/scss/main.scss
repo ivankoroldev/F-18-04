@@ -1,0 +1,62 @@
+ @import 'bootstrap';
+
+h1 {
+	margin-bottom: 40px;
+	// @include media-breakpoint-down(lg) {
+	// 	background: $green;
+	// }
+
+	// @include media-breakpoint-down(md) {
+	// 	background: $black;
+	// }
+
+	
+}
+
+.row {
+
+	&:before, &:after {
+		display: none;
+	}
+}
+
+.two-columns {
+
+	.row {
+		margin: 0;
+	}
+
+	.col {
+		background: #e2f8ff;
+		padding: 0;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 100%;
+			background: #e2f8ff;
+			width: 99999px;
+			height: 100%;
+		}
+
+		+ .col {
+			background: #f5f9eb;
+
+			&:after {
+				right: auto;
+				left: 100%;
+				background: #f5f9eb;
+			}
+
+			.col-wrap {
+				padding: 0 0 0 50px;
+			}
+		}
+	}
+
+	.col-wrap {
+		padding: 0 50px 0 0;
+	}
+}

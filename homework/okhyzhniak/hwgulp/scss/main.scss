@@ -8,6 +8,41 @@ $breakpoints: (
 );
 
 
+@import 'common-settings/include-media';
+@import 'common-settings/normalize';
+@import 'common-settings/icons';
+
+@import 'basic-settings/variables';
+@import 'basic-settings/reset';
+@import 'basic-settings/heading-styles';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?68nvxr');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?68nvxr#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?68nvxr') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?68nvxr') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?68nvxr##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 .container {
 	max-width: 970px;
 	margin: 0 auto;
@@ -28,26 +63,239 @@ $breakpoints: (
 	background-color: green;
 	overflow: hidden;
 }
-.navigation{
-  max-width: 500px;
-  background-color: red;
-
+.big-conteiner{
+	max-width: 1400px;
+	margin: 0 auto;
 }
-.navigation {
- > nav{
-  >  ul{
-      font-size: 0;
-       line-height: 0;
-     > li{
-          display: inline-block;
-          vertical-align: top;
-          padding: 10px;
-          font-size: 15px;
-          line-height: 1.2;
-           color: yellow;
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+	color: #fff;
+	
+}
+.header-wrap {
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    align-items:center;
+    flex-direction: row;
+    width: 100%;
+}
+.logo {
+	width: 15%;
+	cursor: pointer;
+	img {
+	width: 100%;
+	height: auto;
+	}
+}
+.navigation{
+	 
+}
+.drop {
+  font-size: 14px;
 
+
+   > ul {
+    line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0 -5px; 
+
+
+    > li {
+      font-family: 'Brandon Grotesque', sans-serif;
+    	font-size: 18px;
+    	font-weight: 500;
+    	line-height: 1;
+    	display: inline-block;
+    	vertical-align: top;
+    	position: relative;
+          &:hover {
+              .dropdown {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+          &:hover, &.active &{
+            background: #fff;
+            color: #31263f;
+            }
+        > a {
+        	display: block;
+      		text-decoration: none;
+      		position: relative;
+      		transition: all .3s ease-in-out;
+          color: inherit;
+          z-index: 2;
+          padding: 0 13px;
+          }
+    } 
+
+  a {
+    display: block;
+    transition: all .3s ease-in-out;
+  } 
+  }
+}
+.dropdown {
+  width: 200px;
+  background: $white;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  > ul {
+ 
+    > li {
+      background: #31263f;
+		      &:hover{
+            background-color: #dfdfdf;
+    		   .dropdown-second {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          
+          > a {
+            color: $white;
+            padding: 10px;
+
+          }
       }
+  }
+}
+
+.dropdown-second {
+  width: 200px;
+  background: #31263f;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 100%;
+
+  a {
+    color: $white;
+    
+    }
+	
+	li{
+		display: block;
+		padding: 10px;
+		&:hover {
+      background: #e0e0e0;
+       color: #31263f;
+        .dropdown-third {
+              opacity: 1;
+              visibility: visible;
+            }
+
+    }
+	}
+    
+  
+}
+.dropdown-third {
+  width: 200px;
+  background: #31263f;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 100%;
+
+  a {
+    color: $white;
+    
+    }
+  
+  li{
+    display: block;
+    padding: 10px;
+    &:hover {
+      background: #e0e0e0;
+       color: #31263f;
     }
   }
- 
+    
+  
+}
+.visual {
+	background: url("../img/visul-bg.jpg");
+	color: #fff;
+	padding-top: 100px;
+	position: relative;
+	z-index: 10;
+	background-repeat: no-repeat;
+	min-height: 618px;
+
+}
+.visual-wrap{
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Brandon Grotesque';
+  text-align: center;
+  line-height: 0;
+  font-size: 0px;
+  color: $white;
+}
+.visual-wrap p{
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0;
+
+}
+.visual-wrap h1{
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 1.2;
+}
+.visual-wrap a{
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.2;
+  display: inline-block;
+  color: inherit;
+  padding: 30px 70px;
+  border: 3px solid $white;
+}
+.visual-wrap a:hover{
+  border: 3px solid #31263f;
+  background-color: rgba(49,38,63,.5);
+}
+.services{
+  padding: 0px 40px;
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-pinterest {
+  &:before {
+    content: $icon-pinterest; 
+  }
+}
+.icon-google-plus {
+  &:before {
+    content: $icon-google-plus; 
+  }
 }
