@@ -1,8 +1,23 @@
 $(document).ready(function(){
 	$("#work1").hover(function(){
-    $('#aw1').toggleClass('hidden');
+    $('#aw1').toggleClass('visible');
 },function(){
-    $('#aw1').removeClass('hidden');
+    $('#aw1').removeClass('visible');
+	});
+	$("#work2").hover(function(){
+    $('#aw2').toggleClass('visible');
+},function(){
+    $('#aw2').removeClass('visible');
+	});
+	$("#work3").hover(function(){
+    $('#aw3').toggleClass('visible');
+},function(){
+    $('#aw3').removeClass('visible');
+	});
+	$("#work4").hover(function(){
+    $('#aw4').toggleClass('visible');
+},function(){
+    $('#aw4').removeClass('visible');
 	});
 });
 
@@ -26,3 +41,12 @@ $(document).ready(function(){
     }
 })
 });
+
+$(document).ready(function(){
+	$(".article-info").click(function(event){
+		event.preventDefault();
+		$(this).click(function(){
+			$(".article").toggleClass("ok");
+		})
+	})
+})
