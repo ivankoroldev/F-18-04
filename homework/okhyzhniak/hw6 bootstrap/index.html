@@ -3,8 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>bootstrap</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/media.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,7 +12,8 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 
 </head>
 <body>
@@ -67,7 +66,7 @@
 					       	<p>
 					       	 Dolore molestiae nam maxime veniam optio porro obcaecati,
 					       	</p>
-					       <div><a href="#">Become a Member</a></div>
+					       <div><a class="btn btn-success" href="#">Become a Member</a></div>
 					    </div>
 					   </div>
 					   <!-- Controls -->
@@ -127,8 +126,26 @@
 						   		</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="transparent">
+						    	<div class="row">
+						   			<div class="col-sm-8 col-xs-12 tab-content-text">
+						   				<h3>Browse projects, like booking a hotel online !</h3>
+						   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						   			</div>
+						   			<div class="col-sm-4 col-xs-6 img-glases">
+						   				<img src="img/glasses.png" alt="glasses">
+						   			</div>
+						   		</div>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="collaborative">
+						    	<div class="row">
+						    		<div class="col-sm-4 col-xs-6 img-glases">
+						   				<img src="img/glasses.png" alt="glasses">
+						   			</div>
+						   			<div class="col-sm-8 col-xs-12 tab-content-text">
+						   				<h3>Browse projects, like booking a hotel online !</h3>
+						   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						   			</div>
+						   		</div>
 						    </div>
 						</div>
 					</div>
@@ -176,12 +193,39 @@
 						</div>
 					</div>
 					<div class="projects">
-						<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:70%">
-    <span class="sr-only">70% Complete</span>
-  </div>
-</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 col-md-4">
+									<div class="projects-wrap center-block">
+										<div class="projects-img" >
+											<div class="uppercase project-new">new</div>
+											<img src="img/project1.png" alt="project1" class="img-responsive">
+											<button type="button" class="btn btn-info">From <span> GBR 3600</span></button>
+										</div>
+										<div class="project-content center-block">
+											<h3>Ontario Tower, LONDON</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+												</div>
+											</div>
+											<div class="progress-text row">
+												<p class="col-xs-6 col-sm-6 col-md-6">
+													10% Funded
+												</p>
+												<p  class="col-xs-6 col-sm-6 col-md-6">
+													8 Days Left
+												</p>
+											</div>
+											<div class="project-bottom">
+												<p>See Project Details</p>
+												<div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
