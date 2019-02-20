@@ -14,7 +14,7 @@ $breakpoints: (
 @import 'common-settings/normalize';
 @import 'basic-settings/mixins';
 @import 'basic-settings/helpers';
-@import 'common-settings/_fonts';
+@import 'common-settings/fonts';
 @import 'basic-settings/reset';
 @import 'basic-settings/heading-styles';
 
@@ -45,8 +45,14 @@ ul {
 }
 
 p {
-  line-height: 25px;
+  line-height: 28px;
   font-family: $base-font-family;
+}
+
+p.under-title {
+  font-family: 'merriweather';
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 a {
@@ -67,10 +73,11 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
 .container {
   margin: 0 auto;
   max-width: 1170px;
+  padding: 0 15px;
 }
 
 .header {
-  font-size: 14px;
+  font-size: 16px;
   padding: 20px 0;
   position: absolute;
   width: 100%;
@@ -91,49 +98,40 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     height: 30px;
     position: relative;
     z-index: 4;
-}
-}
-.menu-opener::after,
-  .menu-opener::before {
-      content: '';
   }
-
-.menu-opener::after,
-  .menu-opener::before,
-  .menu-opener span {
-      position: absolute;
-      height: 4px;
-      width: 26px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #606061;
-      top: 18px;
-      transition: all 0.3s ease-in-out;
-      border-radius: 3px;
+  &:after, &:before {
+    content: '';
   }
-
-.menu-opener::after {
-  top: 12px;
-}
-
-.menu-opener::before {
-  top: 6px; 
-}
-
-.menu-active .menu-opener::after {
-  opacity: 0;
-}
-
-.menu-active .menu-opener::before {
-  top: 12px; 
-  left: 2px;
-  transform: rotate(45deg);
-}
-
-.menu-active .menu-opener span {
-  top: 12px;
-  left: 2px;
-  transform: rotate(-45deg);
+  &:after, &:before, & span {
+    position: absolute;
+    height: 4px;
+    width: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #606061;
+    top: 18px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  &:after {
+    top: 12px;
+  }
+  &:before {
+    top: 6px; 
+  }
+  .menu-active &::after {
+    opacity: 0;
+  }
+  .menu-active &::before {
+    top: 12px; 
+    left: 2px;
+    transform: rotate(45deg);
+  }
+  .menu-active & span {
+    top: 12px;
+    left: 2px;
+    transform: rotate(-45deg);
+  }
 }
 
 .drop {
@@ -146,9 +144,10 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     > li {
       display: inline-block;
       vertical-align: top;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.2;
       padding: 20px;
+      font-weight: 600;
       > a {
         color: #606061;
         text-transform: uppercase;
@@ -162,61 +161,55 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   background: #eff0f2;
   min-height: 100vh;
   @include v-align(100vh);
-}
-
-.visual-wrapper {
-  padding: 150px 0;
-  h1, p  {
-    font-size: 45px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-}
-
-.visual-button {
-  a {
-    display: inline-block;
-    border: 2px solid #505050;
-    color: #505050;
-    padding: 18px 45px;
-    font-size: 18px;
-  }
-}
-
-.visual-holder {
-  position: relative;
-  @include media('>=tablet') {
-    p {
-      margin-bottom: 145px;
+  .visual-wrapper {
+    padding: 150px 0;
+    h1, p {
+      font-family: 'montserrat';
+      font-size: 45px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 15px;
     }
-  }  
-}
-
-.visual-image {
-  display: none;
-  @include media('>=tablet') {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: -50px;
+    .visual-holder {
+      position: relative;
+      @include media('>=tablet') {
+        p {
+          margin-bottom: 145px;
+          text-transform: uppercase;
+        }
+      }
+      .visual-button {
+        a {
+          display: inline-block;
+          border: 2px solid #505050;
+          color: #505050;
+          padding: 18px 45px;
+          font-size: 18px;
+        }
+      } 
+      .visual-image {
+        display: none;
+        @include media('>=tablet') {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 100%;
+          margin-top: -50px;
+        }
+      } 
+      .color-span  {
+        background: #b2f2ee;
+      }
+    }
   }
 }
 
-.snopno  {
-  background: #b2f2ee;
-}
 
 .about-us {
   text-align: center;
   padding-top: 125px;
-  h2 {
-    text-transform: uppercase;
-  }
   h5 {
     font-size: 18px;
-    text-transform: uppercase;
     margin-block-end: 145px;
   }
   .about-us-wrapper {
@@ -242,7 +235,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     .about-us-item1 {
       text-align: center;
       position: relative;
-      &::before {
+      &::after {
         content: "";
         position: absolute;
         background: #eff0f2;
@@ -254,11 +247,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       }
       img {
         position: relative;
-        z-index: 1;
       }
     }
   }
 }
-
-
 
