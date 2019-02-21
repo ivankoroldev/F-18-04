@@ -710,14 +710,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'montserrat';
   font-weight: 700;
   color: #000;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 h1 {
   font-size: 45px;
-  color: #505050; }
+  color: #505050;
+  text-align: center; }
 
 h2 {
-  font-size: 38px; }
+  font-size: 38px;
+  text-align: center; }
 
 h3 {
   font-size: 20px;
@@ -760,7 +763,10 @@ p {
 p.under-title {
   font-family: 'merriweather';
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 120px; }
 
 a {
   color: #7690c5; }
@@ -882,7 +888,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       font-size: 45px;
       font-weight: bold;
       line-height: 1.2;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      text-shadow: 7px 9px 13px rgba(80, 80, 80, 0.48); }
     .visual .visual-wrapper .visual-holder {
       position: relative; }
       @media (min-width: 768px) {
@@ -908,42 +915,64 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         background: #b2f2ee; }
 
 .about-us {
-  text-align: center;
-  padding-top: 125px; }
-  .about-us h5 {
-    font-size: 18px;
-    -webkit-margin-after: 145px;
-    margin-block-end: 145px; }
+  padding-top: 125px;
+  background: #f8fafa; }
+  .about-us .under-title {
+    margin-bottom: 140px; }
   .about-us .about-us-wrapper {
     font-size: 0;
-    line-height: 0; }
+    line-height: 0;
+    margin: 0 -15px; }
     .about-us .about-us-wrapper .about-us-item {
       width: 50%;
       display: inline-block;
       vertical-align: top;
       line-height: 1.2;
       font-size: 14px;
-      padding: 0 50px;
+      padding: 0 15px;
       text-align: left; }
       .about-us .about-us-wrapper .about-us-item h3 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         text-transform: uppercase;
         font-size: 20px; }
       .about-us .about-us-wrapper .about-us-item p {
         margin-bottom: 30px; }
+      .about-us .about-us-wrapper .about-us-item .about-us-hold {
+        padding: 0 40px; }
+        .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold {
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          z-index: 1; }
+          .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            height: 85%;
+            background: #eeeff1;
+            left: -40px;
+            right: -40px; }
+          .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold img {
+            position: relative;
+            z-index: 1; }
     .about-us .about-us-wrapper .about-us-item1 {
-      text-align: center;
-      position: relative; }
-      .about-us .about-us-wrapper .about-us-item1::after {
-        content: "";
-        position: absolute;
-        background: #eff0f2;
-        height: 80%;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: -10px;
-        right: -10px; }
-      .about-us .about-us-wrapper .about-us-item1 img {
-        position: relative; }
+      text-align: center; }
+
+.featured-works {
+  text-align: center;
+  padding: 110px 0; }
+  @media (min-width: 768px) {
+    .featured-works p {
+      margin-bottom: 100px; } }
+  .featured-works .featured-works-grid li {
+    padding: 7px 8px; }
+    @media (min-width: 768px) {
+      .featured-works .featured-works-grid li {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top;
+        font-size: inherit;
+        line-height: 1; } }
