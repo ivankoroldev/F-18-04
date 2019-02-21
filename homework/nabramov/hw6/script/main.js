@@ -46,7 +46,7 @@ $(document).ready(function(){
 	$(".article-info").click(function(event){
 		event.preventDefault();
 		$(this).click(function(){
-			$(".article").toggleClass("ok");
+			$(this).parent().toggleClass("ok");
 		})
 	})
 })
