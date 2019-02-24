@@ -3,8 +3,8 @@
 @font-face
 {
  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?256sql");
-  src: url("../fonts/icomoon.eot?256sql#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?256sql") format("truetype"), url("../fonts/icomoon.woff?256sql") format("woff"), url("../fonts/icomoon.svg?256sql#icomoon") format("svg");
+  src: url("../icons/icomoon.eot?6kmjy5");
+  src: url("../icons/icomoon.eot?6kmjy5#iefix") format("embedded-opentype"), url("../icons/icomoon.ttf?6kmjy5") format("truetype"), url("../icons/icomoon.woff?6kmjy5") format("woff"), url("../icons/icomoon.svg?6kmjy5#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,79 +24,24 @@
  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-man-user:before
+.icon-basket:before
 {
  content: "\e900";
 }
 
-.icon-web-design-service:before
+.icon-mail:before
 {
  content: "\e901";
 }
 
-.icon-smartphone:before
+.icon-facebook:before
 {
  content: "\e902";
 }
 
-.icon-video-camera:before
+.icon-twitter:before
 {
  content: "\e903";
-}
-
-.icon-google-plus-logo:before
-{
- content: "\e904";
-}
-
-.icon-three:before
-{
- content: "\e905";
-}
-
-.icon-multiply:before
-{
- content: "\e906";
-}
-
-.icon-pinterest-logo:before
-{
- content: "\e907";
-}
-
-.icon-star:before
-{
- content: "\e908";
-}
-
-.icon-message-closed-envelope:before
-{
- content: "\e909";
-}
-
-.icon-twitter-logo-silhouette:before
-{
- content: "\e90a";
-}
-
-.icon-facebook-logo:before
-{
- content: "\e90b";
-}
-
-.icon-camera:before
-{
- content: "\e90f";
-}
-
-.icon-envelop:before
-{
- content: "\e945";
-}
-
-.icon-mobile:before
-{
- content: "\e958";
 }
 
 /* Slider */
@@ -839,141 +784,141 @@ th {
 
 @font-face {
   font-family: 'merriweather';
-  src: url("../../fonts/merriweather-bold-webfont.eot");
-  src: url("../../fonts/merriweather-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../fonts/merriweather-bold-webfont.woff") format("woff"), url("../../fonts/merriweather-bold-webfont.ttf") format("truetype"), url("../../fonts/merriweather-bold-webfont.svg#merriweatherbold") format("svg");
+  src: url("../fonts/merriweather-bold-webfont.eot");
+  src: url("../fonts/merriweather-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../fonts/merriweather-bold-webfont.woff") format("woff"), url("../fonts/merriweather-bold-webfont.ttf") format("truetype"), url("../fonts/merriweather-bold-webfont.svg#merriweatherbold") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'merriweather';
-  src: url("../../fonts/merriweather-light-webfont.eot");
-  src: url("../../fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../fonts/merriweather-light-webfont.woff") format("woff"), url("../../fonts/merriweather-light-webfont.ttf") format("truetype"), url("../../fonts/merriweather-light-webfont.svg#merriweatherlight") format("svg");
+  src: url("../fonts/merriweather-light-webfont.eot");
+  src: url("../fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-light-webfont.woff2") format("woff2"), url("../fonts/merriweather-light-webfont.woff") format("woff"), url("../fonts/merriweather-light-webfont.ttf") format("truetype"), url("../fonts/merriweather-light-webfont.svg#merriweatherlight") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'merriweather';
   src: url("../fonts/merriweather-regular-webfont.eot");
-  src: url("../../fonts/merriweather-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../../fonts/merriweather-regular-webfont.woff") format("woff"), url("../../fonts/merriweather-regular-webfont.ttf") format("truetype"), url("../../fonts/merriweather-regular-webfont.svg#merriweatherregular") format("svg");
+  src: url("../fonts/merriweather-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../fonts/merriweather-regular-webfont.woff") format("woff"), url("../fonts/merriweather-regular-webfont.ttf") format("truetype"), url("../fonts/merriweather-regular-webfont.svg#merriweatherregular") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-bold-webfont.eot");
-  src: url("../../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../../fonts/raleway-bold-webfont.woff") format("woff"), url("../../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
+  src: url("../fonts/raleway-bold-webfont.eot");
+  src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-extrabold-webfont.eot");
-  src: url("../../fonts/raleway-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-extrabold-webfont.woff2") format("woff2"), url("../../fonts/raleway-extrabold-webfont.woff") format("woff"), url("../../fonts/raleway-extrabold-webfont.ttf") format("truetype"), url("../../fonts/raleway-extrabold-webfont.svg#ralewayextrabold") format("svg");
+  src: url("../fonts/raleway-extrabold-webfont.eot");
+  src: url("../fonts/raleway-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extrabold-webfont.woff2") format("woff2"), url("../fonts/raleway-extrabold-webfont.woff") format("woff"), url("../fonts/raleway-extrabold-webfont.ttf") format("truetype"), url("../fonts/raleway-extrabold-webfont.svg#ralewayextrabold") format("svg");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-extralight-webfont.eot");
-  src: url("../../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../../fonts/raleway-extralight-webfont.woff") format("woff"), url("../../fonts/raleway-extralight-webfont.ttf") format("truetype"), url("../../fonts/raleway-extralight-webfont.svg#ralewayextralight") format("svg");
+  src: url("../fonts/raleway-extralight-webfont.eot");
+  src: url("../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../fonts/raleway-extralight-webfont.woff") format("woff"), url("../fonts/raleway-extralight-webfont.ttf") format("truetype"), url("../fonts/raleway-extralight-webfont.svg#ralewayextralight") format("svg");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-light-webfont.eot");
-  src: url("../../fonts/raleway-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-light-webfont.woff2") format("woff2"), url("../../fonts/raleway-light-webfont.woff") format("woff"), url("../../fonts/raleway-light-webfont.ttf") format("truetype"), url("../../fonts/raleway-light-webfont.svg#ralewaylight") format("svg");
+  src: url("../fonts/raleway-light-webfont.eot");
+  src: url("../fonts/raleway-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-light-webfont.woff2") format("woff2"), url("../fonts/raleway-light-webfont.woff") format("woff"), url("../fonts/raleway-light-webfont.ttf") format("truetype"), url("../fonts/raleway-light-webfont.svg#ralewaylight") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-medium-webfont.eot");
-  src: url("../../fonts/raleway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../../fonts/raleway-medium-webfont.woff") format("woff"), url("../../fonts/raleway-medium-webfont.ttf") format("truetype"), url("../../fonts/raleway-medium-webfont.svg#ralewaymedium") format("svg");
+  src: url("../fonts/raleway-medium-webfont.eot");
+  src: url("../fonts/raleway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../fonts/raleway-medium-webfont.woff") format("woff"), url("../fonts/raleway-medium-webfont.ttf") format("truetype"), url("../fonts/raleway-medium-webfont.svg#ralewaymedium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-regular-webfont.eot");
-  src: url("../../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../../fonts/raleway-regular-webfont.woff") format("woff"), url("../../fonts/raleway-regular-webfont.ttf") format("truetype"), url("../../fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
+  src: url("../fonts/raleway-regular-webfont.eot");
+  src: url("../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../fonts/raleway-regular-webfont.woff") format("woff"), url("../fonts/raleway-regular-webfont.ttf") format("truetype"), url("../fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-semibold-webfont.eot");
-  src: url("../../fonts/raleway-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-semibold-webfont.woff2") format("woff2"), url("../../fonts/raleway-semibold-webfont.woff") format("woff"), url("../../fonts/raleway-semibold-webfont.ttf") format("truetype"), url("../../fonts/raleway-semibold-webfont.svg#ralewaysemibold") format("svg");
+  src: url("../fonts/raleway-semibold-webfont.eot");
+  src: url("../fonts/raleway-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-semibold-webfont.woff2") format("woff2"), url("../fonts/raleway-semibold-webfont.woff") format("woff"), url("../fonts/raleway-semibold-webfont.ttf") format("truetype"), url("../fonts/raleway-semibold-webfont.svg#ralewaysemibold") format("svg");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
-  src: url("../../fonts/raleway-thin-webfont.eot");
-  src: url("../../fonts/raleway-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-thin-webfont.woff2") format("woff2"), url("../../fonts/raleway-thin-webfont.woff") format("woff"), url("../../fonts/raleway-thin-webfont.ttf") format("truetype"), url("../../fonts/raleway-thin-webfont.svg#ralewaythin") format("svg");
+  src: url("../fonts/raleway-thin-webfont.eot");
+  src: url("../fonts/raleway-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-thin-webfont.woff2") format("woff2"), url("../fonts/raleway-thin-webfont.woff") format("woff"), url("../fonts/raleway-thin-webfont.ttf") format("truetype"), url("../fonts/raleway-thin-webfont.svg#ralewaythin") format("svg");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-black-webfont.eot");
-  src: url("../../fonts/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-black-webfont.woff2") format("woff2"), url("../../fonts/montserrat-black-webfont.woff") format("woff"), url("../../fonts/montserrat-black-webfont.ttf") format("truetype"), url("../../fonts/montserrat-black-webfont.svg#montserratblack") format("svg");
+  src: url("../fonts/montserrat-black-webfont.eot");
+  src: url("../fonts/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-black-webfont.woff2") format("woff2"), url("../fonts/montserrat-black-webfont.woff") format("woff"), url("../fonts/montserrat-black-webfont.ttf") format("truetype"), url("../fonts/montserrat-black-webfont.svg#montserratblack") format("svg");
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-bold-webfont.eot");
-  src: url("../../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-bold-webfont.woff") format("woff"), url("../../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  src: url("../fonts/montserrat-bold-webfont.eot");
+  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-extrabold-webfont.eot");
-  src: url("../../fonts/montserrat-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-extrabold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-extrabold-webfont.woff") format("woff"), url("../../fonts/montserrat-extrabold-webfont.ttf") format("truetype"), url("../../fonts/montserrat-extrabold-webfont.svg#montserratextrabold") format("svg");
+  src: url("../fonts/montserrat-extrabold-webfont.eot");
+  src: url("../fonts/montserrat-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-extrabold-webfont.woff2") format("woff2"), url("../fonts/montserrat-extrabold-webfont.woff") format("woff"), url("../fonts/montserrat-extrabold-webfont.ttf") format("truetype"), url("../fonts/montserrat-extrabold-webfont.svg#montserratextrabold") format("svg");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-extralight-webfont.eot");
-  src: url("../../fonts/montserrat-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-extralight-webfont.woff2") format("woff2"), url("../../fonts/montserrat-extralight-webfont.woff") format("woff"), url("../../fonts/montserrat-extralight-webfont.ttf") format("truetype"), url("../../fonts/montserrat-extralight-webfont.svg#montserratextralight") format("svg");
+  src: url("../fonts/montserrat-extralight-webfont.eot");
+  src: url("../fonts/montserrat-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-extralight-webfont.woff2") format("woff2"), url("../fonts/montserrat-extralight-webfont.woff") format("woff"), url("../fonts/montserrat-extralight-webfont.ttf") format("truetype"), url("../fonts/montserrat-extralight-webfont.svg#montserratextralight") format("svg");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-light-webfont.eot");
-  src: url("../../fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../../fonts/montserrat-light-webfont.woff") format("woff"), url("../../fonts/montserrat-light-webfont.ttf") format("truetype"), url("../../fonts/montserrat-light-webfont.svg#montserratlight") format("svg");
+  src: url("../fonts/montserrat-light-webfont.eot");
+  src: url("../fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff"), url("../fonts/montserrat-light-webfont.ttf") format("truetype"), url("../fonts/montserrat-light-webfont.svg#montserratlight") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-medium-webfont.eot");
-  src: url("../../fonts/montserrat-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../../fonts/montserrat-medium-webfont.woff") format("woff"), url("../../fonts/montserrat-medium-webfont.ttf") format("truetype"), url("../../fonts/montserrat-medium-webfont.svg#montserratmedium") format("svg");
+  src: url("../fonts/montserrat-medium-webfont.eot");
+  src: url("../fonts/montserrat-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../fonts/montserrat-medium-webfont.woff") format("woff"), url("../fonts/montserrat-medium-webfont.ttf") format("truetype"), url("../fonts/montserrat-medium-webfont.svg#montserratmedium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-regular-webfont.eot");
-  src: url("../../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../../fonts/montserrat-regular-webfont.woff") format("woff"), url("../../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  src: url("../fonts/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-semibold-webfont.eot");
-  src: url("../../fonts/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-semibold-webfont.woff") format("woff"), url("../../fonts/montserrat-semibold-webfont.ttf") format("truetype"), url("../../fonts/montserrat-semibold-webfont.svg#montserratsemibold") format("svg");
+  src: url("../fonts/montserrat-semibold-webfont.eot");
+  src: url("../fonts/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat-semibold-webfont.woff") format("woff"), url("../fonts/montserrat-semibold-webfont.ttf") format("truetype"), url("../fonts/montserrat-semibold-webfont.svg#montserratsemibold") format("svg");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'montserrat';
-  src: url("../../fonts/montserrat-thin-webfont.eot");
-  src: url("../../fonts/montserrat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-thin-webfont.woff2") format("woff2"), url("../../fonts/montserrat-thin-webfont.woff") format("woff"), url("../../fonts/montserrat-thin-webfont.ttf") format("truetype"), url("../../fonts/montserrat-thin-webfont.svg#montserratthin") format("svg");
+  src: url("../fonts/montserrat-thin-webfont.eot");
+  src: url("../fonts/montserrat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-thin-webfont.woff2") format("woff2"), url("../fonts/montserrat-thin-webfont.woff") format("woff"), url("../fonts/montserrat-thin-webfont.ttf") format("truetype"), url("../fonts/montserrat-thin-webfont.svg#montserratthin") format("svg");
   font-weight: 100;
   font-style: normal; }
 
@@ -1129,7 +1074,8 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   font-size: 16px;
   padding: 20px 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 99; }
 
 .header-wrapper {
   display: -webkit-box;
@@ -1249,7 +1195,17 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     font-size: 16px;
     line-height: 1.2;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 600;
+    position: relative;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .drop > ul > li:hover {
+      background: #70f6eb; }
+      .drop > ul > li:hover .dropdown {
+        display: block;
+        opacity: 1;
+        visibility: visible; }
     @media (min-width: 768px) {
       .drop > ul > li {
         display: inline-block;
@@ -1257,12 +1213,36 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     .drop > ul > li > a {
       color: #606061;
       padding: 20px;
+      display: block; }
+
+.dropdown {
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  display: none; }
+  @media (min-width: 768px) {
+    .dropdown {
+      width: 150px;
+      opacity: 0;
       display: block;
-      -webkit-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
-      .drop > ul > li > a:hover {
-        background: #70f6eb; }
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7); } }
+  .dropdown > li {
+    font-size: 15px;
+    line-height: 1.2;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: #456458; }
+    .dropdown > li:hover {
+      background: #d0d0d0; }
+    .dropdown > li > a {
+      color: #fff;
+      padding: 20px 20px 20px 40px;
+      display: block; }
 
 .visual {
   color: #505050;
@@ -1351,58 +1331,59 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
     .visual .visual-wrapper .visual-holder .color-span {
       background: #b2f2ee; }
 
-.about-us {
+.main-content section:nth-child(odd) {
   background: #f8fafa; }
-  .about-us .about-us-wrapper {
-    font-size: 0;
-    line-height: 0; }
+
+.about-us .about-us-wrapper {
+  font-size: 0;
+  line-height: 0; }
+  @media (min-width: 768px) {
+    .about-us .about-us-wrapper {
+      margin: 0 -15px; } }
+  .about-us .about-us-wrapper .about-us-item {
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-size: 14px;
+    text-align: left; }
     @media (min-width: 768px) {
-      .about-us .about-us-wrapper {
-        margin: 0 -15px; } }
-    .about-us .about-us-wrapper .about-us-item {
-      margin-bottom: 30px;
-      line-height: 1.2;
-      font-size: 14px;
-      text-align: left; }
-      @media (min-width: 768px) {
-        .about-us .about-us-wrapper .about-us-item {
-          width: 50%;
+      .about-us .about-us-wrapper .about-us-item {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;
+        margin-bottom: 0; }
+        .about-us .about-us-wrapper .about-us-item .about-us-image-hold {
           display: inline-block;
-          vertical-align: top;
-          padding: 0 15px;
-          margin-bottom: 0; }
-          .about-us .about-us-wrapper .about-us-item .about-us-image-hold {
-            display: inline-block;
-            vertical-align: top; } }
-      .about-us .about-us-wrapper .about-us-item h3 {
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-size: 20px; }
-      .about-us .about-us-wrapper .about-us-item p {
-        margin-bottom: 30px; }
-      @media (min-width: 768px) {
-        .about-us .about-us-wrapper .about-us-item .about-us-hold {
-          padding: 0 40px; } }
-      .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold {
+          vertical-align: top; } }
+    .about-us .about-us-wrapper .about-us-item h3 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 20px; }
+    .about-us .about-us-wrapper .about-us-item p {
+      margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .about-us .about-us-wrapper .about-us-item .about-us-hold {
+        padding: 0 40px; } }
+    .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold {
+      position: relative;
+      z-index: 1;
+      padding: 0 40px; }
+      .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 85%;
+        background: #eeeff1;
+        width: 100%; }
+      .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold img {
         position: relative;
         z-index: 1;
-        padding: 0 40px; }
-        .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          height: 85%;
-          background: #eeeff1;
-          width: 100%; }
-        .about-us .about-us-wrapper .about-us-item .about-us-hold .about-us-image-hold img {
-          position: relative;
-          z-index: 1;
-          margin: 0 auto; }
-    .about-us .about-us-wrapper .about-us-item1 {
-      text-align: center; }
+        margin: 0 auto; }
+  .about-us .about-us-wrapper .about-us-item1 {
+    text-align: center; }
 
 .featured-works {
   text-align: center; }
@@ -1419,5 +1400,114 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         font-size: inherit;
         line-height: 1; } }
 
-.our-services {
-  background: #f9fbfb; }
+.small-team {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .small-team > p {
+      margin-bottom: 100px; } }
+  .small-team .small-team-grid > li {
+    padding: 7px 8px;
+    line-height: 1.2;
+    font-size: 16px; }
+    @media (min-width: 768px) {
+      .small-team .small-team-grid > li {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1; } }
+    @media (min-width: 1024px) {
+      .small-team .small-team-grid > li {
+        width: 33.33%; } }
+    .small-team .small-team-grid > li .team-img-holder {
+      display: inline-block;
+      position: relative; }
+      .small-team .small-team-grid > li .team-img-holder:hover .team-description {
+        opacity: 1;
+        visibility: visible; }
+      .small-team .small-team-grid > li .team-img-holder .team-description {
+        position: absolute;
+        top: 40%;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+        text-align: left;
+        background: #70f6eb;
+        opacity: 0;
+        visibility: visible;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; }
+        .small-team .small-team-grid > li .team-img-holder .team-description:after {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 20px;
+          border-left: 11px solid transparent;
+          border-right: 11px solid transparent;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid #70f6eb; }
+        @media (min-width: 1024px) {
+          .small-team .small-team-grid > li .team-img-holder .team-description {
+            padding: 35px; } }
+        .small-team .small-team-grid > li .team-img-holder .team-description h3 {
+          font-size: 18px; }
+          @media (min-width: 1024px) {
+            .small-team .small-team-grid > li .team-img-holder .team-description h3 {
+              font-size: 20px; } }
+          .small-team .small-team-grid > li .team-img-holder .team-description h3 span {
+            font-size: 15px;
+            color: #767070;
+            text-transform: none;
+            font-style: italic; }
+        .small-team .small-team-grid > li .team-img-holder .team-description p {
+          margin-bottom: 20px; }
+          @media (min-width: 1024px) {
+            .small-team .small-team-grid > li .team-img-holder .team-description p {
+              margin-bottom: 25px; } }
+        .small-team .small-team-grid > li .team-img-holder .team-description ul {
+          margin: 0 -6px; }
+          .small-team .small-team-grid > li .team-img-holder .team-description ul li {
+            font-size: 20px;
+            line-height: 1.2;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 6px;
+            color: #214946; }
+            .small-team .small-team-grid > li .team-img-holder .team-description ul li a {
+              color: inherit;
+              -webkit-transition: all .3s ease-out;
+              -o-transition: all .3s ease-out;
+              transition: all .3s ease-out; }
+              .small-team .small-team-grid > li .team-img-holder .team-description ul li a:hover {
+                color: white; }
+
+.what-they-says .they-say-hold {
+  position: relative;
+  z-index: 1;
+  padding: 0 40px; }
+  .what-they-says .they-say-hold:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 85%;
+    background: #eeeff1;
+    width: 100%; }
+  .what-they-says .they-say-hold img {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto; }

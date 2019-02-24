@@ -32,7 +32,7 @@ body {
 #wrapper {
   position: relative;
   width: 100%;
-  //overflow: hidden;
+  // overflow: hidden;
 }
 
 img {
@@ -111,6 +111,7 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   padding: 20px 0;
   position: absolute;
   width: 100%;
+  z-index: 99;
 }
 
 .header-wrapper {
@@ -236,6 +237,16 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
       line-height: 1.2;
       text-transform: uppercase;
       font-weight: 600;
+      position: relative;
+      transition: all .3s ease-in-out;
+      &:hover {
+        background: $green;
+        .dropdown {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
       @include media('>=tablet') {
         display: inline-block;
         vertical-align: top;
@@ -244,11 +255,38 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
         color: #606061;
         padding: 20px;
         display: block;
-        transition: all .3s ease-in-out;
-        &:hover {
-          background: $green;
-        }
+        
       }
+    }
+  }
+}
+
+
+.dropdown {
+  transition: all .3s ease-in-out;
+  display: none;
+  @include media('>=tablet') {
+    width: 150px;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0,0,0,.7);
+  }
+  > li {
+    font-size: 15px;
+    line-height: 1.2;
+    transition: all .3s ease-in-out;
+    background: #456458;
+    &:hover {
+      background: #d0d0d0;
+    }
+    > a {
+      color: $white;
+      padding: 20px 20px 20px 40px;
+      display: block;
     }
   }
 }
@@ -338,9 +376,13 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
 }
 
+.main-content {
+  section:nth-child(odd) {
+    background: #f8fafa;
+  }
+}
 
 .about-us {
-  background: #f8fafa;
   .about-us-wrapper {
     font-size: 0;
     line-height: 0;
@@ -423,6 +465,125 @@ div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li {
   }
 }
 
-.our-services {
-  background: #f9fbfb;
+.small-team {
+  text-align: center;
+  @include media('>=tablet') {
+    > p {
+      margin-bottom: 100px;
+    }
+  }
+  .small-team-grid {
+    > li {
+      padding: 7px 8px;
+      line-height: 1.2;
+      font-size: 16px;
+      @include media('>=tablet') {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+      }
+      @include media('>=desktop') {
+        width: 33.33%;
+      }
+      .team-img-holder {
+        display: inline-block;
+        position: relative;
+        &:hover {
+          .team-description {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .team-description {
+          position: absolute;
+          top: 40%;
+          bottom: 20px;
+          left: 20px;
+          right: 20px;
+          padding: 20px;
+          text-align: left;
+          background: $green;
+          opacity: 0;
+          visibility: visible;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: column;
+          justify-content: space-around;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 20px;
+            border-left: 11px solid transparent;
+            border-right: 11px solid transparent;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid $green;
+          }
+          @include media('>=desktop') {
+            padding: 35px;
+          }
+          h3 {
+            font-size: 18px;
+            @include media('>=desktop') {
+              font-size: 20px;
+            }
+            span {
+              font-size: 15px;
+              color: #767070;
+              text-transform: none;
+              font-style: italic;
+            }
+          }
+          p {
+            margin-bottom: 20px;
+            @include media('>=desktop') {
+              margin-bottom: 25px;
+            }
+          }
+          ul {
+            margin: 0 -6px;
+            li {
+              font-size: 20px;
+              line-height: 1.2;
+              display: inline-block;
+              vertical-align: top;
+              padding: 0 6px;
+              color: #214946;
+              a {
+                color: inherit;
+                transition: all .3s ease-out;
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      } 
+    }
+  }
+}
+
+.what-they-says {
+  .they-say-hold {
+    position: relative;
+    z-index: 1;
+    padding: 0 40px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 85%;
+      background: #eeeff1;
+      width: 100%;
+    }
+    img {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+    }
+  }
 }
