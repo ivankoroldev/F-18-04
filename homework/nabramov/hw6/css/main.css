@@ -331,7 +331,8 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .logo {
   font-family: "wisdom";
@@ -408,7 +409,7 @@ body {
         left: auto;
         right: 0; }
       .navigation .drop > ul > li:hover {
-        background: #a3043c; }
+        background: #fc5f45; }
         .navigation .drop > ul > li:hover > a {
           color: #fff; }
         .navigation .drop > ul > li:hover .dropdown {
@@ -430,7 +431,7 @@ body {
           position: relative;
           background: #000; }
           .navigation .drop > ul > li .dropdown > ul > li:hover {
-            background: #0682e0; }
+            background: #b27cf5; }
             .navigation .drop > ul > li .dropdown > ul > li:hover .dropdown-second {
               opacity: 1;
               visibility: visible; }
@@ -446,7 +447,7 @@ body {
           visibility: hidden; }
           .navigation .drop > ul > li .dropdown > ul .dropdown-second > ul > li {
             padding: 10px 15px;
-            background: red; }
+            background: #38c695; }
             .navigation .drop > ul > li .dropdown > ul .dropdown-second > ul > li:hover {
               background: #c1cc00; }
             .navigation .drop > ul > li .dropdown > ul .dropdown-second > ul > li > a {
@@ -973,29 +974,61 @@ body {
   .work-steps .works-hold {
     padding-top: 100px; }
     .work-steps .works-hold .works-row {
-      margin-bottom: 50px;
       position: relative;
-      background: red;
-      min-height: 300px; }
+      min-height: 300px;
+      text-align: center; }
+      .work-steps .works-hold .works-row .bg-color {
+        display: inline-block;
+        vertical-align: middle;
+        width: 556px;
+        background: yellow;
+        min-height: 300px;
+        font-size: 10px;
+        line-height: 1; }
+      .work-steps .works-hold .works-row .orange {
+        background: orange; }
+      .work-steps .works-hold .works-row .green {
+        background: green; }
+      .work-steps .works-hold .works-row .pink {
+        background: pink; }
+      .work-steps .works-hold .works-row .yellow {
+        background: yellow; }
       .work-steps .works-hold .works-row .works {
         display: inline-block;
         vertical-align: middle;
         width: 40%;
         min-height: 300px;
         text-align: left;
-        background: pink;
-        padding: 60px;
+        background: #fff;
+        padding: 60px 10px 10px 125px;
         font-family: inherit;
-        position: absolute; }
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+        border-bottom: 2px solid green;
+        -webkit-box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 21px 4px rgba(0, 0, 0, 0.75); }
+        .work-steps .works-hold .works-row .works .small-number {
+          font-family: "libre_baskerville";
+          font-size: 50px;
+          color: #e0e0e0;
+          position: absolute;
+          left: 5%;
+          top: 5%; }
         .work-steps .works-hold .works-row .works .works-descr {
           font-size: 25px;
           display: block;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          font-weight: 400; }
         .work-steps .works-hold .works-row .works p {
           font-size: 15px;
           margin-bottom: 10px; }
-      .work-steps .works-hold .works-row:nth-child(even) {
-        text-align: right; }
+      .work-steps .works-hold .works-row:nth-child(even) .works {
+        position: absolute;
+        left: auto;
+        right: 5%;
+        bottom: 10%; }
 
 .pricing-table {
   background: #f7f7f7;
@@ -1306,27 +1339,51 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    .our-blog .blog-wrap .ok .hover-photo {
+      max-height: 400px;
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      -webkit-transition: max-height .8s;
+      -o-transition: max-height .8s;
+      transition: max-height .8s; }
+      .our-blog .blog-wrap .ok .hover-photo .article-text-wrap {
+        display: block; }
+    .our-blog .blog-wrap .ok .article-text-wrap {
+      display: none; }
+    .our-blog .blog-wrap .hover-photo {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden; }
+      .our-blog .blog-wrap .hover-photo .photo {
+        width: 100%;
+        height: 400px;
+        background: pink;
+        position: relative; }
+        .our-blog .blog-wrap .hover-photo .photo .article-text-wrap {
+          position: absolute;
+          left: 5%;
+          bottom: 10%; }
     .our-blog .blog-wrap .article {
       background: #fff;
       margin-bottom: 20px;
       padding: 30px;
       border-bottom: 2px solid #38c695;
       position: relative; }
+      .our-blog .blog-wrap .article .article-text-wrap {
+        margin-bottom: 20px; }
+      .our-blog .blog-wrap .article:hover {
+        cursor: pointer; }
       .our-blog .blog-wrap .article .article-author {
-        display: inline-block;
-        vertical-align: middle;
         font-family: inherit;
         font-size: 15px;
         font-weight: 500;
         color: #38c695;
-        text-transform: uppercase;
-        margin-bottom: 20px; }
+        text-transform: uppercase; }
       .our-blog .blog-wrap .article .article-date {
-        display: inline-block;
-        vertical-align: middle;
         font-size: 13px;
-        padding: 0 10px;
-        margin-bottom: 20px; }
+        font-family: inherit; }
       .our-blog .blog-wrap .article .article-name {
         display: block;
         margin-bottom: 20px; }
@@ -1336,19 +1393,6 @@ body {
       .our-blog .blog-wrap .article a {
         text-decoration: none;
         color: #38c695; }
-      .our-blog .blog-wrap .article .hover-photo {
-        display: none; }
-        .our-blog .blog-wrap .article .hover-photo .photo {
-          width: 100%;
-          height: 400px;
-          background: pink;
-          position: relative; }
-          .our-blog .blog-wrap .article .hover-photo .photo .article-text-wrap {
-            position: absolute;
-            left: 5%;
-            bottom: 0; }
-    .our-blog .blog-wrap .ok .hover-photo {
-      display: block; }
 
 .subscribe {
   padding: 50px 0;
@@ -1465,8 +1509,7 @@ body {
     align-items: center;
     background: #3f4049;
     padding: 50px 0 50px;
-    position: relative;
-    text-align: center; }
+    position: relative; }
     .footer .footer-info > div {
       width: 25%;
       padding: 20px; }

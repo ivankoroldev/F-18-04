@@ -1,25 +1,31 @@
 $(document).ready(function(){
-	$("#work1").hover(function(){
-    $('#aw1').toggleClass('visible');
-},function(){
-    $('#aw1').removeClass('visible');
-	});
-	$("#work2").hover(function(){
-    $('#aw2').toggleClass('visible');
-},function(){
-    $('#aw2').removeClass('visible');
-	});
-	$("#work3").hover(function(){
-    $('#aw3').toggleClass('visible');
-},function(){
-    $('#aw3').removeClass('visible');
-	});
-	$("#work4").hover(function(){
-    $('#aw4').toggleClass('visible');
-},function(){
-    $('#aw4').removeClass('visible');
-	});
-});
+    initCustom();
+})
+
+
+function initCustom(){
+    var activeClass = "visible";
+    var opener = jQuery('.worker');
+
+var checkState = function() {
+    opener.each(function(){
+        var item = jQuery(this);
+        var block = item.attr("data-id");
+
+        if(item.hasClass(activeClass)) {
+            jQuery("#" + block).addClass(activeClass).siblings().removeClass(activeClass);
+        }
+    })
+}
+
+opener.on( "mouseover", function() {
+    jQuery(this).addClass(activeClass).siblings().removeClass(activeClass);
+    checkState();
+})
+
+checkState();
+
+}
 
 
 
@@ -43,10 +49,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$(".article-info").click(function(event){
-		event.preventDefault();
-		$(this).click(function(){
-			$(this).parent().toggleClass("ok");
-		})
-	})
+	$(".article-wrap").on("mousemove", function(){
+        $(this).addClass("ok").siblings().removeClass("ok");
+    }) 
 })
