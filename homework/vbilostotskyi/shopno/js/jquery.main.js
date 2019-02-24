@@ -14,9 +14,11 @@ function initMenu() {
 	opener.on('click', clickHandler);
 }
 
-$('.grid').masonry({
-	columnWidth: 200,
-	itemSelector: '.grid-item',
-	columnWidth: 200,
-	horizontalOrder: true
+$(document).ready(function(){
+	$('.vertical-slider').slick({
+		slidesToShow: 1,
+		arrows: false,
+		dots: true,
+		mobileFirst: true
+	});
   });
