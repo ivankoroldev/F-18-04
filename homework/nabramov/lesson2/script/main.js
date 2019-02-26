@@ -1,10 +1,8 @@
 $(document).ready(function(){
-	$(".know-more").click(function(e){
-		e.preventDefault();
-		$(this).click(function(){
-			$(".hover-text").toggleClass("ok");
-		})
-	})
+	$(".know-more").on("click", function(){
+        $(this).parent(".visible-text").parent(".img").toggleClass("ok");
+        $(this).toggleClass("active");
+    })
 })
 
 
