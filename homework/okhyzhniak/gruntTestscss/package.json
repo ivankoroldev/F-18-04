@@ -1,0 +1,24 @@
+{
+  "name": "grunttestscss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.3",
+    "postcss-scss": "^2.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0"
+  }
+}
